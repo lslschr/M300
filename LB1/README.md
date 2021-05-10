@@ -41,14 +41,14 @@ Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die a
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
 
 - Input
-...Weitergeleitete Daten, Daten welche hochgeladen wurden. 
+⋅⋅⋅Weitergeleitete Daten, Daten welche hochgeladen wurden. 
 - Parsing
-...Untersuchung der Daten und fügt Metadaten hinzu. 
+⋅⋅⋅Untersuchung der Daten und fügt Metadaten hinzu. 
 - Indexing
-...Teilt Daten in Event auf. Dabei werden Events als einzelne Datenzeilen an die
+⋅⋅⋅Teilt Daten in Event auf. Dabei werden Events als einzelne Datenzeilen an die
 Metadaten angehängt wurden definiert. 
 - Searching
-...Hierbei spricht man über die Benutzerinteraktion mit den gesammelten und aufbereiteten
+⋅⋅⋅Hierbei spricht man über die Benutzerinteraktion mit den gesammelten und aufbereiteten
 Daten. 
 
 
