@@ -14,9 +14,9 @@ Einleitung zum LB1 Projekt (Erklärungen)
 
 - [20-Umsetzung](#20-Umsetzung)<br>
 
-- [40-Testing](40-Testing)<br>
+- [30-Testing](30-Testing)<br>
 
-- [50-Quellen](#50-Quellen)<br>
+- [40-Quellen](#40-Quellen)<br>
 
 ## 10-Service-Aufbau 
 Text
@@ -26,7 +26,7 @@ Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werde
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
 
-![Alt-Text](/images/Splunk_Logo.png "Splunk_Logo")
+![Alt-Text](/LB1/images/Splunk_Logo.png "Splunk_Logo")
 
 - **Input**<br>
 Weitergeleitete Daten, Daten welche hochgeladen wurden. 
@@ -89,8 +89,8 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 ## 20-Umsetzung
 Text
 
-## 40-Testing
+## 30-Testing
 Text
 
-## 50-Quellen
+## 40-Quellen
 Text
