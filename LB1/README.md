@@ -6,25 +6,18 @@ Einleitung zum LB1 Projekt (Erklärungen)
 Kurze Beschreibung
 
 	- [11-Splunk](#11-Splunk)<br>
-	Kurze Beschreibung
 
 	- [12-Wordpress](#12-Wordpress)<br>
-	Kurze Beschreibung
 
 	- [13-MariaDB](#13-MariaDB)<br>
-	Kurze Beschreibung
     
     - [14-Apache](#14-Apache)<br>
-	Kurze Beschreibung
 
 - [20-Umsetzung](#20-Umsetzung)<br>
-Kurze Beschreibung
 
 - [40-Testing](40-Testing)<br>
-Kurze Beschreibung
 
 - [50-Quellen](#50-Quellen)<br>
-Kurze Beschreibung
 
 ## 10-Service-Aufbau 
 Text
