@@ -1,5 +1,5 @@
 # Einleitung
-Einleitung zum LB1 Projekt (Erklärungen)
+Aufbau eines Docker Swarm (Cluster) mit 4 Raspberry Pi's
 
 # Inhaltsverszeichnis
 
