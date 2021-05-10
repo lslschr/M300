@@ -26,7 +26,7 @@ Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werde
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
 
-![Alt-Text](/images/Splunk_Logo.png "Splunk_Logo")
+![Alt-Text](/LB1/images/Splunk_Logo.png "Splunk_Logo")
 
 - **Input**<br>
 Weitergeleitete Daten, Daten welche hochgeladen wurden. 
