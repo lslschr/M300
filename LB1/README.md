@@ -40,14 +40,14 @@ Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werde
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
 
-- Input
+- Input<br>
 ⋅⋅⋅Weitergeleitete Daten, Daten welche hochgeladen wurden. 
-- Parsing
+- Parsing<br>
 ⋅⋅⋅Untersuchung der Daten und fügt Metadaten hinzu. 
-- Indexing
+- Indexing<br>
 ⋅⋅⋅Teilt Daten in Event auf. Dabei werden Events als einzelne Datenzeilen an die
 Metadaten angehängt wurden definiert. 
-- Searching
+- Searching<br>
 ⋅⋅⋅Hierbei spricht man über die Benutzerinteraktion mit den gesammelten und aufbereiteten
 Daten. 
 
