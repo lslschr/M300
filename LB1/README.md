@@ -35,7 +35,7 @@ Kurze Beschreibung
 ## 10-Service-Aufbau 
 Text
 
-### Splunk
+### 11-Splunk
 Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werden «Cloud» und «On
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
@@ -91,9 +91,9 @@ weitere Splunkdeployments können sich sehr unterscheiden. So können als Beispi
 einzigen System laufen, allerdings kann man auch alle Komponenten auf verschiedene Systeme
 verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
-### Wordpress
+### 12-Wordpress
 
-### MariaDB
+### 13-MariaDB
 
 ## Umsetzung
 Text
