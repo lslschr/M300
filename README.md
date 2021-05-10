@@ -3,6 +3,8 @@
 # Einleitung allgemein
 Einleitung allgemein (Erklärungen zum ganzen M300-Projekt)
 
+![Alt-Text](/images/logo_TBZ.jpg.jpg "Logo TBZ")
+
 # Inhaltsverszeichnis
 
 ## 10-Toolumgebungen 
