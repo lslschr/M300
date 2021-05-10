@@ -9,6 +9,10 @@ Text
 ### Splunk
 
 
+### Wordpress
+
+### MariaDB
+
 ## Umsetzung
 Text
 
