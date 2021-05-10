@@ -13,7 +13,7 @@ Kurze Beschreibung
 
 	- [13-MariaDB](#13-MariaDB)<br>
 	Kurze Beschreibung
-    
+
 - [35-Sicherheit-1](#35-Sicherheit-1)<br>
 Kurze Beschreibung
 
@@ -36,6 +36,20 @@ Kurze Beschreibung
 Text
 
 ### Splunk
+Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werden «Cloud» und «On
+Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
+werden. Die vier Phasen sind folgendermassen aufgeteilt. 
+
+- Input
+...Weitergeleitete Daten, Daten welche hochgeladen wurden. 
+- Parsing
+...Untersuchung der Daten und fügt Metadaten hinzu. 
+- Indexing
+...Teilt Daten in Event auf. Dabei werden Events als einzelne Datenzeilen an die
+Metadaten angehängt wurden definiert. 
+- Searching
+...Hierbei spricht man über die Benutzerinteraktion mit den gesammelten und aufbereiteten
+Daten. 
 
 
 ### Wordpress
