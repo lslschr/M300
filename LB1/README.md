@@ -3,7 +3,6 @@ Einleitung zum LB1 Projekt (Erklärungen)
 
 ## Inhaltsverszeichnis
 - [10-Service-Aufbau](#10-Service-Aufbau)<br>
-Kurze Beschreibung
 
 	- [11-Splunk](#11-Splunk)<br>
 
@@ -26,6 +25,8 @@ Text
 Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werden «Cloud» und «On
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
+
+![Alt-Text](/images/Splunk_Logo.png "Logo TBZ")
 
 - **Input**<br>
 Weitergeleitete Daten, Daten welche hochgeladen wurden. 
