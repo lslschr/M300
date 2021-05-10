@@ -3,6 +3,7 @@
 # Einleitung allgemein
 Einleitung allgemein (Erklärungen zum ganzen M300-Projekt)
 
+Im Modul 300 erarbeiten wir in der Technischen Berufsschule Zürich zusammen mit der Klasse ST18A die erforderlichen Kompetenzen. 
 ![Alt-Text](/images/logo_TBZ.jpg "Logo TBZ")
 
 # Inhaltsverszeichnis
