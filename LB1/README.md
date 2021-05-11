@@ -153,10 +153,21 @@ Einleitung zum LB1 Projekt (Erklärungen)
 Text
 
 ### 11-Selbststaendigkeit
+Ich versichere, dass ich die vorliegende Arbeit selbstständig und ohne Benutzung anderer als der im
+Literaturverzeichnis angegebenen Quellen und Hilfsmittel angefertigt habe.
+Die wörtlich oder inhaltlich den im Literaturverzeichnis aufgeführten Quellen und Hilfsmitteln
+entnommenen Stellen sind in der Arbeit als Zitat bzw. Paraphrase kenntlich gemacht.<br>
+
+Oberengstringen, 10.05.2021<br>
+Luis Lüscher<br>
 
 ### 12-Projekthintergrund
 
 ### 13-Danksagung
+Ich möchte mich bei Marcello Calisto bedanken, der mich in der schulischen Ausbildung immer wieder
+aufs Neue herausfordert und versucht, dass ich mein volles Potenzial ausschöpfen kann. Zudem hat er
+den gesamten Unterricht, wie immer, sehr spannend gestaltet.<br>
+Zudem möchte ich mich noch bei noch bei meinem Vater Theodor Lüscher bedanken für das Gegenlesen meiner Dokumentation.
 
 ### 14-Managment-Summary
 
