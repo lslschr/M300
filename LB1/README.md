@@ -341,6 +341,10 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 ### 8.1-Testfaelle
 
 #### 8.1.1-Test-1
+| : Testfall 1 - Testen der Templates               : |||
+| :------------------- | :------------------------------|
+| Beschreibung		   | Es wird überprüft, ob die Tabelle
+richtig formatiert ist. \
 
 ## 9-Auswerten
 ### 9.1-Auswerten-der-Testfaelle
@@ -349,6 +353,6 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
 ### 9.3-Verbesserungsmoeglichkeiten
 
-### 9.4-zukunftsaussichten
+### 9.4-Zukunftsaussichten
 
 ## 10-Quellenverzeichnis
