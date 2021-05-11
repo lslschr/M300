@@ -4,129 +4,129 @@ Einleitung zum LB1 Projekt (Erklärungen)
 ## Inhaltsverszeichnis
 - [1-Vorwort](#1-Vorwort)<br>
 
-	- [1.1-Selbststaendigkeit](#1.1-Selbststaendigkeit)<br>
+	- [11-Selbststaendigkeit](#11-Selbststaendigkeit)<br>
 
-	- [1.2-Projekthintergrund](#1.2-Projekthintergrund)<br>
+	- [12-Projekthintergrund](#12-Projekthintergrund)<br>
 
-	- [1.3-Danksagung](#1.3-Danksagung)<br>
+	- [13-Danksagung](#13-Danksagung)<br>
     
-    - [1.4-Managment-Summary](#1.4-Managment-Summary)<br>
+    - [14-Managment-Summary](#14-Managment-Summary)<br>
 
-    - [1.5-Modulidentifikation](#1.5-Modulidentifikation)<br>
+    - [15-Modulidentifikation](#15-Modulidentifikation)<br>
 
-    - [1.6-Darstellung und Aufbau](#1.6-Darstellung-und-Aufbau)<br>
+    - [16-Darstellung und Aufbau](#16-Darstellung-und-Aufbau)<br>
 
 - [2-Umfeld-und-Ablauf](#2-Umfeld-und-Ablauf)<br>
 
-	- [2.1-Fikties-Unternehmen](#2.1-Fikties-Unternehmen)<br>
+	- [21-Fikties-Unternehmen](#21-Fikties-Unternehmen)<br>
 
-		- [2.1.1-Internetauftritt](#2.1.1-Internetauftritt)<br>
+		- [211-Internetauftritt](#211-Internetauftritt)<br>
 
-	- [2.2-Aufgabenstellung](#2.2-Aufgabenstellung)<br>
+	- [22-Aufgabenstellung](#22-Aufgabenstellung)<br>
 
-		- [2.2.1-Titel-der-Arbeit](#2.2.1-Titel-der-Arbeit)<br>
+		- [221-Titel-der-Arbeit](#221-Titel-der-Arbeit)<br>
 
-		- [2.2.2-Ausgangslage](#2.2.2-Ausgangslage)<br>
+		- [222-Ausgangslage](#222-Ausgangslage)<br>
 
-		- [2.2.3-Detaillierte-Aufgabenstellung](#2.2.3-Detaillierte-Aufgabenstellung)<br>
+		- [223-Detaillierte-Aufgabenstellung](#223-Detaillierte-Aufgabenstellung)<br>
 
-		- [2.2.4-Mittel-und-Methoden](#2.2.4-Mittel-und-Methoden)<br>
+		- [224-Mittel-und-Methoden](#224-Mittel-und-Methoden)<br>
 
-		- [2.2.5-Vorkenntnisse](#2.2.5-Vorkenntnisse)<br>
+		- [225-Vorkenntnisse](#225-Vorkenntnisse)<br>
 
-	- [2.3-Individuelle-Beurteilungskriterien](#2.3-Individuelle-Beurteilungskriterien)<br>
+	- [23-Individuelle-Beurteilungskriterien](#23-Individuelle-Beurteilungskriterien)<br>
 
-		- [2.3.1-Teil-A](#2.3.1-Teil-A)<br>
+		- [231-Teil-A](#231-Teil-A)<br>
 
-		- [2.3.2-Teil-B](#2.3.2-Teil-B)<br>
+		- [232-Teil-B](#232-Teil-B)<br>
 
-		- [2.3.3-Teil-C](#2.3.3-Teil-C)<br>
+		- [233-Teil-C](#233-Teil-C)<br>
     
-    - [2.4-Projektantrag](#2.4-Projektantrag)<br>
+    - [24-Projektantrag](#24-Projektantrag)<br>
 
-    - [2.5-Arbeitsumfeld](#2.5-Arbeitsumfeld)<br>
+    - [25-Arbeitsumfeld](#25-Arbeitsumfeld)<br>
 
-		- [2.5.1-Arbeitsplatz](#2.5.1-Arbeitsplatz)<br>
+		- [251-Arbeitsplatz](#251-Arbeitsplatz)<br>
 
-		- [2.5.2-Hardware-und-Software](#2.5.2-Hardware-und-Software)<br>
+		- [252-Hardware-und-Software](#252-Hardware-und-Software)<br>
 
-		- [2.5.3-Dokumentablage](#2.5.3-Dokumentablage)<br>
+		- [253-Dokumentablage](#253-Dokumentablage)<br>
 
-    - [2.6-Namenskonvention](#2.6-Namenskonvention)<br>
+    - [26-Namenskonvention](#26-Namenskonvention)<br>
 
-		- [2.6.1-Geraetetypen](#2.6.1-Geraetetypen)<br>
+		- [261-Geraetetypen](#261-Geraetetypen)<br>
 
-    - [2.7-Zeitplanung](#2.7-Zeitplanung)<br>
+    - [27-Zeitplanung](#27-Zeitplanung)<br>
 
-		- [2.7.1-Termine](#2.7.1-Termine)<br>
+		- [271-Termine](#271-Termine)<br>
 
-		- [2.7.2-Arbeitstage](#2.7.2-Arbeitstage)<br>
+		- [272-Arbeitstage](#272-Arbeitstage)<br>
 
-		- [2.7.4-Meilensteine](#2.7.4-Meilensteine)<br>
+		- [274-Meilensteine](#274-Meilensteine)<br>
 
-    - [2.8-Arbeitsjournal](#2.8-Arbeitsjournal)<br>
+    - [28-Arbeitsjournal](#28-Arbeitsjournal)<br>
 
-		- [2.8.1-Tag-1](#2.8.1-Tag-1)<br>
+		- [281-Tag-1](#281-Tag-1)<br>
 
-		- [2.8.2-Tag-2](#2.8.2-Tag-2)<br>
+		- [282-Tag-2](#282-Tag-2)<br>
 
-		- [2.8.3-Tag-3](#2.8.3-Tag-3)<br>
+		- [283-Tag-3](#283-Tag-3)<br>
 
-		- [2.8.4-Tag-4](#2.8.4-Tag-4)<br>
+		- [284-Tag-4](#284-Tag-4)<br>
 
 - [3-Projektmanagement](#3-Projektmanagement)<br>
 
-    - [3.1-IPERKA](#3.1-IPERKA)<br>
+    - [31-IPERKA](#31-IPERKA)<br>
 
-		- [3.1.1-Informieren](#3.1.1-Informieren)<br>
+		- [311-Informieren](#311-Informieren)<br>
 
-		- [3.1.2-Planen](#3.1.2-Planen)<br>
+		- [312-Planen](#312-Planen)<br>
 
-		- [3.1.3-Entscheiden](#3.1.3-Entscheiden)<br>
+		- [313-Entscheiden](#313-Entscheiden)<br>
 
-		- [3.1.4-Realisieren](#3.1.4-Realisieren)<br>
+		- [314-Realisieren](#314-Realisieren)<br>
 
-		- [3.1.5-Kontrollieren](#3.1.5-Kontrollieren)<br>
+		- [315-Kontrollieren](#315-Kontrollieren)<br>
 
-		- [3.1.6-Auswerten](#3.1.6-Auswerten)<br>
+		- [316-Auswerten](#316-Auswerten)<br>
 
-    - [3.2-SWOT](#3.2-SWOT)<br>
+    - [32-SWOT](#32-SWOT)<br>
 
-		- [3.2.1-SWOT-Beschreibung](#3.2.1-SWOT-Beschreibung)<br>
+		- [321-SWOT-Beschreibung](#321-SWOT-Beschreibung)<br>
 
-		- [3.2.2-SWOT-Strategie](#3.2.2-SWOT-Strategie)<br>
+		- [322-SWOT-Strategie](#322-SWOT-Strategie)<br>
 
-		- [3.2.3-SWOT-Analyse](#3.2.3-SWOT-Analyse)<br>
+		- [323-SWOT-Analyse](#323-SWOT-Analyse)<br>
 
-    - [3.3-Risikoanalyse](#3.3-Risikoanalyse)<br>
+    - [33-Risikoanalyse](#33-Risikoanalyse)<br>
 
-		- [3.3.1-Risk-analysis-Beschreibung](#3.3.1-Risk-analysis-Beschreibung)<br>
+		- [331-Risk-analysis-Beschreibung](#331-Risk-analysis-Beschreibung)<br>
 
-		- [3.3.2-Risk-analysis-Vorgehen](#3.3.2-Risk-analysis-Vorgehen)<br>
+		- [332-Risk-analysis-Vorgehen](#332-Risk-analysis-Vorgehen)<br>
 
-		- [3.3.3-Risikoanalysetabelle](#3.3.3-Risikoanalysetabelle)<br>
+		- [333-Risikoanalysetabelle](#333-Risikoanalysetabelle)<br>
 
-		- [3.3.4-Risikomatrix](#3.3.4-Risikomatrix)<br>
+		- [334-Risikomatrix](#334-Risikomatrix)<br>
 
 - [4-Informieren](#4-informieren)<br>
 
-    - [4.1-Themen](#4.1-Themen)<br>
+    - [41-Themen](#41-Themen)<br>
 
-		- [4.1.1-Splunk](#4.1.1-Splunk)<br>
+		- [411-Splunk](#411-Splunk)<br>
 
-		- [4.1.2-Wordpress](#4.1.2-Wordpress)<br>
+		- [412-Wordpress](#412-Wordpress)<br>
 
-		- [4.1.3-MariaDB](#4.1.3-MariaDB)<br>
+		- [413-MariaDB](#413-MariaDB)<br>
 
-		- [4.1.4-Apache](#4.1.4-Apache)<br>
+		- [414-Apache](#414-Apache)<br>
 
 - [5-Planen](#5-Planen)<br>
 
-    - [5.1-Benoetigte-Infrastruktur](#5.1-Benoetigte-Infrastruktur)<br>
+    - [51-Benoetigte-Infrastruktur](#51-Benoetigte-Infrastruktur)<br>
 
-    - [5.2-Testkonzept](#5.2-Testkonzept)<br>
+    - [52-Testkonzept](#52-Testkonzept)<br>
 
-		- [5.2.1-Erklaerung-Klassifikation](#5.2.1-Erklaerung-Klassifikation)<br>
+		- [521-Erklaerung-Klassifikation](#521-Erklaerung-Klassifikation)<br>
 
 - [6-Entscheiden ](#6-Entscheiden )<br>
 
@@ -134,134 +134,134 @@ Einleitung zum LB1 Projekt (Erklärungen)
 
 - [8-Kontrollieren](#8-Kontrollieren)<br>
 
-    - [8.1-Testfaelle](#8.1-Testfaelle)<br>
+    - [81-Testfaelle](#81-Testfaelle)<br>
 
-		- [8.1.1-Test-1](#8.1.1-Test-1)<br>
+		- [811-Test-1](#811-Test-1)<br>
 
 - [9-Auswerten](#9-Auswerten)<br>
 
-    - [9.1-Auswerten-der-Testfaelle](#9.1-Auswerten-der-Testfaelle)<br>
+    - [91-Auswerten-der-Testfaelle](#91-Auswerten-der-Testfaelle)<br>
 
-    - [9.2-Reflexion](#9.2-Reflexion)<br>
+    - [92-Reflexion](#92-Reflexion)<br>
 
-    - [9.3-Verbesserungsmoeglichkeiten](#9.3-Verbesserungsmoeglichkeiten)<br>
+    - [93-Verbesserungsmoeglichkeiten](#93-Verbesserungsmoeglichkeiten)<br>
 
-    - [9.4-zukunftsaussichten](#9.4-zukunftsaussichten)<br>
+    - [94-Zukunftsaussichten](#94-Zukunftsaussichten)<br>
 
 - [10-Quellenverzeichnis](#10-Quellenverzeichnis)<br>
 ## 1-Vorwort
 Text
 
-### 1.1-Selbststaendigkeit
+### 11-Selbststaendigkeit
 
-### 1.2-Projekthintergrund
+### 12-Projekthintergrund
 
-### 1.3-Danksagung
+### 13-Danksagung
 
-### 1.4-Managment-Summary
+### 14-Managment-Summary
 
-### 1.5-Modulidentifikation
+### 15-Modulidentifikation
 
-### 1.6-Darstellung-und-Aufbau
+### 16-Darstellung-und-Aufbau
 
 ## 2-Umfeld-und-Ablauf
 
-### 2.1-Fikties-Unternehmen
+### 21-Fikties-Unternehmen
 
-#### 2.1.1-Internetauftritt
+#### 211-Internetauftritt
 
-### 2.2-Aufgabenstellung
+### 22-Aufgabenstellung
 
-#### 2.2.1-Titel-der-Arbeit
+#### 221-Titel-der-Arbeit
 
-#### 2.2.2-Ausgangslage
+#### 222-Ausgangslage
 
-#### 2.2.3-Detaillierte-Aufgabenstellung
+#### 223-Detaillierte-Aufgabenstellung
 
-#### 2.2.4-Mittel-und-Methoden
+#### 224-Mittel-und-Methoden
 
-#### 2.2.5-Vorkenntnisse
+#### 225-Vorkenntnisse
 
-### 2.3-Individuelle-Beurteilungskriterien
+### 23-Individuelle-Beurteilungskriterien
 
-#### 2.3.1-Teil-A
+#### 231-Teil-A
 
-#### 2.3.2-Teil-B
+#### 232-Teil-B
 
-#### 2.3.3-Teil-C
+#### 233-Teil-C
 
-### 2.4-Projektantrag
+### 24-Projektantrag
 
-### 2.5-Arbeitsumfeld
+### 25-Arbeitsumfeld
 
-#### 2.5.1-Arbeitsplatz
+#### 251-Arbeitsplatz
 
-#### 2.5.2-Hardware-und-Software
+#### 252-Hardware-und-Software
 
-#### 2.5.3-Dokumentablage
+#### 253-Dokumentablage
 
-### 2.6-Namenskonvention
+### 26-Namenskonvention
 
-#### 2.6.1-Geraetetypen
+#### 261-Geraetetypen
 
-### 2.7-Zeitplanung
+### 27-Zeitplanung
 
-#### 2.7.1-Termine
+#### 271-Termine
 
-#### 2.7.2-Arbeitstage
+#### 272-Arbeitstage
 
-#### 2.7.3-Zeitplan
+#### 273-Zeitplan
 
-#### 2.7.4-Meilensteine
+#### 274-Meilensteine
 
-### 2.8-Arbeitsjournal
+### 28-Arbeitsjournal
 
-#### 2.8.1-Tag-1
+#### 281-Tag-1
 
-#### 2.8.2-Tag-2
+#### 282-Tag-2
 
-#### 2.8.3-Tag-3
+#### 283-Tag-3
 
-#### 2.8.4-Tag-4
+#### 284-Tag-4
 
 ## 3-Projektmanagement
 
-### 3.1-IPERKA
+### 31-IPERKA
 
-#### 3.1.1-Informieren
+#### 311-Informieren
 
-#### 3.1.2-Planen
+#### 312-Planen
 
-#### 3.1.3-Entscheiden
+#### 313-Entscheiden
 
-#### 3.1.4-Realisieren
+#### 314-Realisieren
 
-#### 3.1.5-Kontrollieren
+#### 315-Kontrollieren
 
-#### 3.1.6-Auswerten
+#### 316-Auswerten
 
-### 3.2-SWOT
+### 32-SWOT
 
-#### 3.2.1-SWOT-Beschreibung
+#### 321-SWOT-Beschreibung
 
-#### 3.2.2-SWOT-Strategie
+#### 322-SWOT-Strategie
 
-#### 3.2.3-SWOT-Analyse
+#### 323-SWOT-Analyse
 
-### 3.3-Risikoanalyse
+### 33-Risikoanalyse
 
-#### 3.3.1-Risk-analysis-Beschreibung
+#### 331-Risk-analysis-Beschreibung
 
-#### 3.3.2-Risk-analysis-Vorgehen
+#### 332-Risk-analysis-Vorgehen
 
-#### 3.3.3-Risikoanalysetabelle
+#### 333-Risikoanalysetabelle
 
-#### 3.3.4-Risikomatrix
+#### 334-Risikomatrix
 
 ## 4-Informieren
 
-### 4.1-Themen
-#### 4.1.1-Splunk
+### 41-Themen
+#### 411-Splunk
 Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werden «Cloud» und «On
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
@@ -319,18 +319,18 @@ weitere Splunkdeployments können sich sehr unterscheiden. So können als Beispi
 einzigen System laufen, allerdings kann man auch alle Komponenten auf verschiedene Systeme
 verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
-#### 4.1.2-Wordpress
+#### 412-Wordpress
 
-#### 4.1.3-MariaDB
+#### 413-MariaDB
 
-#### 4.1.4-Apache
+#### 414-Apache
 
 ## 5-Planen
-### 5.1-Benoetigte-Infrastruktur
+### 51-Benoetigte-Infrastruktur
 
-### 5.2-Testkonzept
+### 52-Testkonzept
 
-#### 5.2.1-Erklaerung-Klassifikation
+#### 521-Erklaerung-Klassifikation
 
 ## 6-Entscheiden 
 
@@ -338,21 +338,21 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
 ## 8-Kontrollieren
 
-### 8.1-Testfaelle
+### 81-Testfaelle
 
-#### 8.1.1-Test-1
+#### 811-Test-1
 | : Testfall 1 - Testen der Templates               : |||
 | :------------------- | :------------------------------|
 | Beschreibung		   | Es wird überprüft, ob die Tabelle
 richtig formatiert ist. \
 
 ## 9-Auswerten
-### 9.1-Auswerten-der-Testfaelle
+### 91-Auswerten-der-Testfaelle
 
-### 9.2-Reflexion
+### 92-Reflexion
 
-### 9.3-Verbesserungsmoeglichkeiten
+### 93-Verbesserungsmoeglichkeiten
 
-### 9.4-Zukunftsaussichten
+### 94-Zukunftsaussichten
 
 ## 10-Quellenverzeichnis
