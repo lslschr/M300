@@ -250,8 +250,7 @@ Geplantes Ende: 07.12.2020 11:50 Uhr
     <td><strong>Unterschrift / 
 Abnahme
 :</strong></td>
-    <td>Auftraggeber: Calisto, Marcello</td>
-    <td>Auftragnehmer: Lüscher, Luis</td>
+    <td>Auftraggeber: <br>Calisto, Marcello<td>Auftragnehmer: <br>Lüscher, Luis</td></td>
   </tr>
   
 </table>
