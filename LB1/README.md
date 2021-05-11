@@ -363,7 +363,7 @@ richtig formatiert ist.</td>
       <tr>
     <td><strong>1</strong></td>
     <td>Testfall 1 XY</td>
-    <td style="background-color:#6FAC46">Erfolgreich</td>
+    <td>Erfolgreich</td>
   </tr>
 </table>
 
