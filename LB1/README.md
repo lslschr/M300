@@ -13,10 +13,10 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
   - [14-Managment-Summary](#14-Managment-Summary)<br>
 
   - [15-Modulidentifikation](#15-Modulidentifikation)<br>
+    
+    - [151-Handlungsziele](#151-Handlungsziele)<br>
 
-		- [151-Handlungsziele](#151-Handlungsziele)<br>
-
-		- [152-Handlungsnotwendige-Kenntnisse](#152-Handlungsnotwendige-Kenntnisse)<br>
+    - [152-Handlungsnotwendige-Kenntnisse](#152-Handlungsnotwendige-Kenntnisse)<br>
 
   - [16-Darstellung und Aufbau](#16-Darstellung-und-Aufbau)<br>
 
