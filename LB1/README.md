@@ -343,10 +343,10 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 #### 811-Test-1
 <table>
   <tr>
-    <td colspan="2">Testfall 1 - Testen der Templates</td>
+    <td colspan="2"><strong>Testfall 1 - Testen der Templates</strong></td>
   </tr>
     <tr>
-    <td>Beschreibung</td>
+    <td><strong>Beschreibung</strong></td>
     <td>Es wird überprüft, ob die Tabelle
 richtig formatiert ist.</td>
   </tr>
