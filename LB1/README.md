@@ -361,7 +361,6 @@ richtig formatiert ist.</td>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>
-	<ul>
 	<li>DB: Test 1234</li>
 	<li>Server: XY </li>
 	<li>Skript: Superhacker.ps1</li>
