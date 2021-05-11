@@ -353,17 +353,18 @@ richtig formatiert ist.</td>
       <tr>
     <td><strong>Testszenario</strong></td>
     <td>Beschreiben des Testszenario sowie das Vorgehen (Stichworte).
-	* XY
-	* XY
-	* YZ
+	<li>XY</li>
+	<li>XY</li>
+	<li>YZ</li>
 	</td>
   </tr>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>
-	* DB: Test 1234
-	* Server: XY 
-	* Skript: Superhacker.ps1
+	<ul>
+	<li>DB: Test 1234</li>
+	<li>Server: XY </li>
+	<li>Skript: Superhacker.ps1</li>
 	</td>
   </tr>
     <tr>
