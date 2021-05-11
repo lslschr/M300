@@ -350,6 +350,38 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
     <td>Es wird überprüft, ob die Tabelle
 richtig formatiert ist.</td>
   </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Beschreiben des Testszenario sowie das Vorgehen (Stichworte).
+	* XY
+	* XY
+	* YZ
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>
+	* DB: Test 1234
+	* Server: XY 
+	* Skript: Superhacker.ps1
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Beschreibung des Erwarteten Resultat</td>
+  </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Tatsächliche Resultat dokumentieren Screenshot und Beschreibung</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich, Teilweise Erfolgreich (gelb) oder Fehlgeschlagen (rot)</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich oder Massnahmen beschreiben wenn oben gelb oder rot</td>
+  </tr>
 </table>
 
 ## 9-Auswerten
