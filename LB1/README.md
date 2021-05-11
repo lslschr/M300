@@ -341,10 +341,16 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 ### 81-Testfaelle
 
 #### 811-Test-1
-| : Testfall 1 - Testen der Templates               : |||
-| :------------------- | :------------------------------|
-| Beschreibung		   | Es wird überprüft, ob die Tabelle
-richtig formatiert ist. \
+<table>
+  <tr>
+    <td colspan="2">Testfall 1 - Testen der Templates</td>
+  </tr>
+    <tr>
+    <td>Beschreibung</td>
+    <td>Es wird überprüft, ob die Tabelle
+richtig formatiert ist.</td>
+  </tr>
+</table>
 
 ## 9-Auswerten
 ### 91-Auswerten-der-Testfaelle
