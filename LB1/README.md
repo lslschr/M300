@@ -191,6 +191,70 @@ Text
 #### 233-Teil-C
 
 ### 24-Projektantrag
+<table>
+    <tr>
+    <td><strong>Projekttitel:</strong></td>
+    <td>XY</td>
+  </tr>
+      <tr>
+    <td><strong>Projektnummer:</strong></td>
+    <td>00001</td>
+  </tr>
+        <tr>
+    <td><strong>Projektart:</strong></td>
+    <td>00001</td>
+  </tr>
+        <tr>
+    <td><strong>Projektleiter/in:</strong></td>
+    <td>Lüscher, Luis</td>
+  </tr>
+          <tr>
+    <td><strong>Projektmitglieder:</strong></td>
+    <td>Lüscher, Luis</td>
+  </tr>
+            <tr>
+    <td><strong>Projektauftraggeber/in:</strong></td>
+    <td>Marcello Calisto, Dozent TBZ</td>
+  </tr>
+              <tr>
+    <td><strong>Projektkunde(n):</strong></td>
+    <td>Technische Berufsschule Zürich</td>
+  </tr>
+                <tr>
+    <td><strong>Projektdauer:</strong></td>
+    <td>Geplanter Beginn: 22.11.2020 09:00 Uhr <br>
+Geplantes Ende: 07.12.2020 11:50 Uhr
+</td>
+  </tr>
+                  <tr>
+    <td><strong>Ausgangssituation / Problembeschreibung:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                    <tr>
+    <td><strong>Projektgesamtziel:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                      <tr>
+    <td><strong>Projektressourcen:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                      <tr>
+    <td><strong>Projektbudget:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                        <tr>
+    <td><strong>Sonstige relevante Informationen:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                        <tr>
+    <td><strong>Unterschrift / 
+Abnahme
+:</strong></td>
+    <td>Auftraggeber: Calisto, Marcello</td>
+    <td>Auftragnehmer: Lüscher, Luis</td>
+  </tr>
+  
+</table>
 
 ### 25-Arbeitsumfeld
 
