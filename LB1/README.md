@@ -354,6 +354,18 @@ richtig formatiert ist.</td>
 
 ## 9-Auswerten
 ### 91-Auswerten-der-Testfaelle
+<table>
+    <tr>
+    <td><strong>Testfall</strong></td>
+    <td><strong>Beschreibung</strong></td>
+    <td><strong>Ergebnis</strong></td>
+  </tr>
+      <tr>
+    <td><strong>1</strong></td>
+    <td>Testfall 1 XY</td>
+    <td style="background-color:#6FAC46">Erfolgreich</td>
+  </tr>
+</table>
 
 ### 92-Reflexion
 
