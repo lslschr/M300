@@ -1,5 +1,5 @@
 # Einleitung (Summary)
-Einleitung zum LB1 Projekt (Erklärungen)
+Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Leistungsbeurteilung 1. 
 
 ## Inhaltsverszeichnis
 - [1-Vorwort](#1-Vorwort)<br>
@@ -10,14 +10,14 @@ Einleitung zum LB1 Projekt (Erklärungen)
 
 	- [13-Danksagung](#13-Danksagung)<br>
     
-    - [14-Managment-Summary](#14-Managment-Summary)<br>
+  - [14-Managment-Summary](#14-Managment-Summary)<br>
 
-    - [15-Modulidentifikation](#15-Modulidentifikation)<br>
+  - [15-Modulidentifikation](#15-Modulidentifikation)<br>
 
 		- [151-Handlungsziele](#151-Handlungsziele)<br>
 
 		- [152-Handlungsnotwendige-Kenntnisse](#152-Handlungsnotwendige-Kenntnisse)<br>
-    - [16-Darstellung und Aufbau](#16-Darstellung-und-Aufbau)<br>
+  - [16-Darstellung und Aufbau](#16-Darstellung-und-Aufbau)<br>
 
 - [2-Umfeld-und-Ablauf](#2-Umfeld-und-Ablauf)<br>
 
@@ -302,8 +302,95 @@ Abnahme
 #### 253-Dokumentablage
 
 ### 26-Namenskonvention
+<table>
+    <tr>
+    <th><strong>Position</strong></th>
+    <th><strong>Beschreibung</strong></th>
+    <th><strong>Beispiel</strong></th>
+  </tr>
+      <tr>
+    <td>Gerät</td>
+    <td>Eine bestimmte Abkürzung für den 
+jeweiligen Gerätetyp.
+</td>
+    <td><strong>sv</strong>=Server<br>
+    <strong>rt</strong>=Router<br>
+    </td>
+  </tr>
+        <tr>
+    <td>Kategorie</td>
+    <td>Wofür wird das System verwendet
+</td>
+    <td><strong>p</strong>=Produktion<br>
+    <strong>t</strong>=Testing<br>
+    <strong>i</strong>=Integration<br>
+    <strong>d</strong>=Development<br></td>
+  </tr>
+          <tr>
+    <td>Standort</td>
+    <td>Wo steht das Gerät?</td>
+    <td><strong>zh</strong>=Zürich<br>
+    <strong>oe</strong>=Oberengstringen<br></td>
+  </tr>
+            <tr>
+    <td>OS</td>
+    <td>Das Betriebssystem des Servers</td>
+    <td><strong>l</strong>=Linux<br>
+    <strong>w</strong>=Windows<br></td>
+  </tr>
+              <tr>
+    <td>Funktion</td>
+    <td>Projektname, Servicename, Applikationsname</td>
+    <td><strong>spk</strong>=Splunk <br>
+    <strong>ost</strong>=OS Ticket <br></td>
+  </tr>
+               <tr>
+    <td>Nummer</td>
+    <td>Aufzählung bei mehreren, gleichen Systemen.</td>
+    <td><strong>01-99</strong><br>
+    </td>
+  </tr>
+</table>
 
 #### 261-Geraetetypen
+<table>
+    <tr>
+    <th><strong>Abkuerzung</strong></th>
+    <th><strong>Beschreibung</strong></th>
+  </tr>
+              <tr>
+    <td>sv</td>
+    <td>Servers</td>
+  </tr>
+                <tr>
+    <td>ws</td>
+    <td>Workstations</td>
+  </tr>
+                <tr>
+    <td>pr</td>
+    <td>Printers </td>
+  </tr>
+                <tr>
+    <td>rt</td>
+    <td>Router</td>
+  </tr>
+                <tr>
+    <td>sw</td>
+    <td>Switch</td>
+  </tr>
+                <tr>
+    <td>fw</td>
+    <td>Firewall</td>
+  </tr>
+                <tr>
+    <td>msx</td>
+    <td>Mail Servers</td>
+  </tr>
+                <tr>
+    <td>wbs </td>
+    <td>Web Servers </td>
+  </tr>
+  </table>
 
 ### 27-Zeitplanung
 
