@@ -18,24 +18,137 @@ Einleitung zum LB1 Projekt (Erklärungen)
 
 - [2-Umfeld-und-Ablauf](#2-Umfeld-und-Ablauf)<br>
 
-	- [2.1-Fikties Unternehmen]("#2.1-Fikties Unternehmen")<br>
+	- [2.1-Fikties-Unternehmen](#2.1-Fikties-Unternehmen)<br>
 
-	- [1.2-Projekthintergrund](#2.2-Projekthintergrund)<br>
+		- [2.1.1-Internetauftritt](#2.1.1-Internetauftritt)<br>
 
-	- [1.3-Danksagung](#2.3-Danksagung)<br>
+	- [2.2-Aufgabenstellung](#2.2-Aufgabenstellung)<br>
+
+		- [2.2.1-Titel-der-Arbeit](#2.2.1-Titel-der-Arbeit)<br>
+
+		- [2.2.2-Ausgangslage](#2.2.2-Ausgangslage)<br>
+
+		- [2.2.3-Detaillierte-Aufgabenstellung](#2.2.3-Detaillierte-Aufgabenstellung)<br>
+
+		- [2.2.4-Mittel-und-Methoden](#2.2.4-Mittel-und-Methoden)<br>
+
+		- [2.2.5-Vorkenntnisse](#2.2.5-Vorkenntnisse)<br>
+
+	- [2.3-Individuelle-Beurteilungskriterien](#2.3-Individuelle-Beurteilungskriterien)<br>
+
+		- [2.3.1-Teil-A](#2.3.1-Teil-A)<br>
+
+		- [2.3.2-Teil-B](#2.3.2-Teil-B)<br>
+
+		- [2.3.3-Teil-C](#2.3.3-Teil-C)<br>
     
-    - [1.4-Managment-Summary](#1.4-Managment-Summary)<br>
+    - [2.4-Projektantrag](#2.4-Projektantrag)<br>
 
-    - [1.5-Modulidentifikation](#1.5-Modulidentifikation)<br>
+    - [2.5-Arbeitsumfeld](#2.5-Arbeitsumfeld)<br>
 
-    - [1.6-Darstellung und Aufbau](#1.6-Darstellung-und-Aufbau)<br>
+		- [2.5.1-Arbeitsplatz](#2.5.1-Arbeitsplatz)<br>
 
-- [20-Umsetzung](#20-Umsetzung)<br>
+		- [2.5.2-Hardware-und-Software](#2.5.2-Hardware-und-Software)<br>
 
-- [30-Testing](30-Testing)<br>
+		- [2.5.3-Dokumentablage](#2.5.3-Dokumentablage)<br>
 
-- [40-Quellen](#40-Quellen)<br>
+    - [2.6-Namenskonvention](#2.6-Namenskonvention)<br>
 
+		- [2.6.1-Geraetetypen](#2.6.1-Geraetetypen)<br>
+
+    - [2.7-Zeitplanung](#2.7-Zeitplanung)<br>
+
+		- [2.7.1-Termine](#2.7.1-Termine)<br>
+
+		- [2.7.2-Arbeitstage](#2.7.2-Arbeitstage)<br>
+
+		- [2.7.4-Meilensteine](#2.7.4-Meilensteine)<br>
+
+    - [2.8-Arbeitsjournal](#2.8-Arbeitsjournal)<br>
+
+		- [2.8.1-Tag-1](#2.8.1-Tag-1)<br>
+
+		- [2.8.2-Tag-2](#2.8.2-Tag-2)<br>
+
+		- [2.8.3-Tag-3](#2.8.3-Tag-3)<br>
+
+		- [2.8.4-Tag-4](#2.8.4-Tag-4)<br>
+
+- [3-Projektmanagement](#3-Projektmanagement)<br>
+
+    - [3.1-IPERKA](#3.1-IPERKA)<br>
+
+		- [3.1.1-Informieren](#3.1.1-Informieren)<br>
+
+		- [3.1.2-Planen](#3.1.2-Planen)<br>
+
+		- [3.1.3-Entscheiden](#3.1.3-Entscheiden)<br>
+
+		- [3.1.4-Realisieren](#3.1.4-Realisieren)<br>
+
+		- [3.1.5-Kontrollieren](#3.1.5-Kontrollieren)<br>
+
+		- [3.1.6-Auswerten](#3.1.6-Auswerten)<br>
+
+    - [3.2-SWOT](#3.2-SWOT)<br>
+
+		- [3.2.1-SWOT-Beschreibung](#3.2.1-SWOT-Beschreibung)<br>
+
+		- [3.2.2-SWOT-Strategie](#3.2.2-SWOT-Strategie)<br>
+
+		- [3.2.3-SWOT-Analyse](#3.2.3-SWOT-Analyse)<br>
+
+    - [3.3-Risikoanalyse](#3.3-Risikoanalyse)<br>
+
+		- [3.3.1-Risk-analysis-Beschreibung](#3.3.1-Risk-analysis-Beschreibung)<br>
+
+		- [3.3.2-Risk-analysis-Vorgehen](#3.3.2-Risk-analysis-Vorgehen)<br>
+
+		- [3.3.3-Risikoanalysetabelle](#3.3.3-Risikoanalysetabelle)<br>
+
+		- [3.3.4-Risikomatrix](#3.3.4-Risikomatrix)<br>
+
+- [4-Informieren](#4-informieren)<br>
+
+    - [4.1-Themen](#4.1-Themen)<br>
+
+		- [4.1.1-Splunk](#4.1.1-Splunk)<br>
+
+		- [4.1.2-Wordpress](#4.1.2-Wordpress)<br>
+
+		- [4.1.3-MariaDB](#4.1.3-MariaDB)<br>
+
+		- [4.1.4-Apache](#4.1.4-Apache)<br>
+
+- [5-Planen](#5-Planen)<br>
+
+    - [5.1-Benoetigte-Infrastruktur](#5.1-Benoetigte-Infrastruktur)<br>
+
+    - [5.2-Testkonzept](#5.2-Testkonzept)<br>
+
+		- [5.2.1-Erklaerung-Klassifikation](#5.2.1-Erklaerung-Klassifikation)<br>
+
+- [6-Entscheiden ](#6-Entscheiden )<br>
+
+- [7-Realisieren](#7-Realisieren)<br>
+
+- [8-Kontrollieren](#8-Kontrollieren)<br>
+
+    - [8.1-Testfaelle](#8.1-Testfaelle)<br>
+
+		- [8.1.1-Test-1](#8.1.1-Test-1)<br>
+
+- [9-Auswerten](#9-Auswerten)<br>
+
+    - [9.1-Auswerten-der-Testfaelle](#9.1-Auswerten-der-Testfaelle)<br>
+
+    - [9.2-Reflexion](#9.2-Reflexion)<br>
+
+    - [9.3-Verbesserungsmoeglichkeiten](#9.3-Verbesserungsmoeglichkeiten)<br>
+
+    - [9.4-zukunftsaussichten](#9.4-zukunftsaussichten)<br>
+
+- [10-Quellenverzeichnis](#10-Quellenverzeichnis)<br>
 ## 1-Vorwort
 Text
 
@@ -43,7 +156,7 @@ Text
 
 ### 1.2-Projekthintergrund
 
-### #1.3-Danksagung
+### 1.3-Danksagung
 
 ### 1.4-Managment-Summary
 
@@ -53,14 +166,102 @@ Text
 
 ## 2-Umfeld-und-Ablauf
 
-### 2.1-Fikties Unternehmen
+### 2.1-Fikties-Unternehmen
 
 #### 2.1.1-Internetauftritt
 
 ### 2.2-Aufgabenstellung
 
+#### 2.2.1-Titel-der-Arbeit
 
-### 11-Splunk
+#### 2.2.2-Ausgangslage
+
+#### 2.2.3-Detaillierte-Aufgabenstellung
+
+#### 2.2.4-Mittel-und-Methoden
+
+#### 2.2.5-Vorkenntnisse
+
+### 2.3-Individuelle-Beurteilungskriterien
+
+#### 2.3.1-Teil-A
+
+#### 2.3.2-Teil-B
+
+#### 2.3.3-Teil-C
+
+### 2.4-Projektantrag
+
+### 2.5-Arbeitsumfeld
+
+#### 2.5.1-Arbeitsplatz
+
+#### 2.5.2-Hardware-und-Software
+
+#### 2.5.3-Dokumentablage
+
+### 2.6-Namenskonvention
+
+#### 2.6.1-Geraetetypen
+
+### 2.7-Zeitplanung
+
+#### 2.7.1-Termine
+
+#### 2.7.2-Arbeitstage
+
+#### 2.7.3-Zeitplan
+
+#### 2.7.4-Meilensteine
+
+### 2.8-Arbeitsjournal
+
+#### 2.8.1-Tag-1
+
+#### 2.8.2-Tag-2
+
+#### 2.8.3-Tag-3
+
+#### 2.8.4-Tag-4
+
+## 3-Projektmanagement
+
+### 3.1-IPERKA
+
+#### 3.1.1-Informieren
+
+#### 3.1.2-Planen
+
+#### 3.1.3-Entscheiden
+
+#### 3.1.4-Realisieren
+
+#### 3.1.5-Kontrollieren
+
+#### 3.1.6-Auswerten
+
+### 3.2-SWOT
+
+#### 3.2.1-SWOT-Beschreibung
+
+#### 3.2.2-SWOT-Strategie
+
+#### 3.2.3-SWOT-Analyse
+
+### 3.3-Risikoanalyse
+
+#### 3.3.1-Risk-analysis-Beschreibung
+
+#### 3.3.2-Risk-analysis-Vorgehen
+
+#### 3.3.3-Risikoanalysetabelle
+
+#### 3.3.4-Risikomatrix
+
+## 4-Informieren
+
+### 4.1-Themen
+#### 4.1.1-Splunk
 Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werden «Cloud» und «On
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
@@ -118,18 +319,36 @@ weitere Splunkdeployments können sich sehr unterscheiden. So können als Beispi
 einzigen System laufen, allerdings kann man auch alle Komponenten auf verschiedene Systeme
 verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
-### 12-Wordpress
+#### 4.1.2-Wordpress
 
+#### 4.1.3-MariaDB
 
-### 13-MariaDB
+#### 4.1.4-Apache
 
-### 14-Apache
+## 5-Planen
+### 5.1-Benoetigte-Infrastruktur
 
-## 20-Umsetzung
-Text
+### 5.2-Testkonzept
 
-## 30-Testing
-Text
+#### 5.2.1-Erklaerung-Klassifikation
 
-## 40-Quellen
-Text
+## 6-Entscheiden 
+
+## 7-Realisieren
+
+## 8-Kontrollieren
+
+### 8.1-Testfaelle
+
+#### 8.1.1-Test-1
+
+## 9-Auswerten
+### 9.1-Auswerten-der-Testfaelle
+
+### 9.2-Reflexion
+
+### 9.3-Verbesserungsmoeglichkeiten
+
+### 9.4-zukunftsaussichten
+
+## 10-Quellenverzeichnis
