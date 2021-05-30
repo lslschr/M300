@@ -110,8 +110,6 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
 		- [333-Risikoanalysetabelle](#333-Risikoanalysetabelle)<br>
 
-		- [334-Risikomatrix](#334-Risikomatrix)<br>
-
 - [4-Informieren](#4-informieren)<br>
 
     - [41-Themen](#41-Themen)<br>
@@ -444,36 +442,200 @@ jeweiligen Gerätetyp.
 ## 3-Projektmanagement
 
 ### 31-IPERKA
+Für dieses Projekt wird nach dem Vorgehensmodell IPERKA vorgegangen und die Planung ist entsprechend dem Modell aufgebaut. Dies spiegelt sich auch in der Dokumentation wider.
+IPERKA wurde bereits in einigen Schulprojekten eingesetzt und hat sich für solche Arbeiten bewährt.
+Bei IPERKA beschreibt jeder Buchstabe des Namens einen Projektabschnitt:
+
+![IPERKA](/LB1/images/IPERKA.png "IPERKA")
 
 #### 311-Informieren
+Beim Informieren werden die Informationen abgeholt, die für die Durchführung des Projekts benötigt werden. Damit wird ein klares Bild des Auftrages geschaffen und erste Fragen werden bereits geklärt.
+Am Ende dieser Phase sind folgende Fragen beantwortet:
+- Wie lautet der genaue Auftrag?
+- Was für Bedingungen muss ich erfüllen?
+- Was ist das Ziel des Projekts?
+- Habe ich die notwendigen Mittel, um das Projekt durchzuführen?
 
 #### 312-Planen
+Beim Planen wird das ganze Projekt geplant. Sprich, hier wird ein genauer Zeitplan erstellt, in dem definiert ist, wer was wann macht. Ebenfalls werden die benötigten Ressourcen definiert. Hier soll klarwerden, wie das ganze Projekt durchgeführt wird.
+Am Ende dieser Phase sind folgende Fragen beantwortet:
+- Wie wird das Projekt realisiert?
+- Was für Ressourcen werden benötigt?
+- Was wird wann erledigt?
 
 #### 313-Entscheiden
+Beim Entscheiden wird festgelegt, welche Tools und Produkte verwendet werden sollen, um das Projekt umzusetzen. Dafür werden passende Kriterien definiert und in Frage kommende Möglichkeiten verglichen.
+Am Ende dieser Phase sind folgende Fragen beantwortet:
+- Mit welcher Lösung setze ich das Projekt um?
+- Ist diese Lösung sinnvoll?
+- Hat die Entscheidung eine ausschlaggebende Begründung?
 
 #### 314-Realisieren
+Beim Realisieren wird das Projekt effektiv umgesetzt. Das heisst, hier werden die geplanten Arbeiten zur Umsetzung des Projektes ausgeführt und der Auftrag nach Aufgabenstellung durchgeführt.
 
 #### 315-Kontrollieren
+Beim Kontrollieren wird die gesamte Arbeit nochmals kontrolliert und es wird geprüft, ob das Gemachte den Anforderungen entspricht. Hier wird ein Testprotokoll erstellt und ausgefüllt und die Arbeit auf Fehler überprüft.
+Am Ende dieser Phase sind folgende Fragen beantwortet:
+- Entspricht mein Produkt den gestellten Anforderungen?
+- Ist das Produkt vollständig getestet und fehlerlos?
+- Sind alle Ziele erreicht worden?
 
 #### 316-Auswerten
+Beim Auswerten wird auf das ganze Projekt nochmal zurückgeschaut. Es werden Erkenntnisse bezüglich der Projektarbeit festgehalten und ausgearbeitet, was in zukünftigen Projekten ähnlicher Art besser gemacht werden könnte.
+Am Ende dieser Phase sind folgende Fragen beantwortet:
+- Was lief gut?
+- Was lief schlecht und was kann man besser machen?
+- Ist man zufrieden mit dem Produkt?
 
 ### 32-SWOT
+Die SWOT-Analyse Strengths (Stärken), Weaknesses (Schwächen), Opportunities (Chancen), Threats (Gefahren) ist ein Werkzeug des strategischen Managements, wird aber auch für die Qualitätsentwicklung von Programmen und Projekten eingesetzt. Mit dieser einfachen und flexiblen Methode können sowohl Stärken und Schwächen innerhalb des Projektes als auch externe Chancen und Gefahren betrachtet werden. Aus dieser Kombination kann eine Strategie für die weitere Ausrichtung von Partizipationsprojekten abgeleitet werden.
+
+<strong>Vorteile SWOT</strong>
+
+- Schnelle Auseinandersetzung mit positiven und negativen Aspekten einer Situation.
+- Projizierung dieser Situation in die Zukunft.
+
+<strong>Nachteile SWOT</strong>
+
+- Oberflächliche Ergebnisse bei fehlender Ernsthaftigkeit oder Infragestellen des Nutzens möglich.
+
 
 #### 321-SWOT-Beschreibung
+Um die einzelnen Bereiche zu untersuchen, bieten sich unter anderen folgende Fragen an:
+
+<strong>Strengths (Stärken)</strong>
+
+- Was zeichnet dein Unternehmen aus?
+- Was sind/waren seine grössten Erfolge?
+- Und im direkten Vergleich: Was kann das Unternehmen besser als seine Wettbewerber?
+
+<strong>Weaknesses (Schwächen)</strong>
+
+- Worin ist das Unternehmen nicht gut?
+- Was fehlt im Unternehmen?
+- Und wieder im direkten Vergleich: Was können die Wettbewerber besser?
+
+<strong>Opportunities (Chancen)</strong>
+
+- Welche positiven Trends zeichnen sich ab?
+- Welche gesellschaftlichen, wirtschaftlichen, technologischen oder politischen Entwicklungen könnten dem Unternehmen zugutekommen?
+- Welche sonstigen Rahmenbedingungen sind positiv (oder ändern sich in eine positive Richtung)?
+
+<strong>Threats (Bedrohungen)</strong>
+
+- Welche negativen Trends zeichnen sich ab?
+- Welche gesellschaftlichen, wirtschaftlichen, technologischen oder politischen Entwicklungen könnten dem Unternehmen schaden?
+- Welche sonstigen Rahmenbedingungen sind negativ (oder ändern sich in eine negative Richtung)?
 
 #### 322-SWOT-Strategie
+
+Mit der Analyse der vier Bereiche ist hat man nun zwar einen guten Überblick über die aktuelle Situation sowie anstehende Herausforderungen, aber wenn man jetzt aufhört, verpasst man einen wichtigen abschliessenden Analyseschritt. Das eigentliche Ziel einer SWOT Analyse ist es nämlich nicht, diese Faktoren einfach zu sammeln, sondern – darauf aufbauend – strategische Massnahmen zu identifizieren.
+Dafür musst du nun die Wechselwirkungen der vier Bereiche analysieren. Aus den unterschiedlichen Kombinationen kann man wiederum vier Kategorien an strategischen Massnahmen ableiten:
+
+<strong>SO-Strategie Strengths und Opportunities</strong>
+
+- «Welche Stärken können wir nutzen, um von den Chancen zu profitieren?»
+- Strategien, die hieraus abgeleitet werden, fallen in die Kategorie «Führungsposition ausbauen» und sind relativ einfach durchzuführen.
+
+<strong>WO-Strategie Weaknesses und Opportunities</strong>
+
+- «Welche Schwächen hindern uns daran, die Chancen zu nutzen?»
+- Hieraus ergeben sich Strategien aus der Kategorie «Zum Wettbewerb aufholen».
+
+<strong>ST-Strategie Strengths und Threats</strong>
+
+- «Welche Stärken können wir nutzen, um Bedrohungen zu reduzieren?»
+- Massnahmen aus diesem Bereich fallen in die Kategorie «Absichern».
+
+<strong>WT-Strategien Weaknesses and Threats</strong>
+
+- «Welche Schwächen hindern uns daran, die Bedrohungen zu reduzieren?»
+- Massnahmen aus dieser Kombination fallen in die Kategorie «Vermeiden».
 
 #### 323-SWOT-Analyse
 
 ### 33-Risikoanalyse
 
 #### 331-Risk-analysis-Beschreibung
+Bei der Risikoanalyse handelt es sich um eine vorausschauende Diagnose, um mögliche Probleme zu erkennen, einzudämmen und zu minimieren.
+Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende Probleme, die vorausschauende Planung des Projektes und die Garantie eines reibungslosen Ablaufs.
 
 #### 332-Risk-analysis-Vorgehen
 
+1. Ziele SMART beschreiben
+    * M, R und T sind Vorgaben der Risikoanalyse
+
+2. Risikobereich identifizieren
+    * Suchen von möglichen Risiken, dabei alle Projektdimensionen beachten (Qualität, Ressourcen, Zeit). Dabei ist es wichtig, die Ursachen der Risiken zu benennen – nicht die Symptome (progressiv abstrahieren).
+
+3. Symptome benenne
+    * Symptome sind Erkennungsmerkmale für Risiken, die anzeigen, ob ein Problem bereits eingetreten ist oder einzutreten droht.
+
+4. Risiken bewerten und gewichten mittels Risikomatrix
+    * Jedem Risiko die Kriterien «Wahrscheinlichkeit des Eintreffens» und Tragweite zuordnen.
+
+5. Vorbeugende Massnahmen umsetzen mittels Risikoanalysetabelle
+    * Verbindliche Umsetzung von Gegenmassnahmen, die entweder das Problem verhindern oder seine Auswirkung begrenzen.
+
+6. Eventuellmassnahmen planen (Alternativplan, katastrophenplan) mittels Risikoanalysetabelle
+    * Bei besonderen kritischen Problembereichen sollen bereits in der Planungsphase alternativen Vorgehensweisen vorgesehen werden.
+
 #### 333-Risikoanalysetabelle
 
-#### 334-Risikomatrix
+<table>
+  <tr>
+    <td><strong>Nr.</strong></td>
+    <td><strong>Risiko</strong></td>
+    <td><strong>Symptome</strong></td>
+    <td><strong>Wahrscheinlichkeit</strong></td>
+    <td><strong>Tragweite</strong></td>
+    <td><strong>Gegenmassnahmen</strong></td>
+  </tr>
+  <tr>
+    <td>Nr. 1</td>
+    <td>Dokumentation geht verloren</td>
+    <td>
+     <li>Dokumentation ist nicht mehr aktuell</li>
+	   <li>Dokumentation ist nicht mehr auffindbar</li>
+	   <li>Dokumentation ist ungewollt verändert worden</li>
+    </td>
+    <td>Mittel</td>
+    <td>Sehr hoch</td>
+    <td>
+      <li>Regelmässig auf Git Repo pushen</li>
+	    <li>Lokales Backup erstellen</li>
+	    <li>Berechtigungen überprüfen Git Repo</li>
+    </td>
+   </tr>
+     <tr>
+    <td>Nr. 2</td>
+    <td>Schwierigkeiten mit neuen Technologien</td>
+    <td>
+     <li>Erhöhter Aufwand beim Teil "Informieren"</li>
+	   <li>Viel Aufwand während Realsieiren mit fehlenden Informationen</li>
+    </td>
+    <td>Mittel</td>
+    <td>Mittel</td>
+    <td>
+      <li>Teil Informieren klar strukturieren</li>
+	    <li>Vorhandenes Wissen und benötigtes Wissen deklarieren</li>
+    </td>
+   </tr>
+     <tr>
+    <td>Nr. 3</td>
+    <td>Schwierigkeiten mit Splunk</td>
+    <td>
+     <li>Fokus beim Teil "Realisieren" liegt bei Splunk und sprengt den Rahmen</li>
+	   <li>Viele offene Fragen beim dokumentieren</li>
+    </td>
+    <td>Tief</td>
+    <td>Mittel</td>
+    <td>
+      <li>Arbeitsbuch SIX als Wissensdatenbank verwenden</li>
+	    <li>Berufsbildner bei Unklarheiten nach Hilfe bitten</li>
+    </td>
+   </tr>
+</table>
 
 ## 4-Informieren
 
