@@ -294,12 +294,40 @@ Abnahme
 In diesem Kapitel wird mein Arbeitsumfeld beschrieben. Wie sieht mein Arbeitsplatz aus und welche Hardware sowie Software wird für die Arbeit verwendet? Wo werden die Dokumente abgelegt?
 
 #### 251-Arbeitsplatz
-Der Arbeitsplatz sieht folgendermassen aus:
+Der Arbeitsplatz sieht folgendermassen aus: <br>
 ![Arbeitsplatz Luis Lüscher](/LB1/images/Arbeitsplatz_Luis_Luescher.png "Arbeitsplatz_Luis_Luescher")
 
 #### 252-Hardware-und-Software
+##### Hardware
+<strong>PC von Luis</strong>
+- <strong>OS:</strong> Windows 10 1909
+- <strong>CPU:</strong> AMD ryzen 7 2700X 7300 MHz 8 Cores
+- <strong>RAM:</strong> 16GB
+- <strong>Speicher:</strong> 512 GB SSD 1000 GB HDD
+- <strong>CPU:</strong> GeForce RTX 2070
+
+<strong>Synology NAS Storage DS218+</strong>
+- <strong>OS:</strong> DiskStation manager (DSM)
+- <strong>RAM:</strong>  1 GB
+- <strong>Speicher:</strong>  Insgesamt 4TB im Raid 1
+
+##### Software
+Während der LB1 wurde folgende Software genutzt:
+- Windows 10 1909
+- Office 365 (Outlook, Word, PowerPoint, Excel und Teams)
+- Snagit 2020
+- Remote Desktop
+- Putty
+- Solar-Putty
+- Visual Studio Code
+- Google Chrome
+- VMWare ESXi 6.7.0
+- DiskStation Manager
+- WinSCP
+- Draw.io
 
 #### 253-Dokumentablage
+Die gesamten Dokumente des Modul 300 werden auf meinem NAS abgespeichert. Alle zusätzlichen Inhalte wie Code Snippets, Bilder oder Quellen werden ebenfalls darauf gespeichert. Die gesamten Ergebnisse werden auf GitHub gepusht und somit auch auf GitHub versioniert. 
 
 ### 26-Namenskonvention
 <table>
