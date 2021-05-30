@@ -291,8 +291,11 @@ Abnahme
 </table>
 
 ### 25-Arbeitsumfeld
+In diesem Kapitel wird mein Arbeitsumfeld beschrieben. Wie sieht mein Arbeitsplatz aus und welche Hardware sowie Software wird für die Arbeit verwendet? Wo werden die Dokumente abgelegt?
 
 #### 251-Arbeitsplatz
+Der Arbeitsplatz sieht folgendermassen aus:
+![Arbeitsplatz Luis Lüscher](/LB1/images/Arbeitsplatz_Luis_Luescher.png "Arbeitsplatz_Luis_Luescher")
 
 #### 252-Hardware-und-Software
 
@@ -451,7 +454,7 @@ Splunk kann grundsätzlich in zwei verschiedenen Deployment Models benutzt werde
 Premises». Beide Variationen bieten die vier Phasen der Datenaufbereitung die als IPIS abgekürzt
 werden. Die vier Phasen sind folgendermassen aufgeteilt. 
 
-![Alt-Text](/LB1/images/Splunk_Logo.png "Splunk_Logo")
+![Splunk Logo](/LB1/images/Splunk_Logo.png "Splunk_Logo")
 
 - **Input**<br>
 Weitergeleitete Daten, Daten welche hochgeladen wurden. 
