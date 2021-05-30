@@ -118,11 +118,7 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
 		- [411-Splunk](#411-Splunk)<br>
 
-		- [412-Wordpress](#412-Wordpress)<br>
-
-		- [413-MariaDB](#413-MariaDB)<br>
-
-		- [414-Apache](#414-Apache)<br>
+		- [412-Apache](#412-Apache)<br>
 
 - [5-Planen](#5-Planen)<br>
 
@@ -508,11 +504,7 @@ weitere Splunkdeployments können sich sehr unterscheiden. So können als Beispi
 einzigen System laufen, allerdings kann man auch alle Komponenten auf verschiedene Systeme
 verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
-#### 412-Wordpress
-
-#### 413-MariaDB
-
-#### 414-Apache
+#### 412-Apache
 
 ## 5-Planen
 ### 51-Benoetigte-Infrastruktur
