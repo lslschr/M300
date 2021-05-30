@@ -1,0 +1,618 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="de">
+<!--<![endif]-->
+
+<head>
+    <!-- Title -->
+    <title>Netzwerk Monitoring | Luis Lüscher | it.luis-luescher.com</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description"
+        content="Erfahre mehr über Netzwerk Überwachung. Welche Datenquellen gibt es für Netzwerk Monitoring? ">
+    <meta name="keywords" content="Informatik, Lernender, IT, Luis Lüscher, SNMP, Network, Netzwerk Überwachung">
+    <meta name="author" content="Luis Ricardo Lüscher">
+    <meta name="publisher" content="Luis Ricardo Lüscher">
+    <meta name="copyright" content="Luis Ricardo Lüscher">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1" />
+    <meta name="page-topic" content="Forschung Technik">
+    <meta name="page-type" content="Private Homepage">
+    <meta name="audience" content="Azubis">
+    <meta http-equiv="content-language" content="de">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,400" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="Main Logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+            <!-- Top Menu -->
+            <div id="hornav" class="row text-light">
+                <div class="col-md-12">
+                    <div class="text-center visible-lg">
+                        <ul id="hornavmenu" class="nav navbar-nav">
+                            <li>
+                                <a href="index.html" class="fa-home
+                                        active">Home</a>
+                            </li>
+                            <li>
+                                <span class="fa-gears">Informatik</span>
+                                <ul>
+                                    <li class="parent">
+                                        <span>Datenbanken</span>
+                                        <ul>
+                                            <li>
+                                                <a href="datenbank-theorie.html">Theorie</a>
+                                            </li>
+                                            <li>
+                                                <a href="datenbank-tabellen.html">Datenbank
+                                                    erstellen mit SQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Hardware</span>
+                                        <ul>
+                                            <li>
+                                                <a href="hardware-access-point.html">Access
+                                                    Point</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-firewall.html">Firewall</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-nas.html">NAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-router.html">Router</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-server.html">Server</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-switch.html">Switch</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Linux</span>
+                                        <ul>
+                                            <li>
+                                                <a href="linux-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-distributionen.html">Distributionen</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-eastereggs.html">Eastereggs</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-basic.html">Grundbefehle</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-mariadb.html">MariaDB</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-webserver.html">Webserver</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="documentations.html">Modularbeiten</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Netzwerk</span>
+                                        <ul>
+                                            <li>
+                                                <a href="netzwerk-vpn.html">VPN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-tor.html">TOR</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-snmp.html">SNMP</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-monitoring.html">NW-Monitoring
+                                                    Systeme</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-vlan.html">VLAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-wlan.html">WLAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="php.html">PHP</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://security.luis-luescher.com" target="_blank">Security</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Serverdienste</span>
+                                        <ul>
+                                            <li>
+                                                <a href="serverdienste-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-dns.html">DNS</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-file.html">File</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-print.html">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-ad.html">AD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-me.html" class="fa-copy">Über
+                                    mich</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fa-comment">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Menu -->
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- === END HEADER === -->
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-40">
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3">
+                    <ul class="list-group sidebar-nav" id="sidebar-nav">
+                        <!-- Weitere Theorie -->
+                        <li class="list-group-item list-toggle">
+                            <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Weitere
+                                Links</a>
+                            <ul id="collapse-typography" class="collapse">
+                                <li>
+                                    <a href="https://de.wikipedia.org/wiki/Monitoring" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>Monitoring Begriffserklärung Wikipedia</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.de.paessler.com/" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>Paessler.com</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Weitere Theorie -->
+                        <!-- Datenbank erstellen und verwalten -->
+                        <li class="list-group-item list-toggle">
+                            <a class="accordion-toggle" href="#collapse-components" data-toggle="collapse">Mehr zu
+                                Netzwerk</a>
+                            <ul id="collapse-components" class="collapse">
+                                <li>
+                                    <a href="netzwerk-vpn.html">
+                                        <i class="fa fa-arrows-h"></i>VPN</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-tor.html">
+                                        <i class="fa fa-arrows-h"></i>TOR</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-snmp.html">
+                                        <i class="fa fa-arrows-h"></i>SNMP</a>
+                                </li>
+                                <li>
+                                    <span class="badge">Du bist hier</span>
+                                    <a href="netzwerk-monitoring.html">
+                                        <i class="fa fa-arrows-h"></i>Monitoring Systeme</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-vlan.html">
+                                        <i class="fa fa-arrows-h"></i>VLAN</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-wlan.html">
+                                        <i class="fa fa-arrows-h"></i>WLAN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Icons -->
+                        <!-- End Grid System -->
+                    </ul>
+                </div>
+                <!-- End Sidebar Menu -->
+                <div class="col-md-9">
+                    <!-- Paragraph Examples -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="headline">
+                                <h1>Netzwerk - Managementsysteme
+                                </h1>
+                            </div>
+                            <h6>VPN ist ein logisches privates Netzwerk auf einer öffentlich zugänglichen Infrastruktur.
+                                Nur die Kommunikationspartner, die zu diesem privaten Netzwerk gehören, können
+                                miteinander kommunizieren und Informationen und Daten austauschen.</h6>
+
+                            <p>Eine allgemein gültige Definition für VPN gibt es allerdings nicht. Der Begriff und die
+                                Abkürzung VPN stehen für eine Vielzahl unterschiedlicher Techniken. So wird manche
+                                Technik, Protokoll oder Produkt zu VPN zugeordnet, obwohl Aspekte wie Verschlüsselung
+                                oder Authentifizierung völlig aussen vor gelassen sind.</p>
+
+                            <p>VPNs müssen Authentizität, Vertraulichkeit und Integrität sicherstellen, damit ein
+                                sicherer Betrieb mit Datenschutz möglich ist. Authentizität bedeutet die Identifizierung
+                                von autorisierten Nutzern und die Überprüfung der Daten, dass sie nur aus der
+                                autorisierten Quelle stammen. Vertraulichkeit und Geheimhaltung wird durch
+                                Verschlüsselung der Daten hergestellt. Mit der Integrität wird sichergestellt, dass die
+                                Daten von Dritten nicht verändert wurden. Unabhängig von der Infrastruktur sorgen VPNs
+                                für die Sicherheit der Daten, die darüber übertragen werden.</p>
+
+                            <hr>
+                            <!-- Tab v1 -->
+                            <h2>Datenquellen für Überwachung</h2>
+                            <div class="tabs">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#sample-1a" data-toggle="tab">SNMP</a>
+                                    </li>
+                                    <li>
+                                        <a href="#sample-1b" data-toggle="tab">WMI</a>
+                                    </li>
+                                    <li>
+                                        <a href="#sample-1c" data-toggle="tab">Ping</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="sample-1a">
+                                        <h3 class="no-margin no-padding">Simple Network Management Protocol</h3>
+                                        <p>SNMP – Simple Network Monitoring Protocol wird meistens für das Monitoring
+                                            von vielen Netzwerkgeräten sowie Endsystemen verwendet. Es läuft via UDP
+                                            Port 161 bzw.. UDP 162 bei SNMP Traps. Die meisten Geräte unterstützen SNMP
+                                            da es ein bereits sehr altes Protokoll ist.
+                                            Jede einzelne Verwaltungsinformation, die über SNMP abgerufen werden kann –
+                                            sei es die Speichernutzung eines Servers, der Datenverkehr an einem Switch
+                                            oder die Dateien in der Warteschlange eines Druckers – wird individuell
+                                            durch ihre OID adressiert. Diese Eigenschaft ist der Grund dafür, warum OIDs
+                                            gebraucht werden. Sie helfen Administratoren, die Objekte in ihrem Netzwerk
+                                            zu identifizieren und die Überwachung auf sinnvolle Weise durchzuführen.
+                                            Damit die Verwaltungseinheit und ein verwaltetes Gerät in Netzwerken
+                                            erfolgreich kommunizieren können, müssen beide wissen, welche OIDs verfügbar
+                                            sind.
+                                            Das ist der Grund, warum MIBs existieren und warum Systemadministratoren sie
+                                            brauchen. Jedes an einem Gerät zu überwachende Objekt muss von der/den
+                                            MIB(s) des Geräts bereitgestellt werden. Daher müssen Administratoren dafür
+                                            sorgen, dass alle nötigen MIBs in SNMP-Agent-Geräten sowie im System der
+                                            Verwaltungseinheit gespeichert sind. Eine MIB-Datei lässt sich leicht an den
+                                            Endungen .my oder .mib erkennen.
+                                        </p>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-pane fade in" id="sample-1b">
+                                        <h3 class="no-margin no-padding">WMI - Windows Management Instrumentation</h3>
+                                        <p><strong>Definition:</strong> Windows Management Instrumentation (WMI) ist ein
+                                            häufig
+                                            verwendeter Microsoft-Standard, der detaillierte Daten für eine
+                                            zentralisierte Überwachung von Windows-Workstations und Windows-Servern
+                                            bietet. WMI basiert auf dem Kommunikationsprotokoll DCOM (Distributed
+                                            Component Object Model) und ist seit Windows 2000 integraler Bestandteil von
+                                            Windows-Betriebssystem und in allen Nachfolgeversionen enthalten.</p>
+
+                                        <p><strong>Vorteil:</strong> WMI ist standardmässig in Windows-Workstations und
+                                            -Servern
+                                            vorhanden sowie freigeschaltet und läuft als Windows Dienst
+                                            („Windows-Verwaltungsinstrumentation"). Administratoren müssen sich also in
+                                            einem ersten Schritt keine Gedanken darüber machen, wie sie ihre Server oder
+                                            Workstations monitoren - Administrationszugangsdaten auf ein Zielgerät sind
+                                            in einfachen Szenarien meist genug. WMI kann auf viele
+                                            Windows-Performance-Daten wie CPU-Last, Auslastung des Arbeitsspeichers,
+                                            Datenverkehr auf der Netzwerkkarte und andere Daten zugreifen.</p>
+
+                                        <p><strong>Nachteil:</strong> WMI ist performancehungrig. Es verursacht eine
+                                            hohe Last auf dem
+                                            System. Ich empfehle, maximal 200 WMI-Sensoren auf dem PRTG-Probe-System zu
+                                            nutzen und ein hohes Scanning-Intervall einzustellen. Standardmässig ist ein
+                                            Intervall von einer Minute üblich. Bei WMI sollte man das Intervall auf fünf
+                                            Minuten erhöhen.
+                                        </p>
+
+                                        <p><strong>Alternative 1:</strong> Alternativ zu WMI können Administratoren für
+                                            ihr Monitoring
+                                            auf SNMP zurückgreifen. Über SNMP können ebenfalls standardmässig viele
+                                            Parameter abgefragt werden, wie Verfügbarkeit, CPU -Last, Arbeitsspeicher
+                                            und die Netzwerkkarte. SNMP verursacht eine deutlich geringere Last.
+                                            Allerdings muss SNMP meist auf den Zielrechnern und -Servern zuerst
+                                            eingerichtet werden.</p>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-pane fade in" id="sample-1c">
+                                        <h3 class="no-margin no-padding">Ping</h3>
+                                        <p><strong>Definition:</strong> Ping ist ein Befehlszeilentool, das für
+                                            praktisch jedes
+                                            Betriebssystem mit Netzwerkkonnektivität verfügbar ist und das als Test
+                                            eingesetzt wird, um festzustellen, ob ein Netzwerkgerät erreichbar ist.
+                                            Der Ping-Befehl sendet eine Anforderung über das Netzwerk an ein bestimmtes
+                                            Gerät. Ein erfolgreicher Ping führt zu einer Antwort des gepingten Computers
+                                            zurück zum ursprünglichen Computer.
+                                        </p>
+                                        <p><strong>Überwachung:</strong> Ping kann zur Überwachung der
+                                            Netzwerkverfügbarkeit von Geräten
+                                            eingesetzt werden. Ein Ping-Befehl, der als geplante Aufgabe ausgeführt
+                                            wird, kann einen rudimentären Abruf jedes vernetzten Computers oder Geräts
+                                            vornehmen, ohne dass zusätzliche Softwareagenten installiert oder
+                                            zusätzliche Ports geöffnet werden müssen. Der grundlegendste aller
+                                            Aufwärts/Abwärts-Monitore könnte durch Ausführen eines Pings mit der Option
+                                            «run until stopped» erzielt werden. Wenn die Pings fehlzuschlagen beginnen,
+                                            haben sie ein Problem, das System zu erreichen.
+                                        </p>
+
+                                        <p>Diese Lösungen werden mit einem zusätzlichen Überwachungstool wie erheblich
+                                            verbessert, das zwar zugrunde liegende Ping-Befehle verwendet, jedoch nicht
+                                            davon abhängt, dass jemand die Ausgabe überwacht oder zur Aufzeichnung an
+                                            einen Datensatz weiterleitet.</p>
+
+                                        <p>Der Standard-Ping-Sensor führt Ping-Befehle im Hintergrund aus. Diese Befehle
+                                            können konfiguriert werden, um in spezifischen Intervallen oder als Reaktion
+                                            auf ein anderes Ereignis ausgeführt zu werden. Wenn zum Beispiel ein Sensor
+                                            einen Verbindungsfehler meldet, lässt sich mit einem Ping bestimmen, ob
+                                            immer noch eine Netzwerkverbindung besteht. Oder Monitore können
+                                            konfiguriert werden, um einen Administrator zu warnen, wenn die Ping-Zeiten
+                                            zu lang werden oder zu viel Paketverlust auftritt.</p>
+
+                                        <p>Ein anderer interessanter Ping-basierter Sensor ist der Cloud Ping Sensor,
+                                            der überwachte Systeme von einer Remote-Cloud verteilter Systeme aus
+                                            anpingt. Er sorgt für den überaus wichtigen, jedoch schwer zu erkennenden
+                                            Alarm, wenn an Ihrem Ende alles normal läuft, Ihre Systeme jedoch aus
+                                            irgendeinem Grund von Remotebenutzern oder -clients von aussen nicht
+                                            erreicht werden können.</p>
+
+                                        <p><strong>Sicherheit:</strong> Das blosse Wissen, dass ein System existiert und
+                                            mit dem Netzwerk verbunden ist, kann genug Information für einen Angreifer
+                                            sein, um mit dem Angriff zu beginnen. Durch sorgfältige Analyse von
+                                            Ping-Antworten können weitere Informationen erhalten werden, z. B. welches
+                                            Betriebssystem das Ziel verwendet, wo sich die Maschine befindet, usw.
+                                            Viele Hacking-Tools gehen einen ganzen Bereich durch, indem sie jede
+                                            IP-Adresse in einem Ziel-Netzwerk anpingen, um eine Liste der Systeme zu
+                                            erhalten, die erreichbar sind und reagieren werden. Infolgedessen sind viele
+                                            Firewalls so konfiguriert, dass Ping-Anforderungen von nicht
+                                            vertrauenswürdigen Netzwerken blockiert werden.
+                                        </p>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Tab v1 -->
+                            <h2>Relevante Parameter</h2>
+                            <!-- Accordion -->
+                            <div id="accordion" class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Laufzeit
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-One" class="accordion-body collapse in">
+                                        <div class="panel-body">
+                                            <p>Die Laufzeit ist ein sehr wichtiger Parameter, wenn es zum Beispiel zu
+                                                einem Ausfall kommt, in grossen Firmennetzwerken, fällt es nicht immer
+                                                direkt auf, wenn ein Server egal ob physisch oder virtuell ausfällt.
+                                                Zudem kann man durch diese Monitoring auch nachschauen, ob man in einem
+                                                SAL seine Bedinungen erfüllt zB. 99% Verfügbarkeit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Prozessorlast
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Two" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>Ist der Prozessor überlastet und dies über längere Zeit muss man die
+                                                Dienste des Server anpassen oder die HW entsprechend aufrüsten. Wichtig
+                                                ist, dass die Prozessorlast durchschnittlich immer gleich bleibt.
+                                                Kleinere Ausnahmen wie höhere Last für einige Sekunden oder Minuten sind
+                                                nicht schlimm sollten aber nicht regelmässig auftauchen. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Three" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Memory
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Three" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>Das selbe wie beim Prozessor gilt auch beim RAM. Der RAM sollte
+                                                durchschnittlich gleich sein, kann aber natürlich kleiner Ausnahmen
+                                                haben. Wichtig ist hier, dass man sich den Ussage regelmässig anschaut
+                                                und wenn ein Wert von mehr als 80% dauerhaft überschritten wir sollte
+                                                man über ein Systemupgrade nachdenken. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Four" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Laufwerkkapazität
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Four" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>Auch das Monitoring der Laufwerke ist sehr wichtig. Insbesondere dann,
+                                                wenn das C: Drive vollläuft. Wichtig ist das man die Laufwerke monitort,
+                                                um ein Überfüllen zu verhindern. Bei einer 95%tigen Disk würde ich diese
+                                                Versuchen zu erweitern, neues SAN LUN hinzufügen etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Five" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Erreichbarkeit (Ping)
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Five" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>Die Erreichbarkeit eines Server oder anderen Netzwerkgerät ist essenziel.
+                                                Daher sollte immer wieder getestet werden, ob ein Gerät erreichbar ist.
+                                                Dies hängt auch wieder mit der entsprechenden Verfügbarkeit in Bezug auf
+                                                SLA’s zusammen die man mit einem Kunden aushandelt.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Accordion -->
+                        </div>
+                    </div>
+                    <!-- End Paragraph Examples -->
+                    <div class="clearfix margin-bottom-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+    <!-- === BEGIN FOOTER === -->
+    <div id="base" class="background-dark text-light">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-6 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Infos zur Website</h3>
+                    <p>Die Inhalte auf dieser Webseite dürfen nichtkommerziell und zu Bildungszwecken verwendet werden.
+                        Bei Verbesserungsvorschlägen bitte das Kontaktformular benutzen.</p>
+                    <p>Vielen Dank für Ihren Besuch</p>
+                </div>
+                <!-- End Disclaimer -->
+                <!-- Image Credits -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Soziale Medien</h3>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://www.instagram.com/lslschr/?hl=de" target="_blank">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/luis-luescher/" target="_blank">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lslschr" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Image Credits -->
+                <!-- Friends -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Friends -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="background-dark text-light">
+        <div class="container no-padding">
+            <div class="row">
+                <!-- Footer Menu -->
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="linux-basic.html">Informatik</a>
+                        </li>
+                        <li>
+                            <a href="https://me.luis-luescher.com" target="_blank">Über mich</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="legal_disclosure.html"">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Footer Menu -->
+            <!-- Copyright -->
+            <div id=" copyright" class="col-md-4">
+
+                                <p class="pull-right">Made by Luis Lüscher. All rights reserved.</p>
+
+                </div>
+                <!-- End Copyright -->
+            </div>
+        </div>
+        <!-- End Footer -->
+        <!-- JS -->
+        <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <!-- Isotope - Portfolio Sorting -->
+        <script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+        <!-- Mobile Menu - Slicknav -->
+        <script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+        <!-- Animate on Scroll-->
+        <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+        <!-- Stellar Parallax -->
+        <script type="text/javascript" src="assets/js/jquery.stellar.js" charset="utf-8"></script>
+        <!-- Sticky Div -->
+        <script type="text/javascript" src="assets/js/jquery.sticky.js" charset="utf-8"></script>
+        <!-- Slimbox2-->
+        <script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+        <!-- End JS -->
+</body>
+
+</html>
+<!-- === END FOOTER === -->

@@ -1,0 +1,126 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby : 
+Vagrant.configure("2") do |config|
+  config.vm.define "wbspzhlweb01" do |wbspzhlweb01|
+    wbspzhlweb01.vm.box = "ubuntu/trusty64"
+    wbspzhlweb01.vm.hostname = 'wbspzhlweb01'
+
+    wbspzhlweb01.vm.network :private_network, ip: "192.168.50.30"
+    wbspzhlweb01.vm.network :forwarded_port, guest: 80, host: 80                   
+    wbspzhlweb01.vm.network :forwarded_port, guest: 443, host: 443
+    wbspzhlweb01.vm.provision "shell", path: "data/apache_splunk_forwarder_installation.sh"
+    wbspzhlweb01.vm.synced_folder "data/www/", "/var/www/html"
+
+    wbspzhlweb01.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      v.customize ["modifyvm", :id, "--memory", 2048]
+      v.customize ["modifyvm", :id, "--name", "wbspzhlweb01"]
+    end
+  end
+
+  config.vm.define "wbspzhlweb02" do |wbspzhlweb02|
+    wbspzhlweb02.vm.box = "ubuntu/trusty64"
+    wbspzhlweb02.vm.hostname = 'wbspzhlweb02'
+
+    wbspzhlweb02.vm.network :private_network, ip: "192.168.50.20"
+    wbspzhlweb02.vm.network :forwarded_port, guest: 80, host: 8080                   
+    wbspzhlweb02.vm.network :forwarded_port, guest: 443, host: 8008
+    wbspzhlweb02.vm.provision "shell", path: "data/apache_splunk_forwarder_installation.sh"
+    wbspzhlweb02.vm.synced_folder "data/www2/", "/var/www/html"
+
+    wbspzhlweb02.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      v.customize ["modifyvm", :id, "--memory", 2048]
+      v.customize ["modifyvm", :id, "--name", "wbspzhlweb02"]
+    end
+  end
+
+  config.vm.define "svpzhlspk01" do |svpzhlspk01|
+    svpzhlspk01.vm.box = "ubuntu/trusty64"
+    svpzhlspk01.vm.hostname = 'svpzhlspk01'
+
+    svpzhlspk01.vm.network :private_network, ip: "192.168.50.10"
+    svpzhlspk01.vm.network :forwarded_port, guest: 8000, host: 8000                     
+    svpzhlspk01.vm.network :forwarded_port, guest: 8089, host: 8089
+    svpzhlspk01.vm.provision :file, source: "data/_internal.xml", destination: "/home/vagrant/_internal.xml"
+    svpzhlspk01.vm.provision :file, source: "data/wbs_monitoring.xml", destination: "/home/vagrant/wbs_monitoring.xml"
+    svpzhlspk01.vm.provision "shell", path: "data/splunk_installation.sh"
+    svpzhlspk01.vm.provision "shell", path: "data/generate_logs.sh"
+    
+
+    svpzhlspk01.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      v.customize ["modifyvm", :id, "--memory", 2048]
+      v.customize ["modifyvm", :id, "--name", "svpzhlspk01"]
+    end
+  end
+
+  #config.vm.define :ubuntud do |buntud|
+    #config.vm.box = "peru/ubuntu-18.04-desktop-amd64"
+    #peru/ubuntu-20.04-desktop-amd64
+    #buntud.vm.network :private_network, ip: "192.168.50.25"
+
+    #buntud.vm.provider :virtualbox do |vb|
+      #vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      #vb.customize ["modifyvm", :id, "--memory", 3096]
+     # vb.customize ["modifyvm", :id, "--name", "ubuntu Szene Desktop"]                                           
+    #  vb.gui = true     
+   # end
+  #end
+
+end
+
+#wget -O splunkforwarder-8.1.4-17f862b42a7c-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.1.4&product=universalforwarder&filename=splunkforwarder-8.1.4-17f862b42a7c-Linux-x86_64.tgz&wget=true'
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  # config.vm.box_check_update = false
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # NOTE: This will enable public access to the opened port
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine and only allow access
+  # via 127.0.0.1 to disable public access
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  # config.vm.network "private_network", ip: "192.168.33.10"
+
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+  # config.vm.network "public_network"
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+  # config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+  #   vb.memory = "1024"
+  # end
+  #
+  # View the documentation for the provider you are using for more
+  # information on available options.
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
+

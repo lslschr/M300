@@ -1,0 +1,424 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="de">
+<!--<![endif]-->
+
+<head>
+    <!-- Title -->
+    <title>Datenbank - Theorie | Luis Lüscher | it.luis-luescher.com</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description"
+        content="Erfahre mehr über Datenbank Theorie. Wie funktioniert eine Datenbank? Was ist ein Datenbank-Management-System?">
+    <meta name="keywords" content="Informatik, Lernender, IT, Datenbank Management System, objektorientiere Datenbank, relationale Datenbank, Daten, Datenbanken">
+    <meta name="author" content="Luis Lüscher">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1" />
+    <meta name="page-topic" content="Forschung Technik">
+    <meta name="page-type" content="Private Homepage">
+    <meta name="audience" content="Azubis">
+    <meta http-equiv="content-language" content="de">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,400" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="Main Logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+            <!-- Top Menu -->
+            <div id="hornav" class="row text-light">
+                <div class="col-md-12">
+                    <div class="text-center visible-lg">
+                        <ul id="hornavmenu" class="nav navbar-nav">
+                            <li>
+                                <a href="index.html" class="fa-home
+                                        active">Home</a>
+                            </li>
+                            <li>
+                                <span class="fa-gears">Informatik</span>
+                                <ul>
+                                    <li class="parent">
+                                        <span>Datenbanken</span>
+                                        <ul>
+                                            <li>
+                                                <a href="datenbank-theorie.html">Theorie</a>
+                                            </li>
+                                            <li>
+                                                <a href="datenbank-tabellen.html">Datenbank
+                                                    erstellen mit SQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Hardware</span>
+                                        <ul>
+                                            <li>
+                                                <a href="hardware-access-point.html">Access
+                                                    Point</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-firewall.html">Firewall</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-nas.html">NAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-router.html">Router</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-server.html">Server</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-switch.html">Switch</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Linux</span>
+                                        <ul>
+                                            <li>
+                                                <a href="linux-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-distributionen.html">Distributionen</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-eastereggs.html">Eastereggs</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-basic.html">Grundbefehle</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-mariadb.html">MariaDB</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-webserver.html">Webserver</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="documentations.html">Modularbeiten</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Netzwerk</span>
+                                        <ul>
+                                            <li>
+                                                <a href="netzwerk-vpn.html">VPN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-tor.html">TOR</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-snmp.html">SNMP</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-monitoring.html">NW-Monitoring
+                                                    Systeme</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-vlan.html">VLAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-wlan.html">WLAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="php.html">PHP</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://security.luis-luescher.com" target="_blank">Security</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Serverdienste</span>
+                                        <ul>
+                                            <li>
+                                                <a href="serverdienste-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-dns.html">DNS</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-file.html">File</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-print.html">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-ad.html">AD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-me.html" class="fa-copy">Über
+                                    mich</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fa-comment">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Menu -->
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- === END HEADER === -->
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-40">
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3">
+                    <ul class="list-group sidebar-nav" id="sidebar-nav">
+                        <!-- Weitere Theorie -->
+                        <li class="list-group-item list-toggle">
+                            <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Weitere
+                                Theorie</a>
+                            <ul id="collapse-typography" class="collapse">
+                                <li>
+                                    <a href="datentypen.html">
+                                        <i class="fa fa-sort-alpha-asc"></i>Datentypen</a>
+                                </li>
+                                <li>
+                                    <a href="erd.html">
+                                        <i class="fa-file-o"></i>ERD</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Weitere Theorie -->
+                        <!-- Datenbank erstellen und verwalten -->
+                        <li class="list-group-item list-toggle">
+                            <a class="accordion-toggle" href="#collapse-components" data-toggle="collapse">Datenbank
+                                erstellen</a>
+                            <ul id="collapse-components" class="collapse">
+                                <li>
+                                    <span class="badge"></span>
+                                    <a href="datenbank-tabellen.html">
+                                        <i class="fa fa-tags"></i>Tabellen</a>
+                                </li>
+                                <li>
+                                    <span class="badge">New</span>
+                                    <a href="attribute.html">
+                                        <i class="fa fa-align-left"></i>Schlüsselantributte</a>
+                                </li>
+                                <li>
+                                    <a href="datenbank-daten.html">
+                                        <i class="fa fa-columns"></i>Daten</a>
+                                </li>
+                                <li>
+                                    <a href="datenbank-abfragen.html">
+                                        <i class="fa fa-arrows-h"></i>Abfragen</a>
+                                </li>
+                                <li>
+                                    <a href="datenbank-joins.html">
+                                        <i class="fa fa-arrows-h"></i>Joins</a>
+                                </li>
+                                <li>
+                                    <a href="datenbank-funktionen.html">
+                                        <i class="fa fa-arrows-h"></i>Funktionen</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Datenbank erstellen und verwalten -->
+                        <!-- Coming Soon -->
+                        <!-- End Icons -->
+                        <!-- End Grid System -->
+                    </ul>
+                </div>
+                <!-- End Sidebar Menu -->
+                <div class="col-md-9">
+                    <!-- Paragraph Examples -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="headline">
+                                <h1>Datenbank Theorie</h1>
+                            </div>
+                            <p class="lead">Eine Datenbank ist ein elektronisches Verwaltungssystem, das Informationen
+                                in Form von Daten beinhaltet. Diese sind so verwaltet, dass sie leicht abgerufen und
+                                gegebenfalls geändert werden können.
+                                Datenbanken lassen sich außerdem, je nach Inhalt, in weitere Klassen unterteilen. Auch
+                                in der IT werden sie unterschieden, hier nach ihrem organisatorischen Ansatz. Die meist
+                                gebrauchte Datenbank in IT-Landschaften ist die relationale Datenbank.</p>
+                            <hr>
+                            <h3>Wie funktioniert eine Datenbank?</h3>
+                            <p>Eine Datenbank ist grundsätzlich ein System für eine elektronische Datenverwaltung. Sie
+                                verwaltet und zeigt Datenmengen an und fungiert auch als Datenspeicher. Eine Datenbank
+                                funktioniert über ein sogenanntes Datenbank-Management-System (DBMS). Das DBMS ist somit
+                                ein fester Bestandteil einer Datenbank. Datenbanksysteme sind heutzutage ein
+                                Hauptbestandteil von Unternehmenssoftware.</p>
+                            <hr>
+                            <h3>Was ist ein Datenbank-Management-System?</h3>
+                            <p>Während in die reine Datenbank die bereitgestellten und zusammengefassten Informationen
+                                hinterlegt werden, ist das DBMS als Software dafür zuständig, diese zu verwalten. Das
+                                DBMS bietet die Möglichkeit, dass mehrere Nutzer ihre Daten in die Datenbank legen und
+                                wieder abrufen können. Außerdem verwaltet und bearbeitet es Nutzer- und
+                                Programmanfragen. Bei der Bearbeitung der Anfragen gewährleistet das DBMS die Sicherheit
+                                der Daten. Häufig handelt es sich bei einem DBMS um relationale
+                                Datenbank-Management-Systeme (RDBMS). Eine relationale Datenbank beruht auf einer
+                                Anhäufung von Tabellen (Relationen). In diesen Tabellen sind dann die Datensätze
+                                abgespeichert – bereit, abgerufen oder neu geordnet zu werden. Die RDBMS benutzt die
+                                sogenannte Structured Query Language (SQL), eine Standard-Programmiersprache zum Abrufen
+                                und Verwalten von Datenbanken.</p>
+                            <hr>
+                            <h3>Die objektorientierte Datenbank im Vergleich zur relationalen Datenbank</h3>
+                            <p>Vergleichsweise neue Datenbank-Management-Systeme sind Objektorientierte
+                                Datenbank-Management-Systeme (ODBMS). Entwickelt wurden diese Ende der 1980er Jahre.
+                                Hier werden, im Gegensatz zum RDBMS, Daten als Objekte verwaltet. Neben den üblichen
+                                Aufgaben einer Datenbank muss das ODBMS unter anderem komplexe Objekte verwalten,
+                                Objekte in Klassen einteilen und diese Objektklassen in einer Hierarchie anordnen.
+                                Jedoch herrscht bis heute eine dominierende Rolle des relationalen Datenbanksystems, da
+                                es im Vergleich relativ einfach und flexibel zu erstellen und zu steuern ist.</p>
+                            <hr>
+                            <h3>Spezielle Formen der Datenbanken</h3>
+                            <p>Eine besondere Form der Datenbank ist die In-Memory-Datenbank bzw.
+                                Hauptspeicher-Datenbank. Diese speichert Daten im Arbeitsspeicher/RAM eines PCs, um
+                                schnellere Antwortzeiten zu erreichen. Somit wird die Verarbeitung von Abfragen
+                                verbessert.</p>
+                            <p>Eine weitere spezielle Form der Datenbank ist die MongoDB. Dies ist eine
+                                Open-Source-Datenbank, welche ein dokumentorientiertes Datenmodell benutzt. Im
+                                Unterschied zu relationalen Datenbanken, die Tabellen beinhalten, verwendet diese
+                                Datenbank eine bestimmte Art des Aufbaus von Sammlungen bzw. Dokumenten. Sammlungen
+                                enthalten eine Hand voll Dokumente und dienen als Ersatz für die Tabellen von
+                                relationalen Datenbanken. Die Dokumente umfassen mehrere Schlüssel und bilden die Basis
+                                für die Daten.</p>
+                            <p>Es besteht außerdem die Möglichkeit, eine Datenbank für eine virtualisierte Computing
+                                Umgebung zu optimieren oder dafür eine zu erstellen. Diese Lösung nennt man dann eine
+                                Cloud-Datenbank. Das bietet unter anderem den Vorteil, dass man die Möglichkeit hat,
+                                eine Datenbank von einem Speicherort zu einem anderen zu verlagern.</p>
+                            <p>Da es heutzutage eine Vielzahl von Datenbanksystemen gibt, hängt die Wahl des richtigen
+                                Systems von mehreren Faktoren ab. Die Hauptfragen dabei sind, wie viele Nutzer mit der
+                                Datenbank arbeiten wollen und auf welche Art die Daten erfasst werden sollen.</p>
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- End Paragraph Examples -->
+                    <div class="clearfix margin-bottom-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+    <!-- === BEGIN FOOTER === -->
+    <div id="base" class="background-dark text-light">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-6 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Infos zur Website</h3>
+                    <p>Die Inhalte auf dieser Webseite dürfen nichtkommerziell und zu Bildungszwecken verwendet werden.
+                        Bei Verbesserungsvorschlägen bitte das Kontaktformular benutzen.</p>
+                    <p>Vielen Dank für Ihren Besuch</p>
+                </div>
+                <!-- End Disclaimer -->
+                <!-- Image Credits -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Soziale Medien</h3>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://www.instagram.com/lslschr/?hl=de" target="_blank">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/luis-luescher/" target="_blank">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lslschr" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Image Credits -->
+                <!-- Friends -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Friends -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="background-dark text-light">
+        <div class="container no-padding">
+            <div class="row">
+                <!-- Footer Menu -->
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="linux-basic.html">Informatik</a>
+                        </li>
+                        <li>
+                            <a href="https://me.luis-luescher.com" target="_blank">Über mich</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="legal_disclosure.html"">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Footer Menu -->
+            <!-- Copyright -->
+            <div id=" copyright" class="col-md-4">
+
+                                <p class="pull-right">Made by Luis Lüscher. All rights reserved.</p>
+
+                </div>
+                <!-- End Copyright -->
+            </div>
+        </div>
+        <!-- End Footer -->
+        <!-- JS -->
+        <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <!-- Isotope - Portfolio Sorting -->
+        <script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+        <!-- Mobile Menu - Slicknav -->
+        <script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+        <!-- Animate on Scroll-->
+        <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+        <!-- Stellar Parallax -->
+        <script type="text/javascript" src="assets/js/jquery.stellar.js" charset="utf-8"></script>
+        <!-- Sticky Div -->
+        <script type="text/javascript" src="assets/js/jquery.sticky.js" charset="utf-8"></script>
+        <!-- Slimbox2-->
+        <script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+        <!-- End JS -->
+</body>
+
+</html>
+<!-- === END FOOTER === -->

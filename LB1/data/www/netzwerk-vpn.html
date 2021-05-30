@@ -1,0 +1,678 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="de">
+<!--<![endif]-->
+
+<head>
+    <!-- Title -->
+    <title>Netzwerk VPN | Luis Lüscher | it.luis-luescher.com</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Erfahre mehr über VPN. Wie funktionieren VPNs? Funktionweise von VPNs">
+    <meta name="keywords" content="Informatik, Lernender, IT, Luis Lüscher, VPNs, Network, Netzwerk">
+    <meta name="author" content="Luis Ricardo Lüscher">
+    <meta name="publisher" content="Luis Ricardo Lüscher">
+    <meta name="copyright" content="Luis Ricardo Lüscher">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1" />
+    <meta name="page-topic" content="Forschung Technik">
+    <meta name="page-type" content="Private Homepage">
+    <meta name="audience" content="Azubis">
+    <meta http-equiv="content-language" content="de">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,400" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="Main Logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+            <!-- Top Menu -->
+            <div id="hornav" class="row text-light">
+                <div class="col-md-12">
+                    <div class="text-center visible-lg">
+                        <ul id="hornavmenu" class="nav navbar-nav">
+                            <li>
+                                <a href="index.html" class="fa-home
+                                        active">Home</a>
+                            </li>
+                            <li>
+                                <span class="fa-gears">Informatik</span>
+                                <ul>
+                                    <li class="parent">
+                                        <span>Datenbanken</span>
+                                        <ul>
+                                            <li>
+                                                <a href="datenbank-theorie.html">Theorie</a>
+                                            </li>
+                                            <li>
+                                                <a href="datenbank-tabellen.html">Datenbank
+                                                    erstellen mit SQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Hardware</span>
+                                        <ul>
+                                            <li>
+                                                <a href="hardware-access-point.html">Access
+                                                    Point</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-firewall.html">Firewall</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-nas.html">NAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-router.html">Router</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-server.html">Server</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-switch.html">Switch</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Linux</span>
+                                        <ul>
+                                            <li>
+                                                <a href="linux-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-distributionen.html">Distributionen</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-eastereggs.html">Eastereggs</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-basic.html">Grundbefehle</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-mariadb.html">MariaDB</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-webserver.html">Webserver</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="documentations.html">Modularbeiten</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Netzwerk</span>
+                                        <ul>
+                                            <li>
+                                                <a href="netzwerk-vpn.html">VPN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-tor.html">TOR</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-snmp.html">SNMP</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-monitoring.html">NW-Monitoring
+                                                    Systeme</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-vlan.html">VLAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-wlan.html">WLAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="php.html">PHP</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://security.luis-luescher.com" target="_blank">Security</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Serverdienste</span>
+                                        <ul>
+                                            <li>
+                                                <a href="serverdienste-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-dns.html">DNS</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-file.html">File</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-print.html">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-ad.html">AD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-me.html" class="fa-copy">Über
+                                    mich</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fa-comment">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Menu -->
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- === END HEADER === -->
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-40">
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3">
+                    <ul class="list-group sidebar-nav" id="sidebar-nav">
+                        <!-- Weitere Theorie -->
+                        <li class="list-group-item list-toggle">
+                            <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Weitere
+                                Links</a>
+                            <ul id="collapse-typography" class="collapse">
+                                <li>
+                                    <a href="https://de.wikipedia.org/wiki/Virtual_Private_Network" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>VPN Wikipedia</a>
+                                </li>
+                                <li>
+                                    <a href="https://internetprivatsphare.ch/was-ist-vpn/" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>Internetprivatsphare.ch</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Weitere Theorie -->
+                        <!-- Datenbank erstellen und verwalten -->
+                        <li class="list-group-item list-toggle">
+                            <a class="accordion-toggle" href="#collapse-components" data-toggle="collapse">Mehr zu
+                                Netzwerk</a>
+                            <ul id="collapse-components" class="collapse">
+                                <li>
+                                    <span class="badge">Du bist hier</span>
+                                    <a href="netzwerk-vpn.html">
+                                        <i class="fa fa-arrows-h"></i>VPN</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-tor.html">
+                                        <i class="fa fa-arrows-h"></i>TOR</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-snmp.html">
+                                        <i class="fa fa-arrows-h"></i>SNMP</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-monitoring.html">
+                                        <i class="fa fa-arrows-h"></i>Monitoring Systeme</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-vlan.html">
+                                        <i class="fa fa-arrows-h"></i>VLAN</a>
+                                </li>
+                                <li>
+                                    <a href="netzwerk-wlan.html">
+                                        <i class="fa fa-arrows-h"></i>WLAN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Icons -->
+                        <!-- End Grid System -->
+                    </ul>
+                </div>
+                <!-- End Sidebar Menu -->
+                <div class="col-md-9">
+                    <!-- Paragraph Examples -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="headline">
+                                <h1>VPN - Virtual Private Network
+                                </h1>
+                            </div>
+                            <h6>VPN ist ein logisches privates Netzwerk auf einer öffentlich zugänglichen Infrastruktur.
+                                Nur die Kommunikationspartner, die zu diesem privaten Netzwerk gehören, können
+                                miteinander kommunizieren und Informationen und Daten austauschen.</h6>
+
+                            <p>Eine allgemein gültige Definition für VPN gibt es allerdings nicht. Der Begriff und die
+                                Abkürzung VPN stehen für eine Vielzahl unterschiedlicher Techniken. So wird manche
+                                Technik, Protokoll oder Produkt zu VPN zugeordnet, obwohl Aspekte wie Verschlüsselung
+                                oder Authentifizierung völlig aussen vor gelassen sind.</p>
+
+                            <p>VPNs müssen Authentizität, Vertraulichkeit und Integrität sicherstellen, damit ein
+                                sicherer Betrieb mit Datenschutz möglich ist. Authentizität bedeutet die Identifizierung
+                                von autorisierten Nutzern und die Überprüfung der Daten, dass sie nur aus der
+                                autorisierten Quelle stammen. Vertraulichkeit und Geheimhaltung wird durch
+                                Verschlüsselung der Daten hergestellt. Mit der Integrität wird sichergestellt, dass die
+                                Daten von Dritten nicht verändert wurden. Unabhängig von der Infrastruktur sorgen VPNs
+                                für die Sicherheit der Daten, die darüber übertragen werden.</p>
+
+                            <hr>
+                            <!-- Tab v1 -->
+                            <h2>Verschiedene VPN-Typen</h2>
+                            <div class="tabs">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#sample-1a" data-toggle="tab">End-to-Site-VPN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#sample-1b" data-toggle="tab">Site-to-Site-VPN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#sample-1c" data-toggle="tab">End-to-End-VPN</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="sample-1a">
+                                        <h3 class="no-margin no-padding">End to Site VPN</h3>
+                                        <p>End-to-Site-VPN beschreibt ein VPN-Szenario, bei dem Heimarbeitsplätze oder
+                                            mobile Benutzer (Aussendienst) in ein Unternehmensnetzwerk eingebunden
+                                            werden. Der externe Mitarbeiter soll so arbeiten, wie wenn er sich im
+                                            Netzwerk des Unternehmens befindet. Man bezeichnet dieses VPN-Szenario auch
+                                            als Remote Access.
+                                            Die VPN-Technik stellt eine logische Verbindung, den VPN-Tunnel, zum
+                                            entfernten lokalen Netzwerk über ein öffentliches Netzwerk her. Hierbei muss
+                                            ein VPN-Client auf dem Computer des externen Mitarbeiters installieren sein.
+                                            Im Vordergrund steht ein möglichst geringer, technischer und finanzieller
+                                            Aufwand für einen sicheren Zugriff auf das entfernte Netzwerk.
+                                        </p>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-pane fade in" id="sample-1b">
+                                        <h3 class="no-margin no-padding">Site to Site VPN</h3>
+                                        <p>Site-to-Site-VPN und LAN-to-LAN-VPN, oder auch Branch-Office-VPN genannt,
+                                            sind VPN-Szenarien, um mehrere lokale Netzwerke von Aussenstellen oder
+                                            Niederlassungen (Filialen) zu einem virtuellen Netzwerk über ein
+                                            öffentliches Netz zusammenzuschalten.
+                                            Netzwerke, die sich an verschiedenen Orten befinden lassen sich über eine
+                                            angemietete Standleitung direkt verbinden. Diese Standleitung entspricht in
+                                            der Regel einer physikalischen Festverbindung zwischen den beiden
+                                            Standorten. Bei Festverbindungen, Frame Relay und ATM kommen je nach Anzahl,
+                                            Entfernung, Bandbreite und Datenmenge sehr schnell hohe Kosten zusammen.
+                                            Da jedes Netzwerk in der Regel auch eine Verbindung zum Internet hat, bietet
+                                            es sich an, diese Internet-Verbindung zur Zusammenschaltung von zwei oder
+                                            mehr Netzwerken mit VPN-Technik (LAN-to-LAN-Kopplung) zu nutzen. Bei VPNs
+                                            über das Internet entstehen einmalige Kosten für die Einrichtung und
+                                            laufende Kosten nur die, die für den Internet Service Provider zu bezahlen
+                                            sind.</p>
+
+                                        <p>Virtuelle private Netze (VPN) werden immer öfter über das Internet
+                                            aufgebaut. Das Internet wird so zur Konkurrenz zu den klassischen
+                                            WAN-Diensten der Netzbetreiber. VPNs lassen sich über das Internet billiger
+                                            und flexibler betreiben.</p>
+
+                                        <p>Eine Variante von Site-to-Site-VPN ist das Extranet-VPN. Während ein
+                                            Branch-Office-VPN nur mehrere lokale Netzwerke einer Firma verbindet, ist
+                                            ein Extranet-VPN ein virtuelles Netzwerk, das die Netzwerke
+                                            unterschiedlicher Firmen miteinander verbindet. In der Regel geht es darum
+                                            bestimmte Dienste fremder Unternehmen ins eigene Netzwerk zu integrieren
+                                            oder Dienste für fremde Unternehmen anzubieten. Zum Beispiel für
+                                            Geschäftspartner, Lieferanten und Support-leistende Unternehmen. Dabei
+                                            gewährt man dem externen Unternehmen Zugriff auf Teilbereiche des eigenen
+                                            Netzwerks. Die Zugriffsbeschränkung erfolgt mittels einer Firewall zwischen
+                                            dem lokalen Netzwerk und dem Dienstenetzwerk. Extranet-VPNs ermöglichen eine
+                                            sichere Kommunikation bzw. einen sicheren Datenaustausch zwischen den
+                                            beteiligten Unternehmen.
+                                        </p>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-pane fade in" id="sample-1c">
+                                        <h3 class="no-margin no-padding">End to End VPN</h3>
+                                        <p>End-to-End-VPN beschreibt ein VPN-Szenario, bei dem ein Client auf einen
+                                            anderen Client in einem entfernten Netzwerk zugreift. Hierbei deckt der
+                                            VPN-Tunnel die gesamte Verbindung zwischen zwei Hosts ab. Auf beiden Seiten
+                                            muss eine entsprechende VPN-Software installiert und konfiguriert sein. In
+                                            der der Regel ist der Verbindungsaufbau nur durch die Unterstützung einer
+                                            zwischengeschalteten Station möglich. Das bedeutet, eine direkter
+                                            Verbindungsaufbau von Host zu Host ist nicht möglich. Stattdessen bauen
+                                            beide Seiten eine Verbindung zu einem Gateway auf, dass die beiden
+                                            Verbindungen dann zusammenschalten.</p>
+                                        <p>Typische Anwendung eines End-to-End-VPN ist Remote-Desktop über öffentliche
+                                            Netze. Während RDP und VNC sich wegen der fehlenden Verschlüsselung nur für
+                                            den Einsatz in lokalen Netzwerken eignet, gibt es für Remote-Desktop-VPNs
+                                            meist nur proprietäre und kommerzielle Lösungen. Zum Beispiel Teamviewer und
+                                            GotoMyPC.
+                                        </p>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Tab v1 -->
+                            <h2>Verschiedene VPN-Typen</h2>
+                            <!-- Accordion -->
+                            <div id="accordion" class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Tunneling
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-One" class="accordion-body collapse in">
+                                        <div class="panel-body">
+                                            <p>Datenpakete werden über ein Netz im Huckepackverfahren sicher
+                                                weitergeleitet. Das Originaldatenpaket wird als Payload (Nutzlast)
+                                                von einem Quell-Rechner über ein anderes Protokoll verschickt.
+                                                Dieser Vorgang wird auch als Encapsulation bezeichnet. Er erzeugt
+                                                einen zusätzlichen Header, der dem Originalpaket vorangestellt wird.
+                                                Am Tunnelende wird der Header wieder entfernt.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Layer 2 Forwarding (L2F)
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Two" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>L2F ist ein Netzwerkprotokoll, welches von mehreren Firmen, Cisco,
+                                                Northern Telecom usw., entwickelt wurde und auf Layer 2 arbeitet. Da es
+                                                hautsächlich für den Einsatz im Provider Enterprise-Modell entwickelt
+                                                wurde gibt es praktisch keine Client-Implementierung, sondern nur
+                                                Softwaremodule für Remote-Access-Konzentratoren und Router. Um über L2F
+                                                einen Tunnel aufzubauen muss eine Verbindung zum Point-of-Presence des
+                                                Internet Service Providers bestehen. Dort wird der Client
+                                                authentifiziert. Dies geschieht über PPP, zusätzlich kann noch eine
+                                                RADIUS –Server eingesetzt werden. Anschliessend wird ein Virtueller
+                                                Tunnel vom IPS zum Gateway des Providers aufgebaut, wo sich der Client
+                                                nochmals authentifizieren muss. Ist dies erfolgt, werden die Pakete
+                                                angenommen und weiterverarbeitet. Dabei herrscht bei L2F eine relativ
+                                                grosse Protokollfreiheit, d.h. es können ausser IP-Paketen auch Pakete
+                                                von anderen Protokollen transportiert werden (zum Bsp. ATM). Ein weitere
+                                                Vorteil von L2F ist, dass es den Aufbau von mehreren parallelen Tunneln
+                                                unterstützt, das und die Client-ID erlaubten mehrere parallele
+                                                Verbindungen pro Tunnel. Das war besonders für kleinere Netzwerke die
+                                                über eine Wählverbindung (analog oder ISDN) mit ihrem Provider verbunden
+                                                waren von Interesse, da so nur wenige Verbindungen benötigt wurden. L2F
+                                                übernimmt nur das Tunneling und die Authentifizierung des Clients und
+                                                besitzt sonst keine weiteren Sicherheitsdienste, wie z.B.
+                                                Verschlüsselung. Aus diesem Grund und auch weil mit L2TP ein besseres
+                                                Alternativ/Nachfolgeprotokoll existiert, spielt L2F keine grosse Rolle
+                                                mehr, der RFC2341, welcher L2F definiert, hat den Status "historic".</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Three" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Point to Point Tunneling Protocol (PPTP)
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Three" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>PPTP wurde etwa zur gleichen Zeit wie L2F von einem Konsortium rund um
+                                                Microsoft, 3com u.a. entwickelt, welche zu diesem Zweck das PPTP-Forum
+                                                gründeten. 1996 wurde PPTP der IETF als Standardprotokoll zum Internet
+                                                Tunneling vorgeschlagen, existiert auch heute noch lediglich als
+                                                informeller RFC. Im Gegensatz zu L2F ist PPTP nicht ausschliesslich für
+                                                das Provider-Enterprise-Modell geeignet, sondern auch für das
+                                                Ende-zu-Ende Modell. Beim Provider-Enterprise-Modell funktioniert PPTP
+                                                ähnlich wie L2F. Der Provider öffnet nach der Einwahl des Clients den
+                                                VPN-Tunnel zum entsprechenden Server der Gegenstelle. Das Tunneling
+                                                selbst erfolgt über PPTP Pakete, welche in GRE (Generic Routing
+                                                Encapsulation) Pakete gekapselt werden. Im Gegensatz zu L2F kann PPTP
+                                                keinen parallelen Tunnel verwalten, besitzt dafür aber integrierte
+                                                Sicherheitsdienste wie Datenverschlüsselung (MPPE – Microsoft
+                                                Point-to-Point Encryption) und eine etwas sichere Authentifizierung
+                                                (MS-CHAPv2) als L2F. Allerdings waren ebendiese Sicherheitsdienste die
+                                                Hauptkritikpunkte an PPTP. So wurde zum Beispiel die schwache
+                                                Implementierung von MPPE, welche auf RC4 aufbaut kritisiert.
+                                                Hauptkritikpunkt war, das der Schlüssel zur Verschlüsselung direkt aus
+                                                den Hashwert des Benutzerpassworts gebildet wurde. Diese Schwäche
+                                                existiert auch weiterhin, trotz einiger Nachbesserungen seitens der
+                                                Entwickler. Trotz dieser Schwächen war PPTP relativ weit verbreitet.
+                                                Dies lag hauptsächlich daran, das ein PPTP Client ab Windows 95 (als
+                                                Update), bzw. Windows NT standardmässig Installiert war. Mittlerweile
+                                                ist PPTP im VPN-Bereich nicht mehr so stark vertreten und wurde durch
+                                                IPSec bzw. L2TP/IPSec abgelöst. Allerdings wird PPTP noch in einigen
+                                                Ländern oberhalb von «PPP over ATM» für DSL-Anschlüsse genutzt.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Four" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                Layer 2 Tunneling Protocol (L2TP)
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Four" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>Das L2TP wurde gemeinsam von Cisco und dem PPTP-Forum als Nachfolger für
+                                                die beiden Protokolle L2F und PPTP entwickelt. Dabei wurden die Vorteile
+                                                der beiden Vorgänger kombiniert. So sind z.B. mehrere parallele Tunnel,
+                                                welche wiederum mehrere PPP Verbindungen beinhalten kein Problem.
+                                                Ausserdem kann L2TP auch im Ende-zu-Ende-Modell eingesetzt werden.
+                                                Ursprünglich wurde L2TP hauptsächlich für das Provider-Enterprise-Modell
+                                                entwickelt. Dabei meldet sich der Client an einem sog. LAC (L2TP Access
+                                                Concentrator) Server des Providers an. Dieser erkennt anhand
+                                                verschiedener Parameter wie Benutzername, etc. ob es sich um eine
+                                                „gewöhnliche“ Einwahl handelt, oder ob ein Tunnel zur entsprechenden
+                                                Gegenstelle, dem LNS (L2TP Network Server) hergestellt werden soll. In
+                                                diesem Fall spricht man von einem „erzwungenen“ Tunnel, da der Benutzer
+                                                keine Gewalt darüber hat ob seine Verbindung getunnelt wird oder nicht.
+                                                Allerdings kann die Funktionalität des LAC auch auf den Clientrechner
+                                                übertragen werden. Auf diese Weise entsteht eine Ende-zu-Ende Verbindung
+                                                die vom Client „freiwillig“ initiiert werden kann. Beim Tunneling selbst
+                                                werden meist PPP Pakete in L2TP Pakete gekapselt, welche wiederum über
+                                                einen Paketdienst z.B. UDP, ATM, etc. verschickt werden. Durch die
+                                                Kapselung von PPP können die verschiedensten Protokolle über L2TP
+                                                übertragen werden. Da L2TP ein reines Tunnelprotokoll ist, fehlt
+                                                jegliche Verschlüsselung. Allerdings kann diese durch die zusätzliche
+                                                Benutzung von IPSec im Transport-Mode hergestellt werden.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Five" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                IPSec-VPN
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Five" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>IPSec ist eine Sammlung von Protokollen (AH, ESP, IKE) und wurde zur
+                                                Sicheren Kommunikation über IP-Netze entworfen. Im Gegensatz zu den
+                                                anderen Protokollen arbeitet IPSec auf Layer 3 und bietet sowohl das
+                                                Tunneling als auch eine sichere Verschlüsselung an. Über IPSec kann so
+                                                problemlos ein sicherer Tunnel aufgebaut werden. Allerdings kann das
+                                                Tunneling auch von einem anderen Protokoll, z.B. L2TP übernommen werden,
+                                                während sich IPSec nur um die Verschlüsselung kümmert. So können auch
+                                                VPN Verbindungen, die über einen Provider mit L2TP laufen sicher
+                                                verschlüsselt werden. Kritisiert wird IPSec hauptsächlich aufgrund
+                                                seiner Komplexität, welche zu einer hohen Fehleranfälligkeit führt.
+                                                Ausserdem ist IPSec, wie der Name schon sagt, nur in der Lage IP-Pakete
+                                                zu kapseln. Auch bei der Verwendung von NAT kann es zu Problemen kommen.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" href="#collapse-Six" data-parent="#accordion"
+                                                data-toggle="collapse">
+                                                SSL-VPN
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Six" class="accordion-body collapse">
+                                        <div class="panel-body">
+                                            <p>SSL-VPNs sind die jüngste Entwicklung auf diesem Gebiet. Der grosse
+                                                Vorteil von SSL basierten VPNs ist ihre hohe Flexibilität. So kann in
+                                                der einfachsten Form lediglich eine SSL gesicherte Verbindung zu einem
+                                                Webserver der Firma hergestellt und auf die dort implementierten
+                                                Webservices zugegriffen werden (wie z.B. beim Onlinebanking). Hierzu ist
+                                                lediglich ein normaler Browser nötig und die Verbindung kann von jedem
+                                                Ort mit einer Internetverbindung hergestellt werden. Auch der sichere
+                                                Zugriff von unsicheren Orten, z.B. Internet Cafés ist möglich. Hierbei
+                                                spricht man von einer Clientless Lösung. Diese lässt sich erweitern,
+                                                indem im Browser ein Plug-In installiert wird, welches Zugriff zu
+                                                anderen TCP/UDP fähigen Applikationen ermöglicht. Hier spricht man von
+                                                einer Thin-Client Lösung. Aber auch eine Fat-Client Lösung ist möglich,
+                                                indem ein Virtuelles Netzwerkinterface installiert wird, über welches
+                                                der entfernte Client über einen SSL-VPN Server transparent in das
+                                                Netzwerk integriert wird (OpenVPN funktioniert nach diesem Prinzip). Mit
+                                                Hilfe eines solchen Servers können z.B. beim Verbindungsaufbau der
+                                                Clientrechner einem Sicherheitscheck unterzogen werden, aufgrund dessen
+                                                anschliessend die Freigaben auf Ressourcen im Unternehmensnetzwerk
+                                                erfolgen. So kann z.B. der Zugriff aus einem Internet Café wesentlich
+                                                restriktiver gehandhabt werden als vom Unternehmensnotebook. Auch ein
+                                                Sicherheitscheck beim Abmelden ist möglich, um z.B. den Cache des
+                                                Browsers zu löschen.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Accordion -->
+                        </div>
+                    </div>
+                    <!-- End Paragraph Examples -->
+                    <div class="clearfix margin-bottom-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+    <!-- === BEGIN FOOTER === -->
+    <div id="base" class="background-dark text-light">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-6 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Infos zur Website</h3>
+                    <p>Die Inhalte auf dieser Webseite dürfen nichtkommerziell und zu Bildungszwecken verwendet werden.
+                        Bei Verbesserungsvorschlägen bitte das Kontaktformular benutzen.</p>
+                    <p>Vielen Dank für Ihren Besuch</p>
+                </div>
+                <!-- End Disclaimer -->
+                <!-- Image Credits -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Soziale Medien</h3>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://www.instagram.com/lslschr/?hl=de" target="_blank">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/luis-luescher/" target="_blank">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lslschr" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Image Credits -->
+                <!-- Friends -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Friends -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="background-dark text-light">
+        <div class="container no-padding">
+            <div class="row">
+                <!-- Footer Menu -->
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="linux-basic.html">Informatik</a>
+                        </li>
+                        <li>
+                            <a href="https://me.luis-luescher.com" target="_blank">Über mich</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="legal_disclosure.html"">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Footer Menu -->
+            <!-- Copyright -->
+            <div id=" copyright" class="col-md-4">
+
+                                <p class="pull-right">Made by Luis Lüscher. All rights reserved.</p>
+
+                </div>
+                <!-- End Copyright -->
+            </div>
+        </div>
+        <!-- End Footer -->
+        <!-- JS -->
+        <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <!-- Isotope - Portfolio Sorting -->
+        <script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+        <!-- Mobile Menu - Slicknav -->
+        <script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+        <!-- Animate on Scroll-->
+        <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+        <!-- Stellar Parallax -->
+        <script type="text/javascript" src="assets/js/jquery.stellar.js" charset="utf-8"></script>
+        <!-- Sticky Div -->
+        <script type="text/javascript" src="assets/js/jquery.sticky.js" charset="utf-8"></script>
+        <!-- Slimbox2-->
+        <script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+        <!-- End JS -->
+</body>
+
+</html>
+<!-- === END FOOTER === -->

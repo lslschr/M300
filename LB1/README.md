@@ -1,5 +1,5 @@
 # Einleitung (Summary)
-Einleitung zum LB1 Projekt (Erklärungen)
+Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Leistungsbeurteilung 1. 
 
 ## Inhaltsverszeichnis
 - [1-Vorwort](#1-Vorwort)<br>
@@ -10,11 +10,15 @@ Einleitung zum LB1 Projekt (Erklärungen)
 
 	- [13-Danksagung](#13-Danksagung)<br>
     
-    - [14-Managment-Summary](#14-Managment-Summary)<br>
+  - [14-Managment-Summary](#14-Managment-Summary)<br>
 
-    - [15-Modulidentifikation](#15-Modulidentifikation)<br>
+  - [15-Modulidentifikation](#15-Modulidentifikation)<br>
+    
+    - [151-Handlungsziele](#151-Handlungsziele)<br>
 
-    - [16-Darstellung und Aufbau](#16-Darstellung-und-Aufbau)<br>
+    - [152-Handlungsnotwendige-Kenntnisse](#152-Handlungsnotwendige-Kenntnisse)<br>
+
+  - [16-Darstellung und Aufbau](#16-Darstellung-und-Aufbau)<br>
 
 - [2-Umfeld-und-Ablauf](#2-Umfeld-und-Ablauf)<br>
 
@@ -114,11 +118,7 @@ Einleitung zum LB1 Projekt (Erklärungen)
 
 		- [411-Splunk](#411-Splunk)<br>
 
-		- [412-Wordpress](#412-Wordpress)<br>
-
-		- [413-MariaDB](#413-MariaDB)<br>
-
-		- [414-Apache](#414-Apache)<br>
+		- [412-Apache](#412-Apache)<br>
 
 - [5-Planen](#5-Planen)<br>
 
@@ -153,14 +153,48 @@ Einleitung zum LB1 Projekt (Erklärungen)
 Text
 
 ### 11-Selbststaendigkeit
+Ich versichere, dass ich die vorliegende Arbeit selbstständig und ohne Benutzung anderer als der im
+Literaturverzeichnis angegebenen Quellen und Hilfsmittel angefertigt habe.
+Die wörtlich oder inhaltlich den im Literaturverzeichnis aufgeführten Quellen und Hilfsmitteln
+entnommenen Stellen sind in der Arbeit als Zitat bzw. Paraphrase kenntlich gemacht.<br>
+
+Oberengstringen, 10.05.2021<br>
+Luis Lüscher<br>
 
 ### 12-Projekthintergrund
 
 ### 13-Danksagung
+Ich möchte mich bei Marcello Calisto bedanken, der mich in der schulischen Ausbildung immer wieder
+aufs Neue herausfordert und versucht, dass ich mein volles Potenzial ausschöpfen kann. Zudem hat er
+den gesamten Unterricht, wie immer, sehr spannend gestaltet.<br>
+Zudem möchte ich mich noch bei noch bei meinem Vater Theodor Lüscher bedanken für das Gegenlesen meiner Dokumentation.
 
 ### 14-Managment-Summary
 
 ### 15-Modulidentifikation
+#### 151-Handlungsziele
+1. Aus den Vorgaben die erforderlichen Dienste ermitteln, Schutz- und Sicherheitsanforderungen ableiten und ein Konzept für die Integration der Dienste ausarbeiten.
+2. Clients und Server gemäss Vorgaben konfigurieren, einrichten und geforderte Funktionalität überprüfen.	
+3. Netzwerkverbindungen einrichten, Dienste in Betrieb nehmen und testen. Definierte Schutz- und Sicherheitsmassnahmen überprüfen.	
+4. Anwendungen und Tools installieren, einrichten und geforderte Funktionalität überprüfen und gemeinsame Ressourcen einbinden	
+5. Allfällige Fehler systematisch eingrenzen, protokollieren und Massnahmen zur Fehlerbehebung einleiten.	
+6. Dokumentation für die Administration des Netzes, der Rollen und Rechte und der eingerichteten Dienste und Anwendungen erstellen.	
+
+#### 152-Handlungsnotwendige-Kenntnisse
+1. 	Kennt die Einsatz- und Konfigurationsmöglichkeiten der vorgegebenen Betriebssysteme und Dienste.
+2. Kennt die übliche (best practice) Vorgehensweise bei der Inbetriebnahme von Serverdiensten (zB. installieren, konfigurieren, starten, testen).
+3. Kennt betriebssystemspezifische Konzepte zur Konfiguration von Software (zB. Konfigurationsdateien, Registry, systemweite / benutzerspezifische Konfiguration).
+4. Kennt die Möglichkeiten von Betriebssystemen zur Gewährleistung und Absicherung des Zugriffs auf Netzwerk-Ressourcen (Authentifizierung, Autorisierung).
+5. Kennt die unterschiedlichen Konzepte, Systembefehle und Hilfsprogramme für die Benutzer- und Rechteverwaltung (zB. User-ID, Zugriffsrechte, Gruppenmitgliedschaft, Standardrechte, Vererbung, Homeverzeichnis).
+6. Kennt die Konfigurationsmöglichkeiten eines DHCP Servers (zB. Zuweisung einer IP Adresse, einer Subnet-Maske, Angaben zu DNS-Servern, Standard-Gateways).
+7. Kennt die Konfigurationsmöglichkeiten eines DNS-Servers.
+8. Kennt die notwendigen Einstellungen bei einem Client in einer DHCP-/DNS-Serverumgebung.
+9. Kennt die Elemente und Funktionen des TCP/IP-Protokolls (zB. MAC- und IP-Adressen, IP-Adressklassen, private Adressen, Netzmasken, Routing, Adress Resolution Protocol (ARP), wichtige Portnummern).
+10. Kennt technische Möglichkeiten um Ressourcen im Netzwerk durch Gruppen gemeinsam zu nutzen (zB. Groupware).
+11. Kennt Methoden zur systematischen Fehlereingrenzung (zB. Ausschlussverfahren intakter Systeme).
+12. Kennt Werkzeuge zur Fehleranalyse und –behebung.
+13. Kennt den Aufbau und die wesentlichen Merkmale eines Testprotokolls.
+14. Kennt Aufbau und Inhalt einer Netzwerk- und Systemdokumentation.
 
 ### 16-Darstellung-und-Aufbau
 
@@ -191,6 +225,70 @@ Text
 #### 233-Teil-C
 
 ### 24-Projektantrag
+<table>
+    <tr>
+    <td><strong>Projekttitel:</strong></td>
+    <td>XY</td>
+  </tr>
+      <tr>
+    <td><strong>Projektnummer:</strong></td>
+    <td>00001</td>
+  </tr>
+        <tr>
+    <td><strong>Projektart:</strong></td>
+    <td>00001</td>
+  </tr>
+        <tr>
+    <td><strong>Projektleiter/in:</strong></td>
+    <td>Lüscher, Luis</td>
+  </tr>
+          <tr>
+    <td><strong>Projektmitglieder:</strong></td>
+    <td>Lüscher, Luis</td>
+  </tr>
+            <tr>
+    <td><strong>Projektauftraggeber/in:</strong></td>
+    <td>Marcello Calisto, Dozent TBZ</td>
+  </tr>
+              <tr>
+    <td><strong>Projektkunde(n):</strong></td>
+    <td>Technische Berufsschule Zürich</td>
+  </tr>
+                <tr>
+    <td><strong>Projektdauer:</strong></td>
+    <td>Geplanter Beginn: 22.11.2020 09:00 Uhr <br>
+Geplantes Ende: 07.12.2020 11:50 Uhr
+</td>
+  </tr>
+                  <tr>
+    <td><strong>Ausgangssituation / Problembeschreibung:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                    <tr>
+    <td><strong>Projektgesamtziel:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                      <tr>
+    <td><strong>Projektressourcen:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                      <tr>
+    <td><strong>Projektbudget:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                        <tr>
+    <td><strong>Sonstige relevante Informationen:</strong></td>
+    <td>XYXYXYXYXYXY</td>
+  </tr>
+                        <tr>
+    <td><strong>Unterschrift / 
+Abnahme
+:</strong></td>
+    <td>Auftraggeber: <br>Calisto, Marcello <br> 
+    Auftragnehmer: <br>Lüscher, Luis</td>
+  </tr>
+  
+</table>
 
 ### 25-Arbeitsumfeld
 
@@ -201,8 +299,95 @@ Text
 #### 253-Dokumentablage
 
 ### 26-Namenskonvention
+<table>
+    <tr>
+    <th><strong>Position</strong></th>
+    <th><strong>Beschreibung</strong></th>
+    <th><strong>Beispiel</strong></th>
+  </tr>
+      <tr>
+    <td>Gerät</td>
+    <td>Eine bestimmte Abkürzung für den 
+jeweiligen Gerätetyp.
+</td>
+    <td><strong>sv</strong>=Server<br>
+    <strong>rt</strong>=Router<br>
+    </td>
+  </tr>
+        <tr>
+    <td>Kategorie</td>
+    <td>Wofür wird das System verwendet
+</td>
+    <td><strong>p</strong>=Produktion<br>
+    <strong>t</strong>=Testing<br>
+    <strong>i</strong>=Integration<br>
+    <strong>d</strong>=Development<br></td>
+  </tr>
+          <tr>
+    <td>Standort</td>
+    <td>Wo steht das Gerät?</td>
+    <td><strong>zh</strong>=Zürich<br>
+    <strong>oe</strong>=Oberengstringen<br></td>
+  </tr>
+            <tr>
+    <td>OS</td>
+    <td>Das Betriebssystem des Servers</td>
+    <td><strong>l</strong>=Linux<br>
+    <strong>w</strong>=Windows<br></td>
+  </tr>
+              <tr>
+    <td>Funktion</td>
+    <td>Projektname, Servicename, Applikationsname</td>
+    <td><strong>spk</strong>=Splunk <br>
+    <strong>ost</strong>=OS Ticket <br></td>
+  </tr>
+               <tr>
+    <td>Nummer</td>
+    <td>Aufzählung bei mehreren, gleichen Systemen.</td>
+    <td><strong>01-99</strong><br>
+    </td>
+  </tr>
+</table>
 
 #### 261-Geraetetypen
+<table>
+    <tr>
+    <th><strong>Abkuerzung</strong></th>
+    <th><strong>Beschreibung</strong></th>
+  </tr>
+              <tr>
+    <td>sv</td>
+    <td>Servers</td>
+  </tr>
+                <tr>
+    <td>ws</td>
+    <td>Workstations</td>
+  </tr>
+                <tr>
+    <td>pr</td>
+    <td>Printers </td>
+  </tr>
+                <tr>
+    <td>rt</td>
+    <td>Router</td>
+  </tr>
+                <tr>
+    <td>sw</td>
+    <td>Switch</td>
+  </tr>
+                <tr>
+    <td>fw</td>
+    <td>Firewall</td>
+  </tr>
+                <tr>
+    <td>msx</td>
+    <td>Mail Servers</td>
+  </tr>
+                <tr>
+    <td>wbs </td>
+    <td>Web Servers </td>
+  </tr>
+  </table>
 
 ### 27-Zeitplanung
 
@@ -319,40 +504,53 @@ weitere Splunkdeployments können sich sehr unterscheiden. So können als Beispi
 einzigen System laufen, allerdings kann man auch alle Komponenten auf verschiedene Systeme
 verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
-#### 412-Wordpress
+#### 412-Apache
 
-#### 413-MariaDB
+Beim Apache HTTP-Server handelt es sich um den weltweit am meisten verwendeten Webserver, der bei der Entwicklung des WWW (World Wide Webs) eine Schlüsselrolle spielte. Das quellfreie Open Source-Produkt wird unter Federführung der Apache Software Foundation fortlaufend weiterentwickelt.
 
-#### 414-Apache
+![Alt-Text](/LB1/images/Apache_Logo.png "Apache_Logo")
+
+Apache ist nach Expertenschätzungen auf gut 60 Prozent der Webserver (auch Managed Server) weltweit installiert. Webserver werden – ihrem Namen entsprechend – vor allem im Netz eingesetzt, spielen aber auch lokal oder im Intranet eine Rolle. Der Server stellt Dokumente lokal, im Intranet oder auch weltweit im WWW zur Verfügung. Stellt ein Nutzer von seinem Rechner – dem Client – eine Anfrage (ruft also zum Beispiel eine Webseite ab), überträgt der Apache Webserver die benötigten Dateien an den oder die Client-Computer. Damit eine Website dargestellt werden kann, werden in der Regel sehr viele Dateien benötigt, die der Browser alle einzeln abfragt. Der HTML-Code einer Seite, das Design (via CSS), Videos, Bild- sowie Audiodateien werden aus unterschiedlichen Quellen wie Datenbanken oder dem Content Management System (CMS) abgerufen und getrennt voneinander an den Client übertragen. Skriptsprachen wie PHP sorgen anschließend dafür, dass alle Einzelinformationen zu einem Dokument verbunden werden.
+
+Einer der großen Vorzüge des Apache Webservers ist die Variabilität. Durch den freien Quellcode kann er an den individuellen Bedarf angepasst werden. Dazu kommen zahlreiche Module, mit denen sich die Kernfunktion des Servers erweitern lässt. Dazu zählen unter anderem:
+
+- eine Schnittstelle für Sprachen, die beispielsweise die Programmiersprachen Perl, Python und PHP unterstützt;
+- Authentifizierungsmodule wie mod_access, mod_auth und mod_digest;
+- Ein Secure Socket Layer (SSL)-Modul
+
+Die Apache Foundation liefert in ihrem Wiki gleich zwei Erklärungen: Der Name ist eine Anerkennung für die unerschöpfliche Ausdauer und die hohen Fähigkeiten in der Kriegsführung, die dem Stamm der Apachen zugeschrieben wird. Mit der Namenswahl wollte man den Ureinwohnern Amerikas Respekt zollen. Bekannter, aber laut der Apache Stiftung nicht richtig ist die Version, dass sich hinter dem Namen ein Wortspiel verbirgt: Die Gründer hätten einst bereits existierenden Code mit eigenen «Code-Flicken» kombiniert. Dabei sei ein Flickenteppich-Server also «a patchy server» entstanden.
 
 ## 5-Planen
 ### 51-Benoetigte-Infrastruktur
 
+Für die LB1 wird folgende Infrastruktur verwendet:
+
+Zuhause:
+- PC von Luis
+
+Schule:
+- Laptop von Luis
+
+Allgemein:
+- [GitHub Repo LB1](https://github.com/lslschr/M300 "GitHub Repo M300")
+
 ### 52-Testkonzept
 
-#### 521-Erklaerung-Klassifikation
+Das Testing ist unerlässlich bei einem Projekt. Für die Funktionstests wurde ein Testkonzept erstellt. Wie die Tests dokumentiert werden, ist in der Tabelle auf der nächsten Seite beschrieben.
+Das Testing wird in verschiedene Testgebiete unterteilt, damit die Übersicht nicht verloren geht. Folgende Testgebiete sind definiert:
 
-## 6-Entscheiden 
-
-## 7-Realisieren
-
-## 8-Kontrollieren
-
-### 81-Testfaelle
-
-#### 811-Test-1
 <table>
   <tr>
-    <td colspan="2"><strong>Testfall 1 - Testen der Templates</strong></td>
+    <td colspan="2"><strong>Testfall X - XY</strong></td>
   </tr>
     <tr>
     <td><strong>Beschreibung</strong></td>
-    <td>Es wird überprüft, ob die Tabelle
-richtig formatiert ist.</td>
+    <td>Hier wird der Testfall kurz beschrieben.</td>
   </tr>
       <tr>
     <td><strong>Testszenario</strong></td>
-    <td>Beschreiben des Testszenario sowie das Vorgehen (Stichworte).
+    <td>Hier werden die genauen Schritte des Tests aufgeschrieben. Es wird notiert, wie der Test durchgeführt wird und was mittels des Tests
+herausgefunden wird.
 	<li>XY</li>
 	<li>XY</li>
 	<li>YZ</li>
@@ -361,7 +559,7 @@ richtig formatiert ist.</td>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>
-	Folgende Komponenten wurden eingesetzt:
+	Alle, vom Test betroffenen Komponenten werden hier aufgeschrieben. Beispielsweise Datenbanken, Server, Tools etc..
 	<li>DB: Test 1234</li>
 	<li>Server: XY </li>
 	<li>Skript: Superhacker.ps1</li>
@@ -369,11 +567,97 @@ richtig formatiert ist.</td>
   </tr>
     <tr>
     <td><strong>Erwartetes Resultat</strong></td>
-    <td>Beschreibung des Erwarteten Resultat</td>
+    <td>Das Resultat aufgeschrieben, das erwartet wird,
+wenn der Test erfolgreich abläuft.</td>
   </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Tatsächliche Resultat dokumentieren Screenshot und Beschreibung</td>
+    <td>Nach der Durchführung des Tests wird hier das tatsächliche Resultat aufgeschrieben.</td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP, FP, TN, FN</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich, Teilweise Erfolgreich (gelb) oder Fehlgeschlagen (rot)</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich oder Massnahmen beschreiben wenn oben gelb oder rot</td>
+  </tr>
+</table>
+
+#### 521-Erklaerung-Klassifikation
+Erklärung von [Wikipedia.org](https://de.wikipedia.org/wiki/Beurteilung_eines_bin%C3%A4ren_Klassifikators#Wahrheitsmatrix:_Richtige_und_falsche_Klassifikationen "Wikipedia.org")
+
+Um einen Klassifikator zu bewerten, muss man ihn in einer Reihe von Fällen anwenden, bei denen man zumindest im Nachhinein Kenntnis über die „wahre“ Klasse der jeweiligen Objekte hat. Ein Beispiel für so einen Fall ist ein medizinischer Labortest, mit dem festgestellt werden soll, ob eine Person eine bestimmte Krankheit hat. Später wird durch aufwändigere Untersuchungen festgestellt, ob die Person tatsächlich an dieser Krankheit leidet. Der Test stellt einen Klassifikator dar, der die Personen in die Kategorien „krank“ und „gesund“ einordnet. Da es sich um eine Ja/Nein-Frage handelt, sagt man auch, der Test fällt positiv (Einordnung „krank“) oder negativ (Einordnung „gesund“) aus. Um zu beurteilen, wie gut geeignet der Labortest für die Diagnose der Krankheit ist, wird nun bei jedem Patienten dessen tatsächlicher Gesundheitszustand mit dem Ergebnis des Tests verglichen. Dabei können vier mögliche Fälle auftreten:
+
+1. Richtig positiv (TP): Der Patient ist krank, und der Test hat dies richtig angezeigt.
+
+2. Falsch negativ (FN): Der Patient ist krank, aber der Test hat ihn fälschlicherweise als gesund eingestuft.
+
+3. Falsch positiv (FP): Der Patient ist gesund, aber der Test hat ihn fälschlicherweise als krank eingestuft.
+
+4. Richtig negativ (TN): Der Patient ist gesund, und der Test hat dies richtig angezeigt.
+
+Im ersten und letzten Fall war die Diagnose also richtig, in den anderen beiden Fällen liegt ein Fehler vor. Die vier Fälle werden in verschiedenen Kontexten auch anders benannt. So sind auch die englischen Begriffe true positive, false positive, false negative und true negative gebräuchlich.
+
+## 6-Entscheiden 
+
+Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Apache installiert und jeweils ein Splunk Forwarder. Die Konfiguration aller Dienste inklusive XML Dashboard Sourcecode sollte automatisch implementiert werden. 
+
+## 7-Realisieren
+
+### 71-Vagrantfile
+
+### 72-Splunk Konfiguration
+
+### 73-Splunkforwarder Konfiguration
+
+## 8-Kontrollieren
+
+### 81-Testfaelle
+
+#### 811-Test-1
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall X - XY</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Hier wird der Testfall kurz beschrieben.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Hier werden die genauen Schritte des Tests aufgeschrieben. Es wird notiert, wie der Test durchgeführt wird und was mittels des Tests
+herausgefunden wird.
+	<li>XY</li>
+	<li>XY</li>
+	<li>YZ</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>
+	Alle, vom Test betroffenen Komponenten werden hier aufgeschrieben. Beispielsweise Datenbanken, Server, Tools etc..
+	<li>DB: Test 1234</li>
+	<li>Server: XY </li>
+	<li>Skript: Superhacker.ps1</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Das Resultat aufgeschrieben, das erwartet wird,
+wenn der Test erfolgreich abläuft.</td>
+  </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Nach der Durchführung des Tests wird hier das tatsächliche Resultat aufgeschrieben.</td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP, FP, TN, FN</td>
   </tr>
         <tr>
     <td><strong>Ergebnis</strong></td>
