@@ -1,0 +1,589 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="de">
+<!--<![endif]-->
+
+<head>
+    <!-- Title -->
+    <title>Linux Webserver | Luis Lüscher | it.luis-luescher.com</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description"
+        content="Erfahre mehr über den Webserver Apache. Wie installiert man Apache auf einem Ubuntu System?">
+    <meta name="keywords"
+        content="Informatik, Lernender, IT, Luis Lüscher, Ubunut, Apache, Installation, Konfiguration">
+    <meta name="author" content="Luis Ricardo Lüscher">
+    <meta name="publisher" content="Luis Ricardo Lüscher">
+    <meta name="copyright" content="Luis Ricardo Lüscher">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1" />
+    <meta name="page-topic" content="Forschung Technik">
+    <meta name="page-type" content="Private Homepage">
+    <meta name="audience" content="Azubis">
+    <meta http-equiv="content-language" content="de">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,400" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="Main Logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+            <!-- Top Menu -->
+            <div id="hornav" class="row text-light">
+                <div class="col-md-12">
+                    <div class="text-center visible-lg">
+                        <ul id="hornavmenu" class="nav navbar-nav">
+                            <li>
+                                <a href="index.html" class="fa-home
+                                        active">Home</a>
+                            </li>
+                            <li>
+                                <span class="fa-gears">Informatik</span>
+                                <ul>
+                                    <li class="parent">
+                                        <span>Datenbanken</span>
+                                        <ul>
+                                            <li>
+                                                <a href="datenbank-theorie.html">Theorie</a>
+                                            </li>
+                                            <li>
+                                                <a href="datenbank-tabellen.html">Datenbank
+                                                    erstellen mit SQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Hardware</span>
+                                        <ul>
+                                            <li>
+                                                <a href="hardware-access-point.html">Access
+                                                    Point</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-firewall.html">Firewall</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-nas.html">NAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-router.html">Router</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-server.html">Server</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-switch.html">Switch</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Linux</span>
+                                        <ul>
+                                            <li>
+                                                <a href="linux-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-distributionen.html">Distributionen</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-eastereggs.html">Eastereggs</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-basic.html">Grundbefehle</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-mariadb.html">MariaDB</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-webserver.html">Webserver</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="documentations.html">Modularbeiten</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Netzwerk</span>
+                                        <ul>
+                                            <li>
+                                                <a href="netzwerk-vpn.html">VPN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-tor.html">TOR</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-snmp.html">SNMP</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-monitoring.html">NW-Monitoring
+                                                    Systeme</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-vlan.html">VLAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-wlan.html">WLAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="php.html">PHP</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://security.luis-luescher.com" target="_blank">Security</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Serverdienste</span>
+                                        <ul>
+                                            <li>
+                                                <a href="serverdienste-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-dns.html">DNS</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-file.html">File</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-print.html">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-ad.html">AD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-me.html" class="fa-copy">Über
+                                    mich</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fa-comment">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Menu -->
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- === END HEADER === -->
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-40">
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3">
+                    <ul class="list-group sidebar-nav" id="sidebar-nav">
+                        <!-- Weitere Theorie -->
+                        <li class="list-group-item list-toggle">
+                            <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Weitere
+                                Links</a>
+                            <ul id="collapse-typography" class="collapse">
+                                <li>
+                                    <a href="https://mariadb.org/" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>MariaDB Foundation</a>
+                                </li>
+                                <li>
+                                    <a href="https://db-engines.com/de/system/MariaDB" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>DB-Engines</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Weitere Theorie -->
+                        <!-- Datenbank erstellen und verwalten -->
+                        <li class="list-group-item list-toggle">
+                            <a class="accordion-toggle" href="#collapse-components" data-toggle="collapse">Mehr zu
+                                Linux</a>
+                            <ul id="collapse-components" class="collapse">
+                                <li>
+                                    <span class="badge">Du bist hier</span>
+                                    <a href="linux-webserver.html">
+                                        <i class="fa fa-arrows-h"></i>Webserver</a>
+                                </li>
+                                <li>
+                                    <a href="linux-mariadb.html">
+                                        <i class="fa fa-arrows-h"></i>MariaDB</a>
+                                </li>
+                                <li>
+                                    <a href="linux-basics.html">
+                                        <i class="fa fa-arrows-h"></i>Grundbefehle</a>
+                                </li>
+                                <li>
+                                    <a href="linux-eastereggs.html">
+                                        <i class="fa fa-arrows-h"></i>Eastereggs</a>
+                                </li>
+                                <li>
+
+                                    <a href="linux-distributionen.html">
+                                        <i class="fa fa-arrows-h"></i>Distributionen</a>
+                                </li>
+                                <li>
+                                    <a href="linux-dhcp.html">
+                                        <i class="fa fa-arrows-h"></i>DHCP</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Icons -->
+                        <!-- End Grid System -->
+                    </ul>
+                </div>
+                <!-- End Sidebar Menu -->
+                <div class="col-md-9">
+                    <!-- Paragraph Examples -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="headline">
+                                <h1>Webserver unter Ubuntu</h1>
+                            </div>
+                            <h2 class="margin-bottom-20">Wozu braucht man einen Webserver?</h2>
+                            <h6>In der Regel alle diejenigen, die ihren Internetauftritt ins Internet bzw. in die
+                                Öffentlichkeit stellen möchten. Am bequemsten geht das über einen Internet-Provider,
+                                diese Provider sind weltweit an Datennetze angeschlossen. Dort mietet man sich eine
+                                Domain und Webspace und lädt die erstellten Internetseiten auf den dazu bereitgestellten
+                                Speicherplatz.
+                                Spätestens dann, wenn eigene Internetseiten entwickelt bzw. dynamische Seiten mit PHP
+                                und MySQL programmiert werden, sollte man auf dem heimischen Rechner einen Webserver in
+                                Betrieb nehmen.</h6>
+                            <hr>
+                            <h3>Wie arbeitet ein Webserver?</h3>
+                            <p>Geben wir in einem Webclient (Browser) eine Adresse ein, dann wird zu einem
+                                entsprechendem Webserver hin eine HTTP- Anfrage gestellt. Mit dem Namen in der
+                                Adresszeile z.B. https://www.initiative-s.de wird der richtige Server und das richtige
+                                Programm auf dem Server ausgewählt.
+                                Der Webserver ist eine Programm oder Dienst den es von unterschiedliche Herstellern
+                                gibt. Bekannte Programme sind, der Apache, Internet Information Server (IIS nur Win) und
+                                der Tomcat.
+                                Der Webserver wartet auf Anfragen. Wird bei einer Anfrage keine bestimmte Datei
+                                angefordert, wird in der Regel vom Webserver eine Startseite default.html oder
+                                index.html ausgeliefert.
+                                Der Server sieht dabei in ein konfiguriertes Verzeichnis und liefert entsprechend die
+                                Datei zurück zum Webclient. In der Regel sind diese Dateien, HTML-Dateien, die vom
+                                Webclient gelesen und dargestellt werden. Statischen Inhalte (HTML-Dateien) werden
+                                direkt vom Webserver an den Webclient wiedergegeben, anders als bei dynamischen
+                                Webseiten, welche je nach Programmierung und Anforderung weitere Module benötigen. Diese
+                                erkennt man z.B. durch die Dateiendungen php, asp u.a.
+                                Jeder Webclient kann nur HTML-Code darstellen, also muß dynamischer Content z.b. *.php
+                                Dateien vom Webserver weiter gereicht werden z.B. an einen PHP-Parser, der die
+                                PHP-programmierten Dateien interpretiert und das Ergebnis als statische HTML-Seite an
+                                den WebClient wieder gibt.
+                            <p>
+                                <hr>
+                                <a href="https://www.ip-insider.de/was-ist-ein-internet-information-server-iis-a-794052/"
+                                    target="_blank">
+                                    <h3>Der Internet Information Server</h3>
+                                </a>
+                            <p>Der Internet Information Server wird als zusätzlich Komponente seit WINDOWS 2000
+                                ausgeliefert. Abgekürzt wird er IIS und ist eigentlich kein eigenständiges Produkt,
+                                sondern ein Bestandteil von Windows.</p>
+                            <hr>
+                            <a href="https://de.wikipedia.org/wiki/Apache_HTTP_Server" target="_blank">
+                                <h3>Der Apache</h3>
+                            </a>
+                            <p>In der Version 2 ist er Apache der meist genutzte Webserver im Internet. Über
+                                serverseitige Skriptsprachen wie PHP und CGI lassen sich auch dynamische Webseiten
+                                erstellen. Über Module können viele weiter Features eingebunden werden.</p>
+                            <hr>
+                            <a href="https://de.wikipedia.org/wiki/Apache_Tomcat" target="_blank">
+                                <h3>Apache Tomcat</h3>
+                            </a>
+                            <p>Stellt eine Umgebung zur Ausführung von Java-Code auf Webservern bereit, die im Rahmen
+                                des Jakarta-Projekts der Apache Software Foundation entwickelt wird. Es handelt sich um
+                                einen in Java geschriebenen Servlet-Container, der mit Hilfe des JSP-Compilers Jasper
+                                auch JavaServer Pages in Servlets übersetzen und ausführen kann. Dazu kommt ein
+                                kompletter HTTP-Server. Der HTTP-Server von Tomcat wird vor allem zur Entwicklung
+                                eingesetzt, während in Produktion zumeist ein Apache Web-Server vor Tomcat geschaltet
+                                wird. Dazu wird in Apache ein Plugin eingebunden, das Requests für dynamische Inhalte an
+                                Tomcat weiterleitet. Das Plugin spricht Tomcat dann normalerweise über das Apache JServ
+                                Protocol an.</p>
+                            <hr>
+                            <a href="https://de.wikipedia.org/wiki/Nginx" target="_blank">
+                                <h3>nginx</h3>
+                            </a>
+                            <p>Ist ein Webserver und Reverse Proxy, welcher sehr schnell und schmal ist. Er ist dafür
+                                ausgelegt, selbst unter hoher Last nur wenig Ressourcen zu verbrauchen. nginx wurde von
+                                Igor Sysoev entwickelt. Nginx findet derzeit bei 22,4 % der Top 10.000 Websites
+                                Verwendung.</p>
+                            <hr>
+                            <a href="https://de.wikipedia.org/wiki/XAMPP" target="_blank">
+                                <h3>XAMPP</h3>
+                            </a>
+                            <p>Ist eine Zusammenstellung von freier Software. XAMPP ermöglicht das einfache Installieren
+                                und Konfigurieren des Webservers Apache mit der Datenbank MySQL bzw. SQLite und den
+                                Skriptsprachen Perl und PHP. XAMPP enthält zusätzlich andere nützliche Tools wie den
+                                FTP-Server ProFTPD, den Mailserver Mercury, phpMyAdmin, Webalizer und OpenSSL. Besonders
+                                gut geeignet bei Eigenentwicklungen und dynamischen Inhalten im Heimbereich.</p>
+                            <hr>
+                            <a href="https://www.mamp.info/de/" target="_blank">
+                                <h3>MAMP</h3>
+                            </a>
+                            <p>Die Abkürzung “MAMP” steht für: Macintosh, Apache, Mysql und PHP. Analog zu ähnlichen
+                                Paketen für Windows und Linux, erstellen sie mit MAMP in kurzer Zeit einen vollwertigen
+                                Webserver mit PHP und MySql und zudem ist das Softwarepaket kostenfrei.</p>
+                            <hr>
+                            <h4>INSTALLATION</h4>
+                            <h5>System-Repositories aktualisieren</h5>
+                            <p>Sie können die neueste Version einer Software herunterladen, indem Sie zunächst den
+                                lokalen Paketindex von Ubuntu-Repositories aktualisieren. Öffnen Sie dazu das Terminal
+                                und geben Sie folgenden Befehl ein</p>
+                            <pre><code>sudo apt update</code></pre>
+                            <h5>Installieren Sie den Apache 2 mit dem apt-Befehl</h5>
+                            <pre><code>sudo apt install apache2</code></pre>
+                            <h4>Konfiguration der Firewall-Einstellungen</h4>
+                            <h5>Liste der UFW-Anwendungsprofile</h5>
+                            <p>Um die Firewall zu konfigurieren, lassen Sie uns zunächst die Anwendungsprofile
+                                auflisten, die wir benötigen, um den Zugriff auf den Apache zu ermöglichen. Verwenden
+                                Sie den folgenden Befehl, um solche verfügbaren Anwendungen aufzulisten:</p>
+                            <pre><code>sudo ufw app list</code></pre>
+                            <h5>Erlauben Sie Apache auf UFW und überprüfen Sie seinen Status</h5>
+                            <p>Das Erlauben des Apache auf UFW öffnet den Port 80 für den Netzwerkverkehr und bietet
+                                gleichzeitig maximale Sicherheit für den Server. Bitte konfigurieren Sie UFW mit dem
+                                folgenden Befehl, um den Apache zu erlauben</p>
+                            <pre><code>sudo ufw allow 'Apache'</code></pre>
+                            <h5>Überprüfen Sie, ob der Apache-Dienst läuft</h5>
+                            <p>Der erste Schritt ist die Überprüfung, ob der Apache2-Dienst auf Ihrem System läuft,
+                                durch den folgenden Befehl</p>
+                            <pre><code>sudo systemctl status apache2</code></pre>
+                            <p>Die Website kann dann einfach, wie folgt über den Browser erreicht werden.</p>
+                            <pre><code>http://server_IP</code></pre>
+                            <h4>Konfigurationsdateien</h4>
+                            <div class="datagrid">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Dateien bzw. Ordner</th>
+                                            <th>Inhalt</th>
+                                        </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>/etc/apache2/apache2 .conf</td>
+                                            <td>Startpunkt - Grundkonfiguration</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/httpd.conf</td>
+                                            <td>benutzerspezifische Konfiguration</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/ports.conf</td>
+                                            <td>überwachte Ports, normalerweise Port 80 oder für SSL 443</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/conf.d/*</td>
+                                            <td>weitere Konfigurationsdateien</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/mods-available/</td>
+                                            <td>verfügbare Erweiterungsmodule</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/mods-enabled/*.conf</td>
+                                            <td>Links auf aktive Erweiterungsmodule</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/conf-available/</td>
+                                            <td>verfügbare Konfigurationsdateien</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/conf-enabled/*.conf</td>
+                                            <td>Links auf aktive Konfigurationsdateien</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/sites-available/</td>
+                                            <td>verfügbare Websites (virtuelle Hosts)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/sites-enabled/*.conf</td>
+                                            <td>Links auf aktive Websites (Aktivierte Hosts)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>/etc/apache2/envvars</td>
+                                            <td>Umgebungsvariablen für das Init-Script</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Einrichten eines Domainnamens</h4>
+                            <p>Der standardmäßig aktivierte Serverblock ist in der Lage, Dokumente aus /var/www/html zu
+                                bedienen. Wir werden jedoch ein Verzeichnis unter /var/wwww/ erstellen, wobei das
+                                Standardverzeichnis intakt bleibt.
+
+                                Erstellen Sie dieses Verzeichnis mit dem folgenden Befehl und ersetzen Sie
+                                sampledomain.com durch Ihren jeweiligen Domainnamen</p>
+                            <pre><code>sudo mkdir -p /var/www/sampledomain.com/html</code></pre>
+                            <p>Dann weisen Sie den Besitz des Verzeichnisses mit folgenden Befehlen zu</p>
+                            <pre><code>sudo chown -R $USER:$USER /var/www/sampledomain.com/html</code></pre>
+                            <pre><code>sudo chmod -R 755 /var/www/sampledomain.com</code></pre>
+                            <p>Lassen Sie uns nun eine Indexseite erstellen, auf die wir später zugreifen können, um zu
+                                testen, ob Apache unseren Domainnamen ausführt. Erstellen Sie eine HTML-Datei entweder
+                                mit dem Nano-Editor oder einem Ihrer bevorzugten Texteditoren</p>
+                            <pre><code>$ nano /var/www/sampledomain.com/html/index.html</code></pre>
+                            <p>Geben Sie den folgenden HTML-Code für die Indexseite ein</p>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Welcome to the page sampledomain.com!&lt;/title&gt;
+    &lt;head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;You got Lucky! Your sampledomain.com server block is up!&lt;h1&gt;
+    &lt;body&gt;
+&lt;/html&gt;
+</code></pre>
+                            <p>Der Apache benötigt eine virtuelle Host-Datei, um den Inhalt Ihres Servers zu bedienen.
+                                Die Standardkonfigurationsdatei für diesen Zweck ist bereits erstellt, aber wir werden
+                                eine neue für unsere eigenen Konfigurationen erstellen.</p>
+                            <pre><code>$ sudo nano /etc/apache2/sites-available/sampledomain.com.conf</code></pre>
+                            <p>Geben Sie die folgenden benutzerdefinierten Konfigurationsdetails für unseren Domainnamen
+                                ein</p>
+                            <pre><code>&lt;VirtualHost *:80&gt;
+ServerAdmin admin@sampledomain.com
+ServerName sampledomain.com
+ServerAlias www.sampledomain.com
+DocumentRoot /var/www/sampledomain.com/html
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;</code></pre>
+                            <p>Lassen Sie uns die Konfigurationsdatei, die wir mit dem a2ensite Tool erstellt haben,
+                                aktivieren</p>
+                            <pre><code>$ sudo a2ensite sampledomain.com.conf</code></pre>
+                            <p>Die Ausgabe wird vorschlagen, die neue Konfiguration zu aktivieren, aber wir können das
+                                alles zusammen tun, nachdem wir den folgenden Befehl ausgeführt haben, der die
+                                ursprüngliche Konfigurationsdatei deaktiviert</p>
+                            <pre><code>$ sudo a2dissite 000-default.conf</code></pre>
+                            <p>Now restart the Apache service</p>
+                            <pre><code>$ sudo systemctl restart apache2</code></pre>
+                            <p>Lassen wir schließlich testen, ob es irgendwelche Konfigurationsfehler gibt, indem wir
+                                den folgenden Befehl verwenden</p>
+                            <pre><code>$ sudo apache2ctl configtest</code></pre>
+                            <p>Wenn Sie keine Fehler erhalten, erhalten Sie folgende Ausgabe</p>
+                            <pre><code>Syntax OK</code></pre>
+                        </div>
+                    </div>
+                    <!-- End Paragraph Examples -->
+                    <div class="clearfix margin-bottom-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+    <!-- === BEGIN FOOTER === -->
+    <div id="base" class="background-dark text-light">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-6 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Infos zur Website</h3>
+                    <p>Die Inhalte auf dieser Webseite dürfen nichtkommerziell und zu Bildungszwecken verwendet werden.
+                        Bei Verbesserungsvorschlägen bitte das Kontaktformular benutzen.</p>
+                    <p>Vielen Dank für Ihren Besuch</p>
+                </div>
+                <!-- End Disclaimer -->
+                <!-- Image Credits -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Soziale Medien</h3>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://www.instagram.com/lslschr/?hl=de" target="_blank">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/luis-luescher/" target="_blank">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lslschr" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Image Credits -->
+                <!-- Friends -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Friends -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="background-dark text-light">
+        <div class="container no-padding">
+            <div class="row">
+                <!-- Footer Menu -->
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="linux-basic.html">Informatik</a>
+                        </li>
+                        <li>
+                            <a href="https://me.luis-luescher.com" target="_blank">Über mich</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="legal_disclosure.html"">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Footer Menu -->
+            <!-- Copyright -->
+            <div id=" copyright" class="col-md-4">
+
+                                <p class="pull-right">Made by Luis Lüscher. All rights reserved.</p>
+
+                </div>
+                <!-- End Copyright -->
+            </div>
+        </div>
+        <!-- End Footer -->
+        <!-- JS -->
+        <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <!-- Isotope - Portfolio Sorting -->
+        <script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+        <!-- Mobile Menu - Slicknav -->
+        <script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+        <!-- Animate on Scroll-->
+        <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+        <!-- Stellar Parallax -->
+        <script type="text/javascript" src="assets/js/jquery.stellar.js" charset="utf-8"></script>
+        <!-- Sticky Div -->
+        <script type="text/javascript" src="assets/js/jquery.sticky.js" charset="utf-8"></script>
+        <!-- Slimbox2-->
+        <script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+        <!-- End JS -->
+</body>
+
+</html>
+<!-- === END FOOTER === -->

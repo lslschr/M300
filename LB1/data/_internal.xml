@@ -1,0 +1,87 @@
+<dashboard theme="dark">
+   <!-- A title for the dashboard -->
+   <label>Basic Dashboard</label>
+   <!-- Provide a description -->
+   <description>Basics Dashboard for testing made by Luis Luescher in the
+module 300</description>
+   <!-- Place panels within rows -->
+   <row>
+     <panel>
+       <table>
+         <title>Top Sourcetypes (Last 24 hours)</title>
+         <search>
+           <query>
+           index=_internal | top limit=100 sourcetype | eval percent =
+round(percent,2)
+           </query>
+           <!-- Specify a time range for the search -->
+           <earliest>-24h@h</earliest>
+           <latest>now</latest>
+         </search>
+         <!-- A search powers the panel -->
+         <!-- Use options to further define how to display result data
+-->
+         <option name="wrap">true</option>
+         <option name="rowNumbers">true</option>
+       </table>
+     </panel>
+   </row>
+   <row>
+     <panel>
+       <chart>
+         <title>Number of logs</title>
+         <search>
+           <query>index = _internal source = "*splunkd.log" | stats
+count</query>
+           <earliest>-24h@h</earliest>
+           <latest>now</latest>
+         </search>
+         <option name="charting.chart">radialGauge</option>
+         <option
+name="charting.chart.rangeValues">[0,10000,45000,50000]</option>
+         <option name="charting.chart.style">shiny</option>
+         <option
+name="charting.gaugeColors">["0x53a051","0xf8be34","0xdc4e41"]</option>
+       </chart>
+     </panel>
+     <panel>
+       <chart>
+         <title>Number of Error in Logs</title>
+         <search>
+           <query>index = _internal source = "*splunkd.log" log_level =
+"error" | stats count</query>
+           <earliest>-24h@h</earliest>
+           <latest>now</latest>
+         </search>
+         <option name="charting.chart">radialGauge</option>
+       </chart>
+     </panel>
+     <panel>
+       <chart>
+         <title>Number of warnings in logs</title>
+         <search>
+           <query>index = _internal source = "*splunkd.log" log_level =
+"warn" | stats count</query>
+           <earliest>-24h@h</earliest>
+           <latest>now</latest>
+         </search>
+         <option name="charting.chart">radialGauge</option>
+         <option name="refresh.display">progressbar</option>
+       </chart>
+     </panel>
+   </row>
+   <row>
+     <panel>
+       <event>
+         <title>Warnings in Logs</title>
+         <search>
+           <query>index = _internal source = "*splunkd.log" log_level =
+"warn"</query>
+           <earliest>-24h@h</earliest>
+           <latest>now</latest>
+         </search>
+         <option name="list.drilldown">none</option>
+       </event>
+     </panel>
+   </row>
+</dashboard>

@@ -1,0 +1,144 @@
+<dashboard theme="dark">
+  <label>Webserver Monitoring</label>
+     <description>Webserver Dashboard for testing made by Luis Luescher in the
+module 300</description>
+  <row>
+    <panel>
+      <single>
+        <title>Total Logs in index="main"</title>
+        <search>
+          <query>index="main" | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="colorMode">block</option>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x006d9c","0x0877a6","0x006d9c","0x006d9c","0x006d9c"]</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Number of logs from wbspzhlweb01</title>
+        <search>
+          <query>index="main" host="wbspzhlweb01" | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="colorMode">block</option>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x006d9c","0x0877a6","0x006d9c","0x006d9c","0x006d9c"]</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Number of logs from wbspzhlweb02</title>
+        <search>
+          <query>index="main" host="wbspzhlweb02" | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="colorMode">block</option>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x006d9c","0x0877a6","0x006d9c","0x006d9c","0x006d9c"]</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Number of HTTP 404 Errors</title>
+        <search>
+          <query>index="main" 404 | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="colorMode">block</option>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0xf1813f","0xf1813f","0xdc4e41","0xdc4e41","0xdc4e41"]</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Number of GET Requests</title>
+        <search>
+          <query>index="main" GET | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="colorMode">block</option>
+        <option name="drilldown">none</option>
+        <option name="height">111</option>
+        <option name="rangeColors">["0x006d9c","0x0877a6","0x006d9c","0x006d9c","0x006d9c"]</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Number of logs from apache2/access.log</title>
+        <search>
+          <query>index="main" source="/var/log/apache2/access.log" | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="colorMode">block</option>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0x006d9c","0x0877a6","0x006d9c","0x006d9c","0x006d9c"]</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Number of logs from apache2/error.log</title>
+        <search>
+          <query>index="main" source="/var/log/apache2/error.log"  | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="colorMode">block</option>
+        <option name="drilldown">none</option>
+        <option name="rangeColors">["0xf8be34","0xf1813f","0xdc4e41","0xdc4e41","0xdc4e41"]</option>
+        <option name="useColors">1</option>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>Sourcetypes in index="main"</title>
+        <search>
+          <query>| tstats count where index=main by sourcetype</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+    <panel>
+      <table>
+        <title>Hosts in index="main"</title>
+        <search>
+          <query>| tstats count where index=main by host</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+    <panel>
+      <table>
+        <title>Sources in index="main"</title>
+        <search>
+          <query>| tstats count where index=main by source</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

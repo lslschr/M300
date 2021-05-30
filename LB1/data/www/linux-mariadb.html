@@ -1,0 +1,459 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="de">
+<!--<![endif]-->
+
+<head>
+    <!-- Title -->
+    <title>Linux MariaDB | Luis Lüscher | it.luis-luescher.com</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Erfahre mehr über MariaDB. Wie installiert man MariaDB auf einem Ubuntu System?">
+    <meta name="keywords"
+        content="Informatik, Lernender, IT, Luis Lüscher, Ubunut, MariaDB, Installation, Benutzerkonto, Datenbank">
+    <meta name="author" content="Luis Ricardo Lüscher">
+    <meta name="publisher" content="Luis Ricardo Lüscher">
+    <meta name="copyright" content="Luis Ricardo Lüscher">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1" />
+    <meta name="page-topic" content="Forschung Technik">
+    <meta name="page-type" content="Private Homepage">
+    <meta name="audience" content="Azubis">
+    <meta http-equiv="content-language" content="de">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,400" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="Main Logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+            <!-- Top Menu -->
+            <div id="hornav" class="row text-light">
+                <div class="col-md-12">
+                    <div class="text-center visible-lg">
+                        <ul id="hornavmenu" class="nav navbar-nav">
+                            <li>
+                                <a href="index.html" class="fa-home
+                                        active">Home</a>
+                            </li>
+                            <li>
+                                <span class="fa-gears">Informatik</span>
+                                <ul>
+                                    <li class="parent">
+                                        <span>Datenbanken</span>
+                                        <ul>
+                                            <li>
+                                                <a href="datenbank-theorie.html">Theorie</a>
+                                            </li>
+                                            <li>
+                                                <a href="datenbank-tabellen.html">Datenbank
+                                                    erstellen mit SQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Hardware</span>
+                                        <ul>
+                                            <li>
+                                                <a href="hardware-access-point.html">Access
+                                                    Point</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-firewall.html">Firewall</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-nas.html">NAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-router.html">Router</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-server.html">Server</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-switch.html">Switch</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Linux</span>
+                                        <ul>
+                                            <li>
+                                                <a href="linux-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-distributionen.html">Distributionen</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-eastereggs.html">Eastereggs</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-basic.html">Grundbefehle</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-mariadb.html">MariaDB</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-webserver.html">Webserver</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="documentations.html">Modularbeiten</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Netzwerk</span>
+                                        <ul>
+                                            <li>
+                                                <a href="netzwerk-vpn.html">VPN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-tor.html">TOR</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-snmp.html">SNMP</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-monitoring.html">NW-Monitoring
+                                                    Systeme</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-vlan.html">VLAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-wlan.html">WLAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="php.html">PHP</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://security.luis-luescher.com" target="_blank">Security</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Serverdienste</span>
+                                        <ul>
+                                            <li>
+                                                <a href="serverdienste-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-dns.html">DNS</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-file.html">File</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-print.html">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-ad.html">AD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-me.html" class="fa-copy">Über
+                                    mich</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fa-comment">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Menu -->
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- === END HEADER === -->
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-40">
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3">
+                    <ul class="list-group sidebar-nav" id="sidebar-nav">
+                        <!-- Weitere Theorie -->
+                        <li class="list-group-item list-toggle">
+                            <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Weitere
+                                Links</a>
+                            <ul id="collapse-typography" class="collapse">
+                                <li>
+                                    <a href="https://mariadb.org/" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>MariaDB Foundation</a>
+                                </li>
+                                <li>
+                                    <a href="https://db-engines.com/de/system/MariaDB" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>DB-Engines</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Weitere Theorie -->
+                        <!-- Datenbank erstellen und verwalten -->
+                        <li class="list-group-item list-toggle">
+                            <a class="accordion-toggle" href="#collapse-components" data-toggle="collapse">Mehr zu
+                                Linux</a>
+                            <ul id="collapse-components" class="collapse">
+                                <li>
+                                    <span class="badge"></span>
+                                    <a href="linux-webserver.html">
+                                        <i class="fa fa-arrows-h"></i>Webserver</a>
+                                </li>
+                                <li>
+                                    <span class="badge">Du bist hier</span>
+                                    <a href="linux-mariadb.html">
+                                        <i class="fa fa-arrows-h"></i>MariaDB</a>
+                                </li>
+                                <li>
+                                    <a href="linux-basics.html">
+                                        <i class="fa fa-arrows-h"></i>Grundbefehle</a>
+                                </li>
+                                <li>
+                                    <a href="linux-eastereggs.html">
+                                        <i class="fa fa-arrows-h"></i>Eastereggs</a>
+                                </li>
+                                <li>
+
+                                    <a href="linux-distributionen.html">
+                                        <i class="fa fa-arrows-h"></i>Distributionen</a>
+                                </li>
+                                <li>
+                                    <a href="linux-dhcp.html">
+                                        <i class="fa fa-arrows-h"></i>DHCP</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Icons -->
+                        <!-- End Grid System -->
+                    </ul>
+                </div>
+                <!-- End Sidebar Menu -->
+                <div class="col-md-9">
+                    <!-- Paragraph Examples -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="headline">
+                                <h1>MariaDB</h1>
+                            </div>
+                            <h3 class="margin-bottom-20"><strong>Was ist MariaDB?</strong></h3>
+                            <h6>MariaDB ist eine relationale Datenbank die sich im Featureset stark an MySQL orientiert
+                                und von einigen der originalen Entwickler von MySQL entwickelt wurde. MariaDB setzt sich
+                                vor allem dadurch ab, dass das Lizenzmodell (und die Philosophie in der Community) eine
+                                quelloffene Verfügbarkeit garantiert.</h6>
+                            <hr>
+                            <h4>INSTALLATION</h4>
+                            <p>Importieren Sie den GnuPG-Signaturschlüssel mit folgendem Code</p>
+                            <pre><code>sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db</code></pre>
+                            <p>MariaDB zur Datei sources.list hinzufügen. Öffnen Sie die Datei und fügen Sie den
+                                folgenden Code hinzu</p>
+                            <pre><code>sudo add-apt-repository 'deb http://ftp.osuosl.org/pub/mariadb/repo/5.5/ubuntuprecise main'
+</code></pre>
+                            <p>Aktualisieren Sie das System wie folgt</p>
+                            <pre><code>sudo apt-get update</code></pre>
+                            <p>Installieren Sie MariaDB mit dem untenstehenden Befehl</p>
+                            <pre><code>sudo apt-get install mariadb-server</code></pre>
+                            <hr>
+                            <h4>Erstellen eines Benutzerkontos</h4>
+                            <p>Erstellen Sie ein neues Benutzerkonto mit folgendem Code</p>
+                            <pre><code>CREATE USER 'newusername'@'localhost' IDENTIFIED BY 'userpassword';</code></pre>
+                            <p>Dieser Code fügt der Benutzertabelle eine Zeile ohne Privilegien hinzu. Sie haben auch
+                                die Möglichkeit, einen Hash-Wert für das Passwort zu verwenden. Erteilen Sie dem
+                                Benutzer Rechte mit folgendem Code</p>
+                            <pre><code>GRANT SELECT, INSERT, UPDATE, DELETE ON database1 TO 'newusername'@'localhost';
+</code></pre>
+                            <p>Andere Privilegien umfassen fast alle Befehle oder Operationen, die in MariaDB möglich
+                                sind. Nachdem Sie einen Benutzer angelegt haben, führen Sie ein "FLUSH PRIVILEGES"
+                                Kommando aus, um die Berechtigungstabellen zu aktualisieren. Dies ermöglicht die
+                                Verwendung des Benutzerkontos.</p>
+                            <hr>
+                            <h4>Erstellen einer Datenbank</h4>
+                            <p>Das folgende Beispiel demonstriert die Verwendung des mysqladmin Binary bei der
+                                Erstellung einer Datenbank mit dem Namen Products</p>
+                            <pre><code>[root@host]# mysqladmin -u root -p create PRODUCTS
+Enter password:******</code></pre>
+                            <p>Bei erfolgreicher Ausführung erhalten Sie folgende Ausgabe</p>
+                            <pre><code>mysql> Database PRODUCTS created successfully 
+mysql> SHOW DATABASES; 
++-----------------------+ 
+| Database              | 
++-----------------------+ 
+| PRODUCTS              | 
++-----------------------+  
+</code></pre>
+                            <hr>
+                            <h4>Löschen einer Datenbank</h4>
+                            <p>DDas folgende Beispiel zeigt, wie man die mysqladmin-Binärdatei verwendet, um eine
+                                bestehende Datenbank zu löschen</p>
+                            <pre><code>[root@host]# mysqladmin -u root -p drop PRODUCTS
+Enter password:******</code></pre>
+                            <p>Bei erfolgreicher Ausführung erhalten Sie folgende Ausgabe</p>
+                            <pre><code>mysql> Database PRODUCTS deleted successfully</code></pre>
+                            <h4>Auswählen einer Datenbank</h4>
+                            <p>Bei der Auswahl einer Datenbank an der Eingabeaufforderung verwenden Sie einfach den
+                                SQL-Befehl 'use'.</p>
+                            <pre><code>[root@host]# mysql -u root -p
+
+Enter password:******
+
+mysql> use PRODUCTS;
+
+Database changed</code></pre>
+                            <h4>Erstellen einer Tabelle</h4>
+                            <p>Es folgt die allgemeine Syntax für die Tabellenerstellung</p>
+                            <pre><code>CREATE TABLE table_name (column_name column_type);</code></pre>
+                            <p>Befehl zum Erstellen einer Tabelle in der PRODUCTS-Datenbank</p>
+                            <pre><code>databaseproducts_ tbl(
+   product_id INT NOT NULL AUTO_INCREMENT,
+   product_name VARCHAR(100) NOT NULL,
+   product_manufacturer VARCHAR(40) NOT NULL,
+   submission_date DATE,
+   PRIMARY KEY ( product_id )
+);</code></pre>
+                            <h4>Löschen einer Tabelle</h4>
+                            <p>Das Löschen von Tabellen ist sehr einfach, aber denken Sie daran, dass alle gelöschten
+                                Tabellen unwiederbringlich sind. Die allgemeine Syntax für das Löschen von Tabellen ist
+                                wie folgt</p>
+                            <pre><code>DROP TABLE table_name ;</code></pre>
+                            <h4>Daten einfügen</h4>
+                            <p>DDas Einfügen von Daten in eine Tabelle erfordert den INSERT-Befehl. Die allgemeine
+                                Syntax des Befehls lautet INSERT, gefolgt von Tabellenname, Feldern und Werten.</p>
+                            <pre><code>INSERT INTO tablename (field,field2,...) VALUES (value, value2,...);
+</code></pre>
+                            <h4>Daten auswählen</h4>
+                            <p>SELECT-Befehle rufen ausgewählte Zeilen ab. Sie können UNION-Anweisungen, eine
+                                Ordnungsklausel, eine LIMIT-Klausel, eine WHERE-Klausel, eine GROUP BY...HAVING-Klausel
+                                und Unterabfragen enthalten.</p>
+                            <pre><code>SELECT field, field2,... FROM table_name, table_name2,... WHERE...
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- End Paragraph Examples -->
+                    <div class="clearfix margin-bottom-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+    <!-- === BEGIN FOOTER === -->
+    <div id="base" class="background-dark text-light">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-6 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Infos zur Website</h3>
+                    <p>Die Inhalte auf dieser Webseite dürfen nichtkommerziell und zu Bildungszwecken verwendet werden.
+                        Bei Verbesserungsvorschlägen bitte das Kontaktformular benutzen.</p>
+                    <p>Vielen Dank für Ihren Besuch</p>
+                </div>
+                <!-- End Disclaimer -->
+                <!-- Image Credits -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Soziale Medien</h3>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://www.instagram.com/lslschr/?hl=de" target="_blank">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/luis-luescher/" target="_blank">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lslschr" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Image Credits -->
+                <!-- Friends -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Friends -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="background-dark text-light">
+        <div class="container no-padding">
+            <div class="row">
+                <!-- Footer Menu -->
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="linux-basic.html">Informatik</a>
+                        </li>
+                        <li>
+                            <a href="https://me.luis-luescher.com" target="_blank">Über mich</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="legal_disclosure.html"">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Footer Menu -->
+            <!-- Copyright -->
+            <div id=" copyright" class="col-md-4">
+
+                                <p class="pull-right">Made by Luis Lüscher. All rights reserved.</p>
+
+                </div>
+                <!-- End Copyright -->
+            </div>
+        </div>
+        <!-- End Footer -->
+        <!-- JS -->
+        <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <!-- Isotope - Portfolio Sorting -->
+        <script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+        <!-- Mobile Menu - Slicknav -->
+        <script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+        <!-- Animate on Scroll-->
+        <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+        <!-- Stellar Parallax -->
+        <script type="text/javascript" src="assets/js/jquery.stellar.js" charset="utf-8"></script>
+        <!-- Sticky Div -->
+        <script type="text/javascript" src="assets/js/jquery.sticky.js" charset="utf-8"></script>
+        <!-- Slimbox2-->
+        <script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+        <!-- End JS -->
+</body>
+
+</html>
+<!-- === END FOOTER === -->

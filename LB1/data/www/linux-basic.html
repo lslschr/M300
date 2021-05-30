@@ -1,0 +1,681 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="de">
+<!--<![endif]-->
+
+<head>
+    <!-- Title -->
+    <title>Linux Basics | Luis Lüscher | it.luis-luescher.com</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Erfahre mehr über Linux. Welche Befehl innerhalb von Linux sind wichtig?">
+    <meta name="keywords" content="Informatik, Lernender, IT, Luis Lüscher, Befehle, Erklärung, Linux">
+    <meta name="author" content="Luis Ricardo Lüscher">
+    <meta name="publisher" content="Luis Ricardo Lüscher">
+    <meta name="copyright" content="Luis Ricardo Lüscher">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1" />
+    <meta name="page-topic" content="Forschung Technik">
+    <meta name="page-type" content="Private Homepage">
+    <meta name="audience" content="Azubis">
+    <meta http-equiv="content-language" content="de">
+    <meta name="robots" content="index, follow">
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,400" type="text/css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" style="background-position: 50% 0%; height:100%;" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="Main Logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+            <!-- Top Menu -->
+            <div id="hornav" class="row text-light">
+                <div class="col-md-12">
+                    <div class="text-center visible-lg">
+                        <ul id="hornavmenu" class="nav navbar-nav">
+                            <li>
+                                <a href="index.html" class="fa-home
+                                        active">Home</a>
+                            </li>
+                            <li>
+                                <span class="fa-gears">Informatik</span>
+                                <ul>
+                                    <li class="parent">
+                                        <span>Datenbanken</span>
+                                        <ul>
+                                            <li>
+                                                <a href="datenbank-theorie.html">Theorie</a>
+                                            </li>
+                                            <li>
+                                                <a href="datenbank-tabellen.html">Datenbank
+                                                    erstellen mit SQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Hardware</span>
+                                        <ul>
+                                            <li>
+                                                <a href="hardware-access-point.html">Access
+                                                    Point</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-firewall.html">Firewall</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-nas.html">NAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-router.html">Router</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-server.html">Server</a>
+                                            </li>
+                                            <li>
+                                                <a href="hardware-switch.html">Switch</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Linux</span>
+                                        <ul>
+                                            <li>
+                                                <a href="linux-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-distributionen.html">Distributionen</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-eastereggs.html">Eastereggs</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-basic.html">Grundbefehle</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-mariadb.html">MariaDB</a>
+                                            </li>
+                                            <li>
+                                                <a href="linux-webserver.html">Webserver</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="documentations.html">Modularbeiten</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Netzwerk</span>
+                                        <ul>
+                                            <li>
+                                                <a href="netzwerk-vpn.html">VPN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-tor.html">TOR</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-snmp.html">SNMP</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-monitoring.html">NW-Monitoring
+                                                    Systeme</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-vlan.html">VLAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="netzwerk-wlan.html">WLAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="php.html">PHP</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://security.luis-luescher.com" target="_blank">Security</a>
+                                    </li>
+                                    <li class="parent">
+                                        <span>Serverdienste</span>
+                                        <ul>
+                                            <li>
+                                                <a href="serverdienste-dhcp.html">DHCP</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-dns.html">DNS</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-file.html">File</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-print.html">Print</a>
+                                            </li>
+                                            <li>
+                                                <a href="serverdienste-ad.html">AD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-me.html" class="fa-copy">Über
+                                    mich</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="fa-comment">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Menu -->
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- === END HEADER === -->
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-40">
+                <!-- Begin Sidebar Menu -->
+                <div class="col-md-3">
+                    <ul class="list-group sidebar-nav" id="sidebar-nav">
+                        <!-- Weitere Theorie -->
+                        <li class="list-group-item list-toggle">
+                            <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Weitere
+                                Links</a>
+                            <ul id="collapse-typography" class="collapse">
+                                <li>
+                                    <a href="https://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht/" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>ubuntuusers</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.giga.de/extra/linux/specials/linux-befehle/" target="_blank">
+                                        <i class="fa fa-arrows-h"></i>giga.de</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Weitere Theorie -->
+                        <!-- Datenbank erstellen und verwalten -->
+                        <li class="list-group-item list-toggle">
+                            <a class="accordion-toggle" href="#collapse-components" data-toggle="collapse">Mehr zu
+                                Linux</a>
+                            <ul id="collapse-components" class="collapse">
+                                <li>
+                                    <span class="badge"></span>
+                                    <a href="linux-webserver.html">
+                                        <i class="fa fa-arrows-h"></i>Webserver</a>
+                                </li>
+                                <li>
+                                    <a href="linux-mariadb.html">
+                                        <i class="fa fa-arrows-h"></i>MariaDB</a>
+                                </li>
+                                <li>
+                                    <span class="badge">Du bist hier</span>
+                                    <a href="linux-basics.html">
+                                        <i class="fa fa-arrows-h"></i>Grundbefehle</a>
+                                </li>
+                                <li>
+                                    <a href="linux-eastereggs.html">
+                                        <i class="fa fa-arrows-h"></i>Eastereggs</a>
+                                </li>
+                                <li>
+
+                                    <a href="linux-distributionen.html">
+                                        <i class="fa fa-arrows-h"></i>Distributionen</a>
+                                </li>
+                                <li>
+                                    <a href="linux-dhcp.html">
+                                        <i class="fa fa-arrows-h"></i>DHCP</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End Icons -->
+                        <!-- End Grid System -->
+                    </ul>
+                </div>
+                <!-- End Sidebar Menu -->
+                <div class="col-md-9">
+                    <!-- Paragraph Examples -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="headline">
+                                <h1>Linux Grundbefehle</h1>
+                            </div>
+                            <p class="lead">In der untenstehenden Tabelle sind einige Grundbefehle für Linux aufgeführt.
+                            </p>
+                            <hr>
+                            <div class="datagrid">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Befehl</th>
+                                            <th>Beschreibung</th>
+                                        </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>ls</td>
+                                            <td>Auflistung des Verzeichnisse</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ls -al</td>
+                                            <td>Formatierte Auflistung mit versteckten Dateien</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ls -lt</td>
+                                            <td>Sortieren der formatierten Liste nach Zeitänderung</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cd dir</td>
+                                            <td>Auf dir Verzeichnis wechseln</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cd</td>
+                                            <td>Wechseln ins Hauptverzeichnis</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pwd</td>
+                                            <td>Aktuelles Arbeitsverzeichnis anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>mkdir dir</td>
+                                            <td>Erstellen eines dir Verzeichnisses</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cat >file </td>
+                                            <td>Setzt die Standardeingabe in die Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>more file</td>
+                                            <td>Den Inhalt der Datei ausgeben</td>
+                                        </tr>
+                                        <tr>
+                                            <td>head file</td>
+                                            <td>Ausgabe der ersten 10 Zeilen der Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tail file</td>
+                                            <td>Ausgabe der letzten 10 Zeilen der Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tail -f file</td>
+                                            <td>Den Inhalt der Datei ausgeben, wenn sie wächst, beginnend mit
+                                                die letzten 10 Zeilen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>touch file</td>
+                                            <td>Datei erstellen oder aktualisieren</td>
+                                        </tr>
+                                        <tr>
+                                            <td>rm file</td>
+                                            <td>Löschen der Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>rm -r dir</td>
+                                            <td>Löschen des Verzeichnisses</td>
+                                        </tr>
+                                        <tr>
+                                            <td>rm -f file</td>
+                                            <td>Erzwingen des Entfernens der Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>rm -rf dir</td>
+                                            <td>Erzwingen der Entfernung des Verzeichnisses dir</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cp file1 file2</td>
+                                            <td>Kopieren des Inhalts von Datei1 nach Datei2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cp -r dir1 dir2</td>
+                                            <td>Kopiere dir1 nach dir2;erstelle dir2 wenn nicht vorhanden</td>
+                                        </tr>
+                                        <tr>
+                                            <td>mv file1 file2</td>
+                                            <td>Datei1 in Datei2 umbenennen oder verschieben, falls sich Datei2 in einem
+                                                Verzeichnis befindet</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ln -s file link</td>
+                                            <td>Symbolischen Link zur Datei erstellen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ps</td>
+                                            <td>So zeigen Sie die aktuellen Arbeitsprozesse an</td>
+                                        </tr>
+                                        <tr>
+                                            <td>top</td>
+                                            <td>Alle laufenden Prozesse anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>kill pid</td>
+                                            <td>Beenden des Prozesses mit gegebener pid</td>
+                                        </tr>
+                                        <tr>
+                                            <td>killall proc</td>
+                                            <td>Beenden der gesamten Prozesses namens proc</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pkill pattern</td>
+                                            <td>Tötet alle Prozesse, die dem Muster entsprechen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>bg</td>
+                                            <td>Gestoppte oder Hintergrund-Jobs auflisten, einen gestoppten Job im
+                                                Hintergrund wieder aufnehmen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>fg</td>
+                                            <td>Bringt die jüngste Aufgabe in den Vordergrund</td>
+                                        </tr>
+                                        <tr>
+                                            <td>fg n </td>
+                                            <td>Bringt den Job n in den Vordergrund</td>
+                                        </tr>
+                                        <tr>
+                                            <td>chmod file</td>
+                                            <td>Ändern der berechtigung der Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>grep pattern file</td>
+                                            <td>Suche nach einem Muster in der Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>grep -r pattern dir</td>
+                                            <td>Rekursiv nach Muster in dir suchen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>command | grep pattern</td>
+                                            <td>Suchmuster in der Ausgabe eines Befehls</td>
+                                        </tr>
+                                        <tr>
+                                            <td>locate file</td>
+                                            <td>Alle Instanzen der Datei finden</td>
+                                        </tr>
+                                        <tr>
+                                            <td>find . -name filename</td>
+                                            <td>Sucht im aktuellen Verzeichnis und darunter, für Dateien und
+                                                Verzeichnisse mit Namen, die mit dem Dateinamen beginnen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pgrep pattern</td>
+                                            <td>Sucht nach allen genannten Prozessen, die stimmt mit dem Muster überein
+                                                und gibt standardmäßig ihre ID</td>
+                                        </tr>
+                                        <tr>
+                                            <td>date</td>
+                                            <td>Anzeige des aktuellen Datums und der Uhrzeit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cal</td>
+                                            <td>Den Kalender dieses Monats anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>uptime</td>
+                                            <td>Aktuelle Betriebszeit anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>w</td>
+                                            <td>Anzeigen, wer online ist</td>
+                                        </tr>
+                                        <tr>
+                                            <td>whoami</td>
+                                            <td>Als wen Sie eingeloggt sind</td>
+                                        </tr>
+                                        <tr>
+                                            <td>finger user</td>
+                                            <td>Informationen über den Benutzer anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>uname -a</td>
+                                            <td>Kernel-Informationen anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cat /proc/cpuinfo</td>
+                                            <td>CPU Informationen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cat proc/meminfo</td>
+                                            <td>RAM Informationen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>man command</td>
+                                            <td>Das Benutzerhandbuch für Befehle anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>df</td>
+                                            <td>Anzeige der Festplattennutzung</td>
+                                        </tr>
+                                        <tr>
+                                            <td>du</td>
+                                            <td>Speicherplatzausnutzung anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>free</td>
+                                            <td>Speicher- und Swap-Nutzung anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>whereis app</td>
+                                            <td>Mögliche Standorte der Applikation anzeigen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>which app</td>
+                                            <td>Anzeigen, welche Anwendungen standardmäßig ausgeführt werden</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tar cf file.tar file</td>
+                                            <td>Erstellen einer Datei mit dem Namen file.tar, die eine Datei enthält
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>tar xf file.tar</td>
+                                            <td>Entpacken Sie der Dateien aus file.tar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tar czf file.tar.gz files </td>
+                                            <td>Erstellen eines tar mit Gzip-Komprimierung</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tar xzf file.tar.gz</td>
+                                            <td>Tar mit Gzip extrahieren</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tar cjf file.tar.bz2 </td>
+                                            <td>Tar mit Bzip2-Komprimierung erstellen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tar xjf file.tar.bz2</td>
+                                            <td>Extrahieren eines Tar mit Bzip2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>gzip file</td>
+                                            <td>Komprimiert die Datei und benennt sie in file.gz um</td>
+                                        </tr>
+                                        <tr>
+                                            <td>gzip -d file.gz</td>
+                                            <td>Dekomprimiert file.gz zurück in die Datei</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ping host</td>
+                                            <td>Ping-Host und Ausgabe der Ergebnisse</td>
+                                        </tr>
+                                        <tr>
+                                            <td>whois domain</td>
+                                            <td>Whois-Informationen für Domains abrufen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>dig domain</td>
+                                            <td>DNS-Informationen für die Domäne abrufen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>dig -x host</td>
+                                            <td>Reverse-Lookup-Host</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wget file</td>
+                                            <td>Datei herunterladen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>wget -c file</td>
+                                            <td>Fortsetzen eines gestoppten Downloads</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ctrl+c</td>
+                                            <td>Hält den aktuellen Befehl an</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ctrl+z</td>
+                                            <td>Stoppt den aktuellen Befehl, Fortsetzung mit fg im Vordergrund oder bg
+                                                im Hintergrund</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ctrl+d</td>
+                                            <td>Abmelden der aktuellen Sitzung, ähnlich wie beim Beenden </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ctrl+w</td>
+                                            <td>Löscht ein Wort in der aktuellen Zeile</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ctrl+u</td>
+                                            <td>Löscht die ganze Zeile</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ctrl+r</td>
+                                            <td>Eingeben um einen aktuellen Befehl aufzurufen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>!!</td>
+                                            <td>Wiederhohlt den vorherigen Befehl</td>
+                                        </tr>
+                                        <tr>
+                                            <td>exit</td>
+                                            <td>Abmelden der aktuellen Sitzung</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Paragraph Examples -->
+                    <div class="clearfix margin-bottom-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+    <!-- === BEGIN FOOTER === -->
+    <div id="base" class="background-dark text-light">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-6 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Infos zur Website</h3>
+                    <p>Die Inhalte auf dieser Webseite dürfen nichtkommerziell und zu Bildungszwecken verwendet werden.
+                        Bei Verbesserungsvorschlägen bitte das Kontaktformular benutzen.</p>
+                    <p>Vielen Dank für Ihren Besuch</p>
+                </div>
+                <!-- End Disclaimer -->
+                <!-- Image Credits -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <h3 class="margin-bottom-10">Soziale Medien</h3>
+                    <ul class="menu">
+                        <li>
+                            <a href="https://www.instagram.com/lslschr/?hl=de" target="_blank">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/luis-luescher/" target="_blank">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lslschr" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Image Credits -->
+                <!-- Friends -->
+                <div class="col-sm-6 col-md-3 margin-bottom-30">
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Friends -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="background-dark text-light">
+        <div class="container no-padding">
+            <div class="row">
+                <!-- Footer Menu -->
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="linux-basic.html">Informatik</a>
+                        </li>
+                        <li>
+                            <a href="https://me.luis-luescher.com" target="_blank">Über mich</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="legal_disclosure.html"">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Footer Menu -->
+            <!-- Copyright -->
+            <div id=" copyright" class="col-md-4">
+
+                                <p class="pull-right">Made by Luis Lüscher. All rights reserved.</p>
+
+                </div>
+                <!-- End Copyright -->
+            </div>
+        </div>
+        <!-- End Footer -->
+        <!-- JS -->
+        <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <!-- Isotope - Portfolio Sorting -->
+        <script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+        <!-- Mobile Menu - Slicknav -->
+        <script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+        <!-- Animate on Scroll-->
+        <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+        <!-- Stellar Parallax -->
+        <script type="text/javascript" src="assets/js/jquery.stellar.js" charset="utf-8"></script>
+        <!-- Sticky Div -->
+        <script type="text/javascript" src="assets/js/jquery.sticky.js" charset="utf-8"></script>
+        <!-- Slimbox2-->
+        <script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+        <!-- End JS -->
+</body>
+
+</html>
+<!-- === END FOOTER === -->
