@@ -506,6 +506,20 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
 #### 412-Apache
 
+Beim Apache HTTP-Server handelt es sich um den weltweit am meisten verwendeten Webserver, der bei der Entwicklung des WWW (World Wide Webs) eine Schlüsselrolle spielte. Das quellfreie Open Source-Produkt wird unter Federführung der Apache Software Foundation fortlaufend weiterentwickelt.
+
+![Alt-Text](/LB1/images/Apache_Logo.png "Apache_Logo")
+
+Apache ist nach Expertenschätzungen auf gut 60 Prozent der Webserver (auch Managed Server) weltweit installiert. Webserver werden – ihrem Namen entsprechend – vor allem im Netz eingesetzt, spielen aber auch lokal oder im Intranet eine Rolle. Der Server stellt Dokumente lokal, im Intranet oder auch weltweit im WWW zur Verfügung. Stellt ein Nutzer von seinem Rechner – dem Client – eine Anfrage (ruft also zum Beispiel eine Webseite ab), überträgt der Apache Webserver die benötigten Dateien an den oder die Client-Computer. Damit eine Website dargestellt werden kann, werden in der Regel sehr viele Dateien benötigt, die der Browser alle einzeln abfragt. Der HTML-Code einer Seite, das Design (via CSS), Videos, Bild- sowie Audiodateien werden aus unterschiedlichen Quellen wie Datenbanken oder dem Content Management System (CMS) abgerufen und getrennt voneinander an den Client übertragen. Skriptsprachen wie PHP sorgen anschließend dafür, dass alle Einzelinformationen zu einem Dokument verbunden werden.
+
+Einer der großen Vorzüge des Apache Webservers ist die Variabilität. Durch den freien Quellcode kann er an den individuellen Bedarf angepasst werden. Dazu kommen zahlreiche Module, mit denen sich die Kernfunktion des Servers erweitern lässt. Dazu zählen unter anderem:
+
+- eine Schnittstelle für Sprachen, die beispielsweise die Programmiersprachen Perl, Python und PHP unterstützt;
+- Authentifizierungsmodule wie mod_access, mod_auth und mod_digest;
+- Ein Secure Socket Layer (SSL)-Modul
+
+Die Apache Foundation liefert in ihrem Wiki gleich zwei Erklärungen: Der Name ist eine Anerkennung für die unerschöpfliche Ausdauer und die hohen Fähigkeiten in der Kriegsführung, die dem Stamm der Apachen zugeschrieben wird. Mit der Namenswahl wollte man den Ureinwohnern Amerikas Respekt zollen. Bekannter, aber laut der Apache Stiftung nicht richtig ist die Version, dass sich hinter dem Namen ein Wortspiel verbirgt: Die Gründer hätten einst bereits existierenden Code mit eigenen «Code-Flicken» kombiniert. Dabei sei ein Flickenteppich-Server also «a patchy server» entstanden.
+
 ## 5-Planen
 ### 51-Benoetigte-Infrastruktur
 
