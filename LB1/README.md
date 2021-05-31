@@ -895,13 +895,13 @@ sudo mv /home/vagrant/_internal.xml /opt/splunk/etc/apps/search/default/data/ui/
 sudo mv /home/vagrant/wbs_monitoring.xml /opt/splunk/etc/apps/search/default/data/ui/views/
 ```
 
-Als letztes aktivieren wir den Listener auf dem Port 9997. Dadurch können wir auf diesem Port Daten von anderen Hosts (Forwarders) empfangen. 
+Als letztes aktivieren wir den Listener auf dem Port 9997. Dadurch können wir auf diesem Port Daten von anderen Hosts (Forwarder) empfangen. 
 ```bash
 sudo /opt/splunk/bin/splunk enable listen 9997 -auth admin:Admin1234
 ```
 
 ### 73-Splunkforwarder Konfiguration
-Die Grundkonfiguration des Splunk Forwarder ist identisch mit derer der Splunkinstanz. Nachdem Splunk installiert wurde unterscheidet sich nur die Konfiguration.
+Die Grundkonfiguration des Splunk Forwarder ist identisch mit derer der Splunkinstanz. Nachdem Splunk installiert wurde unterscheidet sich nur die Konfiguration. Die Splunkforwarder werden mit meinem [apache_splunk_forwarder_installation.sh](/data/apache_splunk_forwarder_installation.sh "Splunkforwarder Installation") Skript installiert. 
 
 Als erstes gibt man an, wie die Logs weitergeleitet werden sollten. Hierbei gibt man die IP-Adresse der Splunkinstanz an, gefolgt vom vorhin definierten Port (9997). Anschliessend wird noch das Passwort für den Administraot abgefragt bzw. als Parameter angegeben. 
 ```bash
