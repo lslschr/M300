@@ -331,12 +331,12 @@ Während der LB1 wurde folgende Software genutzt:
 - Windows 10 1909
 - Office 365 (Outlook, Word, PowerPoint, Excel und Teams)
 - Snagit 2020
-- Remote Desktop
 - Putty
 - Solar-Putty
 - Visual Studio Code
 - Google Chrome
-- VMWare ESXi 6.7.0
+- Vagrant
+- Git Bash
 - DiskStation Manager
 - WinSCP
 - Draw.io
@@ -799,7 +799,7 @@ wenn der Test erfolgreich abläuft.</td>
 </table>
 
 #### 521-Erklaerung-Klassifikation
-Erklärung von [Wikipedia.org](https://de.wikipedia.org/wiki/Beurteilung_eines_bin%C3%A4ren_Klassifikators#Wahrheitsmatrix:_Richtige_und_falsche_Klassifikationen "Wikipedia.org")
+<em>Erklärung von [Wikipedia.org](https://de.wikipedia.org/wiki/Beurteilung_eines_bin%C3%A4ren_Klassifikators#Wahrheitsmatrix:_Richtige_und_falsche_Klassifikationen "Wikipedia.org")
 
 Um einen Klassifikator zu bewerten, muss man ihn in einer Reihe von Fällen anwenden, bei denen man zumindest im Nachhinein Kenntnis über die „wahre“ Klasse der jeweiligen Objekte hat. Ein Beispiel für so einen Fall ist ein medizinischer Labortest, mit dem festgestellt werden soll, ob eine Person eine bestimmte Krankheit hat. Später wird durch aufwändigere Untersuchungen festgestellt, ob die Person tatsächlich an dieser Krankheit leidet. Der Test stellt einen Klassifikator dar, der die Personen in die Kategorien „krank“ und „gesund“ einordnet. Da es sich um eine Ja/Nein-Frage handelt, sagt man auch, der Test fällt positiv (Einordnung „krank“) oder negativ (Einordnung „gesund“) aus. Um zu beurteilen, wie gut geeignet der Labortest für die Diagnose der Krankheit ist, wird nun bei jedem Patienten dessen tatsächlicher Gesundheitszustand mit dem Ergebnis des Tests verglichen. Dabei können vier mögliche Fälle auftreten:
 
@@ -811,7 +811,7 @@ Um einen Klassifikator zu bewerten, muss man ihn in einer Reihe von Fällen anwe
 
 4. Richtig negativ (TN): Der Patient ist gesund, und der Test hat dies richtig angezeigt.
 
-Im ersten und letzten Fall war die Diagnose also richtig, in den anderen beiden Fällen liegt ein Fehler vor. Die vier Fälle werden in verschiedenen Kontexten auch anders benannt. So sind auch die englischen Begriffe true positive, false positive, false negative und true negative gebräuchlich.
+Im ersten und letzten Fall war die Diagnose also richtig, in den anderen beiden Fällen liegt ein Fehler vor. Die vier Fälle werden in verschiedenen Kontexten auch anders benannt. So sind auch die englischen Begriffe true positive, false positive, false negative und true negative gebräuchlich.</em>
 
 ## 6-Entscheiden 
 
