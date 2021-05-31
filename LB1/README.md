@@ -799,9 +799,9 @@ wenn der Test erfolgreich abläuft.</td>
 </table>
 
 #### 521-Erklaerung-Klassifikation
-<em>Erklärung von [Wikipedia.org](https://de.wikipedia.org/wiki/Beurteilung_eines_bin%C3%A4ren_Klassifikators#Wahrheitsmatrix:_Richtige_und_falsche_Klassifikationen "Wikipedia.org")
+Erklärung von [Wikipedia.org](https://de.wikipedia.org/wiki/Beurteilung_eines_bin%C3%A4ren_Klassifikators#Wahrheitsmatrix:_Richtige_und_falsche_Klassifikationen "Wikipedia.org")
 
-Um einen Klassifikator zu bewerten, muss man ihn in einer Reihe von Fällen anwenden, bei denen man zumindest im Nachhinein Kenntnis über die „wahre“ Klasse der jeweiligen Objekte hat. Ein Beispiel für so einen Fall ist ein medizinischer Labortest, mit dem festgestellt werden soll, ob eine Person eine bestimmte Krankheit hat. Später wird durch aufwändigere Untersuchungen festgestellt, ob die Person tatsächlich an dieser Krankheit leidet. Der Test stellt einen Klassifikator dar, der die Personen in die Kategorien „krank“ und „gesund“ einordnet. Da es sich um eine Ja/Nein-Frage handelt, sagt man auch, der Test fällt positiv (Einordnung „krank“) oder negativ (Einordnung „gesund“) aus. Um zu beurteilen, wie gut geeignet der Labortest für die Diagnose der Krankheit ist, wird nun bei jedem Patienten dessen tatsächlicher Gesundheitszustand mit dem Ergebnis des Tests verglichen. Dabei können vier mögliche Fälle auftreten:
+<em>Um einen Klassifikator zu bewerten, muss man ihn in einer Reihe von Fällen anwenden, bei denen man zumindest im Nachhinein Kenntnis über die „wahre“ Klasse der jeweiligen Objekte hat. Ein Beispiel für so einen Fall ist ein medizinischer Labortest, mit dem festgestellt werden soll, ob eine Person eine bestimmte Krankheit hat. Später wird durch aufwändigere Untersuchungen festgestellt, ob die Person tatsächlich an dieser Krankheit leidet. Der Test stellt einen Klassifikator dar, der die Personen in die Kategorien „krank“ und „gesund“ einordnet. Da es sich um eine Ja/Nein-Frage handelt, sagt man auch, der Test fällt positiv (Einordnung „krank“) oder negativ (Einordnung „gesund“) aus. Um zu beurteilen, wie gut geeignet der Labortest für die Diagnose der Krankheit ist, wird nun bei jedem Patienten dessen tatsächlicher Gesundheitszustand mit dem Ergebnis des Tests verglichen. Dabei können vier mögliche Fälle auftreten:
 
 1. Richtig positiv (TP): Der Patient ist krank, und der Test hat dies richtig angezeigt.
 
@@ -944,8 +944,12 @@ Am Ende hat man Einblick in die Warnings im Index _internal
 ![Logs im Index _internal](/LB1/images/internal_dashboard_3.png "Die gegenwärtigen Warnungen im Index _internal")
 
 #### 742-Splunk-Dashboard-Webserver
-Für die Überwachung der beiden Webserver habe ich ein zusätzliches Dashboard erstellt, mit welchem man die wichtigstens Informationen zu den jeweiligen Servern sowie dem Index main erhält. 
+Für die Überwachung der beiden Webserver habe ich ein zusätzliches Dashboard erstellt, mit welchem man die wichtigstens Informationen zu den jeweiligen Servern sowie dem Index "main" erhält. 
 
+Auf dem Dashboard kann man einsehen wieviele Logs im Index main vorhanden sind. Zudem wieviele Logs vom jeweiligen Server stammen. Die Anzahl HTTP 404 Errors sowie GET Requests kann eingesehen werden. 
+Man kann noch weitere Einzelheiten zu den beiden Log Files access.log und error.log erhalten. 
+Am Footer des Dashboard sieht man dann die Sourcetypes, die Hosts die in den Index main liefern und die Sources. 
+![Webserver Monitoring](/LB1/images/webserver_dashboard.png "Informationen zu den Webservern 01 & 02")
 
 ## 8-Kontrollieren
 
