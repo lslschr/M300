@@ -870,8 +870,35 @@ Die ersten Konfigurationen sind identisch mit den des Webserver. Viel wichtiger 
 Die restlichen Konfigurationen sind wieder identisch mit denen der Webserver. 
 
 ### 72-Splunk Konfiguration
-Die Installation von Splunk erfolgt in meinem Setup über das Skript [splunk_installation.sh](/data/splunk_installation.sh "Splunk Installation")
+Die Installation von Splunk erfolgt in meinem Setup über das Skript [splunk_installation.sh](/data/splunk_installation.sh "Splunk Installation"). In diesem Skript 
 
+Die wichtigsten Befehle werde ich hier kurz kommentieren.
+
+```bash
+wget -O splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.0&product=splunk&filename=splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz&wget=true'
+```
+Mit diesem Befehl wird Splunk heruntergeladen und unter dem Dateinamen "splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz" abgespeichert. 
+
+```bash
+sudo tar xvzf splunk.tgz -C /opt/ 
+```
+Im Anschluss werden die Splunk Systemdateien ins das Verzeichnis /opt/ extrahiert. 
+
+```bash
+sudo /opt/splunk/bin/splunk  restart --accept-license --answer-yes --no-prompt --seed-passwd Admin1234
+```
+Dies ist der wichtigste Befehl innerhalb der LB1. Mit diesem Befehl wird Splunk installiert und das Administratorpasswort gesetzt. 
+
+```bash
+sudo mv /home/vagrant/_internal.xml /opt/splunk/etc/apps/search/default/data/ui/views/
+sudo mv /home/vagrant/wbs_monitoring.xml /opt/splunk/etc/apps/search/default/data/ui/views/
+```
+Um das Monitoring zu garantieren, müssen wir die beiden XML Dateien in das dazugehörige Splunk Verzeichnis verlegen. 
+
+```bash
+sudo /opt/splunk/bin/splunk enable listen 9997 -auth admin:Admin1234
+```
+Als letztes aktivieren wir den Listener auf dem Port 9997. Dadurch können wir auf diesem Port Daten von anderen Hosts (Forwarders) empfangen. 
 
 ### 73-Splunkforwarder Konfiguration
 
