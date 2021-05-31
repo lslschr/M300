@@ -32,7 +32,7 @@ sudo chmod 777 /var/log/apache2/other_vhosts_access.log
 sudo service apache2 start
 
 ## Herunterladen der benötigten Splunk Dateien von der offizielen Source (Wird nicht mehr verwendet, da Splunk im Anhang)
-#wget -O splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.0&product=universalforwarder&filename=splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz&wget=true'
+wget -O splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.0&product=universalforwarder&filename=splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz&wget=true'
 
 ## Umbenennen in Splunk
 sudo mv splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz splunkforwarder.tgz 
