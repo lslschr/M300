@@ -132,9 +132,9 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
     - [71-Vagrantfile](#71-Vagrantfile)<br>
 
-    - [711-Vagrant-Webserver](#711-Vagrant-Webserver)<br>
+      - [711-Vagrant-Webserver](#711-Vagrant-Webserver)<br>
 
-    - [712-Vagrant-Splunk](#712-Vagrant-Splunk)<br>
+      - [712-Vagrant-Splunk](#712-Vagrant-Splunk)<br>
   
     - [72-Splunk-Konfiguration](#72-Splunk-Konfiguration)<br>
   
@@ -142,9 +142,9 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
   
     - [74-Splunk-Dashbaord](#74-Splunk-Dashbaord)<br>
   
-    - [741-Splunk-Dashboard-Internal](#741-Splunk-Dashboard-Internal)<br>
+      - [741-Splunk-Dashboard-Internal](#741-Splunk-Dashboard-Internal)<br>
   
-    - [742-Splunk-Dashboard-Webserver](#742-Splunk-Dashboard-Webserver)<br>
+      - [742-Splunk-Dashboard-Webserver](#742-Splunk-Dashboard-Webserver)<br>
 
 - [8-Kontrollieren](#8-Kontrollieren)<br>
 
@@ -944,6 +944,9 @@ Am Ende hat man Einblick in die Warnings im Index _internal
 ![Logs im Index _internal](/LB1/images/internal_dashboard_3.png "Die gegenwärtigen Warnungen im Index _internal")
 
 #### 742-Splunk-Dashboard-Webserver
+Für die Überwachung der beiden Webserver habe ich ein zusätzliches Dashboard erstellt, mit welchem man die wichtigstens Informationen zu den jeweiligen Servern sowie dem Index main erhält. 
+
+
 ## 8-Kontrollieren
 
 ### 81-Testfaelle
