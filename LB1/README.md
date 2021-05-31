@@ -834,11 +834,44 @@ Im ersten Teil der Konfiguration definiert man den Hostname sowie die dazu verwe
 Anschliessend werden IP-Adresse im Private Network und die weitergeleiteten Ports festgelegt. 
 Da für die Konfiguration der VMs einige Befehle ausgeführt werden müssen, habe ich folgendes [Skript](/data/apache_splunk_forwarder_installation.sh "Apache + Splunk Installation") erstellt, mit welchem die Installation vollständig automatisch geschieht. 
 
-Im Anschluss werden die beiden Websites [it.luis-luescher.com](https://it.luis-luescher.com "it.luis-luescher.com") und die erste Version der Seite webity.ch [webity.ch](https://webity.ch "webity.ch") auf die einzelnen Webserver hochgeladen. "Hochladen" ist hier eigentlich der falsche Begriff, denn hierbei handelt es sich im einen Synced Folder, somit werden Veränderung in diesem Ordner auf den Webserver ebenfalls sichtbar. 
+Im Anschluss werden die beiden Websites [it.luis-luescher.com](https://it.luis-luescher.com "it.luis-luescher.com") und die erste Version der Seite [webity.ch](https://webity.ch "webity.ch") auf die einzelnen Webserver hochgeladen. "Hochladen" ist hier eigentlich der falsche Begriff, denn hierbei handelt es sich im einen Synced Folder, somit werden Veränderung in diesem Ordner auf den Webserver ebenfalls sichtbar. 
 
 Die restlichen Einstellungen sind für VirtualBox. Hierbei wird in Virtualbox die Anzahl an Memeory in MB angegbeen und der Name auf den bereits vorhin gesetzten Hostname gestetzt. 
 
+#### 712-Vagrant Splunk
+Der Aufbau sieht vor das eine Splunkinstanz aufgestzt werden sollte. Hierbei wird somit das Herzstück der LB1 ins Leben gerufen. Mit dem Splunkserver kann man dann im Anschluss auf die von mir selbst erstellten Dashbaords zugreifen und die beiden Webserver überwachen. 
+
+```vagrant
+  config.vm.define "svpzhlspk01" do |svpzhlspk01|
+    svpzhlspk01.vm.box = "ubuntu/trusty64"
+    svpzhlspk01.vm.hostname = 'svpzhlspk01'
+
+    svpzhlspk01.vm.network :private_network, ip: "192.168.50.10"
+    svpzhlspk01.vm.network :forwarded_port, guest: 8000, host: 8000                     
+    svpzhlspk01.vm.network :forwarded_port, guest: 8089, host: 8089
+    svpzhlspk01.vm.provision :file, source: "data/_internal.xml", destination: "/home/vagrant/_internal.xml"
+    svpzhlspk01.vm.provision :file, source: "data/wbs_monitoring.xml", destination: "/home/vagrant/wbs_monitoring.xml"
+    svpzhlspk01.vm.provision "shell", path: "data/splunk_installation.sh"
+    svpzhlspk01.vm.provision "shell", path: "data/generate_logs.sh"
+    
+
+    svpzhlspk01.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      v.customize ["modifyvm", :id, "--memory", 2048]
+      v.customize ["modifyvm", :id, "--name", "svpzhlspk01"]
+    end
+  end
+```
+
+Die ersten Konfigurationen sind identisch mit den des Webserver. Viel wichtiger ist hierbei welche Dateien auf den Splunkserver hochgeladen werden. 
+- Ein internes Dashboard, welches den Index "_internal" überwacht und Auskunft gibt.
+- Ein Webserver Dashboard, hier werden die beiden Webserver 01 & 02 überwacht und weitere Informationen über Apache spezifische Logs ausgegeben. 
+
+Die restlichen Konfigurationen sind wieder identisch mit denen der Webserver. 
+
 ### 72-Splunk Konfiguration
+Die Installation von Splunk erfolgt in meinem Setup über das Skript [splunk_installation.sh](/data/splunk_installation.sh "Splunk Installation")
+
 
 ### 73-Splunkforwarder Konfiguration
 
