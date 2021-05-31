@@ -807,6 +807,37 @@ Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Ap
 
 Das verwendete Vagrantfile kann [hier](Vagrantfile "Vagrantfile") eingesehen werden. 
 
+#### 711-Vagrant Webserver 1 & 2
+Der Aufbau sieht vor das zwei Webserver aufgestzt werden, diese werden identisch konfiguriert, ausser IP-Adresse und definierte Portweiterleitungen
+
+```vagrant
+Vagrant.configure("2") do |config|
+  config.vm.define "wbspzhlweb01" do |wbspzhlweb01|
+    wbspzhlweb01.vm.box = "ubuntu/trusty64"
+    wbspzhlweb01.vm.hostname = 'wbspzhlweb01'
+
+    wbspzhlweb01.vm.network :private_network, ip: "192.168.50.30"
+    wbspzhlweb01.vm.network :forwarded_port, guest: 80, host: 80                   
+    wbspzhlweb01.vm.network :forwarded_port, guest: 443, host: 443
+    wbspzhlweb01.vm.provision "shell", path: "data/apache_splunk_forwarder_installation.sh"
+    wbspzhlweb01.vm.synced_folder "data/www/", "/var/www/html"
+
+    wbspzhlweb01.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      v.customize ["modifyvm", :id, "--memory", 2048]
+      v.customize ["modifyvm", :id, "--name", "wbspzhlweb01"]
+    end
+  end
+```
+
+Im ersten Teil der Konfiguration definiert man den Hostname sowie die dazu verwendeten VM-Images.
+Anschliessend werden IP-Adresse im Private Network und die weitergeleiteten Ports festgelegt. 
+Da für die Konfiguration der VMs einige Befehle ausgeführt werden müssen, habe ich folgendes [Skript](/data/apache_splunk_forwarder_installation.sh "Apache + Splunk Installation") erstellt, mit welchem die Installation vollständig automatisch geschieht. 
+
+Im Anschluss werden die beiden Websites [it.luis-luescher.com](https://it.luis-luescher.com "it.luis-luescher.com") und die erste Version der Seite webity.ch [webity.ch](https://webity.ch "webity.ch") auf die einzelnen Webserver hochgeladen. "Hochladen" ist hier eigentlich der falsche Begriff, denn hierbei handelt es sich im einen Synced Folder, somit werden Veränderung in diesem Ordner auf den Webserver ebenfalls sichtbar. 
+
+Die restlichen Einstellungen sind für VirtualBox. Hierbei wird in Virtualbox die Anzahl an Memeory in MB angegbeen und der Name auf den bereits vorhin gesetzten Hostname gestetzt. 
+
 ### 72-Splunk Konfiguration
 
 ### 73-Splunkforwarder Konfiguration
