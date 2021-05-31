@@ -718,7 +718,7 @@ verteilen, um so die ganze Splunkumgebung performanter zu machen.
 
 Beim Apache HTTP-Server handelt es sich um den weltweit am meisten verwendeten Webserver, der bei der Entwicklung des WWW (World Wide Webs) eine Schlüsselrolle spielte. Das quellfreie Open Source-Produkt wird unter Federführung der Apache Software Foundation fortlaufend weiterentwickelt.
 
-![Alt-Text](/LB1/images/Apache_Logo.png "Apache_Logo")
+![Apache Logo](/LB1/images/Apache_Logo.png "Apache_Logo")
 
 Apache ist nach Expertenschätzungen auf gut 60 Prozent der Webserver (auch Managed Server) weltweit installiert. Webserver werden – ihrem Namen entsprechend – vor allem im Netz eingesetzt, spielen aber auch lokal oder im Intranet eine Rolle. Der Server stellt Dokumente lokal, im Intranet oder auch weltweit im WWW zur Verfügung. Stellt ein Nutzer von seinem Rechner – dem Client – eine Anfrage (ruft also zum Beispiel eine Webseite ab), überträgt der Apache Webserver die benötigten Dateien an den oder die Client-Computer. Damit eine Website dargestellt werden kann, werden in der Regel sehr viele Dateien benötigt, die der Browser alle einzeln abfragt. Der HTML-Code einer Seite, das Design (via CSS), Videos, Bild- sowie Audiodateien werden aus unterschiedlichen Quellen wie Datenbanken oder dem Content Management System (CMS) abgerufen und getrennt voneinander an den Client übertragen. Skriptsprachen wie PHP sorgen anschließend dafür, dass alle Einzelinformationen zu einem Dokument verbunden werden.
 
@@ -932,7 +932,16 @@ sudo ./splunk add monitor /var/log/apache2
 ### 74-Splunk-Dashbaord
 
 #### 741-Splunk-Dashboard-Internal
+Für die Überwachung des Index "_internal" habe ich ein Dashboard erstellt, mit welchem man die wichtigsten informationen über den Index erhält. 
 
+Als erstes werden die meist verwendeten Sourcetypes aufgezeigt. 
+![Sourcetypes im Index _internal](/LB1/images/internal_dashboard_1.png "Häufigsten Sourcetypes im Index _internal")
+
+Danach erhählt man eisicht in die anzahl Logs im Index _internal sowie die Warnings und Errors
+![Logs, Warnings und Errors im Index _internal](/LB1/images/internal_dashboard_2.png "Anzahl Logs, Warnings und Errors im Index _internal")
+
+Am Ende hat man Einblick in die Warnings im Index _internal
+![Logs im Index _internal](/LB1/images/internal_dashboard_3.png "Die gegenwärtigen Warnungen im Index _internal")
 
 #### 742-Splunk-Dashboard-Webserver
 ## 8-Kontrollieren
