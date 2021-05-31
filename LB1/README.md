@@ -140,7 +140,7 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
   
     - [73-Splunkforwarder-Konfiguration](#73-Splunkforwarder-Konfiguration)<br>
   
-    - [74-Splunk-Dashbaord](#74-Splunk-Dashbaord)<br>
+    - [74-Splunk-Dashboard](#74-Splunk-Dashboard)<br>
   
       - [741-Splunk-Dashboard-Internal](#741-Splunk-Dashboard-Internal)<br>
   
@@ -929,7 +929,7 @@ Zum Abschluss muss man noch definieren, welches Log Verzeichnis die Daten an Spl
 sudo ./splunk add monitor /var/log/apache2
 ```
 
-### 74-Splunk-Dashbaord
+### 74-Splunk-Dashboard
 
 #### 741-Splunk-Dashboard-Internal
 Für die Überwachung des Index "_internal" habe ich ein Dashboard erstellt, mit welchem man die wichtigsten informationen über den Index erhält. 
