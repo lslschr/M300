@@ -805,6 +805,8 @@ Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Ap
 
 ### 71-Vagrantfile
 
+Das verwendete Vagrantfile kann [hier](Vagrantfile "Vagrantfile") eingesehen werden. 
+
 ### 72-Splunk Konfiguration
 
 ### 73-Splunkforwarder Konfiguration
