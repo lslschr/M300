@@ -874,34 +874,44 @@ Die Installation von Splunk erfolgt in meinem Setup über das Skript [splunk_ins
 
 Die wichtigsten Befehle werde ich hier kurz kommentieren.
 
+Mit diesem Befehl wird Splunk heruntergeladen und unter dem Dateinamen "splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz" abgespeichert. 
 ```bash
 wget -O splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.0&product=splunk&filename=splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz&wget=true'
 ```
-Mit diesem Befehl wird Splunk heruntergeladen und unter dem Dateinamen "splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz" abgespeichert. 
 
+Im Anschluss werden die Splunk Systemdateien ins das Verzeichnis /opt/ extrahiert. 
 ```bash
 sudo tar xvzf splunk.tgz -C /opt/ 
 ```
-Im Anschluss werden die Splunk Systemdateien ins das Verzeichnis /opt/ extrahiert. 
 
+Dies ist der wichtigste Befehl innerhalb der LB1. Mit diesem Befehl wird Splunk installiert und das Administratorpasswort gesetzt. 
 ```bash
 sudo /opt/splunk/bin/splunk  restart --accept-license --answer-yes --no-prompt --seed-passwd Admin1234
 ```
-Dies ist der wichtigste Befehl innerhalb der LB1. Mit diesem Befehl wird Splunk installiert und das Administratorpasswort gesetzt. 
 
+Um das Monitoring zu garantieren, müssen wir die beiden XML Dateien in das dazugehörige Splunk Verzeichnis verlegen. 
 ```bash
 sudo mv /home/vagrant/_internal.xml /opt/splunk/etc/apps/search/default/data/ui/views/
 sudo mv /home/vagrant/wbs_monitoring.xml /opt/splunk/etc/apps/search/default/data/ui/views/
 ```
-Um das Monitoring zu garantieren, müssen wir die beiden XML Dateien in das dazugehörige Splunk Verzeichnis verlegen. 
 
+Als letztes aktivieren wir den Listener auf dem Port 9997. Dadurch können wir auf diesem Port Daten von anderen Hosts (Forwarders) empfangen. 
 ```bash
 sudo /opt/splunk/bin/splunk enable listen 9997 -auth admin:Admin1234
 ```
-Als letztes aktivieren wir den Listener auf dem Port 9997. Dadurch können wir auf diesem Port Daten von anderen Hosts (Forwarders) empfangen. 
 
 ### 73-Splunkforwarder Konfiguration
+Die Grundkonfiguration des Splunk Forwarder ist identisch mit derer der Splunkinstanz. Nachdem Splunk installiert wurde unterscheidet sich nur die Konfiguration.
 
+Als erstes gibt man an, wie die Logs weitergeleitet werden sollten. Hierbei gibt man die IP-Adresse der Splunkinstanz an, gefolgt vom vorhin definierten Port (9997). Anschliessend wird noch das Passwort für den Administraot abgefragt bzw. als Parameter angegeben. 
+```bash
+sudo ./splunk add forward-server 192.168.50.10:9997 -auth admin:Admin1234
+```
+
+Zum Abschluss muss man noch definieren, welches Log Verzeichnis die Daten an Splunk senden sollte. Sprich welche überwacht werden sollten. In meinem Fall ist dies das Apache2 Log Verzeichnis. 
+```bash
+sudo ./splunk add monitor /var/log/apache2
+```
 ## 8-Kontrollieren
 
 ### 81-Testfaelle
