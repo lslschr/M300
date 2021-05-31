@@ -130,6 +130,22 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
 - [7-Realisieren](#7-Realisieren)<br>
 
+    - [71-Vagrantfile](#71-Vagrantfile)<br>
+
+    - [711-Vagrant-Webserver](#711-Vagrant-Webserver)<br>
+
+    - [712-Vagrant-Splunk](#712-Vagrant-Splunk)<br>
+  
+    - [72-Splunk-Konfiguration](#72-Splunk-Konfiguration)<br>
+  
+    - [73-Splunkforwarder-Konfiguration](#73-Splunkforwarder-Konfiguration)<br>
+  
+    - [74-Splunk-Dashbaord](#74-Splunk-Dashbaord)<br>
+  
+    - [741-Splunk-Dashboard-Internal](#741-Splunk-Dashboard-Internal)<br>
+  
+    - [742-Splunk-Dashboard-Webserver](#742-Splunk-Dashboard-Webserver)<br>
+
 - [8-Kontrollieren](#8-Kontrollieren)<br>
 
     - [81-Testfaelle](#81-Testfaelle)<br>
@@ -807,7 +823,7 @@ Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Ap
 
 Das verwendete Vagrantfile kann [hier](Vagrantfile "Vagrantfile") eingesehen werden. 
 
-#### 711-Vagrant Webserver 1 & 2
+#### 711-Vagrant-Webserver
 Der Aufbau sieht vor das zwei Webserver aufgestzt werden, diese werden identisch konfiguriert, ausser IP-Adresse und definierte Portweiterleitungen
 
 ```vagrant
@@ -838,7 +854,7 @@ Im Anschluss werden die beiden Websites [it.luis-luescher.com](https://it.luis-l
 
 Die restlichen Einstellungen sind für VirtualBox. Hierbei wird in Virtualbox die Anzahl an Memeory in MB angegbeen und der Name auf den bereits vorhin gesetzten Hostname gestetzt. 
 
-#### 712-Vagrant Splunk
+#### 712-Vagrant-Splunk
 Der Aufbau sieht vor das eine Splunkinstanz aufgestzt werden sollte. Hierbei wird somit das Herzstück der LB1 ins Leben gerufen. Mit dem Splunkserver kann man dann im Anschluss auf die von mir selbst erstellten Dashbaords zugreifen und die beiden Webserver überwachen. 
 
 ```vagrant
@@ -900,7 +916,7 @@ Als letztes aktivieren wir den Listener auf dem Port 9997. Dadurch können wir a
 sudo /opt/splunk/bin/splunk enable listen 9997 -auth admin:Admin1234
 ```
 
-### 73-Splunkforwarder Konfiguration
+### 73-Splunkforwarder-Konfiguration
 Die Grundkonfiguration des Splunk Forwarder ist identisch mit derer der Splunkinstanz. Nachdem Splunk installiert wurde unterscheidet sich nur die Konfiguration. Die Splunkforwarder werden mit meinem [apache_splunk_forwarder_installation.sh](/data/apache_splunk_forwarder_installation.sh "Splunkforwarder Installation") Skript installiert. 
 
 Als erstes gibt man an, wie die Logs weitergeleitet werden sollten. Hierbei gibt man die IP-Adresse der Splunkinstanz an, gefolgt vom vorhin definierten Port (9997). Anschliessend wird noch das Passwort für den Administraot abgefragt bzw. als Parameter angegeben. 
@@ -912,6 +928,13 @@ Zum Abschluss muss man noch definieren, welches Log Verzeichnis die Daten an Spl
 ```bash
 sudo ./splunk add monitor /var/log/apache2
 ```
+
+### 74-Splunk-Dashbaord
+
+#### 741-Splunk-Dashboard-Internal
+
+
+#### 742-Splunk-Dashboard-Webserver
 ## 8-Kontrollieren
 
 ### 81-Testfaelle
