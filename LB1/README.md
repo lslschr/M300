@@ -947,7 +947,7 @@ sudo mv /home/vagrant/wbs_monitoring.xml /opt/splunk/etc/apps/search/default/dat
 ```
 
 Als letztes aktivieren wir den Listener auf dem Port 9997. Dadurch können wir auf diesem Port Daten von anderen Hosts (Forwarder) empfangen. 
-```bash
+```shell
 sudo /opt/splunk/bin/splunk enable listen 9997 -auth admin:Admin1234
 ```
 
@@ -960,7 +960,7 @@ sudo ./splunk add forward-server 192.168.50.10:9997 -auth admin:Admin1234
 ```
 
 Zum Abschluss muss man noch definieren, welches Log Verzeichnis die Daten an Splunk senden sollte. Sprich welche überwacht werden sollten. In meinem Fall ist dies das Apache2 Log Verzeichnis. 
-```bash
+```shell
 sudo ./splunk add monitor /var/log/apache2
 ```
 
@@ -987,6 +987,18 @@ Am Footer des Dashboard sieht man dann die Sourcetypes, die Hosts die in den Ind
 ![Webserver Monitoring](/LB1/images/webserver_dashboard.png "Informationen zu den Webservern 01 & 02")
 
 ### 75-Startem
+Als erstes muss man eine Shell im LB1 Verzeichnis öffnen.
+![Erster Schritt für die Umgebung](/LB1/images/Step_1_Start.png "Erster Schritt für die Umgebung")
+
+Anschliessend einfach in der Shell "vagrant up" eingeben und den Befehl ausführen. Nun dauert die Installation ca. 2 - 5 Minuten. 
+![Zweiter Schritt für die Umgebung](/LB1/images/Step_2_Start.png "Zweiter Schritt für die Umgebung")
+
+Nun einfach einen Browser öffnen und anschliessend die URL Localhost:8000 öffnen. 
+![Splunk Login](/LB1/images/Splunk_login.png "Splunk Login")
+
+Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashboards einsehen:
+- Basic Dashboard
+- Webserver monitoring
 
 ## 8-Kontrollieren
 
