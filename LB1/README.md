@@ -25,6 +25,10 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 	- [21-Fikties-Unternehmen](#21-Fikties-Unternehmen)<br>
 
 		- [211-Internetauftritt](#211-Internetauftritt)<br>
+    
+      - [212-Unternehmenswerte](#212-Unternehmenswerte)<br>
+
+      - [213-Unsere-Dienstleistungen](#213-Unsere-Dienstleistungen)<br>
 
 	- [22-Aufgabenstellung](#22-Aufgabenstellung)<br>
 
@@ -215,8 +219,39 @@ Zudem möchte ich mich noch bei noch bei meinem Vater Theodor Lüscher bedanken 
 ## 2-Umfeld-und-Ablauf
 
 ### 21-Fikties-Unternehmen
+Webity steht für Web und Security.
+Wer Aufmerksamkeit, Interesse, Kunden gewinnen will, braucht einen optimalen und sicheren Web-Auftritt. In den ersten zwei Sekunden entscheidet sich, ob jemand auf einer Seite bleibt oder weiterklickt. Als junges Team wissen wir, wie man im Web unterwegs ist. Als Informatiker kennen wir uns aus mit innovativen Lösungen. Ob Verein, Firma, Dienstleistung oder persönliches Profil: Wir gestalten Deinen Webauftritt attraktiv, modern und nutzerfreundlich, und wir sorgen dafür, dass er von der ersten Sekunde an überzeugt.
+Webity wurde 2021 von Luis Lüscher ins Leben gerufen und hat nun in einem Monat bereits drei weitere Mitarbeiter gewonnen
+
+![Logo Webity](/LB1/images/Logo_Webity.png "Logo Webity")
 
 #### 211-Internetauftritt
+
+#### 212-Unternehmenswerte
+Einzeln betrachtet mögen unsere Unternehmenswerte sehr banal wirken. Zusammengenommen ergeben sie allerdings unsere einzigartige Unternehmenskultur. Unsere Werte beschreiben, wer wir sind, wofür wir stehen und was wir tun.
+
+##### Wir sind ein Team
+Unsere grossartigen Kollegen machen den Unterschied. Wenn wir unsere Fähigkeiten, unser Wissen oder unsere Erfahrung teilen, werden wir ein Team. Vielfalt macht uns stärker.
+
+##### Unternehmergeist
+Der Tag, an dem wir aufhören, wie Unternehmer zu agieren, wird der erste Tag sein, an dem wir nur ein weiteres IT-Unternehmen sind.
+
+##### Verantwortung übertragen und übernehmen
+Wir sind davon überzeugt, dass es richtig ist, Menschen zu stärken, und dass jeder Einzelne, der sich weiterentwickeln möchte, viel bewirken kann.
+
+##### Wir kommunizieren offen und ehrlich
+Wir teilen Informationen, Erkenntnisse und Ratschläge konstruktiv und regelmässig mit anderen und navigieren schwierige Situationen mit Hilfe von Mut und Ehrlichkeit.
+
+#### 213-Unsere-Dienstleistungen
+
+##### Web Design
+Das Erscheinungsbild einer Website ist essentiell, um neue Kunden gewinnen zu können. Unsere Webseiten werden mit dem mobile first Ansatz entwickelt, damit die Website zeitgemäss ist.
+
+##### Beratung
+Wir bieten eine umfangreiche Beratung im Bereich Informatik an. Wir gehen auf Ihre Wünsche und Anliegen ein, um Ihnen die Möglichkeiten und Vorteile eines vielseitigen und modernen IT-Thema zu zeigen.
+
+##### SEO
+SEO (Suchmaschinenoptimierung) ist heutzutage ein sehr wichtiges Thema im Bereich Webauftritt. Aufgrund praktischer Erfahrung in diesem Bereich, können wir Ihre Webseite für die Suchmaschinenindexierung optimieren.
 
 ### 22-Aufgabenstellung
 
