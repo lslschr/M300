@@ -986,6 +986,8 @@ Man kann noch weitere Einzelheiten zu den beiden Log Files access.log und error.
 Am Footer des Dashboard sieht man dann die Sourcetypes, die Hosts die in den Index main liefern und die Sources. 
 ![Webserver Monitoring](/LB1/images/webserver_dashboard.png "Informationen zu den Webservern 01 & 02")
 
+### 75-Startem
+
 ## 8-Kontrollieren
 
 ### 81-Testfaelle
