@@ -64,24 +64,6 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
 		- [261-Geraetetypen](#261-Geraetetypen)<br>
 
-    - [27-Zeitplanung](#27-Zeitplanung)<br>
-
-		- [271-Termine](#271-Termine)<br>
-
-		- [272-Arbeitstage](#272-Arbeitstage)<br>
-
-		- [274-Meilensteine](#274-Meilensteine)<br>
-
-    - [28-Arbeitsjournal](#28-Arbeitsjournal)<br>
-
-		- [281-Tag-1](#281-Tag-1)<br>
-
-		- [282-Tag-2](#282-Tag-2)<br>
-
-		- [283-Tag-3](#283-Tag-3)<br>
-
-		- [284-Tag-4](#284-Tag-4)<br>
-
 - [3-Projektmanagement](#3-Projektmanagement)<br>
 
     - [31-IPERKA](#31-IPERKA)<br>
@@ -226,6 +208,8 @@ Webity wurde 2021 von Luis Lüscher ins Leben gerufen und hat nun in einem Monat
 ![Logo Webity](/LB1/images/Logo_Webity.png "Logo Webity")
 
 #### 211-Internetauftritt
+
+Das Unternehmen Webity verfügt natürlich, wie jede moderne und junge Firma, über eine Webseite. Die Webseite kann unter der URL [Webseite Webity.ch](https://webity.ch "Webseite Webity.ch") erreicht werden. 
 
 #### 212-Unternehmenswerte
 Einzeln betrachtet mögen unsere Unternehmenswerte sehr banal wirken. Zusammengenommen ergeben sie allerdings unsere einzigartige Unternehmenskultur. Unsere Werte beschreiben, wer wir sind, wofür wir stehen und was wir tun.
@@ -469,26 +453,6 @@ jeweiligen Gerätetyp.
     <td>Web Servers </td>
   </tr>
   </table>
-
-### 27-Zeitplanung
-
-#### 271-Termine
-
-#### 272-Arbeitstage
-
-#### 273-Zeitplan
-
-#### 274-Meilensteine
-
-### 28-Arbeitsjournal
-
-#### 281-Tag-1
-
-#### 282-Tag-2
-
-#### 283-Tag-3
-
-#### 284-Tag-4
 
 ## 3-Projektmanagement
 
@@ -1007,50 +971,49 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
 #### 811-Test-1
 <table>
   <tr>
-    <td colspan="2"><strong>Testfall X - XY</strong></td>
+    <td colspan="2"><strong>Testfall 1 - Vagrant</strong></td>
   </tr>
     <tr>
     <td><strong>Beschreibung</strong></td>
-    <td>Hier wird der Testfall kurz beschrieben.</td>
+    <td>Das erarbeitete Projekt und die damit verbundene Umgebung, kann ohne Probleme nur durch den Befehl "vagrant up" dem User zur Verfügung stehen</td>
   </tr>
       <tr>
     <td><strong>Testszenario</strong></td>
-    <td>Hier werden die genauen Schritte des Tests aufgeschrieben. Es wird notiert, wie der Test durchgeführt wird und was mittels des Tests
-herausgefunden wird.
-	<li>XY</li>
-	<li>XY</li>
-	<li>YZ</li>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Klonen des Repository</li>
+	<li>Öffnen einer Bash Shell im LB1 Unterordner</li>
+	<li>Eingabe des Befehl "vagrant up"</li>
 	</td>
   </tr>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
-    <td>
-	Alle, vom Test betroffenen Komponenten werden hier aufgeschrieben. Beispielsweise Datenbanken, Server, Tools etc..
-	<li>DB: Test 1234</li>
-	<li>Server: XY </li>
-	<li>Skript: Superhacker.ps1</li>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Vagrantfile</li>
+	<li>Skripts: generate_logs.sh / apache_splunk_forwarder_installation.sh / splunk_installation.sh </li>
+	<li>Dashboards: _internal.xml / apache_dashboard.xml</li>
+  <li>Webseiten: Inhalte aus den Ordnern /data/www und /data/www2</li>
 	</td>
   </tr>
     <tr>
     <td><strong>Erwartetes Resultat</strong></td>
-    <td>Das Resultat aufgeschrieben, das erwartet wird,
-wenn der Test erfolgreich abläuft.</td>
-  </tr>
+    <td>Die Installation sollte nach der Eingabe des Befehl "vagrant up" ein vollautomatisches Setup druchführen. Der User sollte sich um nicht kümmern müssen. </td>
+      </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Nach der Durchführung des Tests wird hier das tatsächliche Resultat aufgeschrieben.</td>
+    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. 
+    <img src="/LB1/images/LB1_Test_1.png" alt="LB1 Test 1"></td>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
-    <td>TP, FP, TN, FN</td>
+    <td>TP</td>
   </tr>
         <tr>
     <td><strong>Ergebnis</strong></td>
-    <td>Erfolgreich, Teilweise Erfolgreich (gelb) oder Fehlgeschlagen (rot)</td>
+    <td>Erfolgreich</td>
   </tr>
           <tr>
     <td><strong>Massnahmen</strong></td>
-    <td>Keine Massnahmen erforderlich oder Massnahmen beschreiben wenn oben gelb oder rot</td>
+    <td>Keine Massnahmen erforderlich</td>
   </tr>
 </table>
 
