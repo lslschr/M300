@@ -1209,6 +1209,54 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
   </tr>
 </table>
 
+#### 816-Test-6
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 6 - Splunk Instanz Login</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Auf den beiden Webservern werden die jeweiligen Splunk Forwarders korrekt installiert.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Aufsetzen der Umgebung (Vagrant)</li>
+	<li>Aufrufen des einzelnen </li>
+	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Vagrantfile</li>
+	<li>Programme: Virtualbox </li>
+  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
+    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
 
 ## 9-Auswerten
 ### 91-Auswerten-der-Testfaelle
@@ -1243,12 +1291,23 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
     <td>Testfall 5 Dashboard _internal</td>
     <td>Erfolgreich</td>
   </tr>
+          <tr>
+    <td><strong>6</strong></td>
+    <td>Testfall 6 Splunk Instanz Login</td>
+    <td>Erfolgreich</td>
+  </tr>
 </table>
 
 ### 92-Reflexion
+Die Projektarbeit im Modul 300 im Rahmen der LB1 fand ich sehr spannend. Ich persönlich habe zuvor nie mit Vagrant geabrietet und muss sagen, dass dies sehr interessant war. Besonders im Aspekt vom zukünftigen Modulunterricht finde ich, dass Vagrant einen grossen Vorteil mit in den Unterricht mitbringen kann. beispielweise dadurch, dass man Testumgebungen via Vagrant voll automatisch aufsetzen kann. Besonders werde ich mich aber auf die LB2 freuen, hier werde ich einen Kubernetes Cluster mit meinen Raspberry Pis aufbauen, eventuell noch über mehrere Knoten, daher verschiedene Public IPv4-Adressen eine HA-Umgebung aufbauen. 
 
 ### 93-Verbesserungsmoeglichkeiten
 
 ### 94-Zukunftsaussichten
 
 ## 10-Quellenverzeichnis
+[Allgemein Splunk Doku](https://docs.splunk.com/Documentation/Splunk/8.2.0/Viz/Aboutthismanual "Allgemein Splunk Doku")
+[Dokumentation für stats Search](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Stats "Dokumentation für stats Search")
+[Dokumentation für Metadata Search](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Metadata "Dokumentation für Metadata Search")
+[Dokumentation für Search ](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Search "Dokumentation für Search ")
+[Dokumentation für Where Search ](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Where "Dokumentation für Where Search")
