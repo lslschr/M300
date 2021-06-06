@@ -1048,7 +1048,7 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. 
+    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
     <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
   </tr>
           <tr>
@@ -1065,6 +1065,151 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
   </tr>
 </table>
 
+#### 813-Test-3
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 3 - Splunk Forwarder</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Auf den beiden Webservern werden die jeweiligen Splunk Forwarders korrekt installiert.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Aufsetzen der Umgebung (Vagrant)</li>
+	<li>Aufrufen des einzelnen </li>
+	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Vagrantfile</li>
+	<li>Programme: Virtualbox </li>
+  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
+    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
+#### 814-Test-4
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 4 - Dashboard Webserver</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Auf den beiden Webservern werden die jeweiligen Splunk Forwarders korrekt installiert.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Aufsetzen der Umgebung (Vagrant)</li>
+	<li>Aufrufen des einzelnen </li>
+	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Vagrantfile</li>
+	<li>Programme: Virtualbox </li>
+  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
+    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
+#### 815-Test-5
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 5 - Dashboard _internal</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Auf den beiden Webservern werden die jeweiligen Splunk Forwarders korrekt installiert.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Aufsetzen der Umgebung (Vagrant)</li>
+	<li>Aufrufen des einzelnen </li>
+	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Vagrantfile</li>
+	<li>Programme: Virtualbox </li>
+  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
+    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
+
 ## 9-Auswerten
 ### 91-Auswerten-der-Testfaelle
 <table>
@@ -1075,7 +1220,27 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
   </tr>
       <tr>
     <td><strong>1</strong></td>
-    <td>Testfall 1 XY</td>
+    <td>Testfall 1 Vagrant</td>
+    <td>Erfolgreich</td>
+  </tr>
+        <tr>
+    <td><strong>2</strong></td>
+    <td>Testfall 2 Erstellte VMs</td>
+    <td>Erfolgreich</td>
+  </tr>
+        <tr>
+    <td><strong>3</strong></td>
+    <td>Testfall 3 Splunk Forwarder</td>
+    <td>Erfolgreich</td>
+  </tr>
+        <tr>
+    <td><strong>4</strong></td>
+    <td>Testfall 4 Dashboard Webserver</td>
+    <td>Erfolgreich</td>
+  </tr>
+        <tr>
+    <td><strong>5</strong></td>
+    <td>Testfall 5 Dashboard _internal</td>
     <td>Erfolgreich</td>
   </tr>
 </table>
