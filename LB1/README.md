@@ -1017,6 +1017,54 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
   </tr>
 </table>
 
+#### 812-Test-2
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 2 - Erstellte VMs</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Das erarbeitete Projekt und die damit verbundene Umgebung, wird durch drei VMs bereitgesellt. Zwei Apache Webserver und eine Splunk Instanz.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Aufsetzen der Umgebung (Vagrant)</li>
+	<li>Öffnen des Programm Virtual Box</li>
+	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Vagrantfile</li>
+	<li>Programme: Virtualbox </li>
+  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. 
+    <img src="/LB1/images/LB1_Test_1.png" alt="LB1 Test 1"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
 ## 9-Auswerten
 ### 91-Auswerten-der-Testfaelle
 <table>
