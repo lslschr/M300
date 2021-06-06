@@ -998,7 +998,7 @@ Nun einfach einen Browser öffnen und anschliessend die URL Localhost:8000 öffn
 
 Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashboards einsehen:
 - Basic Dashboard
-- Webserver monitoring
+- Webserver Monitoring
 
 ## 8-Kontrollieren
 
