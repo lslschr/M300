@@ -1049,7 +1049,7 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
     <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. 
-    <img src="/LB1/images/LB1_Test_1.png" alt="LB1 Test 1"></td>
+    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
