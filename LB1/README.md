@@ -1132,32 +1132,32 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
   </tr>
     <tr>
     <td><strong>Beschreibung</strong></td>
-    <td>Auf den beiden Webservern werden die jeweiligen Splunk Forwarders korrekt installiert.</td>
+    <td>Für die beiden Webserver sollte innerhalb von Splunk ein Dashbaord erstellt werden, welches genauere angaben zu den beiden Webservern erstellt. </td>
   </tr>
       <tr>
     <td><strong>Testszenario</strong></td>
     <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
-	<li>Aufsetzen der Umgebung (Vagrant)</li>
-	<li>Aufrufen des einzelnen </li>
-	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	<li>Aufrufen der Splunk Instanz localhost:8000</li>
+	<li>Öffnen des Verzeichnis Search => Dashboards</li>
+	<li>Auswählen des Dashboards Webserver Monitoring</li>
+  <li>Überprüfung der Funktionalität des Dashboard</li>
 	</td>
   </tr>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>Folgende Komponenten werden im Testfall eingesetzt. 
-	<li>Vagrantfile</li>
-	<li>Programme: Virtualbox </li>
-  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+	<li>Dashboard: Webserver Monitoring</li>
+  <li>Virtuelle Maschinen: svpzhlspk01</li>
 	</td>
   </tr>
     <tr>
     <td><strong>Erwartetes Resultat</strong></td>
-    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+    <td>Auf der Splunk Instanz wird ein Dashboard importiert, welches genauere Angaben zu den beiden Webservern geben kann. </td>
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
-    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+    <td>Im Installationsprozess wurde das Dashboard Webserver Monitoring korrekt implementiert und kann Daten aus dem index="main" einlesen und in Form eines Dashboard darstellen.<br>
+    <img src="/LB1/images/webserver_dashboard.png" alt="Webserver Dashboard"></td>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
@@ -1185,27 +1185,29 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
       <tr>
     <td><strong>Testszenario</strong></td>
     <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
-	<li>Aufsetzen der Umgebung (Vagrant)</li>
-	<li>Aufrufen des einzelnen </li>
-	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	<li>Aufrufen der Splunk Instanz localhost:8000</li>
+	<li>Öffnen des Verzeichnis Search => Dashboards</li>
+	<li>Auswählen des Dashboards Basic Dashboard</li>
+  <li>Überprüfung der Funktionalität des Dashboard</li>
 	</td>
   </tr>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>Folgende Komponenten werden im Testfall eingesetzt. 
-	<li>Vagrantfile</li>
-	<li>Programme: Virtualbox </li>
-  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+	<li>Dashboard: Basic Dashboard</li>
+  <li>Virtuelle Maschinen: svpzhlspk01</li>
 	</td>
   </tr>
     <tr>
     <td><strong>Erwartetes Resultat</strong></td>
-    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+    <td>Auf der Splunk Instanz wird ein Dashboard importiert, welches genauere Angaben zur Splunk Instanz bzw. dem Index _internal geben kann. </td>
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
-    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+    <td>Im Installationsprozess wurde das Dashboard Basic Dashboard korrekt implementiert und kann Daten aus dem index="_internal_" einlesen und in Form eines Dashboard darstellen.<br>
+    <img src="/LB1/images/internal_dashboard_1.png" alt="internal_dashboard_1"></td><br>
+    <img src="/LB1/images/internal_dashboard_2.png" alt="internal_dashboard_2"></td><br>
+    <img src="/LB1/images/internal_dashboard_3.png" alt="internal_dashboard_3"></td><br>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
