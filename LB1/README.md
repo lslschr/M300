@@ -259,6 +259,8 @@ SEO (Suchmaschinenoptimierung) ist heutzutage ein sehr wichtiges Thema im Bereic
 Für diese Arbeit wird IPERKA als Projektmethode verwendet. Diese vorgehen hat der Kandidat bereits mehrfach in der Schule angewendet. Die Inhalte werden via Recherchen und bereits vorhandenen Fachkenntnissen erarbeitet und so aufbereitet, dass diese gut anschaulich dokumentiert werden können.
 
 #### 225-Vorkenntnisse
+Der Lehrling Luis Lüscher arbeitet in seinem Betrieb der SIX Group Services AG intensiv & täglich mit Splunk. Dadurch hat der Auftragsnehmer einiges an Wissen welches er mit an die LB1 mitnimmt.
+Im Bereich Vagrant konnte er bisher keine Erfahrungen sammeln, somit ist dies etwas neues für ihn. 
 
 ### 23-Individuelle-Beurteilungskriterien
 
@@ -272,7 +274,7 @@ Für diese Arbeit wird IPERKA als Projektmethode verwendet. Diese vorgehen hat d
 <table>
     <tr>
     <td><strong>Projekttitel:</strong></td>
-    <td>XY</td>
+    <td>LB1 - Infrastructure as Code (IaC)</td>
   </tr>
       <tr>
     <td><strong>Projektnummer:</strong></td>
@@ -280,7 +282,7 @@ Für diese Arbeit wird IPERKA als Projektmethode verwendet. Diese vorgehen hat d
   </tr>
         <tr>
     <td><strong>Projektart:</strong></td>
-    <td>00001</td>
+    <td>Leistungsbeurteilung für ein Modul</td>
   </tr>
         <tr>
     <td><strong>Projektleiter/in:</strong></td>
@@ -300,29 +302,29 @@ Für diese Arbeit wird IPERKA als Projektmethode verwendet. Diese vorgehen hat d
   </tr>
                 <tr>
     <td><strong>Projektdauer:</strong></td>
-    <td>Geplanter Beginn: 22.11.2020 09:00 Uhr <br>
-Geplantes Ende: 07.12.2020 11:50 Uhr
+    <td>Geplanter Beginn: 31.05.2021 13:00 Uhr <br>
+Geplantes Ende: 14.06.2021 16:50 Uhr
 </td>
   </tr>
                   <tr>
     <td><strong>Ausgangssituation / Problembeschreibung:</strong></td>
-    <td>XYXYXYXYXYXY</td>
+    <td>Im Rahmen vom Modulunterricht im Modul 300 der LB1 sollte das Unternehmen Webity eine Infra as Code Umgebung aufbauen und dies möglichst einfach gegenüber dem Kunden zu gestalten. </td>
   </tr>
                     <tr>
     <td><strong>Projektgesamtziel:</strong></td>
-    <td>XYXYXYXYXYXY</td>
+    <td>Es sollte eine Infra as Code Umgebung aufgebaut werden. </td>
   </tr>
                       <tr>
     <td><strong>Projektressourcen:</strong></td>
-    <td>XYXYXYXYXYXY</td>
+    <td>
+    - Laptop von Luis<br>
+    - TBZ Cloud<br>
+    - Vagrant<br>
+    - VS Code</td>
   </tr>
                       <tr>
     <td><strong>Projektbudget:</strong></td>
-    <td>XYXYXYXYXYXY</td>
-  </tr>
-                        <tr>
-    <td><strong>Sonstige relevante Informationen:</strong></td>
-    <td>XYXYXYXYXYXY</td>
+    <td>0 CHF</td>
   </tr>
                         <tr>
     <td><strong>Unterschrift / 
