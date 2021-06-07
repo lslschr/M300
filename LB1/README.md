@@ -1230,32 +1230,29 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
   </tr>
     <tr>
     <td><strong>Beschreibung</strong></td>
-    <td>Auf den beiden Webservern werden die jeweiligen Splunk Forwarders korrekt installiert.</td>
+    <td>Die Splunk Instanz svpzhlspk01 wurde korrekt installiert. Man kann sich mit dem admin Account sowie dem Passwort: Admin1234 einloggen. </td>
   </tr>
       <tr>
     <td><strong>Testszenario</strong></td>
-    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
-	<li>Aufsetzen der Umgebung (Vagrant)</li>
-	<li>Aufrufen des einzelnen </li>
-	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt.
+    	<li>Aufrufen der Splunk Instanz localhost:8000</li> 
+    <li>Login via Username: admin und Passwort: Admin1234</li>
 	</td>
   </tr>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>Folgende Komponenten werden im Testfall eingesetzt. 
-	<li>Vagrantfile</li>
-	<li>Programme: Virtualbox </li>
-  <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
+  <li>Virtuelle Maschinen: svpzhlspk01</li>
 	</td>
   </tr>
     <tr>
     <td><strong>Erwartetes Resultat</strong></td>
-    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+    <td>Das Login mit den Benutzerdaten Username: admin und dem Passwort: Admin1234 sollte erfolgreich möglich sein. </td>
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
-    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+    <td>Das Login mit dem Benutzer admin und dem Passwort Admin1234 wurde erfolgreich durchgeführt.  <br>
+    <img src="/LB1/images/LB1_Test_6.png" alt="LB1 Test 6"></td>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
