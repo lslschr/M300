@@ -1205,8 +1205,8 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
     <td>Im Installationsprozess wurde das Dashboard Basic Dashboard korrekt implementiert und kann Daten aus dem index="_internal_" einlesen und in Form eines Dashboard darstellen.<br>
-    <img src="/LB1/images/internal_dashboard_1.png" alt="internal_dashboard_1"></td><br>
-    <img src="/LB1/images/internal_dashboard_2.png" alt="internal_dashboard_2"></td><br>
+    <img src="/LB1/images/internal_dashboard_1.png" alt="internal_dashboard_1"><br>
+    <img src="/LB1/images/internal_dashboard_2.png" alt="internal_dashboard_2"><br>
     <img src="/LB1/images/internal_dashboard_3.png" alt="internal_dashboard_3"></td><br>
   </tr>
           <tr>
