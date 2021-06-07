@@ -34,6 +34,8 @@ sudo /opt/splunk/bin/splunk enable boot-start
 ## Verschieben des _Internal und Webserver Monitoring Dashboard in das richtige Verzeichnis
 sudo mv /home/vagrant/_internal.xml /opt/splunk/etc/apps/search/default/data/ui/views/
 sudo mv /home/vagrant/wbs_monitoring.xml /opt/splunk/etc/apps/search/default/data/ui/views/
+sudo mv /home/vagrant/dashboard_internal_2.0.xml /opt/splunk/etc/apps/search/default/data/ui/views/
+sudo mv /home/vagrant/Webserver_Monitoring_2.0.xml /opt/splunk/etc/apps/search/default/data/ui/views/
 #sudo mv /home/vagrant/apache_dashboard.xml /opt/splunk/etc/apps/search/default/data/ui/views/ -- Wird nicht mehr verwendet, kann aber reaktiviert werden wenn gewünscht
 
 ## Receiver configuren für apache Logs

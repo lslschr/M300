@@ -1,0 +1,390 @@
+{
+	"visualizations": {
+		"viz_izbWnk8o": {
+			"type": "viz.img",
+			"options": {
+				"preserveAspectRatio": true,
+				"src": "splunk-enterprise-kvstore://60be0314a54f2366ee22e6d3"
+			}
+		},
+		"viz_qQ7ZF7gj": {
+			"type": "viz.singlevalueradial",
+			"title": "Number of logs in index=\"main\"",
+			"dataSources": {
+				"primary": "ds_MkHZVPgr"
+			},
+			"options": {
+				"backgroundColor": "#4e4b99"
+			}
+		},
+		"viz_WH2HWObe": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_MDj8VQMB"
+			},
+			"title": "Number of logs from wbspzhlweb01",
+			"options": {
+				"backgroundColor": "#4e4b99"
+			}
+		},
+		"viz_OPjtQJvv": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_ewHouTLK_ds_MDj8VQMB"
+			},
+			"title": "Number of logs from wbspzhlweb02",
+			"options": {
+				"backgroundColor": "#4e4b99"
+			}
+		},
+		"viz_WpHuJpuj": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB"
+			},
+			"title": "Number of logs from apache\"/error.log",
+			"options": {
+				"backgroundColor": "#4e4b99"
+			}
+		},
+		"viz_kGkUe9hh": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_bgE5rKEi_ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB"
+			},
+			"title": "Number of GET requests",
+			"options": {
+				"backgroundColor": "#4e4b99"
+			}
+		},
+		"viz_32vp76fS": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_xX4SXm3P_ds_bgE5rKEi_ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB"
+			},
+			"title": "Number of HTTP 404 Errors",
+			"options": {
+				"backgroundColor": "#4e4b99"
+			},
+			"encoding": {
+				"fill": {
+					"field": "primary[0]",
+					"format": {
+						"type": "rangevalue",
+						"ranges": [
+							{
+								"from": 500,
+								"value": "#cb3b43"
+							},
+							{
+								"from": 300,
+								"value": "#ff7152",
+								"to": 500
+							},
+							{
+								"from": 150,
+								"value": "#fc9850",
+								"to": 300
+							},
+							{
+								"from": 75,
+								"value": "#f4df7a",
+								"to": 150
+							},
+							{
+								"from": 10,
+								"to": 75,
+								"value": "#4beba8"
+							},
+							{
+								"to": 10,
+								"value": "#5fbcff"
+							}
+						]
+					}
+				}
+			}
+		},
+		"viz_4P3NUPwa": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_rnRCdUco_ds_bgE5rKEi_ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB"
+			},
+			"title": "Number of logs from apache2/access.log",
+			"options": {
+				"backgroundColor": "#4e4b99"
+			}
+		},
+		"viz_K1PKt1ml": {
+			"type": "splunk.table",
+			"options": {
+				"backgroundColor": "#4e4b99",
+				"tableFormat": {
+					"rowBackgroundColors": "> table | seriesByIndex(0) | pick(tableAltRowBackgroundColorsByBackgroundColor)",
+					"headerBackgroundColor": "> backgroundColor | setColorChannel(tableHeaderBackgroundColorConfig)",
+					"rowColors": "> rowBackgroundColors | maxContrast(tableRowColorMaxContrast)",
+					"headerColor": "> headerBackgroundColor | maxContrast(tableRowColorMaxContrast)"
+				},
+				"count": 2,
+				"headerVisibility": "none"
+			},
+			"dataSources": {
+				"primary": "ds_LtnKXIpj"
+			},
+			"title": "Sources in index=\"main\""
+		},
+		"viz_zUrgLSR1": {
+			"type": "splunk.table",
+			"options": {
+				"backgroundColor": "#4e4b99",
+				"tableFormat": {
+					"rowBackgroundColors": "> table | seriesByIndex(0) | pick(tableAltRowBackgroundColorsByBackgroundColor)",
+					"headerBackgroundColor": "> backgroundColor | setColorChannel(tableHeaderBackgroundColorConfig)",
+					"rowColors": "> rowBackgroundColors | maxContrast(tableRowColorMaxContrast)",
+					"headerColor": "> headerBackgroundColor | maxContrast(tableRowColorMaxContrast)"
+				},
+				"count": 2,
+				"headerVisibility": "none"
+			},
+			"dataSources": {
+				"primary": "ds_vaPuBCVj_ds_LtnKXIpj"
+			},
+			"title": "Hosts in index=\"main\""
+		},
+		"viz_WtHKOwBA": {
+			"type": "splunk.table",
+			"options": {
+				"backgroundColor": "#4e4b99",
+				"tableFormat": {
+					"rowBackgroundColors": "> table | seriesByIndex(0) | pick(tableAltRowBackgroundColorsByBackgroundColor)",
+					"headerBackgroundColor": "> backgroundColor | setColorChannel(tableHeaderBackgroundColorConfig)",
+					"rowColors": "> rowBackgroundColors | maxContrast(tableRowColorMaxContrast)",
+					"headerColor": "> headerBackgroundColor | maxContrast(tableRowColorMaxContrast)"
+				},
+				"count": 2,
+				"headerVisibility": "none"
+			},
+			"dataSources": {
+				"primary": "ds_1uRDP2YN_ds_vaPuBCVj_ds_LtnKXIpj"
+			},
+			"title": "Sourcetypes in index=\"main\""
+		}
+	},
+	"dataSources": {
+		"ds_MkHZVPgr": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"main\" | stats count"
+			},
+			"name": "Number of Logs in Index=\"main\""
+		},
+		"ds_MDj8VQMB": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"main\" host=\"wbspzhlweb01\" | stats count"
+			},
+			"name": "Number of logs from wbspzhlweb01"
+		},
+		"ds_ewHouTLK_ds_MDj8VQMB": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"main\" host=\"wbspzhlweb02\" | stats count"
+			},
+			"name": "Copy of Number of logs from wbspzhlweb01"
+		},
+		"ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"main\" source=\"/var/log/apache2/error.log\"  | stats count"
+			},
+			"name": "Copy of Copy of Number of logs from wbspzhlweb01"
+		},
+		"ds_bgE5rKEi_ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"main\" GET | stats count"
+			},
+			"name": "Copy of Copy of Copy of Number of logs from wbspzhlweb01"
+		},
+		"ds_xX4SXm3P_ds_bgE5rKEi_ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"main\" 404 | stats count"
+			},
+			"name": "Copy of Copy of Copy of Copy of Number of logs from wbspzhlweb01"
+		},
+		"ds_rnRCdUco_ds_bgE5rKEi_ds_wE3F3oE7_ds_ewHouTLK_ds_MDj8VQMB": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=\"main\" source=\"/var/log/apache2/access.log\" | stats count"
+			},
+			"name": "Copy of Copy of Copy of Copy of Number of logs from wbspzhlweb01"
+		},
+		"ds_LtnKXIpj": {
+			"type": "ds.search",
+			"options": {
+				"query": "| tstats count where index=main by source"
+			},
+			"name": "Sources in index=\"main\""
+		},
+		"ds_vaPuBCVj_ds_LtnKXIpj": {
+			"type": "ds.search",
+			"options": {
+				"query": "| tstats count where index=main by host"
+			},
+			"name": "Copy of Sources in index=\"main\""
+		},
+		"ds_1uRDP2YN_ds_vaPuBCVj_ds_LtnKXIpj": {
+			"type": "ds.search",
+			"options": {
+				"query": "| tstats count where index=main by sourcetype"
+			},
+			"name": "Copy of Copy of Sources in index=\"main\""
+		}
+	},
+	"defaults": {
+		"dataSources": {
+			"ds.search": {
+				"options": {
+					"queryParameters": {
+						"latest": "$global_time.latest$",
+						"earliest": "$global_time.earliest$"
+					}
+				}
+			}
+		}
+	},
+	"inputs": {
+		"input_global_trp": {
+			"type": "input.timerange",
+			"options": {
+				"token": "global_time",
+				"defaultValue": "-24h@h,now"
+			},
+			"title": "Globale Zeitspanne"
+		}
+	},
+	"layout": {
+		"type": "absolute",
+		"options": {
+			"display": "auto-scale"
+		},
+		"structure": [
+			{
+				"item": "viz_izbWnk8o",
+				"type": "block",
+				"position": {
+					"x": 440,
+					"y": 270,
+					"w": 290,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_qQ7ZF7gj",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"w": 1170,
+					"h": 270
+				}
+			},
+			{
+				"item": "viz_WH2HWObe",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 270,
+					"w": 440,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_OPjtQJvv",
+				"type": "block",
+				"position": {
+					"x": 730,
+					"y": 270,
+					"w": 440,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_WpHuJpuj",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 520,
+					"w": 290,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_kGkUe9hh",
+				"type": "block",
+				"position": {
+					"x": 570,
+					"y": 520,
+					"w": 290,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_32vp76fS",
+				"type": "block",
+				"position": {
+					"x": 860,
+					"y": 520,
+					"w": 310,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_4P3NUPwa",
+				"type": "block",
+				"position": {
+					"x": 290,
+					"y": 520,
+					"w": 280,
+					"h": 250
+				}
+			},
+			{
+				"item": "viz_K1PKt1ml",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 770,
+					"w": 400,
+					"h": 100
+				}
+			},
+			{
+				"item": "viz_zUrgLSR1",
+				"type": "block",
+				"position": {
+					"x": 400,
+					"y": 770,
+					"w": 400,
+					"h": 100
+				}
+			},
+			{
+				"item": "viz_WtHKOwBA",
+				"type": "block",
+				"position": {
+					"x": 800,
+					"y": 770,
+					"w": 370,
+					"h": 100
+				}
+			}
+		],
+		"globalInputs": [
+			"input_global_trp"
+		]
+	},
+	"description": "This is the new version for the webserver monitoring 2.0",
+	"title": "Webserver_Monitoring_2.0"
+}

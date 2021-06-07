@@ -1,0 +1,163 @@
+{
+	"visualizations": {
+		"viz_z7v0HoAW": {
+			"type": "viz.pie",
+			"dataSources": {
+				"primary": "ds_7GHewDVB"
+			},
+			"title": "Top Sourcetypes in index _internal",
+			"options": {
+				"hasDonutHole": true,
+				"chart.showPercent": true
+			}
+		},
+		"viz_xOmsb5LG": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_ugMPiWUg"
+			},
+			"title": "Number of logs",
+			"options": {
+				"backgroundColor": "#0877a6"
+			},
+			"encoding": {}
+		},
+		"viz_ZqXrjGqB": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_iAiA1UA7"
+			},
+			"title": "Number of warnings",
+			"options": {
+				"backgroundColor": "#0877a6"
+			}
+		},
+		"viz_FXn27QwT": {
+			"type": "viz.singlevalueradial",
+			"dataSources": {
+				"primary": "ds_Z0k05rBu"
+			},
+			"title": "Number of errors",
+			"options": {
+				"backgroundColor": "#0877a6"
+			}
+		}
+	},
+	"dataSources": {
+		"ds_7GHewDVB": {
+			"type": "ds.search",
+			"options": {
+				"query": "index=_internal | top limit=100 sourcetype | eval percent =\nround(percent,2)"
+			},
+			"name": "Top Sourcetypes in Index _internal"
+		},
+		"ds_ugMPiWUg": {
+			"type": "ds.search",
+			"options": {
+				"query": "index = _internal source = \"*splunkd.log\" | stats\ncount"
+			},
+			"name": "Number of logs"
+		},
+		"ds_2hhR9HIN_ds_ugMPiWUg": {
+			"type": "ds.search",
+			"options": {
+				"query": "index = _internal source = \"*splunkd.log\" | stats\ncount"
+			},
+			"name": "Copy of Number of logs"
+		},
+		"ds_iAiA1UA7": {
+			"type": "ds.search",
+			"options": {
+				"query": "index = _internal source = \"*splunkd.log\" log_level =\n\"warn\" | stats count"
+			},
+			"name": "Number of warnings"
+		},
+		"ds_0Z5pOQha_ds_ugMPiWUg": {
+			"type": "ds.search",
+			"options": {
+				"query": "index = _internal source = \"*splunkd.log\" | stats\ncount"
+			},
+			"name": "Copy of Number of logs"
+		},
+		"ds_Z0k05rBu": {
+			"type": "ds.search",
+			"options": {
+				"query": "index = _internal source = \"*splunkd.log\" log_level =\n\"error\" | stats count"
+			},
+			"name": "Number of errors"
+		}
+	},
+	"defaults": {
+		"dataSources": {
+			"ds.search": {
+				"options": {
+					"queryParameters": {
+						"latest": "$global_time.latest$",
+						"earliest": "$global_time.earliest$"
+					}
+				}
+			}
+		}
+	},
+	"inputs": {
+		"input_global_trp": {
+			"type": "input.timerange",
+			"options": {
+				"token": "global_time",
+				"defaultValue": "-24h@h,now"
+			},
+			"title": "Globale Zeitspanne"
+		}
+	},
+	"layout": {
+		"type": "grid",
+		"options": {},
+		"structure": [
+			{
+				"item": "viz_z7v0HoAW",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 0,
+					"w": 1200,
+					"h": 400
+				}
+			},
+			{
+				"item": "viz_xOmsb5LG",
+				"type": "block",
+				"position": {
+					"x": 0,
+					"y": 400,
+					"w": 750,
+					"h": 400
+				}
+			},
+			{
+				"item": "viz_ZqXrjGqB",
+				"type": "block",
+				"position": {
+					"x": 750,
+					"y": 400,
+					"w": 450,
+					"h": 200
+				}
+			},
+			{
+				"item": "viz_FXn27QwT",
+				"type": "block",
+				"position": {
+					"x": 750,
+					"y": 600,
+					"w": 450,
+					"h": 200
+				}
+			}
+		],
+		"globalInputs": [
+			"input_global_trp"
+		]
+	},
+	"description": "Dieses Dashboard wurde von Luis Lüscher erstellt im Rahmen der LB1 im M300",
+	"title": "Dashboard _internal"
+}

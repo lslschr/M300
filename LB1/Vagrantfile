@@ -44,6 +44,8 @@ Vagrant.configure("2") do |config|
     svpzhlspk01.vm.network :forwarded_port, guest: 8089, host: 8089
     svpzhlspk01.vm.provision :file, source: "data/_internal.xml", destination: "/home/vagrant/_internal.xml"
     svpzhlspk01.vm.provision :file, source: "data/wbs_monitoring.xml", destination: "/home/vagrant/wbs_monitoring.xml"
+    svpzhlspk01.vm.provision :file, source: "data/Webserver_Monitoring_2.0.xml", destination: "/home/vagrant/Webserver_Monitoring_2.0.xml"
+    svpzhlspk01.vm.provision :file, source: "data/dashboard_internal_2.0.xml", destination: "/home/vagrant/dashboard_internal_2.0.xml"
     svpzhlspk01.vm.provision "shell", path: "data/splunk_installation.sh"
     svpzhlspk01.vm.provision "shell", path: "data/generate_logs.sh"
     
