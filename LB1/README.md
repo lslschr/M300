@@ -1078,26 +1078,38 @@ Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashbo
     <td><strong>Testszenario</strong></td>
     <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
 	<li>Aufsetzen der Umgebung (Vagrant)</li>
-	<li>Aufrufen des einzelnen </li>
-	<li>Überprüfung der VMs (Anzahl sowie Hostname)</li>
+	<li>Aufrufen der einzelnen Webserver</li>
+	<li>Mehrere Seiten aufrufen (Logs generieren)</li>
+  <li>Splunk Dashboard aufrufen & Werte vergleichen</li>
 	</td>
   </tr>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>Folgende Komponenten werden im Testfall eingesetzt. 
-	<li>Vagrantfile</li>
-	<li>Programme: Virtualbox </li>
+	<li>Dashbaord: Webserver Monitoring</li>
   <li>Virtuelle Maschinen: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</li>
 	</td>
   </tr>
     <tr>
     <td><strong>Erwartetes Resultat</strong></td>
-    <td>Es sollten drei VMs zur Verfügung stehen, zwei davon sind Webserver (Apache) und eine Splunk Instanz. Folgende Hostnamen müssen gestzt sein: wbspzhlweb01, wbspzhlweb02 und svpzhlspk01</td>
+    <td>Es sollten jeweils zwei Log-Einträge generiert werden für den einmaligen Aufruf einer beliebigen Seite auf dem Webserver. Da jeweils ein Log für die GET-Requests der Seite sowie für das Favicon erstellt werden. </td>
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. <br>
-    <img src="/LB1/images/LB1_Test_2.png" alt="LB1 Test 1"></td>
+    <td>Es wurden jeweils für den einmaligen Aufruf einer Webseite zwei Apache Logs generiert (Insofern Favicon vorhanden).
+    <br>Als erstes haben wir den Status der Anzahl Logs vor dem Aufruf: <br>
+    <img src="/LB1/images/LB1_Test_3-1.png" alt="LB1 Test 3-1"> <br>
+    Dies ist die Anzahl von Logs im Index="main" nach dem Aufruf der Webseite:<br>
+    <img src="/LB1/images/LB1_Test_3-2.png" alt="LB1 Test 3-2"> <br>
+    Der erzeugte Log sah folgendermassen aus: <br>
+    <img src="/LB1/images/LB1_Test_3-6.png" alt="LB1 Test 3-6"> <br>
+    Das selbe nun noch auf dem zweiten Webserver, auch hier die Anzahl von Logs vor dem Aufruf: <br>
+    <img src="/LB1/images/LB1_Test_3-3.png" alt="LB1 Test 3-3"> <br>
+    Dies ist die Anzahl von Logs im Index="main" nach dem Aufruf der Webseite:<br>
+    <img src="/LB1/images/LB1_Test_3-4.png" alt="LB1 Test 3-4"> <br>
+    Der erzeugte Log sah folgendermassen aus: <br>
+    <img src="/LB1/images/LB1_Test_3-5.png" alt="LB1 Test 3-5"> <br>
+    </td>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
