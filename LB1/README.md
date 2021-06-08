@@ -176,8 +176,7 @@ Luis Lüscher<br>
 ### 13-Danksagung
 Ich möchte mich bei Marcello Calisto bedanken, der mich in der schulischen Ausbildung immer wieder
 aufs Neue herausfordert und versucht, dass ich mein volles Potenzial ausschöpfen kann. Zudem hat er
-den gesamten Unterricht, wie immer, sehr spannend gestaltet.<br>
-Zudem möchte ich mich noch bei noch bei meinem Vater Theodor Lüscher bedanken für das Gegenlesen meiner Dokumentation.
+den gesamten Unterricht, wie immer, sehr spannend gestaltet.
 
 ### 14-Managment-Summary
 
@@ -207,6 +206,47 @@ Zudem möchte ich mich noch bei noch bei meinem Vater Theodor Lüscher bedanken 
 14. Kennt Aufbau und Inhalt einer Netzwerk- und Systemdokumentation.
 
 ### 16-Darstellung-und-Aufbau
+Als Rechtschreibehilfe wurde die Überprüfungsfunktion von Duden.de verwendet. Ausserdem
+wurde die Dokumentation von verschieden Personen auf die Rechtschreibung überprüft.
+Es wird unter verschiedenen Textsorten unterschieden. Dafür wurde die Formatierung selbst definiert:<br>
+<br>
+
+Verschiedene Titelformate:
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+---
+Sortierte Listen:
+1. Item 1
+2. Item 2
+3. Item 3
+---
+Unsortierte Listen:
+* Unordered list Item 1
+* Unordered list Item 2
+* Unordered list Item 3
+---
+Links:<br>
+[Link](https://www.google.com "Google's Homepage")
+***
+Abbildungen:<br>
+![Logo Luis Lüscher](LB1/images/Logo_Luis_Luescher.jpg "Logo Text 1")
+***
+Codebesipiele:
+```python
+s = "Python syntax highlighting"
+print s
+```
+***
+Tabellen:
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 ## 2-Umfeld-und-Ablauf
 
@@ -251,9 +291,52 @@ SEO (Suchmaschinenoptimierung) ist heutzutage ein sehr wichtiges Thema im Bereic
 
 #### 221-Titel-der-Arbeit
 
+#### Infrastructre as Code
+
 #### 222-Ausgangslage
+Ausgangslage gemäss [Auftrag - Infrastructure as Code](/LB1/add-on/Auftrag_TBZ_ST18a_M300_LB1.pdf "Auftrag - Infrastructre as Code")
+
+<em>Sie erstellen - auf Basis von VirtualBox/Vagrant - ein selbst gewähltes «Infrastructure as Code» Projekt, indem sie einen Service oder Serverdienst automatisieren.<br>
+Teamarbeit ist erwünscht. Die Implementation des IaC-Projekts erfolgt hingegen als Einzelarbeit. Der erstellte Code sowie die gesamte Dokumentation wird versioniert, auf GitHub hinterlegt und der Lehrperson zugänglich gemacht (Lese-Rechte).<br>
+Das Internet ist eine zugelassene Ressource für solche Projekte. Entsprechend dürfen sie auch Codebeispiele aus dem Internet verwenden, sofern sie entsprechende Quellenangaben machen. <br>
+Der verwendete Code muss aber von ihnen vollständig dokumentiert sein. Das gilt auch für Code, welchen sie aus fremden Quellen verwenden.<br>
+Das bedeutet sie können über den verwendeten Code Auskunft geben.<br>
+</em>
 
 #### 223-Detaillierte-Aufgabenstellung
+##### Anforderungen
+- Wiederholbar und konsistent ausführbar auf eigenem Rechner
+- Die Entwicklungsschritte des Codes und der Dokumentation sind in der Git History durch regelmässige und dokumentierteCommits nachvollziehbar
+- Service / Dienst startet mit ‘vagrant up’ (ohne User-Interaktion)
+- Service / Dienst weist dokumentierte Sicherheitsmerkmale auf
+- Die Projektdokumentation erfolgt in Markdown
+
+##### Bewertung der Praxisarbeit
+###### Komplexitiät, Umfang, Funktionalität, Umsetzung
+- Gem. Kompetenzmatrix. Grad der Umsetzung (Volle Punktzahl bei ausgezeichneter Arbeit)
+- Service-Funktion mit mehreren VMs oder Services (Bsp. Webserver mit DB-Backend)
+- Keine Interaktion nötig nach dem Start, Service ist nach «Vagrant up» verfügbar
+- Korrekte Netzwerkkonfiguration wie Portforwarding / Bridge-Konfig etc.
+- Installation oder Konfiguration von zusätzlich benötigter SW
+- Service / Dienst weist Sicherheitsmerkmale auf
+- Der Fortschritt ist in der Git-History nachvollziehbar 
+- Es wird eine technische Dokumentation über ihr IaC Projekt erwartet. Sie beschreiben, wie der Service funktioniert, was die Rahmenbedingungen zum Service sind und wie sie den Servie auf korrekte Funktion testen. Eine gut strukturierte und mit Grafiken ergänzte Doku-mentation gibt Auskunft über verwendete Server, Applikationen, Netzwerkkonfiguratio-nen. 
+
+###### Inhaltsverzeichnis (Beispiel)
+- Inhaltsverzeichnis
+- Einleitung
+- Service-Aufbau, Setting (Struktur, Deklarativer Ablauf)
+- Umsetzung
+- Testing
+- Quellen
+
+###### Markdown
+- Verwendung von verschiedenen Markdown-Elementen (etwa Tabellen, Links Bilder etc...)
+
+###### Darstellung
+- Ansprechend 
+- Nachvollziehbar
+- korrekt
 
 #### 224-Mittel-und-Methoden
 Für diese Arbeit wird IPERKA als Projektmethode verwendet. Diese vorgehen hat der Kandidat bereits mehrfach in der Schule angewendet. Die Inhalte werden via Recherchen und bereits vorhandenen Fachkenntnissen erarbeitet und so aufbereitet, dass diese gut anschaulich dokumentiert werden können.
@@ -266,9 +349,38 @@ Im Bereich Vagrant konnte er bisher keine Erfahrungen sammeln, somit ist dies et
 
 #### 231-Teil-A
 
+Setup Umgebung, Lernumgebung, Tools<br>
+1P Virtualbx / 1P Vagrant / 1P Git-Setup / 1P SSH-Keys / 1P Repo-Setup / 1P Editor
+
 #### 232-Teil-B
 
+Technische Doku (Struktur, Tiefe, Gestaltung, Formatierung, Nachvollziehbarkeit)<br>
+6P Excellent   / 5P Sehr gut (überdurchschnittlich) / 3P Gut / 2P Ausreichend / 1P Vorhanden
+
 #### 233-Teil-C
+
+Entwicklung des Repositories (Regelmässigkeit und Umfang der Updates/Commits)Umfang Einträge + Commits des Repos <br>
+3P Regelm. / 2P mehrmals wöchentl. / 1P wöchentl.)
+
+#### 234-Teil-D
+
+Grund-Service, Funktionalität, Dokumentation (Eigen- oder Ergänzungsleistung!) <br>
+3P Excellent (Persist.,  deklarativ,  viel Eigenleistung) /2P Gut (Niveau Vorlage)  / 1P Eigenl. vorh.
+
+#### 235-Teil-E
+
+Ergänzende Services, Funktionalität, Dokumentation <br>
+3P Excellent (Persist., deklarativ, viel Eigenleistung) / 2P Gut (Niveau Vorlage)  / 1P Eigenl. vorh
+
+#### 236-Teil-F
+
+Engagement, Haltung, Professionalität, Kommunikation:  (Max. 2 P.)<br>
+2P Alle Punkte erfüllt
+
+#### 237-Teil-G
+
+Präsentation, Live-Demo & Quellenangaben:  (Max. 2 P.)<br>
+2P Projekt kundengerecht umgesetzt,  keine erkennb. Fehler / 1P Projekt umgesetzt, kleine Mängel
 
 ### 24-Projektantrag
 <table>
