@@ -172,6 +172,11 @@ Oberengstringen, 10.05.2021<br>
 Luis Lüscher<br>
 
 ### 12-Projekthintergrund
+Im Rahmen des Modulunterricht im Modul 300 "Plattformübergreifende Dienste in ein Netzwerk integrieren" musste die Klasse ein Projekt durchühren mit dem Programm Vagrant. Hierbei sollte ein Projekt erarbeitet werden, dass eine fertige Umgebung aufbaut (IaC).
+
+Für die Arbeiten werden pro Modultag 3 Lektionen Zeit zur Verfügung gestellt. Am letzten Tag der LB1, werden die Projekte in einem 1:1 Gespräch der Lehrperson vorgestellt und dementsprechend bewertet. Erwartet wird hierbei, dass es sich um ein Vagrantprojekt handelt, welches nur durch die Eingabe von "vagrant up" aufgestzt werden kann (Keine weitere User-Interaction). Bevorzugte Vorgehensweise ist hierbei eine vereinfachte Version von IPERKA.
+Eigene Projektideen dürfen mit Absprache der Lehrperson realsiert werden. Die Arbeit
+muss eine ausreichende Komplexität und einen gewissen Umfang aufweisen. Es wird erwartet, dass in der Regel drei bis vier Handlungsziele aus der Modulidentifikation abgedeckt werden.
 
 ### 13-Danksagung
 Ich möchte mich bei Marcello Calisto bedanken, der mich in der schulischen Ausbildung immer wieder
