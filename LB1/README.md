@@ -233,7 +233,7 @@ Links:<br>
 [Link](https://www.google.com "Google's Homepage")
 ***
 Abbildungen:<br>
-![Logo Luis Lüscher](LB1/images/Logo_Luis_Luescher.jpg "Logo Text 1")
+![Logo Luis Lüscher](/LB1/images/Logo_Luis_Luescher.jpg "Logo Text 1")
 ***
 Codebesipiele:
 ```python
