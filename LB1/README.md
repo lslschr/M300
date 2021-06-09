@@ -124,6 +124,10 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
   
       - [742-Splunk-Dashboard-Webserver](#742-Splunk-Dashboard-Webserver)<br>
 
+    - [75-Starten](#75-Starten)<br>
+
+    - [76-Aufbau](#76-Aufbau)<br>
+
 - [8-Kontrollieren](#8-Kontrollieren)<br>
 
     - [81-Testfaelle](#81-Testfaelle)<br>
@@ -151,6 +155,7 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
     - [94-Zukunftsaussichten](#94-Zukunftsaussichten)<br>
 
 - [10-Quellenverzeichnis](#10-Quellenverzeichnis)<br>
+
 ## 1-Vorwort
 Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Leistungsbeurteilung 1. Erarbeitung einer Splunk Instanz mit zwei Webservern die jeweils über einen Splunk Forwarder verfügungen, der Informationen (wie der Name bereits sagt), an die Splunk Instanz weiterleitet. In Form von zwei Dashboards sollten generierte Logs besser dargestellt werde. Die gesamte Infrastruktur sollte via IaC (Infrastructre as Code) realsiert werden. als primäre Software dient hierbei Vagrant. 
 
@@ -176,7 +181,7 @@ aufs Neue herausfordert und versucht, dass ich mein volles Potenzial ausschöpfe
 den gesamten Unterricht, wie immer, sehr spannend gestaltet.
 
 ### 14-Managment-Summary
-Im Modulunterricht des Modul 300 "Plattformübergreifende Dienste in ein Netzwerk integrieren" werden verschiedene Kenntnisse in Bezug auf IaC und Git bzw. Versionierungssystemen vermittelt. Die Leistugsbeurteilung 1 wird in Form eines IaC-Projekt erarbeitet, welches ich mit einer Splunk Instanz realsiert habe. Die Leistungsbeurteilung 2 ist nicht Teil dieser Dokumentation. 
+Im Modulunterricht des Modul 300 "Plattformübergreifende Dienste in ein Netzwerk integrieren" werden verschiedene Kenntnisse in Bezug auf IaC und Git bzw. Versionierungssystemen vermittelt. Die Leistugsbeurteilung 1 wird in Form eines IaC-Projekt erarbeitet, welches ich mit einer Splunk Instanz realsiert habe. Als zentrale Software wird Vagrant verwendet. Die Leistungsbeurteilung 2 ist nicht Teil dieser Dokumentation. 
 
 ### 15-Modulidentifikation
 #### 151-Handlungsziele
@@ -682,7 +687,7 @@ Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende
     <td>Schwierigkeiten mit neuen Technologien</td>
     <td>
      <li>Erhöhter Aufwand beim Teil "Informieren"</li>
-	   <li>Viel Aufwand während Realsieiren mit fehlenden Informationen</li>
+	   <li>Viel Aufwand während Realisieren mit fehlenden Informationen</li>
     </td>
     <td>Mittel</td>
     <td>Mittel</td>
@@ -1005,7 +1010,7 @@ Man kann noch weitere Einzelheiten zu den beiden Log Files access.log und error.
 Am Footer des Dashboard sieht man dann die Sourcetypes, die Hosts die in den Index main liefern und die Sources. 
 ![Webserver Monitoring](/LB1/images/webserver_dashboard.png "Informationen zu den Webservern 01 & 02")
 
-### 75-Startem
+### 75-Starten
 Als erstes muss man eine Shell im LB1 Verzeichnis öffnen.
 ![Erster Schritt für die Umgebung](/LB1/images/Step_1_Start.png "Erster Schritt für die Umgebung")
 
@@ -1018,6 +1023,15 @@ Nun einfach einen Browser öffnen und anschliessend die URL Localhost:8000 öffn
 Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashboards einsehen:
 - Basic Dashboard
 - Webserver Monitoring
+
+#### 76-Aufbau
+Der Aufbau der gesamten Umgebung sieht folgendermassen aus:<br>
+![Setup_Plan](/LB1/images/Setup_Plan.png "Setup_Plan")<br>
+
+Erreicht werden können die einzelnen Host via folgende URL:
+- svpzhlspk01 => localhost:8000
+- wbspzhlweb01 => localhost:8080
+- wbspzhlweb02 => localhost
 
 ## 8-Kontrollieren
 
@@ -1374,8 +1388,9 @@ Die Splunk Instanz könnte man natürlich um einiges erweitern und anderem mit a
 Mit Splunk würde ich sehr gerne weitermachen auch in der LB2. Ich weiss dass es ebenfalls Splunk Forwarders für ARM CPUs gibt, so könnte ich beispielweise in der LB2 einen K8s Cluster aufbauen, der mittels Splunk Forwarders die Logs an eine zentrale Splunk Instanz sendet. Informationen über pysikalische Hosts sowie über einzelne Kubes. Das würde mir bestimmt viel Freude bereiten, insbesonder eauch aufgrund dessen, dass ich schön seit längerem einen K8s Cluster aufbauen möchte. 
 
 ## 10-Quellenverzeichnis
-[Allgemein Splunk Doku](https://docs.splunk.com/Documentation/Splunk/8.2.0/Viz/Aboutthismanual "Allgemein Splunk Doku")<br>
-[Dokumentation für stats Search](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Stats "Dokumentation für stats Search")<br>
-[Dokumentation für Metadata Search](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Metadata "Dokumentation für Metadata Search")<br>
-[Dokumentation für Search ](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Search "Dokumentation für Search ")<br>
-[Dokumentation für Where Search ](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Where "Dokumentation für Where Search")<br>
+- [Allgemein Splunk Doku](https://docs.splunk.com/Documentation/Splunk/8.2.0/Viz/Aboutthismanual "Allgemein Splunk Doku")<br>
+- [Dokumentation für stats Search](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Stats "Dokumentation für stats Search")<br>
+- [Dokumentation für Metadata Search](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Metadata "Dokumentation für Metadata Search")<br>
+- [Dokumentation für Search ](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Search "Dokumentation für Search ")<br>
+- [Dokumentation für Where Search ](https://docs.splunk.com/Documentation/Splunk/8.2.0/SearchReference/Where "Dokumentation für Where Search")<br>
+- Arbeitsbuch von Luis Lüscher über Splunk (Wird nicht öffentlich zur Verfügung gestellt.)
