@@ -80,13 +80,13 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
 		- [316-Auswerten](#316-Auswerten)<br>
 
-    - [33-Risikoanalyse](#33-Risikoanalyse)<br>
+    - [32-Risikoanalyse](#33-Risikoanalyse)<br>
 
-		- [331-Risk-analysis-Beschreibung](#331-Risk-analysis-Beschreibung)<br>
+		- [321-Risk-analysis-Beschreibung](#331-Risk-analysis-Beschreibung)<br>
 
-		- [332-Risk-analysis-Vorgehen](#332-Risk-analysis-Vorgehen)<br>
+		- [322-Risk-analysis-Vorgehen](#332-Risk-analysis-Vorgehen)<br>
 
-		- [333-Risikoanalysetabelle](#333-Risikoanalysetabelle)<br>
+		- [323-Risikoanalysetabelle](#333-Risikoanalysetabelle)<br>
 
 - [4-Informieren](#4-informieren)<br>
 
@@ -631,11 +631,11 @@ Am Ende dieser Phase sind folgende Fragen beantwortet:
 
 ### 33-Risikoanalyse
 
-#### 331-Risk-analysis-Beschreibung
+#### 321-Risk-analysis-Beschreibung
 Bei der Risikoanalyse handelt es sich um eine vorausschauende Diagnose, um mögliche Probleme zu erkennen, einzudämmen und zu minimieren.
 Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende Probleme, die vorausschauende Planung des Projektes und die Garantie eines reibungslosen Ablaufs.
 
-#### 332-Risk-analysis-Vorgehen
+#### 322-Risk-analysis-Vorgehen
 
 1. Ziele SMART beschreiben
     * M, R und T sind Vorgaben der Risikoanalyse
@@ -655,7 +655,7 @@ Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende
 6. Eventuellmassnahmen planen (Alternativplan, katastrophenplan) mittels Risikoanalysetabelle
     * Bei besonderen kritischen Problembereichen sollen bereits in der Planungsphase alternativen Vorgehensweisen vorgesehen werden.
 
-#### 333-Risikoanalysetabelle
+#### 323-Risikoanalysetabelle
 
 <table>
   <tr>
