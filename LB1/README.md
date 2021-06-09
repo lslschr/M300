@@ -80,14 +80,6 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
 		- [316-Auswerten](#316-Auswerten)<br>
 
-    - [32-SWOT](#32-SWOT)<br>
-
-		- [321-SWOT-Beschreibung](#321-SWOT-Beschreibung)<br>
-
-		- [322-SWOT-Strategie](#322-SWOT-Strategie)<br>
-
-		- [323-SWOT-Analyse](#323-SWOT-Analyse)<br>
-
     - [33-Risikoanalyse](#33-Risikoanalyse)<br>
 
 		- [331-Risk-analysis-Beschreibung](#331-Risk-analysis-Beschreibung)<br>
@@ -160,7 +152,7 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Lei
 
 - [10-Quellenverzeichnis](#10-Quellenverzeichnis)<br>
 ## 1-Vorwort
-Text
+Projektarbeit im Modul 300 von Luis Lüscher erstellt am 10.05.2020 für die Leistungsbeurteilung 1. Erarbeitung einer Splunk Instanz mit zwei Webservern die jeweils über einen Splunk Forwarder verfügungen, der Informationen (wie der Name bereits sagt), an die Splunk Instanz weiterleitet. In Form von zwei Dashboards sollten generierte Logs besser dargestellt werde. Die gesamte Infrastruktur sollte via IaC (Infrastructre as Code) realsiert werden. als primäre Software dient hierbei Vagrant. 
 
 ### 11-Selbststaendigkeit
 Ich versichere, dass ich die vorliegende Arbeit selbstständig und ohne Benutzung anderer als der im
@@ -184,6 +176,7 @@ aufs Neue herausfordert und versucht, dass ich mein volles Potenzial ausschöpfe
 den gesamten Unterricht, wie immer, sehr spannend gestaltet.
 
 ### 14-Managment-Summary
+Im Modulunterricht des Modul 300 "Plattformübergreifende Dienste in ein Netzwerk integrieren" werden verschiedene Kenntnisse in Bezug auf IaC und Git bzw. Versionierungssystemen vermittelt. Die Leistugsbeurteilung 1 wird in Form eines IaC-Projekt erarbeitet, welches ich mit einer Splunk Instanz realsiert habe. Die Leistungsbeurteilung 2 ist nicht Teil dieser Dokumentation. 
 
 ### 15-Modulidentifikation
 #### 151-Handlungsziele
@@ -258,7 +251,7 @@ Tabellen:
 ### 21-Fikties-Unternehmen
 Webity steht für Web und Security.
 Wer Aufmerksamkeit, Interesse, Kunden gewinnen will, braucht einen optimalen und sicheren Web-Auftritt. In den ersten zwei Sekunden entscheidet sich, ob jemand auf einer Seite bleibt oder weiterklickt. Als junges Team wissen wir, wie man im Web unterwegs ist. Als Informatiker kennen wir uns aus mit innovativen Lösungen. Ob Verein, Firma, Dienstleistung oder persönliches Profil: Wir gestalten Deinen Webauftritt attraktiv, modern und nutzerfreundlich, und wir sorgen dafür, dass er von der ersten Sekunde an überzeugt.
-Webity wurde 2021 von Luis Lüscher ins Leben gerufen und hat nun in einem Monat bereits drei weitere Mitarbeiter gewonnen
+Webity wurde 2021 von Luis Lüscher ins Leben gerufen und hat nun in einem Monat bereits drei weitere Mitarbeiter gewonnen.
 
 ![Logo Webity](/LB1/images/Logo_Webity.png "Logo Webity")
 
@@ -630,73 +623,6 @@ Am Ende dieser Phase sind folgende Fragen beantwortet:
 - Was lief gut?
 - Was lief schlecht und was kann man besser machen?
 - Ist man zufrieden mit dem Produkt?
-
-### 32-SWOT
-Die SWOT-Analyse Strengths (Stärken), Weaknesses (Schwächen), Opportunities (Chancen), Threats (Gefahren) ist ein Werkzeug des strategischen Managements, wird aber auch für die Qualitätsentwicklung von Programmen und Projekten eingesetzt. Mit dieser einfachen und flexiblen Methode können sowohl Stärken und Schwächen innerhalb des Projektes als auch externe Chancen und Gefahren betrachtet werden. Aus dieser Kombination kann eine Strategie für die weitere Ausrichtung von Partizipationsprojekten abgeleitet werden.
-
-<strong>Vorteile SWOT</strong>
-
-- Schnelle Auseinandersetzung mit positiven und negativen Aspekten einer Situation.
-- Projizierung dieser Situation in die Zukunft.
-
-<strong>Nachteile SWOT</strong>
-
-- Oberflächliche Ergebnisse bei fehlender Ernsthaftigkeit oder Infragestellen des Nutzens möglich.
-
-
-#### 321-SWOT-Beschreibung
-Um die einzelnen Bereiche zu untersuchen, bieten sich unter anderen folgende Fragen an:
-
-<strong>Strengths (Stärken)</strong>
-
-- Was zeichnet dein Unternehmen aus?
-- Was sind/waren seine grössten Erfolge?
-- Und im direkten Vergleich: Was kann das Unternehmen besser als seine Wettbewerber?
-
-<strong>Weaknesses (Schwächen)</strong>
-
-- Worin ist das Unternehmen nicht gut?
-- Was fehlt im Unternehmen?
-- Und wieder im direkten Vergleich: Was können die Wettbewerber besser?
-
-<strong>Opportunities (Chancen)</strong>
-
-- Welche positiven Trends zeichnen sich ab?
-- Welche gesellschaftlichen, wirtschaftlichen, technologischen oder politischen Entwicklungen könnten dem Unternehmen zugutekommen?
-- Welche sonstigen Rahmenbedingungen sind positiv (oder ändern sich in eine positive Richtung)?
-
-<strong>Threats (Bedrohungen)</strong>
-
-- Welche negativen Trends zeichnen sich ab?
-- Welche gesellschaftlichen, wirtschaftlichen, technologischen oder politischen Entwicklungen könnten dem Unternehmen schaden?
-- Welche sonstigen Rahmenbedingungen sind negativ (oder ändern sich in eine negative Richtung)?
-
-#### 322-SWOT-Strategie
-
-Mit der Analyse der vier Bereiche ist hat man nun zwar einen guten Überblick über die aktuelle Situation sowie anstehende Herausforderungen, aber wenn man jetzt aufhört, verpasst man einen wichtigen abschliessenden Analyseschritt. Das eigentliche Ziel einer SWOT Analyse ist es nämlich nicht, diese Faktoren einfach zu sammeln, sondern – darauf aufbauend – strategische Massnahmen zu identifizieren.
-Dafür musst du nun die Wechselwirkungen der vier Bereiche analysieren. Aus den unterschiedlichen Kombinationen kann man wiederum vier Kategorien an strategischen Massnahmen ableiten:
-
-<strong>SO-Strategie Strengths und Opportunities</strong>
-
-- «Welche Stärken können wir nutzen, um von den Chancen zu profitieren?»
-- Strategien, die hieraus abgeleitet werden, fallen in die Kategorie «Führungsposition ausbauen» und sind relativ einfach durchzuführen.
-
-<strong>WO-Strategie Weaknesses und Opportunities</strong>
-
-- «Welche Schwächen hindern uns daran, die Chancen zu nutzen?»
-- Hieraus ergeben sich Strategien aus der Kategorie «Zum Wettbewerb aufholen».
-
-<strong>ST-Strategie Strengths und Threats</strong>
-
-- «Welche Stärken können wir nutzen, um Bedrohungen zu reduzieren?»
-- Massnahmen aus diesem Bereich fallen in die Kategorie «Absichern».
-
-<strong>WT-Strategien Weaknesses and Threats</strong>
-
-- «Welche Schwächen hindern uns daran, die Bedrohungen zu reduzieren?»
-- Massnahmen aus dieser Kombination fallen in die Kategorie «Vermeiden».
-
-#### 323-SWOT-Analyse
 
 ### 33-Risikoanalyse
 
