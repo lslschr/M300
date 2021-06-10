@@ -1017,7 +1017,7 @@ Als erstes muss man eine Shell im LB1 Verzeichnis öffnen.
 Anschliessend einfach in der Shell "vagrant up" eingeben und den Befehl ausführen. Nun dauert die Installation ca. 2 - 5 Minuten. 
 ![Zweiter Schritt für die Umgebung](/LB1/images/Step_2_Start.png "Zweiter Schritt für die Umgebung")
 
-Nun einfach einen Browser öffnen und anschliessend die URL Localhost:8000 öffnen. 
+Nun einfach einen Browser öffnen und anschliessend die URL Localhost:8000 öffnen. Hier sich einfach mit dem benutzernamen "admin" und dem dazugehörigen Passwort "Admin1234" einloggen. 
 ![Splunk Login](/LB1/images/Splunk_login.png "Splunk Login")
 
 Nun kann man in der "Search & Reporting" App unter "Dashboard" die beiden Dashboards einsehen:

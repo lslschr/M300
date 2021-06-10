@@ -16,6 +16,9 @@
 ## Package Libraries aktualisieren
 sudo apt-get update -y
 
+## Korrekte Zeitzone einstellen
+timedatectl set-timezone 'Europe/Zurich'
+
 ## Apache2-pakete installieren
 sudo apt-get install apache2 -y
 
