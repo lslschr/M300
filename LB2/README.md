@@ -818,6 +818,13 @@ Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Ap
 ### 71-Step-by-Step-K8s-Cluster
 
 #### 711-Setup-Raspberry-Pis
+Als erstes muss man die Raspberry Pis korrekt konfigurieren, dafür habe ich jede einzene SD-Karte korrekt formatiert und Ubuntu Server 20.04 LTS 64bit installiert. Anschliessend kann man die Pis wieder anschliessen und das OS funktioniert direkt. 
+
+Nun kann man einen IP Scanner im netzwerk laufen lassen, um die entsprechenden Raspberry Pis und deren dazugehörigen IP-Adressen herauszufinden.
+BILD IP_SCANNER
+
+Wenn man die IPs gefunden hat, kann man einfach via ssh auf die jeweiligen raspberry Pis zugreifen und sich mit den benutzerdaten ubuntu/ubuntu authentifizieren.
+![SSH Access](/LB2/images/SSH_Access-via-SSH.png "SSH Access")
 
 #### 712-Setup-Docker
 
@@ -834,7 +841,10 @@ Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Ap
 #### 718-Install-Code-server
 
 
-#72-Ansible-K8s-Cluster
+### 72-Ansible-K8s-Cluster
+#### 721-Aufbau Roles
+
+#### 722-
 
 ## 8-Kontrollieren
 
