@@ -823,28 +823,292 @@ Als erstes muss man die Raspberry Pis korrekt konfigurieren, dafür habe ich jed
 Nun kann man einen IP Scanner im netzwerk laufen lassen, um die entsprechenden Raspberry Pis und deren dazugehörigen IP-Adressen herauszufinden.
 BILD IP_SCANNER
 
-Wenn man die IPs gefunden hat, kann man einfach via ssh auf die jeweiligen raspberry Pis zugreifen und sich mit den benutzerdaten ubuntu/ubuntu authentifizieren.
+Wenn man die IPs gefunden hat, kann man einfach via ssh auf die jeweiligen raspberry Pis zugreifen und sich mit den Benutzerdaten ubuntu/ubuntu authentifizieren.
 ![SSH Access](/LB2/images/SSH_Access-via-SSH.png "SSH Access")
 
 #### 712-Setup-Docker
+Es ist nicht dringend überraschend, dass ich nun doch auf Docker als Container runtime verwende. In meiner ersten Testinstallation habe ich darauf verzichtet, jedoch denke ich dass es mit Docker um einiges besser geht um perfomanter. <br>
+Für die Installation habe ich folgenden Befehl verwendet. 
+
+```bash
+$ curl -sSL https://get.docker.com | sh
+```
+
+Anschliessend muss man den CGroup Driver aktivieren bzw. zuerst anchschauen ob dieser auf systemd läuft. meistens läuft dieser auf CGroup.
+<br>Herausfinden kann man das ganze via folgenden Befehl
+```bash
+$ docker info
+```
+
+Normalerweise kommt dann ein Output der folgendermassen aussieht.
+```bash
+(...)
+Cgroup Driver: cgroups
+(...)
+```
+
+Wenn dies der Fall ist (das der CGroup Driver Cgroup ist), dann erstellen wir das File /etc/docker/deamon.json und fügen einen bestimmten inhalt hinein. 
+```bash
+$ vim /etc/docker/daemon.json
+
+# Folgende Zeilen hinzufügen
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2",
+  "insecure-registries" : ["localhost:32000"]
+}
+```
+Nun einfach noch Docker neu starten und nochmals docker inspect ausführen. 
+```bash
+$ sudo systemctl restart docker
+$ docker info
+(...)
+ Cgroup Driver: systemd
+(...)
+```
+
+Nun muss man auf dem Raspberry die Kernel Command Line anpassen um den CGroups Limit support zu aktivieren. Am Einfachsten amcht man dies mit "sed". 
+```
+$ sudo sed -i '$ s/$/ cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1 swapaccount=1/' /boot/firmware/cmdline.txt
+```
+
+Es wird empfohlen den Raspberry Pi nun neu zu starten.
+```
+$ sudo reboot
+```
 
 #### 713-Setup-MicroK8s
+Jetzt geht es richtig los, als erstes installieren wir K8s mit snap.
+```
+$ sudo snap install microk8s --channel=1.19 --classic
+```
+
+Anschliessen geben wir dem Benutzer k8sadmin die Mitgliedschaft in der microk8s Gruppe und geben die User Berechtigungen für ~/.kue
+```
+$ sudo usermod -a -G microk8s user
+$ sudo chown -f -R user ~/.kube
+```
+
+Ich persönlich habe noch einen alias für microk8s.kubectl erstellt um einiges an Zeit zu sparen.
+```
+sudo snap alias microk8s.kubectl kubectl
+```
+
+Bis hier hin müssen alle Schritte auf allen Pis erledigt werden (Master & Nodes). Ab hier müssen die einzelnen Schritte nur auf dem Master gemacht werden. 
+
+Als erstes aktivieren wir auf dem Master einige microk8s Services wie zB. der DNS-Server oder das Dashboard. 
+```
+microk8s.enable dns dashboard ingress helm helm3 storage metrics-server portainer
+```
 
 #### 714-Access-K8s-Dashboard
+Der Zugang zum internen K8s Dashboard kann sich zum Teil als etwas kompliziert erweisen, daher machen wir uns es möglichst einfach. 
+Als erstes setzen wir den Dashboard Service auf einen NodePort, dadurch wird er auch via Browser für jeden zugänglich. 
+```
+microk8s.kubectl patch --namespace=kube-system svc kubernetes-dashboard --type='json' -p '[{"op":"replace","path":"/spec/type","value":"NodePort"}]'
+```
+
+Anschliessend konfigurieren wir den Proxy so, dass wir darauf zugreifen können.
+```
+$ sudo microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 &
+```
+```
+$ sudo microk8s.kubectl -n kube-system edit deploy kubernetes-dashboard -o yaml
+```
+```
+spec:
+  containers:
+    - args:
+      - --enable-skip-login
+```
+
+Anschliessend ist das Dashboard via http://MASTER_IP:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard verfügbar. 
 
 #### 715-Add-Node-To-Cluster
+Nun sind wir so weit, dass man die vorhin aufgestzten und konfigurierten Hosts in einem Cluster zusammenfügen kann.
+Als erstes muss man dann folgenden Befehl ausführen:
+```
+$ microk8s add-node
+```
+Und danach erschint als output im Terminal ein Code. Diesen muss man, dann auf einem Node ausführen. Man muss hierbei beachten, dass für jeden Node ein einzelner Token verwendet werden muss. Somit muss man den befehl mehrmals auf dem Master ausführen. Der Code sieht ungefähr so aus:
+```
+$ microk8s join MASTER_IP:25000/12345678900987654321abcdefghijklmnop
+```
+
+Sobald die Nodes dem Cluster gejoint sind, kann man anschliessend auf dem Master überprüfen, ob dies so funktionierte wie geplant.
+```
+$ microk8s kubectl get nodes
+```
 
 #### 716-Install-Portainer
+Alles ist besser wenn man ein dazugehöriges GUI hat, für Container hat sich Portainer durchgesetzt. Daher führen wir folgenden befehl aus, um das offiziele K8s Portainer Manifest herunterzuladen. Dies kann auf wegelassen werden, wenn man bei der Installation bei enable ebenfalls portainer angegeben hat. Wenn man meiner Anleitung gefolgt ist, kann man somit diesen Schritt überspringen. 
+```
+$ curl -LO https://raw.githubusercontent.com/portainer/portainer-k8s/master/portainer-nodeport.yaml
+```
+
+Anschliessend führen wir das manifest aus.
+```
+$ kubectl apply -f portainer-nodeport.yaml
+```
+
+Insofern der Service nicht exposed wurde, kann man noch folgenden Befehl ausführen.
+```
+$ microk8s kubectl expose deployment portainer --type=NodePort
+```
 
 #### 717-Install-Linkding
+Nun werden wir Linkding, ein Bookmark Manager mit einem persistenten Volume aufsetzen.
+Als erstes erstellen wir direkt das persistent Volume. Dieses File kann man zB. als pv.yml abspeichern. 
+```YAML
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 8Gi
+  hostPath:
+    path: /home/k8sadmin/data
+  storageClassName: development
+---
+```
+
+Als nächstes müssen wir den Versistent Volume Claim noch konfigurieren.
+```YAML
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: development
+---
+```
+
+Als letztes erstellen wir das YAML File fpür da Linkding Container Deployment. ich speichere dies als linkding.yml ab.
+```YAML
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linkding
+  labels:
+    application: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: frontend
+  template:
+    metadata:
+      labels:
+        application: frontend
+    spec:
+      containers:
+      - name: linkding
+        image: sissbruecker/linkding
+        ports:
+        - containerPort: 9090
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: data
+          mountPath: /etc/linkding/data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data
+---
+```
+
+Nun muss man die erstellten Deployments noch in ausführen.
+```
+$ kubectl apply -f ./pv.yml
+$ kubectl apply -f ./pvc.yml
+$ kubectl apply -f ./linkding.yml
+```
+
+Anschliessend geben wir noch den Service in das lokale Netzwerk frei.
+
+```
+$ microk8s kubectl expose deployment linkding --type=NodePort
+```
 
 #### 718-Install-Code-server
-
+Ebenfalls bei Code-Server erstellen wir ein persisten Volume Claim. Das PV wurde bereits im vorherigen Schritt erstellt.
+```YAML
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: code-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+  storageClassName: development
+---
+```
+Zudem noch dazugehöriges Container deployment für Code-Server
+```YAML
+---code-server.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: code-server
+  name: code-server
+spec:
+  selector:
+    matchLabels:
+      app: code-server
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: code-server
+    spec:
+      containers:
+      - image: codercom/code-server:latest
+        imagePullPolicy: IfNotPresent
+        name: code-server
+        env:
+        - name: PASSWORD
+          value: "Admin1234"
+        volumeMounts:
+        - name: data
+          mountPath: /home/coder/project
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: code-data
+---
+```
+Nun muss man die erstellten Deployments noch in ausführen.
+```
+$ kubectl apply -f ./code-server-pvc.yml
+$ kubectl apply -f ./code-server.yml
+```
 
 ### 72-Ansible-K8s-Cluster
-#### 721-Aufbau Roles
+#### 721-Aufbau
 
-#### 722-
+#### 722-Vorbereitungen
+
+#### 723-Durchführung Ansible Playbook
 
 ## 8-Kontrollieren
 
