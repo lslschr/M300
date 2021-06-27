@@ -703,8 +703,6 @@ Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende
 ## 4-Informieren
 ### 41-Themen
 
-#### 41-Themen
-
 #### 411-Kubernetes
 
 #### 412-APT-vs-SNAP
@@ -723,7 +721,41 @@ Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende
 
 #### 419-Raspberry-Pi
 
-#### 420-Reverse-Proxy
+#### 420-Proxy
+##### 4201-Was-ist-ein-Proxy?
+Als Proxy-Server (Proxy = engl. «Stellvertreter») bezeichnet man eine Kommunikationsschnittstelle in einem Netzwerk, die zwischen zwei Computersystemen vermittelt. Grundlegende Aufgabe des Proxy-Servers ist es, Client-Anfragen an einen Server stellvertretend entgegenzunehmen und mit der eigenen IP-Adresse an den Zielrechner weiterzuleiten. Bei dieser Art der Kommunikation besteht keine direkte Verbindung zwischen Absender und Empfänger. Mitunter wissen das anfragende System und der Zielrechner gar nicht, dass sie es mit einem Proxy zu tun haben. Proxy-Server lassen sich in zwei Richtungen realisieren: Ein Forward-Proxy dient dem Schutz eines Client-Netzwerks vor Einflüssen aus dem Internet. Soll das Zielsystem, beispielsweise ein Webserver, durch einen vorgeschalteten Proxy-Server geschützt werden, spricht man von einem Reverse-Proxy.
+
+- Forward-Proxy (Schutz des Clients): Wird ein Proxy-Server als Schnittstelle zwischen einem privaten Netzwerk (LAN) und dem Internet installiert, lassen sich lokale Endgeräte effektiv von Einflüssen aus dem öffentlichen Netz abschirmen. Anfragen aus dem LAN werden vom Proxy entgegengenommen und mit dessen IP-Adresse als Absender an den Zielrechner im Internet weitergeleitet. Antwortpakete aus dem Netz werden somit nicht an den Client im LAN adressiert, sondern passieren ebenfalls den Proxy-Server, bevor Sie ans eigentliche Ziel weitergeleitet werden. In der Regel fungiert der Proxy-Server dabei als Kontrollinstanz. Entsprechende Sicherheitssysteme müssen so nicht auf jedem Client des Netzwerks installiert werden, sondern lassen sich auf einer überschaubaren Anzahl an Proxy-Servern realisieren. 
+
+- Reverse-Proxy (Schutz des Servers): Auch Webserver lassen sich zusätzlich absichern, indem ein Proxy-Server bei Zugriffen aus dem öffentlichen Netz vorgeschaltet wird. Clients aus dem Internet greifen somit nicht direkt auf den Zielrechner zu. Stattdessen werden Anfragen vom Proxy-Server entgegengenommen, gemäss konfigurierten Sicherheitsregeln geprüft und bei Unbedenklichkeit an den Server im Hintergrund weitergeleitet.
+
+##### 4202-Anwendungsgebiete-eines-Proxy-Server
+Es gibt diverse Gründe, einen Proxy-Server zu implementieren. Als Bindeglied zwischen zwei Kommunikationspartnern ermöglicht diese Netzwerkkomponente selbst dann einen Datenaustausch zwischen zwei Systemen, wenn eine direkte Verbindung aufgrund inkompatibler IP-Adressen unmöglich ist – zum Beispiel weil eine Komponente IPv4 verwendet und die anderen den neuen Standard IPv6. Daten, die den Umweg über einen Proxy nehmen, lassen sich zudem filtern, zwischenspeichern und im Rahmen eines Load-Balancings auf verschiedene Zielsysteme verteilen. Darüber hinaus ist ein Proxy eine zentrale Komponente der Firewall, die Computersysteme vor Angriffen aus dem öffentlichen Netz schützt.
+
+- Caching: Eine weitere Standardfunktion für Proxy-Server ist das Caching. Um wiederkehrende Anfragen aus einem lokalen Netzwerk schnell beantworten zu können, speichert ein entsprechend konfigurierter Proxy-Server eine Kopie der Daten, die er von Servern aus dem Internet erhält, temporär im Cache. Häufig angefragte Webinhalte müssen so nicht jedes Mal neu geladen, sondern können direkt ausgeliefert werden. Dies spart Zeit und Bandbreite. 
+
+- Filterung: Wurde ein Proxy-Server als Schnittstelle zwischen zwei Computersystemen installiert, lässt dieser sich als Filter für den Datenverkehr nutzen, um bestimmte Webinhalte für Clients zu blockieren oder auffällige Serveranfragen automatisch abzuweisen. 
+
+- Bandbreitenkontrolle und Lastenverteilung: Wird ein Proxy-Server zur Kontrolle der Bandbreite genutzt, teilt dieser den Clients eines Netzwerks je nach Auslastung im Vorfeld definierte Ressourcen zu. So lässt sich sicherstellen, dass die Bandbreite durch einzelne Anwendungen nicht komplett blockiert wird. Als zentrale Schnittstelle ermöglicht ein Proxy-Server zudem, ressourcenintensive Client-Anfragen oder Serverantworten auf verschiedene Systeme umzulegen, sodass sich Lasten innerhalb eines Rechnernetzes gleichmässig verteilen lassen. 
+
+- Anonymisierung: Da Proxy-Server die direkte Verbindung zwischen Absender und Empfänger unterbinden, ist es möglich, die IP-Adresse eines Clients hinter der der Kommunikationsschnittstelle zu verbergen. Dies erlaubt ein gewisses Mass an Anonymität, da Nutzer nach aussen hin mit der IP-Adresse und dem Standort des Proxys agieren. In Ländern mit einer starken Internetzensur oder einem eingeschränkten Zugriff auf urheberrechtliche geschützte Inhalte werden Proxy-Server im Ausland mitunter genutzt, um ein Geoblocking zu umgehen.
+
+##### 4203-Welche-Arten-von-Proxys-gibt-es?
+
+###### Application Level vs. Circuit Level
+Manche Proxy-Server werden technisch so realisiert, dass sie in der Lage sind, Datenpakete zu analysieren, die ihnen zur Weiterleitung übergeben werden. Andere Proxy-Realisationen hingegen haben keinen Zugriff auf Paketdaten. Filterfunktionen lassen sich in diesem Fall jedoch auf Grundlage der Absender-IP und des angesprochenen Ports umsetzen.
+
+- Application-Level-Proxy: Ein Application-Level-Proxy ist auf der Anwendungsschicht (Schicht 7) des OSI-Referenzmodells angesiedelt. Somit verfügt diese Proxy-Server-Art über Funktionen, um Datenpakete zu analysieren und je nach vorkonfigurierten Regeln zu blockieren, zu verändern und weiterzuleiten. Ein Application-Level-Proxy wird auch Applikations- oder Anwendungsfilter genannt.
+
+- Circuit-Level-Proxy: Der Circuit-Level-Proxy arbeitet auf der Transportschicht (Schicht 4) des OSI-Referenzmodells und ist somit nicht in der Lage, Paketdaten zu analysieren. Diese Proxy-Art wird in der Regel als Firewall-Filtermodul eingesetzt und ermöglicht es, Datenpakete über Ports und IP-Adressen zu filtern. Anders als der Application-Level-Proxy kann der Circuit-Level-Proxy die Kommunikation selbst nicht beeinflussen. Stattdessen beruht die Filterung auf dem Alles-oder-nichts-Prinzip. Datenpakete werden entweder durchgelassen oder blockiert.
+
+###### Dedizierte vs. generische Proxy-Server
+Die Klassifikation anhand der Begriffe „dediziert“ und „generisch“ bezieht sich auf die Frage, ob ein Proxy-Server nur für ein Kommunikationsprotokoll zuständig ist (dedizierter Proxy) oder ob die Netzwerkschnittstelle als Ansprechpartner für alle Kommunikationsprotokolle fungiert (generischer Proxy).
+
+- Dedizierter Proxy: Ein dedizierter Proxy-Server wird der Bezeichnung entsprechend für ein bestimmtes Kommunikationsprotokoll konfiguriert. In der Regel werden daher verschiedene dedizierte Proxy-Server für unterschiedliche Protokolle wie HTTP, FTP oder SMTP parallel betrieben.
+- Generischer Proxy: Anders als dedizierte Proxys ist ein generischer Proxy-Server nicht spezialisiert und wird für mehrere Kommunikationsprotokolle eingesetzt.
+
+In der Praxis wird ein Application-Level-Proxy meist als dedizierter Proxy-Server realisiert. Generische Proxy-Server hingegen finden als Circuit-Level-Proxys Anwendung. Die entsprechenden Begriffe werden daher mitunter synonym verwendet.
 
 
 ## 5-Planen
@@ -819,12 +851,48 @@ Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Ap
 
 #### 711-Setup-Raspberry-Pis
 Als erstes muss man die Raspberry Pis korrekt konfigurieren, dafür habe ich jede einzene SD-Karte korrekt formatiert und Ubuntu Server 20.04 LTS 64bit installiert. Anschliessend kann man die Pis wieder anschliessen und das OS funktioniert direkt. 
+Als erstes starten man dazu den Raspberry Pi Imager. Man kann diesen von [raspberrypi.org](https://www.raspberrypi.org/software/ "raspberrypi.org") herunterladen. <br>
+![Raspberry Pi Imager](/LB2/images/setup/1-Installation-SD-Ubuntu.png "Raspberry Pi Imager")
 
-Nun kann man einen IP Scanner im netzwerk laufen lassen, um die entsprechenden Raspberry Pis und deren dazugehörigen IP-Adressen herauszufinden.
-BILD IP_SCANNER
+Nun muss man auf "OS wählen" unter Betriebssystem klicken.<br>
+![Raspberry Pi Imager](/LB2/images/setup/2-Installation-SD-Ubuntu.png "Raspberry Pi Imager")
 
-Wenn man die IPs gefunden hat, kann man einfach via ssh auf die jeweiligen raspberry Pis zugreifen und sich mit den Benutzerdaten ubuntu/ubuntu authentifizieren.
+Dann unter Betriebsysteme auf Ubuntu gehen und hier auf Ubuntu Server 20.04.2 LTS auswählen. Wichtig ist hierbei, dass es die 64-bit Version ist. <br>
+![Raspberry Pi Imager](/LB2/images/setup/3-Installation-SD-Ubuntu.png "Raspberry Pi Imager")
+
+Unter SD-Karte klicken wir auf die SD-karte die man formatieren möchte. <br>
+![Raspberry Pi Imager](/LB2/images/setup/4-Installation-SD-Ubuntu.png "Raspberry Pi Imager")
+
+Anschliessend auf "Schreiben" klicken.<br>
+![Raspberry Pi Imager](/LB2/images/setup/5-Installation-SD-Ubuntu.png "Raspberry Pi Imager")
+
+Dann kommt noch eine Meldung, ob man die SD-Karte wirklick formatieren möchte und der Hinweis, dass dadurch alle Daten gelöscht werden. Hier einfach mit "Ja" bestätigen. <br>
+![Raspberry Pi Imager](/LB2/images/setup/6-Installation-SD-Ubuntu.png "Raspberry Pi Imager")
+
+Alle Raspberry Pis sind an einem Switch (SW01) angeschlossen. Der Switch selber ist ein meinen Router angeschlossen. Die genaueren Konfigurationen werden noch aufgezeigt. <br>
+![Cluster Aufbau](/LB2/images/setup/Cluster_Aufbau.jpeg "Cluster Aufbau")
+
+Insgesamt wurden 5 Raspberry Pis in einen Cluster zusammengestzt. Die SD karten wurden eingesteckt und die Stromzufuhr via USB-C gewährleistet. <br>
+![Cluster Aufbau](/LB2/images/setup/Cluster_Aufbau_Switch.jpeg "Cluster Aufbau")
+
+Auf dem Router habe ich den entsprechenden LAN Port gesucht. <br>
+![Router Konfiguration](/LB2/images/setup/router_config_1.png "Router Konfiguration")
+
+Dann klickt man auf den Port. In meinem Fall ist es der Port 4.<br>
+![Router Konfiguration](/LB2/images/setup/router_config_2.png "Router Konfiguration")
+
+Dann unter dem Port profile, wähle ich dass zuvor erstellt VLAN (Raspi Cluster) aus. <br>
+![Router Konfiguration](/LB2/images/setup/router_config_3.png "Router Konfiguration")
+
+Nun ist der Port im korrekten VLAN. <br>
+![Router Konfiguration](/LB2/images/setup/router_config_4.png "Router Konfiguration")
+
+Nun kann man einen IP Scanner im netzwerk laufen lassen, um die entsprechenden Raspberry Pis und deren dazugehörigen IP-Adressen herauszufinden.<br>
+![IP_Scanner_10er_Network](/LB2/images/IP_Scanner_10er_Network.png "IP_Scanner_10er_Network")
+
+Wenn man die IPs gefunden hat, kann man einfach via ssh auf die jeweiligen raspberry Pis zugreifen und sich mit den Benutzerdaten ubuntu/ubuntu authentifizieren.<br>
 ![SSH Access](/LB2/images/SSH_Access-via-SSH.png "SSH Access")
+<br>
 
 #### 712-Setup-Docker
 Es ist nicht dringend überraschend, dass ich nun doch auf Docker als Container runtime verwende. In meiner ersten Testinstallation habe ich darauf verzichtet, jedoch denke ich dass es mit Docker um einiges besser geht um perfomanter. <br>
@@ -835,7 +903,9 @@ $ curl -sSL https://get.docker.com | sh
 ```
 
 Anschliessend muss man den CGroup Driver aktivieren bzw. zuerst anchschauen ob dieser auf systemd läuft. meistens läuft dieser auf CGroup.
-<br>Herausfinden kann man das ganze via folgenden Befehl
+<br>
+Herausfinden kann man das ganze via folgenden Befehl
+
 ```bash
 $ docker info
 ```
@@ -1101,6 +1171,187 @@ Nun muss man die erstellten Deployments noch in ausführen.
 ```
 $ kubectl apply -f ./code-server-pvc.yml
 $ kubectl apply -f ./code-server.yml
+```
+
+#### 719-Install-WordPress
+Eines der gängisten CMS (Content-managment-System) ist WordPress. Viele Webuser verwenden für Ihren Webauftritt WordPress, daher liegt es sehr nahe, dass eine WordPress Installation ebenfalls eine interessante Aufgabe sein könnte. 
+Als erstes erstellen wir ein mit Base64 verschlüsseltes Passwort.
+```
+k8sadmin@rpipoelmaster01:~$ echo -n 'SECRET-PW' | base64
+VERSCHLUESSELT_MIT_BASE64
+```
+
+Anschliessend erstellen wir ein neue Datei mit dem entsprechend PW für den MySQL bzw. MariaDB Service.
+```
+cat <<EOF >./kustomization.yaml
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=VERSCHLUESSELT_MIT_BASE64
+EOF
+```
+
+Nun muss man noch das das MySQL Deployment konfigurieren, dafür habe ich folgendes YAML File erstellt. (mysql-deployment.yaml)
+```YAML
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-mysql
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: wordpress
+    tier: mysql
+  clusterIP: None
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+  labels:
+    app: wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-mysql
+  labels:
+    app: wordpress
+spec:
+  selector:
+    matchLabels:
+      app: wordpress
+      tier: mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        tier: mysql
+    spec:
+      containers:
+      - image: mariadb:latest
+        name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: password
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
+
+```
+
+Zudem muss noch das WordPress deployment konfigurieren (wordpress-deployment.yaml)
+```YAML
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: wordpress
+    tier: frontend
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wp-pv-claim
+  labels:
+    app: wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  selector:
+    matchLabels:
+      app: wordpress
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        tier: frontend
+    spec:
+      containers:
+      - image: wordpress:4.8-apache
+        name: wordpress
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: wordpress-mysql
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: password
+        ports:
+        - containerPort: 80
+          name: wordpress
+        volumeMounts:
+        - name: wordpress-persistent-storage
+          mountPath: /var/www/html
+      volumes:
+      - name: wordpress-persistent-storage
+        persistentVolumeClaim:
+          claimName: wp-pv-claim
+
+```
+
+Danach fügen wir die beiden Deployments als Ressourcen in unser Deployment File.
+
+```
+cat <<EOF >>./kustomization.yaml
+resources:
+  - mysql-deployment.yaml
+  - wordpress-deployment.yaml
+EOF
+```
+
+Als letzten Schritt müssen wir nur noch, dass Deployment starten. Mit folgenden Befehl.
+```
+kubectl apply -k ./
+```
+
+Um den dazugehörigen Port herauszufinden, einfach diesen Befehl ausführen:
+
+```
+kubectl get services wordpress
 ```
 
 ### 72-Ansible-K8s-Cluster
