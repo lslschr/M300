@@ -1357,9 +1357,26 @@ kubectl get services wordpress
 ### 72-Ansible-K8s-Cluster
 #### 721-Aufbau
 
+
+
 #### 722-Vorbereitungen
 
+```
+ssh-copy-id 10.0.10.10
+ssh-copy-id 10.0.10.11
+ssh-copy-id 10.0.10.12
+ssh-copy-id 10.0.10.13
+ssh-copy-id 10.0.10.14
+ssh-copy-id 10.0.10.15
+```
+
+
+
 #### 723-Durchführung Ansible Playbook
+Das Playbook kann ganz einfach dann über folgenden Befehl ausgeführt werden:
+```
+sudo ansible-playbook -i hosts.yml configure_cluster.yml - ubuntu -k
+```
 
 ## 8-Kontrollieren
 
