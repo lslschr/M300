@@ -706,8 +706,657 @@ Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende
 #### 411-Kubernetes
 
 #### 412-APT-vs-SNAP
+##### 4211-Was-ist-Snap?
+Snap ist ein Softwarepaket- und Bereitstellungssystem, das in sich geschlossene Pakete, sogenannte Snaps, verwendet, um Software an Benutzer zu liefern. Snaps packen alle Abhängigkeiten, die ein Programm benötigt, in ein einziges Paket. Auf diese Weise ist die App systemagnostisch, was bedeutet, dass sie nativ auf jeder Linux-Distribution laufen kann, die Snap unterstützt.<br>
+
+Während APT die Pakete meist aus den offiziellen Repositories einer Distribution bezieht, ermöglicht Snap es Entwicklern, ihre Apps über den Snap Store direkt an die Benutzer zu liefern. Entwickler können Snap auch direkt auf ihrer Website veröffentlichen. <br>
+
+Das Werkzeug zur Verwaltung von Snap heißt snapd. Es ist ein Daemon, der es einem System ermöglicht, Snap-Pakete auszuführen. Benutzer interagieren mit snapd, indem sie den Snap-Client verwenden.<br>
+
+##### 4212-Was-ist-APT?
+APT (Advanced Package Tool) ist ein Software-Paketmanager zum Installieren und Entfernen von Paketen auf Debian-basierten Systemen. APT automatisiert den Prozess des Abrufens, Konfigurierens, Aktualisierens, Installierens und Entfernens von Paketen. APT ist ein Front-End von Debians Basis-Paketverwaltungssystem dpkg.<br>
+
+Einer der Hauptvorteile von APT ist die Art, wie es mit Software-Abhängigkeiten umgeht. Nachdem ein Benutzer einen Befehl zur Installation eines Pakets erteilt hat, durchsucht APT die Repositories nach den Abhängigkeiten des Pakets und installiert diejenigen, die noch nicht auf dem System installiert sind.<br>
+
+Das Werkzeug, das APT hauptsächlich als Schnittstelle zu den Benutzern verwendet, ist apt. Das Dienstprogramm bietet die populärsten Befehle apt-get und apt-cache, die als weniger benutzerfreundlich gelten.<br>
+
+##### 4213-Snap-vs.-APT:-Unterschiede
+Bevor wir auf die Unterschiede zwischen Snap und APT eingehen, ist es notwendig, die Ebenen zu verstehen, auf denen wir sie vergleichen können.<br>
+
+Die folgende Tabelle erklärt die Terminologie und enthält die wichtigsten Vergleichspunkte:<br>
+
+|         | Snap           | APT  |
+| ------------- |:-------------:| -----:|
+| Paket-Typ	     | .snap	 | .deb |
+| Tool-Name      | snapd	      |   APT |
+| CLI tool	 | snap	      |    apt |
+| Format		 | SquashFS archive		      |    ar archive |
+| Verfügbar in		 | Snap Store		      |    Debian repositories |
+| Installationsgrösse	 | Grösser      |    Kleiner |
+| Abhängigkeiten	 | In dem Package enthalten	      |    Shared |
+| Updates		 | Automatisch	      |    Manuell |
+| Sicherheitsbeschränkung		 | Eingeschränkt	      |    Begrenzter Einschluss |
+| Mehrere Installationen		 | Möglich	      |  Nicht möglich |
+| Installation mehrerer Versionen		 | Möglich	        |  Nicht möglich |
+
+##### 4214-Paket-Format
+Snap verwendet .snap-Dateien, die im Snap Store oder auf der Website des jeweiligen Entwicklers zum Download bereitstehen. Die .snap-Datei enthält eine Anwendung, ihre Abhängigkeiten und die Metadaten in einem SquashFS-komprimierten Dateisystem.<br>
+
+Snap-Anwendungen sind containerisiert, ähnlich wie Docker seine Container packt. Im Gegensatz zu Docker-Containern haben Snap-Anwendungen jedoch nur begrenzten Zugriff auf das Host-System, hauptsächlich zum Speichern von Konfigurationsdateien und zur Nutzung der E/A des Systems.<br>
+
+APT verwendet .deb-Dateien aus Online-Software-Repositories für jede Linux-Distribution, die sie unterstützt. Eine .deb-Datei ist ein Unix-Archiv, das zwei tar-Archive enthält. Ein Archiv enthält die Steuerinformationen, während das andere die Dateien enthält, die für die Paketinstallation verwendet werden.<br>
+
+##### 4215-Paketgrösse
+Snaps sind in sich geschlossen, was zu einer relativ großen .snap-Datei führt. Wenn ein Benutzer einen Snap installiert, wird die Datei dekomprimiert und als schreibgeschütztes Loopback-Gerät in das Home-Verzeichnis eingehängt.<br>
+
+Eine über APT installierte Anwendung ist kleiner als ihr Snap-Gegenstück, da sie keine Paketabhängigkeiten bündeln muss.<br>
+
+##### 4216-Abhängigkeiten
+Snap bündelt Paketabhängigkeiten innerhalb des Pakets. Dieser Ansatz wirkt sich zwar negativ auf die Paketgröße aus, der Hauptvorteil besteht jedoch darin, dass die Benutzer immer die unterstützte und getestete Version des Pakets haben.<br>
+
+APT verwendet einen Ansatz mit gemeinsam genutzten Abhängigkeiten. Wenn ein Benutzer einen apt install-Befehl ausgibt, liest APT die Liste der Abhängigkeiten, prüft, ob das System bereits einige der Pakete installiert hat, und installiert die fehlenden Pakete. Diese Technik sorgt für einen geringen Speicherbedarf.<br>
+
+
+##### 4217-Benutzerfreundlichkeit
+Der Unterschied in der Benutzerfreundlichkeit für Endbenutzer ist nicht signifikant. Snap-Apps sind universell und für Entwickler praktischer zu warten, und die Freigabe eines Updates ist ein unkomplizierter Prozess, bei dem ein einzelnes Paket geändert wird.<br>
+
+Auf der anderen Seite überprüft APT Repositories, um Updates zu finden. Wenn ein Update bereit ist, benötigt das Repository-System eine separate Version für jede Distribution (Ubuntu, Linux Mint, Pop! OS, etc.) und jede Distributionsversion (Ubuntu 18.04, Ubuntu 20.04, etc.). Diese Methode ist zeitaufwändig und führt manchmal zu Verzögerungen bei bestimmten Distributionen.<br>
+
+##### 4218-Geschwindigkeit
+Snap hat längere Startzeiten als APT, da das Betriebssystem Snaps bei der ersten Verwendung dekomprimiert, um Speicherplatz zu sparen. Allerdings sind Snaps nur beim ersten Durchlauf langsamer - beim zweiten Start verringert sich der Unterschied oder verschwindet ganz.<br>
+
+##### 4219-Aktualisierungen
+Der Snap-Aktualisierungsprozess erfolgt automatisch. Benutzer können die Aktualisierung einer Snap-App nicht verhindern, sondern nur verzögern. Snap-Entwickler sind nicht eingeschränkt in Bezug auf den Zeitpunkt, wann sie ein Update veröffentlichen können.<br>
+
+APT gewährt dem Benutzer die vollständige Kontrolle über den Update-Prozess. Wenn eine Distribution jedoch ein Release kürzt, friert sie normalerweise Debs ein und aktualisiert sie für die Dauer des Releases nicht. Daher ist Snap die bessere Lösung für Benutzer, die die neuesten App-Versionen bevorzugen.<br>
+
+##### 42110-Security
+Snaps unterstützen die Signaturvalidierung und gelten aufgrund ihrer eingeschränkten Natur als sichere Lösung für die App-Bereitstellung. Da der Herausgeber die App jedoch direkt dem Benutzer zur Verfügung stellt, muss der Benutzer dem Herausgeber vertrauen. Es werden keine externen Überprüfungen durchgeführt.<br>
+
+Auf der anderen Seite prüft jede Linux-Distribution die in ihrem Repository enthaltenen Debs. So können APT-Benutzer sicher sein, dass die App aus einer vertrauenswürdigen Quelle stammt. Dies gilt nicht für Repositories von Drittanbietern oder Debs, die auf Websites von Herausgebern verfügbar sind.<br>
+
+##### 42111-Welches-soll-ich-wählen?
+Wähle Snap, wenn:
+- Man nicht möchte, dass unnötige Pakete in ein System integriert werden. Bei Snaps bleiben die Pakete auf das .snap-Paket beschränkt.
+- SMan sicherstellen will, dass man die aktuellste Version der App hat. Snap aktualisiert sich automatisch und kontinuierlich, ohne Feature-Freezes für bestimmte Distributionen.
+- Man eine App isolieren möchte.<br>
+
+Wähle APT, wenn:
+- Man es bevorzugt, dass Apps von der verwendeten Distribution überprüft werden.
+- Man darauf bedacht ist, den Speicherplatz zu schonen. Von APT installierte Apps teilen ihre Abhängigkeiten.
+- Man möchte, dass sich Apps korrekt in die GUI-Umgebung integrieren.
 
 #### 413-Ansible
+##### 4131-Was-ist-Ansible?
+Ansible ist ein Open-Source-Tool, mit dem sich die Konfiguration und Administration von Systemen automatisieren lässt. Das reicht von simplen bis hin zu hoch komplexen Tasks. Das Werkzeug beherrscht Modularisierung und erfordert minimale Systemvoraussetzungen.<br>
+
+Konfigurationsmanagement ist ein Bereich, in dem es viele wiederkehrende Aufgaben gibt – perfekt für Automatisierung. Es existieren zahlreiche Lösungen, um das zu erreichen. Doch viele dieser Ansätze sind recht komplex oder erfordern eine umfangreiche Umgebung.<br>
+
+Eine Besonderheit von Ansible ist, dass die Open-Source Software mit minimalen Voraussetzungen arbeiten kann: Die verwaltenden Geräte benötigen lediglich OpenSSH und Python. Dennoch beherrscht das Tool alle wichtigen Techniken, um Konfiguration, Administration und Orchestrierung zu automatisieren.<br>
+
+Gleichzeitig ist es über die relativ simple Sprache YAML bedienbar, was die Einstiegshürde weiter senkt. Ansible wird weltweit von den verschiedensten Firmen und Einrichtungen verwendet, von Rechenzentren bis hin zu Universitäten.<br>
+
+Eine weitere Besonderheit von Ansible ist, dass bei der Arbeit aus der Ferne kein Agent auf dem Zielsystem installiert werden muss. Bei anderen Konfigurationsmanagern ist häufig eine Agentensoftware nötig, um die gewünschten Tätigkeiten auszuführen. Das kann zu Fehlern oder Sicherheitsproblemen führen. Ansible arbeitet ohne Umwege oder Hilfsmittel und kann diese Bedenken somit im Keim ersticken.<br>
+
+Automatisiertes Konfigurationsmanagement mit Ansible funktioniert, indem der gewünschte Zustand des Hosts oder Systems in einem sogenannten Playbook beschrieben wird. Das können grundlegende Einstellungen sein, aber auch die komplette Einrichtung eines neuen Systems inklusive der Installation bestimmter Software.<br>
+
+Das Tool dient also zum Verwalten von Netzwerken bis hin zum automatisierten Aufsetzen neuer Clients. Bei Bedarf können natürlich auch einzelne Befehle per Kommandozeile abgesetzt werden. Ansible verwendet zum automatisierten Arbeiten drei grundlegende Ressourcen, die in den folgenden Abschnitten näher erklärt werden: Module, Inventar und Playbooks.<br>
+
+###### Module
+Module sind in sich geschlossene Unterprogramme, in die allgemeine, häufig wiederkehrende Aufgaben ausgelagert werden. Sie können von der Konsole aus und in Playbooks verwendet werden. Sie beschleunigen das Erstellen von Playbooks und Anweisungen enorm, da Standardaufgaben nicht ständig neu programmiert werden müssen. Viele Module für alltägliche Aufgaben werden bereits mit Ansible ausgeliefert. Es ist jedoch auch möglich, eigene Module zu programmieren.<br>
+
+###### Inventar
+Im Inventar wird beschrieben, auf welche Knoten per Ansible zugegriffen werden kann. Das Inventar enthält die IP-Adressen oder Namen der verfügbaren Hosts. Die Einträge im Inventar können bei Bedarf gruppiert werden, um die Verwaltung zu erleichtern. Sowohl einzelne Einträge als auch Gruppen können mit Variablen verknüpft werden, um zum Beispiel allen Hosts der Gruppe X einen spezifischen NTP-Server zuzuweisen. Zudem ist es möglich, das Inventar dynamisch aus anderen Quellen zu beziehen sowie mehrere Inventardateien parallel zu verwenden.<br>
+
+###### Playbooks
+Das automatisierte Abarbeiten der Vorgaben erfolgt bei Ansible mittels Playbooks. Sie funktionieren ein wenig wie ein Benutzerhandbuch oder ein Regelwerk, in dem die Schritte der Automatisierung definiert werden. Es handelt sich um Sammlungen einzelner Arbeitsanweisungen (Plays), die für die Konfiguration eines bestimmten Szenarios notwendig sind. Es kann jedes beliebige Shell-Kommando verwendet werden, um gezielt die gewünschten Einstellungen und Installationen auf dem Zielsystem durchzuführen.<br>
+
+Neuere Versionen unterstützen zudem Powershell-Befehle für Windows. Hierfür kommt YAML zum Einsatz. Es handelt sich um eine beschreibende Sprache, mit der man im Fall von Ansible der Software die exakten Parameter der Automatisierung verrät. Die Sprache ist leicht verständlich, was die Arbeit mit Playbooks relativ simpel gestaltet. Für dynamische Szenarien kann mit Variablen gearbeitet werden. Mit einem gut geschriebenen Playbook lässt sich per Ansible sehr sauber und zuverlässig konfigurieren und verwalten.<br>
+
+###### Ansible vs. Ansible Tower
+Die kostenlose Variante von Ansible leidet etwas darunter, dass Kommandozeile und grafische Benutzeroberfläche nicht immer auf dem gleichen Stand sind. Das bedeutet in der Praxis, dass mitunter unterschiedliche Ergebnisse erzielt werden.<br>
+
+Für den professionellen Einsatz bietet die Enterprise-Variante Ansible Tower von Red Hat eine etwas komfortablere Bedienung, da hier beide Eingabemethoden auf demselben Stand gepflegt werden. Zudem gibt es weitere Funktionen wie ein Dashboard, ein Rollensystem für Benutzer, visuell aufbereitetes Inventar-Management sowie einen technischen Support.<br>
+
+##### 4132-Einfuehrung-in-Ansible
+Genesis – mit diesem Titel beschrieb Michael de Haan am 23.2.2012 den Commit, der den Startschuss für Ansible bilden sollte. Heute (Stand März 2019) und knapp 44.000 Commits später ist Ansible vermutlich eines der meist etablierten Open-Source-Orchestrierungstools. Dass Red Hat Ansible 2014 gekauft hat, dürfte den finalen Schub gegeben haben. Höchste Zeit also, für alle die sich bisher nicht damit befasst haben, einen Einblick zu wagen und erste Schritte zu tätigen.<br>
+
+Zunächst einige Begrifflichkeiten: Mit Ansible kann ein Master-Server einen Slave-Server konfigurieren. Dazu verbindet sich der Master per SSH mit dem Slave und führt dann tasks aus. Jeder Task beschreibt einen Konfigurationsschritt, also zum Beispiel das Installieren eines Pakets mittels yum. Dabei ruft jeder Task ein Modul auf, dass die aktuelle Aufgabe umsetzt, beispielsweise das yum-Modul. Soll eine Datei kopiert werden, wird das copy-Modul benutzt, für das Managen für Systemd-Services kann das systemd-Modul zum Einsatz kommen, usw. Ansible liefert in Version 2.7 ca. 2.100 Module mit. Darüber hinaus können zusätzliche Module einfach importiert werden.<br>
+
+Der erste Schritt beim Benutzen von Ansible ist das Schreiben eines Inventories. Dort legen Nutzer fest, welche Hosts orchestriert werden sollen, darüber hinaus lassen sie sich zu Gruppen zusammenfassen. Inventories lassen sich entweder im YAML- oder im INI-Format verfassen. Im folgenden Beispiel soll ein Webserver deployed werden, dazu legt man folgendes Inventory an:<br>
+
+```YAML
+---
+all:
+  hosts:
+    webserver1:
+      ansible_host: 192.168.0.2
+```
+<br>
+Die dict-keys all und hosts sind dabei von Ansible vorgegeben und auch reserviert, dürfen also nicht anderweitig verwendet werden. Zur Liste aller hosts wird nun ein neuer Server hinzugefügt, der in Ansible als webserver1 bekannt sein soll. Darüber hinaus wird Ansible mitgeteilt, dass er unter der IP 192.168.0.2 verfügbar sein soll. Dazu dient der Parameter ansible_host. Möchte man nicht nur einen Webserver, sondern drei und zusätzlich einen Datenbankserver verwalten, fügt man diese Server ebenfalls zum Inventar hinzu:<br>
+
+```YAML
+---
+all:
+  hosts:
+    webserver1:
+      ansible_host: 192.168.0.2
+    webserver2:
+      ansible_host: 192.168.0.3
+    webserver3:
+      ansible_host: 192.168.0.4
+    dbserver:
+      ansible_host: 192.168.1.1
+```
+<br>
+Prinzipiell ist das Inventory an dieser Stelle fertig, allerdings empfiehlt es sich, gleich noch die Definition von Inventory-Gruppen anzulegen, um beispielsweise alle Webserver kollektiv anzusprechen. Dazu wird ein children dict-key eingeführt:<br>
+
+```YAML
+---
+all:
+  hosts:
+    webserver1:
+      ansible_host: 192.168.0.2
+    webserver2:
+      ansible_host: 192.168.0.3
+    webserver3:
+      ansible_host: 192.168.0.4
+    dbserver1:
+      ansible_host: 192.168.1.1
+  children:
+    webservers:
+      hosts:
+        webserver1:
+        webserver2:
+        webserver3:
+    dbservers:
+      dbserver1:
+```
+<br>
+Nach Definition eines Inventories kann Ansible generell auf zwei Arten benutzt werden: Der Ad-hoc-Modus erlaubt das Ausführen einzelner Tasks, also einmaliger Modulaufrufe. Beispielsweise kann man zunächst testen, ob alle Server aus dem Inventory für Ansible erreichbar sind:<br>
+
+```bash
+$ ansible -i inventory.yaml all -m ping
+```
+<br>
+Mit -i wird das zu benutzende Inventory angegeben. Da Ansible alle hosts des Inventories ansprechen soll, benutzt man das Schlüsselwort all. Alternativ könnte man an dieser Stelle auch Gruppennamen webservers und dbservers oder die Namen einzelner Hosts (webserver1, ...) schreiben. Mit -m wird das Modul für den Task spezifiziert. Das Modul Ping bewirkt dabei mehr als ein klassischer ICMP-ping. Es prüft, ob eine SSH-Verbindung zwischen Master und Slave möglich ist und ob auf dem Slave-Server eine kompatible Python-Version installiert ist.<br>
+
+Die Ausgabe dieses Kommandos könnte folgendermaßen aussehen:<br>
+
+```bash
+webserver1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+<br>
+Nach diesem erfolgreichem Check können nun weitere Ad-Hoc-Kommandos ausgeführt werden, etwa die Installation eines Paketes:<br>
+
+```bash
+$ ansible -i inventory.yaml webservers -m package -a "name=nginx state=present" -b
+
+webserver1 | SUCCESS => {
+    "cache_update_time": 1553085209,
+    "cache_updated": false,
+    "changed": true,
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following additional packages will be installed:\n  libnginx-mod-http-geoip libnginx-mod-http-image-filter\n  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream\n  nginx-common nginx-core\nSuggested packages:\n  fcgiwrap nginx-doc\nThe following NEW packages will be installed:\n  libnginx-mod-http-geoip libnginx-mod-http-image-filter\n  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream nginx\n  nginx-comm
+    .........
+}
+```
+<br>
+Das Flag -b bewirkt eine priviledge escalation, sodass bspw. ein neues Paket installiert werden kann. Mit dem Flag -a werden die Argumente übergeben, die ein Modulaufruf beinhalten soll. In diesem Fall ist das der Name des Pakets und der gewünschte Zustand, also zum Beispiel, dass ein Paket installiert werden soll.<br>
+
+Ansible genügt – wie die meisten anderen Tools dieser Art – dem Idempotenzprinzip. Nutzer schreiben keine konkreten Befehle, sondern definieren, welchen Zustand ein System erreichen soll, also dass ein Paket installiert sein soll. Falls – auf den konkreten Fall zugeschnitten – nginx auf einem Webserver vorhanden sein soll, wird Ansible entweder das Paket neu installieren, oder einfach nichts tun, wenn das Paket schon vorhanden ist. Dieses Verhalten lässt sich auch beobachten, wenn der Aufruf ein zweites Mal getätigt wird:<br>
+
+```bash
+$ ansible -i inventory.yaml webservers -m package -a "name=nginx state=present" -b
+
+webserver1 | SUCCESS => {
+    "cache_update_time": 1553085209,
+    "cache_updated": false,
+    "changed": false
+}
+
+webserver2 | SUCCESS => {
+    "cache_update_time": 1553085209,
+    "cache_updated": false,
+    "changed": false
+}
+
+webserver3 | SUCCESS => {
+    "cache_update_time": 1553085209,
+    "cache_updated": false,
+    "changed": false
+}
+```
+<br>
+Ansible benötigt – wie jedes Konfiguration-Management-System – Informationen über den Host, den es verwalten soll:<br>
+
+- Betriebsystem
+- CPU
+- RAM
+- Netzwerk
+- Installierte Pakete
+- Usw.
+<br>
+Um diese einzusammeln bzw. anzuzeigen gibt es das Modul setup:<br>
+
+```bash
+$ ansible  -i inventory.yaml webserver1 -m setup
+
+webserver2 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.0.3",
+            "192.168.122.1",
+        ],
+        "ansible_all_ipv6_addresses": [
+            "45f8:f3c3:fdca:4667:3a27:70d1:dc72:112c",
+            "c3e9:1192:aeb6:c013:497b:51b0:e1b4:5910",
+        ],
+        "ansible_apparmor": {
+            "status": "enabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "05/08/2017",
+        "ansible_bios_version": "1.3.3",
+        ...
+      }
+}
+```
+<br>
+Das Installieren und Konfigurieren eines Webservers beinhaltet normalerweise mehr als einen Task:<br>
+
+1. Konfiguration der Firewall
+2. Installieren des nginx-Pakets
+3. Anpassen der nginx-Konfiguration
+4. Neustarten des nginx-Services
+5. Setzen einer message-of-the-day pro Server
+
+<br>
+Will man mehrere Tasks kombinieren, zu benutzt man ein Playbook. In diesem wird in YAML-Syntax zunächst mit dem hosts key definiert, auf welchen hosts des Inventories das Playbook laufen soll, im nachstehenden Beispiel auf allen Mitgliedern der webservers-Gruppe. Anschließend werden unter dem key tasks alle Aufgaben definiert, die außerdem in eben dieser Reihenfolge ablaufen sollen. Nachstehend ist das fertige Playbook, das in seinen Einzelschritten erklärt werden soll.<br>
+
+```YAML
+- hosts: webservers
+  tasks:
+    - name: Open port 80 for http access
+      become: true
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+      register: firewall_setting
+
+    - name: Restart the firewalld service to load in the firewall changes
+      become: true
+      service:
+        name: firewalld
+        state: restarted
+      when: firewall_setting.changed
+
+    - name: Install packages for nginx
+      become: true
+      package:
+        name: "nginx-{{ nginx_version }}"
+        state: present
+
+    - name: Copy Stylsheet in place
+      become: true
+      copy:
+        src: stylsheet.css
+        dest: "{{ nginx_root }}/stylesheet.css"
+      register: stylesheet
+
+    - name: Create default page
+      become: true
+      template:
+        src: index.html.j2
+        dest: "{{ nginx_root }}/index.html"
+      register: indexfile
+
+    - name: Restart nginx service
+      become: true
+      service:
+        name: nginx
+        state: restarted
+      when: indexfile.changed or stylesheet.changed
+
+    - name: Setup motd
+      become: true
+      template:
+        src: motd.j2
+        dest: /etc/motd
+```
+
+Die Ordnerstruktur sieht nun folgendermassen aus:
+
+```
+.
+|
+├── inventory.yaml
+└── playbook.yaml
+```
+<br>
+Der erste Task benutzt das firewalld-Modul, um den http-Service innerhalb der Firewall zuzulassen. Der Task hat zusätzlich einen register-Parameter. Gibt an diesen an, speichert Ansible das Ergebnis des Tasks in einer Variable ab. Zusätzlich beinhaltet der Task den Parameter become: true. Damit wird dieser Task mit Rechteeskalation (Standard ist sudo) ausgeführt. Diese Berechtigung kann zwar auch global für das gesamte Playbook gesetzt werden, es empfiehlt sich aber aus Sicherheits- und Auditgründen fein-granular zu arbeiten und jeden Task einzeln zu "berechtigen".<br>
+
+Nach der Neukonfiguration der Firewall soll diese neu gestartet werden – dazu kommt das service-Modul zum Einsatz, dass unter anderem für systemd-basierte Services gedacht ist.<br>
+
+Das Neustarten soll allerdings nur passieren, falls der vorhergehende Task eine Änderung nach sich gezogen hat: Dieses Verhalten wird über den when-Parameter und die Abfrage der Variable firewall_setting, die im ersten Task definiert wurde gesteuert.<br>
+
+Im dritten Task installiert das package-Modul das nginx-Paket auf den Webservern. Dazu wird einerseits der gewünschte Zustand übergeben – in diesem Fall present –, zum anderen der Namen des Pakets nginx. Alternativ könnte auch der Zustand latest benutzt werden, dies würde die neueste Version referenzieren, die das System über seine jeweiligen Paketquellen bekommt. Im vorliegenden Fall wird als Name {{ nginx_version | default("1.15.5")}} angegeben. Dies soll das erste Beispiel sein, wie in Ansible Variablen zum Einsatz kommen können.<br>
+
+In Ansible wird dazu Jinja-Syntax benutzt. Variablen werden immer in {{ }}-Blöcke gefasst. Hier muss also eine Variable definiert werden, die nginx_version heißt. Diese kann z. B. in einer Datei ./group_vars/webservers.yaml gespeichert werden:<br>
+
+```YAML
+---
+nginx_version: 1.1.15
+```
+
+Damit sieht die Ordnerstruktur folgendermassen aus:<br>
+
+
+```
+.
+|
+├── group_vars
+│   └── webservers.yaml
+├── inventory.yaml
+└── playbook.yaml
+```
+
+Im späteren Verlauf sollen Variablen noch detaillierter zur Sprache kommen. Für den Moment soll aber noch erwähnt werden, dass alle Variablen die in group_vars/webservers.yaml definiert wurden, allen hosts zur Verfügung stehen, die zur Inventory-Gruppe webservers gehören. Analog kann man eine Datei group_vars/all.yaml anlegen, deren Werte dann für alle Hosts aller Inventory-Gruppen gelten.<br>
+
+Die nächsten beiden Tasks sollen nun eine statische Webseite ausliefern, die Informationen über das Betriebssystem des Servers anzeigen soll. Dazu wird zunächst mittels copy-Modul ein CSS-Stylesheet in den root-Ordner des nginx-Webservers kopiert, das die statische Webseite später benutzen soll. Bevor das passieren kann, muss noch die Variable nginx_root gesetzt werden:<br>
+
+```YAML
+#group_vars/all.yaml
+---
+nginx_version: 1.12.2
+nginx_root: "/usr/share/nginx/html"
+
+```
+<br>
+
+Für die Website selbst bedient man sich der Host-facts, die vorhin bereits im Zusammenhang mit dem setup-Modul verwendet wurden. Falls nicht explizit unterbunden, sammelt Ansible bei jedem Playbook-Run als allerersten "internen" Task diese facts ein, bevor der erste User-definierte Task läuft. Daher stehen dann im Verlauf des Playbooks Variablen wie: ansible_distribution, ansible_os_family, ansible_all_ipv4_adresses, usw. zur Verfügung.<br>
+
+Für die Webseite wird folgendes Template verwendet:<br>
+
+```HTML
+<html>
+<head>
+<title>Information page: {{ ansible_hostname }}</title>
+<style type="text/css">@import url('./stylesheet.css') all;</style>
+</head>
+<body>
+<h1>Information about running host</h1>
+
+<table>
+  <tr> <th colspan='2'>OS Facts</th> </tr>
+  <tr> <td>This system is running on</td> <td>{{ ansible_distribution }}</td> </tr>
+  <tr> <td>Version:</td> <td>{{ ansible_distribution_version }}</td> </tr>
+  <tr> <td>OS Family:</td> <td>{{ ansible_os_family}}</td> </tr>
+  <tr> <td>Used package manager:</td> <td>{{ ansible_pkg_mgr }}</td> </tr>
+  <tr> <td>AppArmor</td> <td>{{ ansible_apparmor['status'] }}</td> </tr>
+  <tr> <td>Selinux</td> <td>{{ ansible_selinux['status'] }}</td> </tr>
+  <tr> <td>Python Version</td> <td>{{ ansible_python_version }}</td> </tr>
+</table>
+
+<table style='float:left;margin-right:50px'>
+  <tr> <th colspan='2'>Network information</th> </tr>
+  <tr> <td>Hostname</td> <td>{{ ansible_nodename }}</td> </tr>
+  <tr> <td>IPv4 addresses</td> <td>{{ ", ".join(ansible_all_ipv4_addresses) }}</td> </tr>
+  <tr> <td>IPv6 addresses</td> <td>{{ ", ".join(ansible_all_ipv6_addresses) }}</td> </tr>
+  <tr> <td>DNS servers</td>    <td>{{ ", ".join(ansible_dns['nameservers']) }}</td> </tr>
+  <tr> <td>DNS search domain</td> <td>{{ ", ".join(ansible_dns['search']) }}</td> </tr>
+  {% for key, value in ansible_default_ipv4.iteritems() %}
+  <tr> <td>Default IPv4 interface -- {{ key }}</td> <td>{{ value }}</td> </tr>
+  {% endfor %}
+  {% for key, value in ansible_default_ipv6.iteritems() %}
+  <tr> <td>Default IPv6 interface -- {{ key }}</td> <td>{{ value }}</td> </tr>
+  {% endfor %}
+  <tr> <td>Hostname</td> <td>{{ ansible_hostname }}</td> </tr>
+  <tr> <td>FQDN</td> <td>{{ ansible_fqdn }}</td> </tr>
+</table>
+
+<table>
+  <tr> <th colspan='2'>Environment variables</th> </tr>
+  {% for key, value in ansible_env.iteritems() %}
+  <tr> <td>{{ key }}</td><td>{{ value }}</td> </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+```
+<br>
+
+Die in Jinja-Syntax eingebundenen Variablen werden dann von Ansible ausgefüllt, wenn die Datei mittels template-Modul an die gewünschte Stelle kopiert wird. Template-Dateien bekommen die Dateiendung .j2. Mit der Template-Datei und dem Stylesheet erhält man dann folgende Ordnerstruktur:<br>
+
+```
+.
+|
+├── group_vars
+│   └── webservers.yaml
+├── index.html.j2
+├── inventory.yaml
+├── playbook.yaml
+└── stylesheet.css
+```
+<br>
+
+Der nachfolgende Task verläuft analog zum Neustarten des Firewall-Dienstes: Sofern sich die index-Datei oder das Stylesheet beim Deployment ändern, soll nginx neu gestartet werden. Das braucht es an sich nicht unbedingt; die ausgelieferten Dateien könnte man auch auch im laufenden Betrieb ändern. Der letzte Task soll nun noch eine Message-of-the-day setzen, also eine Nachricht, die beim Einloggen in der Server per SSH angezeigt wird. Auch hier wird wieder das template-Modul benutzt, um die gewünschte Datei nach etc/motd zu kopieren. Es wird also eine motd.j2-Templatedatei hinzugefügt:<br>
+
+```
+.
+|
+├── group_vars
+│   └── webservers.yaml
+├── index.html.j2
+├── inventory.yaml
+├── motd.j2
+└── playbook.yaml
+
+# motd.j2
+Hello and welcome on {{ ansible_hostname }}.
+This is a {{ ansible_distribution }}-Server running in Version {{ ansible_distribution_version }}.
+This is the {{ webserver_name }} instance.
+Please note: This server is deployed and managed with Ansible.
+Hands off!
+
+                        @@@@@@@@@@@@@@@
+                    @@@@@@@@@@@@@@@@@@@@@@
+                 @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              @@@@@@@@@@@@@@@    @@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@      @@@@@@@@@@@@@@@
+         @@@@@@@@@@@@@@@@@@       @@@@@@@@@@@@@@@@@@
+       @@@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@@@
+      @@@@@@@@@@@@@@@@@@@    @@    @@@@@@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@@@@@    @@@@    @@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@    @@@@@@    @@@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@@     @@@@@@@    @@@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@@     @@@@@@@     @@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@         @@@@@    @@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@    @@      @@@@    @@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@    @@@@@@      @@    @@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@     @@@@@@@@      @    @@@@@@@@@@@@@
+      @@@@@@@@@@@     @@@@@@@@@@@@         @@@@@@@@@@@
+       @@@@@@@@@@    @@@@@@@@@@@@@@@        @@@@@@@@@
+        @@@@@@@@    @@@@@@@@@@@@@@@@@@@     @@@@@@@
+           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                 @@@@@@@@@@@@@@@@@@@@@@@@
+```
+<br>
+
+Die ansible_*-Variablen kommen analog zum Website-Template aus den Host-facts. Das gilt jedoch nicht für webserver_name. Da diese Variable pro Server verschieden sein soll, muss diese auch dementsprechend festgelegt werden. Dafür gibt es mehrere Möglichkeiten. An dieser Stelle sollen zwei vorgestellt werden.<br>
+
+1. Analog zu den Variablen die für Inventory-Gruppen im group_vars-Ordner festgelegt wurden, kann das auch für einzelnen hosts passieren:<br>
+```
+.
+|
+├── group_vars
+│   └── webservers.yaml
+├── host_vars
+│   ├── webserver1.yaml
+│   ├── webserver2.yaml
+│   └── webserver3.yaml
+├── index.html.j2
+├── inventory.yaml
+├── motd.j2
+└── playbook.yaml
+```
+<br>
+
+```YAML
+# host_vars/webserver1.yaml
+---
+webserver_name: "Webserver 1"
+```
+
+<br>
+
+```YAML
+# host_vars/webserver2.yaml
+---
+webserver_name: "Webserver 2"
+```
+<br>
+
+```YAML
+# host_vars/webserver3.yaml
+---
+webserver_name: "Webserver 3"
+```
+
+<br>
+Variablen, die so festgelegt wurden, gelten dann nur für den zum File gleichnamigen Host.<br>
+2. Variablen auf host-Ebene können auch im Inventory-file festgelegt werden:
+<br>
+
+```YAML
+# inventory.yaml
+---
+all:
+  hosts:
+    webserver1:
+      ansible_host: 192.168.0.2
+      webserver_name: "Webserver 1"
+    webserver2:
+      ansible_host: 192.168.0.3
+      webserver_name: "Webserver 2"
+    webserver3:
+      ansible_host: 192.168.0.4
+      webserver_name: "Webserver 3"
+    dbserver1:
+      ansible_host: 192.168.1.1
+  children:
+    webservers:
+      hosts:
+        webserver1:
+        webserver2:
+        webserver3:
+    dbservers:
+      dbserver1:
+```
+<br>
+
+Damit ist das Playbook prinzipiell fertig und lauffähig:
+<br>
+
+```bash
+$ ansible-playbook playbook.yaml -i inventory.yaml
+
+PLAY [webservers] *************************************************************
+
+TASK [Gathering Facts] ********************************************************
+ok: [webserver1]
+ok: [webserver2]
+ok: [webserver3]
+
+TASK [Open port 80 for http access] *******************************************
+changed: [webserver1]
+changed: [webserver2]
+changed: [webserver3]
+
+TASK [Restart the firewalld service to load in the firewall changes] **********
+changed: [webserver1]
+changed: [webserver2]
+changed: [webserver3]
+
+TASK [Install packages for nginx] *********************************************
+changed: [webserver1]
+changed: [webserver2]
+changed: [webserver3]
+
+TASK [Create default page] ****************************************************
+changed: [webserver1]
+changed: [webserver2]
+changed: [webserver3]
+
+TASK [Restart nginx service] **************************************************
+changed: [webserver1]
+changed: [webserver2]
+changed: [webserver3]
+
+TASK [Setup motd] *************************************************************
+changed: [webserver1]
+changed: [webserver2]
+changed: [webserver3]
+
+PLAY RECAP ********************************************************************
+webserver1                 : ok=7    changed=6    unreachable=0    failed=0
+webserver2                 : ok=7    changed=6    unreachable=0    failed=0
+webserver3                 : ok=7    changed=6    unreachable=0    failed=0
+
+```
+<br>
+Wie man sieht, wird das Einsammeln der Fakten als erster Task gewertet, dieser ist der einzige Task, der beim initialen Ausführen keine Änderung bewirkt. Damit man beim Ausführen eines Playbooks nicht immer das Inventory mit angeben muss, kann man noch eine Konfigurationsdatei ansible.cfg mit anlegen:<br>
+
+```
+.
+|
+├── ansible.cfg
+├── group_vars
+│   └── webservers.yaml
+├── host_vars
+│   ├── webserver1.yaml
+│   ├── webserver2.yaml
+│   └── webserver3.yaml
+├── index.html.j2
+├── inventory.yaml
+├── motd.j2
+└── playbook.yaml
+```
+
+<br>
+
+```
+# ansible.cfg
+[defaults]
+inventory=./inventory
+```
+
+<br>
+Ansible legt standardmäßig in /etc/ansible.cfg eine default-Konfigurationsdatei an. Diese lässt sich jedoch mit einer Datei ~/.ansible.cfg oder einer lokalen, wie in diesem Fall überschreiben. Ansible priorisiert diese Dateien in umgekehrter Reihenfolge:<br>
+
+1. Pfad spezifiziert in ANSIBLE_CONFIG-Umgebungsvariable
+2. lokal in ./ansible.cfg
+3. ~/.ansible.cfg
+4. /etc/ansible.cfg
+<br>
+
+In der Datei lässt sich nicht nur ein (oder beliebig viele zusätzliche) Inventory angeben, sondern Ansible auch in zahlreichen anderen Wegen konfigurieren:<br>
+
+- SSH-Parameter, Optionen,
+- zusätzliche externe Module,
+- Verbindungsparameter,
+- uvm.
+
+<br>
+
+Viele dieser Parameter lassen sich zudem auch als Umweltvariablen setzen. Eine komplette Liste lässt sich mit dem CLI-Tool ansible-config anzeigen.<br>
 
 #### 414-Portainer
 
