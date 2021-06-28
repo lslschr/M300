@@ -1,0 +1,637 @@
+---
+
+# Worker-Knoten Hostnamen zuweisen
+- name: Assign hostname for worker 01
+  hostname:
+    name: "{{ k8s_worker_01 }}"
+    use: systemd
+  when: inventory_hostname == '10.0.10.11'
+  tags:
+  - worker
+  - ip_address
+
+- name: Assign hostname for worker 02
+  hostname:
+    name: "{{ k8s_worker_02 }}"
+  when: inventory_hostname == '10.0.10.12'
+  tags:
+  - worker
+  - ip_address
+
+- name: Assign hostname for worker 03
+  hostname:
+    name: "{{ k8s_worker_03 }}"
+  when: inventory_hostname == '10.0.10.13'
+  tags:
+  - worker
+  - ip_address
+
+- name: Assign hostname for worker 04
+  hostname:
+    name: "{{ k8s_worker_04 }}"
+  when: inventory_hostname == '10.0.10.14'
+  tags:
+  - worker
+  - ip_address
+
+# API Master Server Hostname zuweisen
+- name: Assign hostname for K8's Master
+  hostname:
+    name: "{{ k8s_master_01 }}"
+  when: inventory_hostname == '10.0.10.10'
+  tags:
+  - master
+  - ip_address
+
+# Ändern Sie das Root-Passwort
+- name: Change the root password
+  user:
+    name: root
+    update_password: always
+    password: "{{ root_password }}"
+  tags:
+    - manage_users
+
+# Kubernetes Admin erstellen
+- name: Add k8sadmin to cluster
+  user:
+    name: "{{ kubernetes_admin }}"
+    comment: Kubernetes Admin
+    shell: /bin/bash
+    password: "{{ k8s_admin_password}}"
+    groups: sudo
+    append: yes
+    create_home: yes
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: .ssh/id_rsa
+  tags:
+    - manage_users
+
+# Sperren des Standard-Ubuntu-Konto
+- name: Lock the default ubuntu account
+  user:
+    name: ubuntu
+    password_lock: yes
+  tags:
+    - manage_users
+
+# Ändern des Anmeldebanner
+- name: Change the login banner
+  template:
+    src: issue.j2
+    dest: /etc/issue
+  tags:
+    - banner
+
+# SSH-Anmeldebanner-Pfad ändern
+- name: Change Banner option in /etc/ssh/sshd_config
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: '#Banner none'
+    replace: 'Banner /etc/issue'
+  tags:
+    - banner
+
+# sshd-Dienst neu starten
+- name: Restsart sshd service
+  service:
+    name: sshd
+    state: restarted
+  tags:
+    - banner
+
+###############################
+###         Pre-reqs        ###
+###############################
+
+# Prüfen ob diese vorhanden sind. Wenn ja, werden diese entfernt . Wenn sie nicht entfernt werden, führt dies bei jedem Durchlauf dieses Playbooks nach dem ersten Durchlauf zu Problemen
+- name: Remove existing gpg keys and repos to prevent issues
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items:
+    - { path: /etc/apt/sources.list.d/kubernetes.list }
+    - { path: /usr/share/keyrings/kubernetes-archive-keyring.gpg }
+    - { path: /etc/apt/sources.list.d/docker.list }
+    - { path: /usr/share/keyrings/docker-archive-keyring.gpg }
+
+###############################
+### Firewalld Ports öffnen  ###
+###############################
+
+- name: update apt-cache
+  become: yes
+  shell: apt-get update -y && apt-get upgrade -y
+  tags:
+    - update
+
+# Firewalld und netfilter-persistent installieren
+- name: Install firewalld and ( netfilter-persistent Debian only )
+  apt:
+    pkg: 
+      - firewalld
+      - netfilter-persistent
+    state: present
+  tags:
+    - firewalld
+    - iptables
+
+# Erforderliche Master-Ports öffnen
+- name: open ports ( MASTERS )
+  firewalld:
+    port: "{{ item.port }}"
+    
+    permanent: yes
+    state: enabled
+  with_items:
+    - { port: 16443/tcp }
+    - { port: 10255/tcp }
+    - { port: 8080/tcp }
+    - { port: 25000/tcp }
+    - { port: 12379/tcp }
+    - { port: 10257/tcp }
+    - { port: 10259/tcp }
+    - { port: 19001/tcp }
+    - { port: 10256/tcp }
+    - { port: 2380/tcp }
+    - { port: 1338/tcp }
+    - { port: 10248-10252/tcp }
+    - { port: 30000-32767/tcp }
+  when: "'masters' in group_names"
+  tags:
+    - firewalld
+
+# Erforderliche Worker Ports öffnen
+- name: open ports ( WORKERS )
+  firewalld:
+    port: "{{ item.port }}"
+    permanent: yes
+    state: enabled
+  with_items:
+    - { port: 16443/tcp }
+    - { port: 10255/tcp }
+    - { port: 8080/tcp }
+    - { port: 25000/tcp }
+    - { port: 12379/tcp }
+    - { port: 10257/tcp }
+    - { port: 10259/tcp }
+    - { port: 19001/tcp }
+    - { port: 10256/tcp }
+    - { port: 2380/tcp }
+    - { port: 1338/tcp }
+    - { port: 10248-10252/tcp }
+    - { port: 30000-32767/tcp }
+  when: "'workers' in group_names"
+  tags:
+    - firewalld
+
+# Einschalten und Aktivieren von Firewalld
+- name: Turn on and enable firewalld
+  service:
+    name: firewalld
+    state: restarted
+    enabled: yes
+  tags:
+    - firewalld
+
+#############################
+###   SWAP deaktivieren   ###
+#############################
+
+# Swap jetzt deaktivieren
+- name: disable swap
+  shell: /usr/sbin/swapoff -a
+  tags:
+    - swap
+
+# cgroups zur cmdline hinzufügen
+- name: Add cgroups to cmdline
+  template:
+    src: cmdline.txt.j2
+    dest: /boot/firmware/cmdline.txt
+  register: task_result
+  tags:
+    - cmdline
+
+- name: Reboot immediately if there was a change.
+  shell: "sleep 5 && reboot"
+  async: 1
+  poll: 0
+  when: task_result is changed
+  tags:
+    - reboot
+
+- name: Wait for the reboot to complete if there was a change.
+  wait_for_connection:
+    connect_timeout: 20
+    sleep: 5
+    delay: 5
+    timeout: 300
+  when: task_result is changed
+  tags:
+    - reboot
+
+##########################################
+##    Docker & microk8s installieren    ##
+##########################################
+
+# Docker installieren
+- name: Install Docker
+  shell: curl -sSL https://get.docker.com | sh
+  tags:
+    - docker
+
+# Docker-rootless installieren
+- name: docker-rootless dependencies
+  shell: apt-get install -y uidmap
+  tags:
+    - docker
+
+# Docker-rootless installieren
+- name: Install docker-rootless
+  become_user: k8sadmin
+  shell: dockerd-rootless-setuptool.sh install
+  tags:
+    - docker
+
+# docker.service beim Systemstart hinzufügen
+- name: enable-linger k8sadmin
+  shell: loginctl enable-linger k8sadmin
+  tags:
+    - docker
+
+# export PATH=/usr/bin:$PATH
+- name: export PATH=/usr/bin:$PATH
+  shell: export PATH=/usr/bin:$PATH
+  tags:
+    - docker
+
+# export DOCKER_HOST=unix:///run/user/1001/docker.sock
+- name: export DOCKER_HOST=unix:///run/user/1001/docker.sock
+  become: true
+  shell: export DOCKER_HOST=unix:///run/user/1001/docker.sock
+  tags:
+    - docker
+
+# Cgroup-Treiber in systemd ändern
+- name: Change Cgroup Driver to systemd
+  become: true
+  template:
+    src: daemon.j2
+    dest: /etc/docker/daemon.json
+  tags:
+    - docker
+
+# Docker neu starten
+- name: Restart Docker
+  become: true
+  shell: systemctl restart docker
+  tags:
+    - docker
+
+# Install microk8s
+- name: Install microk8s
+  become: true
+  shell: snap install microk8s --channel=1.19 --classic
+  tags:
+    - k8s
+
+# Füge k8sadmin zur Gruppe microk8s hinzu & geben k8sadmin das Recht auf ~/.kube
+- name: user to group microk8s
+  become: true
+  shell: usermod -a -G microk8s k8sadmin
+  tags:
+    - k8s
+
+- name: permission to ~/.kube
+  become: true
+  shell: chown -f -R k8sadmin ~/.kube
+  tags:
+    - k8s
+
+# Füge einen Alias für microk8s.kubectl hinzu, um eine Menge Zeit zu sparen.  
+- name: alias for microk8s.kubectl
+  become: true
+  shell: snap alias microk8s.kubectl kubectl
+  tags:
+    - k8s
+  
+# Befehl zum Verbinden von Knoten 1 holen
+- name: Get command for joining node1
+  become: true
+  ignore_errors: yes
+  shell: microk8s add-node | sed -n '2 p'
+  when: "'masters' in group_names"
+  tags:
+  - master
+  register: code_node1
+- local_action:
+    module: copy
+    content: "{{ code_node1.stdout_lines }}"
+    dest: "/home/ubuntu/Kubernetes-Home-Lab-main/roles/all-in-one/templates/node1.sh"
+    force: yes
+    mode: "0777"
+  ignore_errors: yes
+  when: "'masters' in group_names"
+- debug:
+    var: code_node1.stdout_lines
+  
+# Befehl zum Verbinden von Knoten 2 holen
+- name: Get command for joining node2
+  ignore_errors: yes
+  become: true
+  shell: microk8s add-node | sed -n '2 p'
+  when: "'masters' in group_names"
+  tags:
+  - master
+  register: code_node2
+- local_action:
+    module: copy
+    content: "{{ code_node2.stdout_lines }}"
+    dest: "/home/ubuntu/Kubernetes-Home-Lab-main/roles/all-in-one/templates/node2.sh"
+    force: yes
+    mode: "0777"
+  ignore_errors: yes
+  when: "'masters' in group_names"
+- debug:
+    var: code_node2.stdout_lines
+
+
+# Befehl zum Verbinden von Knoten 3 holen
+- name: Get command for joining node3
+  ignore_errors: yes
+  become: true
+  shell: microk8s add-node | sed -n '2 p'
+  when: "'masters' in group_names"
+  tags:
+  - master
+  register: code_node3
+- local_action:
+    module: copy
+    content: "{{ code_node3.stdout_lines }}"
+    dest: "/home/ubuntu/Kubernetes-Home-Lab-main/roles/all-in-one/templates/node3.sh"
+    force: yes
+    mode: "0777"
+  ignore_errors: yes
+  when: "'masters' in group_names"
+- debug:
+    var: code_node3.stdout_lines
+  
+# Befehl zum Verbinden von Knoten 4 holen
+- name: Get command for joining node4
+  ignore_errors: yes
+  become: true
+  shell: microk8s add-node | sed -n '2 p'
+  when: "'masters' in group_names"
+  tags:
+  - master
+  register: code_node4
+- local_action:
+    module: copy
+    content: "{{ code_node4.stdout_lines }}"
+    dest: /home/ubuntu/Kubernetes-Home-Lab-main/roles/all-in-one/templates/node4.sh
+    force: yes
+    mode: "0777"
+  ignore_errors: yes
+  when: "'masters' in group_names"
+- debug:
+    var: code_node4.stdout_lines
+
+# Knoten 1 in Cluster hinzufügen
+- name: Copy node1.sh script
+  become: true
+  template:
+    src: "node1.sh"
+    dest: "/home/k8sadmin/node1.sh"
+  when: inventory_hostname == '10.0.10.11'
+  tags:
+    - k8s
+
+- name: prepare script
+  become: true
+  shell: "sed -e 's ..  ' -e  's ..$  ' node1.sh > node1-ready.sh"
+  when: inventory_hostname == '10.0.10.11'
+  tags:
+    - k8s
+
+- name: set permissions for script
+  become: true
+  shell: "chmod 774 node1-ready.sh"
+  when: inventory_hostname == '10.0.10.11'
+  tags:
+    - k8s
+
+- name: execute scirpt for node 1
+  become: true
+  shell: "./node1-ready.sh"
+  when: inventory_hostname == '10.0.10.11'
+  tags:
+    - k8s
+- pause:
+    minutes: 2
+
+# Knoten 2 in Cluster hinzufügen
+- name: Copy node2.sh script
+  become: true
+  template:
+    src: node2.sh
+    dest: /home/k8sadmin/node2.sh
+  when: inventory_hostname == '10.0.10.12'
+  tags:
+    - k8s
+
+- name: prepare script
+  become: true
+  shell: sed -e 's ..  ' -e  's ..$  ' node2.sh > node2-ready.sh
+  when: inventory_hostname == '10.0.10.12'
+  tags:
+    - k8s
+
+- name: set permissions for script
+  become: true
+  shell: chmod 774 node2-ready.sh
+  when: inventory_hostname == '10.0.10.12'
+  tags:
+    - k8s
+
+- name: execute scirpt for node 2
+  become: true
+  shell: ./node2-ready.sh
+  when: inventory_hostname == '10.0.10.12'
+  tags:
+    - k8s
+- pause:
+    minutes: 2
+
+# Knoten 3 in Cluster hinzufügen
+- name: Copy node3.sh script
+  become: true
+  template:
+    src: node3.sh
+    dest: /home/k8sadmin/node3.sh
+  when: inventory_hostname == '10.0.10.13'
+  tags:
+    - k8s
+
+- name: prepare script
+  become: true
+  shell: sed -e 's ..  ' -e  's ..$  ' node3.sh > node3-ready.sh
+  when: inventory_hostname == '10.0.10.13'
+  tags:
+    - k8s
+
+- name: set permissions for script
+  become: true
+  shell: chmod 774 node3-ready.sh
+  when: inventory_hostname == '10.0.10.13'
+  tags:
+    - k8s
+
+- name: execute scirpt for node 3
+  become: true
+  shell: ./node3-ready.sh
+  when: inventory_hostname == '10.0.10.13'
+  tags:
+    - k8s
+- pause:
+    minutes: 2
+
+# Knoten 4 in Cluster hinzufügen
+- name: Copy node4.sh script
+  become: true
+  template:
+    src: node3.sh
+    dest: /home/k8sadmin/node4.sh
+  when: inventory_hostname == '10.0.10.14'
+  tags:
+    - k8s
+
+- name: prepare script
+  become: true
+  shell: sed -e 's ..  ' -e  's ..$  ' node4.sh > node4-ready.sh
+  when: inventory_hostname == '10.0.10.14'
+  tags:
+    - k8s
+
+- name: set permissions for script
+  become: true
+  shell: chmod 774 node4-ready.sh
+  when: inventory_hostname == '10.0.10.14'
+  tags:
+    - k8s
+
+- name: execute scirpt for node 4
+  become: true
+  shell: ./node4-ready.sh
+  when: inventory_hostname == '10.0.10.14'
+  tags:
+    - k8s
+- pause:
+    minutes: 2
+
+#Vorbereiten der Linkding-Installation
+- name: Copy pv.yml manifest
+  become: true
+  template:
+    src: pv.yml
+    dest: /home/k8sadmin/pv.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: set permissions for manifest
+  become: true
+  shell: chmod 774 pv.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: Copy pvc.yml manifest
+  become: true
+  template:
+    src: pvc.yml
+    dest: /home/k8sadmin/pvc.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: set permissions for manifest
+  become: true
+  shell: chmod 774 pvc.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: Copy linkding.yml manifest
+  become: true
+  template:
+    src: linkding.yml
+    dest: /home/k8sadmin/linkding.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: set permissions for manifest
+  become: true
+  shell: chmod 774 linkding.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+# Code_Server-Installation vorbereiten
+- name: Copy code-server.yml manifest
+  become: true
+  template:
+    src: code-server.yml
+    dest: /home/k8sadmin/code-server.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: set permissions for manifest
+  become: true
+  shell: chmod 774 code-server.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: Copy code-server-pvc.yml manifest
+  become: true
+  template:
+    src: code-server-pvc.yml
+    dest: /home/k8sadmin/code-server-pvc.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+- name: set permissions for manifest
+  become: true
+  shell: chmod 774 code-server-pvc.yml
+  when: "'masters' in group_names"
+  tags:
+    - linkding
+
+# AddOns-Shell-Skript hinzufügen
+- name: Add AddOns shell script
+  become: true
+  template:
+    src: addons.sh
+    dest: /home/k8sadmin/addons.sh
+  when: "'masters' in group_names"
+  tags:
+    - master
+
+- name: set permissions for script addons.sh
+  become: true
+  shell: chmod 774 addons.sh
+  when: "'masters' in group_names"
+  tags:
+    - master
+
+- name: execute scirpt for add-ons
+  become: true
+  shell: ./addons.sh
+  when: "'masters' in group_names"
+  tags:
+    - master

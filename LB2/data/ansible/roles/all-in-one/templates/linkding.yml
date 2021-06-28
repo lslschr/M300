@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linkding
+  labels:
+    application: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: frontend
+  template:
+    metadata:
+      labels:
+        application: frontend
+    spec:
+      containers:
+      - name: linkding
+        image: sissbruecker/linkding
+        ports:
+        - containerPort: 9090
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: data
+          mountPath: /etc/linkding/data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data

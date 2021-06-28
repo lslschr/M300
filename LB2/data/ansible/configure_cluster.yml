@@ -1,0 +1,11 @@
+---
+
+# Playbook, das die erstellten Rollen aufruft
+
+- name: call roles
+  hosts: all
+  become: true
+  roles:
+     - { role: all-in-one }
+
+
