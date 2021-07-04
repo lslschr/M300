@@ -2519,27 +2519,27 @@ Und dann noch die entsprechende Plattform bzw. die verwendete Container Umgebung
   </tr>
       <tr>
     <td><strong>1</strong></td>
-    <td>Testfall 1 Vagrant</td>
+    <td>Testfall 1</td>
     <td>Erfolgreich</td>
   </tr>
         <tr>
     <td><strong>2</strong></td>
-    <td>Testfall 2 Erstellte VMs</td>
+    <td>Testfall 2</td>
     <td>Erfolgreich</td>
   </tr>
         <tr>
     <td><strong>3</strong></td>
-    <td>Testfall 3 Splunk Forwarder</td>
+    <td>Testfall 3</td>
     <td>Erfolgreich</td>
   </tr>
         <tr>
     <td><strong>4</strong></td>
-    <td>Testfall 4 Dashboard Webserver</td>
+    <td>Testfall 4</td>
     <td>Erfolgreich</td>
   </tr>
         <tr>
     <td><strong>5</strong></td>
-    <td>Testfall 5 Dashboard _internal</td>
+    <td>Testfall 5</td>
     <td>Erfolgreich</td>
   </tr>
 </table>
