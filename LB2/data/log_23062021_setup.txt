@@ -1,0 +1,652 @@
+ubuntu@llsvpoelm30001:~/Kubernetes-Home-Lab-main$ sudo ansible-playbook -i hosts.yml configure_cluster.yml -u ubuntu -k
+[sudo] password for ubuntu: 
+SSH password: 
+
+PLAY [call roles] **********************************************************************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************************************************************
+ok: [10.0.10.12]
+ok: [10.0.10.10]
+ok: [10.0.10.13]
+ok: [10.0.10.11]
+ok: [10.0.10.14]
+
+TASK [all-in-one : Assign hostname for worker 01] **************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.11]
+
+TASK [all-in-one : Assign hostname for worker 02] **************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.12]
+
+TASK [all-in-one : Assign hostname for worker 03] **************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.14]
+changed: [10.0.10.13]
+
+TASK [all-in-one : Assign hostname for worker 04] **************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Assign hostname for K8's Master] ************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10]
+
+TASK [all-in-one : Copy /etc/hosts] ****************************************************************************************************************
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+changed: [10.0.10.10]
+changed: [10.0.10.12]
+changed: [10.0.10.11]
+
+TASK [all-in-one : Change the root password] *******************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Add k8sadmin to cluster] ********************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Lock the default ubuntu account] ************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.13]
+changed: [10.0.10.12]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Change the login banner] ********************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Change Banner option in /etc/ssh/sshd_config] ***********************************************************************************
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Restsart sshd service] **********************************************************************************************************
+changed: [10.0.10.11]
+changed: [10.0.10.13]
+changed: [10.0.10.10]
+changed: [10.0.10.12]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Remove existing gpg keys and repos to prevent issues] ***************************************************************************
+ok: [10.0.10.14] => (item={'path': '/etc/apt/sources.list.d/kubernetes.list'})
+ok: [10.0.10.11] => (item={'path': '/etc/apt/sources.list.d/kubernetes.list'})
+ok: [10.0.10.12] => (item={'path': '/etc/apt/sources.list.d/kubernetes.list'})
+ok: [10.0.10.10] => (item={'path': '/etc/apt/sources.list.d/kubernetes.list'})
+ok: [10.0.10.13] => (item={'path': '/etc/apt/sources.list.d/kubernetes.list'})
+ok: [10.0.10.12] => (item={'path': '/usr/share/keyrings/kubernetes-archive-keyring.gpg'})
+ok: [10.0.10.14] => (item={'path': '/usr/share/keyrings/kubernetes-archive-keyring.gpg'})
+ok: [10.0.10.11] => (item={'path': '/usr/share/keyrings/kubernetes-archive-keyring.gpg'})
+ok: [10.0.10.13] => (item={'path': '/usr/share/keyrings/kubernetes-archive-keyring.gpg'})
+ok: [10.0.10.10] => (item={'path': '/usr/share/keyrings/kubernetes-archive-keyring.gpg'})
+ok: [10.0.10.11] => (item={'path': '/etc/apt/sources.list.d/docker.list'})
+ok: [10.0.10.12] => (item={'path': '/etc/apt/sources.list.d/docker.list'})
+ok: [10.0.10.14] => (item={'path': '/etc/apt/sources.list.d/docker.list'})
+ok: [10.0.10.10] => (item={'path': '/etc/apt/sources.list.d/docker.list'})
+ok: [10.0.10.13] => (item={'path': '/etc/apt/sources.list.d/docker.list'})
+ok: [10.0.10.10] => (item={'path': '/usr/share/keyrings/docker-archive-keyring.gpg'})
+ok: [10.0.10.12] => (item={'path': '/usr/share/keyrings/docker-archive-keyring.gpg'})
+ok: [10.0.10.14] => (item={'path': '/usr/share/keyrings/docker-archive-keyring.gpg'})
+ok: [10.0.10.11] => (item={'path': '/usr/share/keyrings/docker-archive-keyring.gpg'})
+ok: [10.0.10.13] => (item={'path': '/usr/share/keyrings/docker-archive-keyring.gpg'})
+
+TASK [all-in-one : Install firewalld and ( netfilter-persistent Debian only )] *********************************************************************
+changed: [10.0.10.14]
+changed: [10.0.10.13]
+changed: [10.0.10.11]
+changed: [10.0.10.10]
+changed: [10.0.10.12]
+
+TASK [all-in-one : open ports ( MASTERS )] *********************************************************************************************************
+skipping: [10.0.10.11] => (item={'port': '16443/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '10255/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '8080/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '25000/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '12379/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '10257/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '10259/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '19001/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '10256/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '2380/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '1338/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '10248-10252/tcp'}) 
+skipping: [10.0.10.11] => (item={'port': '30000-32767/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '16443/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '10255/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '8080/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '25000/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '12379/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '10257/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '10259/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '19001/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '10256/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '2380/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '16443/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '10255/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '1338/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '8080/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '10248-10252/tcp'}) 
+skipping: [10.0.10.12] => (item={'port': '30000-32767/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '25000/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '12379/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '10257/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '10259/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '19001/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '10256/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '2380/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '1338/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '10248-10252/tcp'}) 
+skipping: [10.0.10.13] => (item={'port': '30000-32767/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '16443/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '10255/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '8080/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '25000/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '12379/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '10257/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '10259/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '19001/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '10256/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '2380/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '1338/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '10248-10252/tcp'}) 
+skipping: [10.0.10.14] => (item={'port': '30000-32767/tcp'}) 
+changed: [10.0.10.10] => (item={'port': '16443/tcp'})
+changed: [10.0.10.10] => (item={'port': '10255/tcp'})
+changed: [10.0.10.10] => (item={'port': '8080/tcp'})
+changed: [10.0.10.10] => (item={'port': '25000/tcp'})
+changed: [10.0.10.10] => (item={'port': '12379/tcp'})
+changed: [10.0.10.10] => (item={'port': '10257/tcp'})
+changed: [10.0.10.10] => (item={'port': '10259/tcp'})
+changed: [10.0.10.10] => (item={'port': '19001/tcp'})
+changed: [10.0.10.10] => (item={'port': '10256/tcp'})
+changed: [10.0.10.10] => (item={'port': '2380/tcp'})
+changed: [10.0.10.10] => (item={'port': '1338/tcp'})
+changed: [10.0.10.10] => (item={'port': '10248-10252/tcp'})
+changed: [10.0.10.10] => (item={'port': '30000-32767/tcp'})
+
+TASK [all-in-one : open ports ( WORKERS )] *********************************************************************************************************
+skipping: [10.0.10.10] => (item={'port': '16443/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '10255/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '8080/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '25000/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '12379/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '10257/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '10259/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '19001/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '10256/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '2380/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '1338/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '10248-10252/tcp'}) 
+skipping: [10.0.10.10] => (item={'port': '30000-32767/tcp'}) 
+changed: [10.0.10.11] => (item={'port': '16443/tcp'})
+changed: [10.0.10.12] => (item={'port': '16443/tcp'})
+changed: [10.0.10.13] => (item={'port': '16443/tcp'})
+changed: [10.0.10.14] => (item={'port': '16443/tcp'})
+changed: [10.0.10.11] => (item={'port': '10255/tcp'})
+changed: [10.0.10.12] => (item={'port': '10255/tcp'})
+changed: [10.0.10.13] => (item={'port': '10255/tcp'})
+changed: [10.0.10.14] => (item={'port': '10255/tcp'})
+changed: [10.0.10.11] => (item={'port': '8080/tcp'})
+changed: [10.0.10.12] => (item={'port': '8080/tcp'})
+changed: [10.0.10.13] => (item={'port': '8080/tcp'})
+changed: [10.0.10.14] => (item={'port': '8080/tcp'})
+changed: [10.0.10.11] => (item={'port': '25000/tcp'})
+changed: [10.0.10.12] => (item={'port': '25000/tcp'})
+changed: [10.0.10.13] => (item={'port': '25000/tcp'})
+changed: [10.0.10.14] => (item={'port': '25000/tcp'})
+changed: [10.0.10.11] => (item={'port': '12379/tcp'})
+changed: [10.0.10.12] => (item={'port': '12379/tcp'})
+changed: [10.0.10.13] => (item={'port': '12379/tcp'})
+changed: [10.0.10.14] => (item={'port': '12379/tcp'})
+changed: [10.0.10.11] => (item={'port': '10257/tcp'})
+changed: [10.0.10.12] => (item={'port': '10257/tcp'})
+changed: [10.0.10.14] => (item={'port': '10257/tcp'})
+changed: [10.0.10.13] => (item={'port': '10257/tcp'})
+changed: [10.0.10.11] => (item={'port': '10259/tcp'})
+changed: [10.0.10.12] => (item={'port': '10259/tcp'})
+changed: [10.0.10.14] => (item={'port': '10259/tcp'})
+changed: [10.0.10.13] => (item={'port': '10259/tcp'})
+changed: [10.0.10.11] => (item={'port': '19001/tcp'})
+changed: [10.0.10.12] => (item={'port': '19001/tcp'})
+changed: [10.0.10.14] => (item={'port': '19001/tcp'})
+changed: [10.0.10.13] => (item={'port': '19001/tcp'})
+changed: [10.0.10.11] => (item={'port': '10256/tcp'})
+changed: [10.0.10.12] => (item={'port': '10256/tcp'})
+changed: [10.0.10.14] => (item={'port': '10256/tcp'})
+changed: [10.0.10.13] => (item={'port': '10256/tcp'})
+changed: [10.0.10.11] => (item={'port': '2380/tcp'})
+changed: [10.0.10.12] => (item={'port': '2380/tcp'})
+changed: [10.0.10.14] => (item={'port': '2380/tcp'})
+changed: [10.0.10.13] => (item={'port': '2380/tcp'})
+changed: [10.0.10.11] => (item={'port': '1338/tcp'})
+changed: [10.0.10.14] => (item={'port': '1338/tcp'})
+changed: [10.0.10.13] => (item={'port': '1338/tcp'})
+changed: [10.0.10.12] => (item={'port': '1338/tcp'})
+changed: [10.0.10.11] => (item={'port': '10248-10252/tcp'})
+changed: [10.0.10.14] => (item={'port': '10248-10252/tcp'})
+changed: [10.0.10.13] => (item={'port': '10248-10252/tcp'})
+changed: [10.0.10.12] => (item={'port': '10248-10252/tcp'})
+changed: [10.0.10.11] => (item={'port': '30000-32767/tcp'})
+changed: [10.0.10.14] => (item={'port': '30000-32767/tcp'})
+changed: [10.0.10.13] => (item={'port': '30000-32767/tcp'})
+changed: [10.0.10.12] => (item={'port': '30000-32767/tcp'})
+
+TASK [all-in-one : Turn on and enable firewalld] ***************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : disable swap] *******************************************************************************************************************
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+
+TASK [all-in-one : Add cgroups to cmdline] *********************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Reboot immediately if there was a change.] **************************************************************************************
+changed: [10.0.10.11]
+changed: [10.0.10.10]
+changed: [10.0.10.13]
+changed: [10.0.10.12]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Wait for the reboot to complete if there was a change.] *************************************************************************
+
+
+
+
+
+
+TASK [all-in-one : Install Docker] *****************************************************************************************************************
+[WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri is insufficient
+you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+changed: [10.0.10.14]
+changed: [10.0.10.13]
+changed: [10.0.10.11]
+changed: [10.0.10.10]
+changed: [10.0.10.12]
+
+TASK [all-in-one : docker-rootless dependencies] ***************************************************************************************************
+[WARNING]: Consider using the apt module rather than running 'apt-get'.  If you need to use command because apt is insufficient you can add 'warn:
+false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+changed: [10.0.10.12]
+
+TASK [all-in-one : Install docker-rootless] ********************************************************************************************************
+changed: [10.0.10.13]
+changed: [10.0.10.11]
+changed: [10.0.10.14]
+changed: [10.0.10.10]
+changed: [10.0.10.12]
+
+TASK [all-in-one : enable-linger k8sadmin] *********************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : export PATH=/usr/bin:$PATH] *****************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : export DOCKER_HOST=unix:///run/user/1001/docker.sock] ***************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Change Cgroup Driver to systemd] ************************************************************************************************
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+changed: [10.0.10.11]
+changed: [10.0.10.10]
+
+TASK [all-in-one : Restart Docker] *****************************************************************************************************************
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+changed: [10.0.10.12]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Install microk8s] ***************************************************************************************************************
+changed: [10.0.10.11]
+changed: [10.0.10.14]
+changed: [10.0.10.13]
+changed: [10.0.10.10]
+changed: [10.0.10.12]
+
+TASK [all-in-one : user to group microk8s] *********************************************************************************************************
+changed: [10.0.10.11]
+changed: [10.0.10.13]
+changed: [10.0.10.14]
+changed: [10.0.10.12]
+changed: [10.0.10.10]
+
+TASK [all-in-one : alias for microk8s.kubectl] *****************************************************************************************************
+changed: [10.0.10.12]
+changed: [10.0.10.14]
+changed: [10.0.10.13]
+changed: [10.0.10.10]
+changed: [10.0.10.11]
+
+TASK [all-in-one : Get command for joining node1] **************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10]
+
+TASK [all-in-one : copy] ***************************************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10 -> localhost]
+
+TASK [all-in-one : debug] **************************************************************************************************************************
+ok: [10.0.10.10] => {
+    "code_node1.stdout_lines": [
+        "microk8s join 10.0.10.10:25000/b2be57144de18288a9412ea2e05f9d78"
+    ]
+}
+ok: [10.0.10.11] => {
+    "code_node1.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.12] => {
+    "code_node1.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.13] => {
+    "code_node1.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.14] => {
+    "code_node1.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+
+TASK [all-in-one : Get command for joining node2] **************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10]
+
+TASK [all-in-one : copy] ***************************************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10 -> localhost]
+
+TASK [all-in-one : debug] **************************************************************************************************************************
+ok: [10.0.10.10] => {
+    "code_node2.stdout_lines": [
+        "microk8s join 10.0.10.10:25000/d97a732f1960e458ac73c3ba47bd3ee3"
+    ]
+}
+ok: [10.0.10.11] => {
+    "code_node2.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.12] => {
+    "code_node2.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.13] => {
+    "code_node2.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.14] => {
+    "code_node2.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+
+TASK [all-in-one : Get command for joining node3] **************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10]
+
+TASK [all-in-one : copy] ***************************************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10 -> localhost]
+
+TASK [all-in-one : debug] **************************************************************************************************************************
+ok: [10.0.10.10] => {
+    "code_node3.stdout_lines": [
+        "microk8s join 10.0.10.10:25000/c403f804efab5360a120c8088d419dd4"
+    ]
+}
+ok: [10.0.10.11] => {
+    "code_node3.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.12] => {
+    "code_node3.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.13] => {
+    "code_node3.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.14] => {
+    "code_node3.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+
+TASK [all-in-one : Get command for joining node4] **************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10]
+
+TASK [all-in-one : copy] ***************************************************************************************************************************
+skipping: [10.0.10.11]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.10 -> localhost]
+
+TASK [all-in-one : debug] **************************************************************************************************************************
+ok: [10.0.10.10] => {
+    "code_node4.stdout_lines": [
+        "microk8s join 10.0.10.10:25000/4574f59a3bd30d516d3a9f4a6ebbb70a"
+    ]
+}
+ok: [10.0.10.11] => {
+    "code_node4.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.12] => {
+    "code_node4.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.13] => {
+    "code_node4.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+ok: [10.0.10.14] => {
+    "code_node4.stdout_lines": "VARIABLE IS NOT DEFINED!"
+}
+
+TASK [all-in-one : Copy node1.sh script] ***********************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.11]
+
+TASK [all-in-one : prepare script] *****************************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+[WARNING]: Consider using the replace, lineinfile or template module rather than running 'sed'.  If you need to use command because replace,
+lineinfile or template is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of
+this message.
+changed: [10.0.10.11]
+
+TASK [all-in-one : set permissions for script] *****************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+[WARNING]: Consider using the file module with mode rather than running 'chmod'.  If you need to use command because file is insufficient you can
+add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+changed: [10.0.10.11]
+
+TASK [all-in-one : execute scirpt for node 1] ******************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.12]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.11]
+
+TASK [all-in-one : Copy node2.sh script] ***********************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.12]
+
+TASK [all-in-one : prepare script] *****************************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.12]
+
+TASK [all-in-one : set permissions for script] *****************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.12]
+
+TASK [all-in-one : execute scirpt for node 2] ******************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.14]
+changed: [10.0.10.12]
+
+TASK [all-in-one : Copy node3.sh script] ***********************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.14]
+skipping: [10.0.10.12]
+changed: [10.0.10.13]
+
+TASK [all-in-one : prepare script] *****************************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.14]
+skipping: [10.0.10.12]
+changed: [10.0.10.13]
+
+TASK [all-in-one : set permissions for script] *****************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.14]
+skipping: [10.0.10.12]
+changed: [10.0.10.13]
+
+TASK [all-in-one : execute scirpt for node 3] ******************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.14]
+skipping: [10.0.10.12]
+changed: [10.0.10.13]
+
+TASK [all-in-one : Copy node4.sh script] ***********************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.12]
+changed: [10.0.10.14]
+
+TASK [all-in-one : prepare script] *****************************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.12]
+changed: [10.0.10.14]
+
+TASK [all-in-one : set permissions for script] *****************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.12]
+changed: [10.0.10.14]
+
+TASK [all-in-one : execute scirpt for node 4] ******************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.12]
+changed: [10.0.10.14]
+
+TASK [all-in-one : Add AddOns shell script] ********************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.12]
+changed: [10.0.10.10]
+
+TASK [all-in-one : set permissions for script addons.sh] *******************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.12]
+changed: [10.0.10.10]
+
+TASK [all-in-one : execute scirpt for add-ons] *****************************************************************************************************
+skipping: [10.0.10.10]
+skipping: [10.0.10.11]
+skipping: [10.0.10.13]
+skipping: [10.0.10.12]
+changed: [10.0.10.10]
+
+PLAY RECAP *****************************************************************************************************************************************
+10.0.10.10                 : ok=41   changed=25   unreachable=0    failed=0    skipped=23   rescued=0    ignored=0   
+10.0.10.11                 : ok=34   changed=18   unreachable=0    failed=0    skipped=30   rescued=0    ignored=0   
+10.0.10.12                 : ok=34   changed=18   unreachable=0    failed=0    skipped=30   rescued=0    ignored=0   
+10.0.10.13                 : ok=34   changed=18   unreachable=0    failed=0    skipped=30   rescued=0    ignored=0   
+10.0.10.14                 : ok=34   changed=18   unreachable=0    failed=0    skipped=30   rescued=0    ignored=0   

@@ -26,21 +26,19 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 14.06.2021 für die Lei
 
 		- [211-Internetauftritt](#211-Internetauftritt)<br>
     
-      - [212-Unternehmenswerte](#212-Unternehmenswerte)<br>
+      		- [212-Unternehmenswerte](#212-Unternehmenswerte)<br>
 
-      - [213-Unsere-Dienstleistungen](#213-Unsere-Dienstleistungen)<br>
+      		- [213-Unsere-Dienstleistungen](#213-Unsere-Dienstleistungen)<br>
 
 	- [22-Aufgabenstellung](#22-Aufgabenstellung)<br>
 
 		- [221-Titel-der-Arbeit](#221-Titel-der-Arbeit)<br>
 
-		- [222-Ausgangslage](#222-Ausgangslage)<br>
+		- [222-Detaillierte-Aufgabenstellung](#223-Detaillierte-Aufgabenstellung)<br>
 
-		- [223-Detaillierte-Aufgabenstellung](#223-Detaillierte-Aufgabenstellung)<br>
+		- [223-Mittel-und-Methoden](#224-Mittel-und-Methoden)<br>
 
-		- [224-Mittel-und-Methoden](#224-Mittel-und-Methoden)<br>
-
-		- [225-Vorkenntnisse](#225-Vorkenntnisse)<br>
+		- [224-Vorkenntnisse](#225-Vorkenntnisse)<br>
 
 	- [23-Individuelle-Beurteilungskriterien](#23-Individuelle-Beurteilungskriterien)<br>
 
@@ -49,6 +47,14 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 14.06.2021 für die Lei
 		- [232-Teil-B](#232-Teil-B)<br>
 
 		- [233-Teil-C](#233-Teil-C)<br>
+
+		- [234-Teil-C](#233-Teil-D)<br>
+
+		- [235-Teil-C](#233-Teil-E)<br>
+
+		- [236-Teil-C](#233-Teil-F)<br>
+
+		- [237-Teil-C](#233-Teil-G)<br>
     
     - [24-Projektantrag](#24-Projektantrag)<br>
 
@@ -100,17 +106,11 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 14.06.2021 für die Lei
 
     - [414-Portainer](#414-Portainer)<br>
 
-    - [415-Bitwarden](#415-Bitwarden)<br>
+    - [415-Nginx](#415-Nginx)<br>
 
-    - [416-Code-Server](#416-Code-Server)<br>
+    - [416-Raspberry-Pi](#416-Raspberry-Pi)<br>
 
-    - [417-Linkding](#417-Linkding)<br>
-
-    - [418-Raspberry-Pi-Cooling](#418-Raspberry-Pi-Cooling)<br>
-
-    - [419-Raspberry-Pi](#419-Raspberry-Pi)<br>
-
-    - [420-Reverse-Proxy](#420-Reverse-Proxy)<br>
+    - [417-Proxy](#417-Proxy)<br>
 
 - [5-Planen](#5-Planen)<br>
 
@@ -142,20 +142,15 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 14.06.2021 für die Lei
 
       - [718-Install-Code-server](#718-Install-Code-server)<br>
 
+      - [719-Install-WordPress](#719-Install-WordPress)<br>
 
     - [72-Ansible-K8s-Cluster](#72-Ansible-K8s-Cluster)<br>
-  
-    - [73-Splunkforwarder-Konfiguration](#73-Splunkforwarder-Konfiguration)<br>
-  
-    - [74-Splunk-Dashboard](#74-Splunk-Dashboard)<br>
-  
-      - [741-Splunk-Dashboard-Internal](#741-Splunk-Dashboard-Internal)<br>
-  
-      - [742-Splunk-Dashboard-Webserver](#742-Splunk-Dashboard-Webserver)<br>
 
-    - [75-Starten](#75-Starten)<br>
+      - [721-Aufbau](#721-Aufbau)<br>
 
-    - [76-Aufbau](#76-Aufbau)<br>
+      - [722-Vorbereitungen](#722-Vorbereitungen)<br>
+
+      - [723-Durchführung-Ansible-Playbook](#723-Durchführung-Ansible-Playbook)<br>
 
 - [8-Kontrollieren](#8-Kontrollieren)<br>
 
@@ -163,15 +158,14 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 14.06.2021 für die Lei
      
       - [811-Test-1](#811-Test-1)<br>
        
-      - [812-Test-1](#812-Test-2)<br>
+      - [812-Test-2](#812-Test-2)<br>
        
-      - [813-Test-1](#813-Test-3)<br>
+      - [813-Test-3](#813-Test-3)<br>
      
-      - [814-Test-1](#814-Test-4)<br>
+      - [814-Test-4](#814-Test-4)<br>
      
-      - [815-Test-1](#815-Test-5)<br>
+      - [815-Test-5](#815-Test-5)<br>
        
-      - [816-Test-1](#816-Test-6)<br>
 
 - [9-Auswerten](#9-Auswerten)<br>
 
@@ -198,15 +192,17 @@ Oberengstringen, 14.06.2021<br>
 Luis Lüscher<br>
 
 ### 12-Projekthintergrund
+Im Rahmen des Modulunterricht im Modul 300 "Plattformübergreifende Dienste in ein Netzwerk integrieren" musste die Klasse ein Projekt durchühren mit den Programmen Docker und K8s.<br>
 
+Für die Arbeiten werden pro Modultag 3 Lektionen Zeit zur Verfügung gestellt. Am letzten Tag der LB2, werden die Projekte in einem 1:1 Gespräch der Lehrperson vorgestellt und dementsprechend bewertet. Bevorzugte Vorgehensweise ist hierbei eine vereinfachte Version von IPERKA. Eigene Projektideen dürfen mit Absprache der Lehrperson realsiert werden. Die Arbeit muss eine ausreichende Komplexität und einen gewissen Umfang aufweisen. Es wird erwartet, dass in der Regel drei bis vier Handlungsziele aus der Modulidentifikation abgedeckt werden.<br>
 
 ### 13-Danksagung
 Ich möchte mich bei Marcello Calisto bedanken, der mich in der schulischen Ausbildung immer wieder
 aufs Neue herausfordert und versucht, dass ich mein volles Potenzial ausschöpfen kann. Zudem hat er
-den gesamten Unterricht, wie immer, sehr spannend gestaltet.
+den gesamten Unterricht, wie immer, sehr spannend gestaltet.<br>
 
 ### 14-Managment-Summary
- 
+Im Modulunterricht des Modul 300 "Plattformübergreifende Dienste in ein Netzwerk integrieren" werden verschiedene Kenntnisse in Bezug auf IaC und Git bzw. Versionierungssystemen vermittelt. Die Leistungsbeurteilung 2 wird in Form eines selbst aufgebauten K8s-Infrastruktur mit verschiedenen Services erarbeitet. Die K8s Infrastruktur wird hierbei mit einem Ansible-Playbook erstellt, sodass die Infrastruktur nach ca. 10 Min steht. Im Anschluss werden auf dem K8s-Cluster verschiedene Services zur Verfügung gestellt. <br>
 
 ### 15-Modulidentifikation
 #### 151-Handlungsziele
@@ -319,49 +315,44 @@ SEO (Suchmaschinenoptimierung) ist heutzutage ein sehr wichtiges Thema im Bereic
 
 #### 221-Titel-der-Arbeit
 
-#### Infrastructre as Code
+#### Microservices aufsetzen, einrichten und bereitstellen (deployen)
 
-#### 222-Ausgangslage
-Ausgangslage gemäss [Auftrag - Infrastructure as Code](/LB1/add-on/Auftrag_TBZ_ST18a_M300_LB1.pdf "Auftrag - Infrastructre as Code")
+#### 222-Detaillierte-Aufgabenstellung
+Eine detaillierte Aufgabenstellung wurde seitens der Lehrperson nicht ausgehändigt. 
 
-<em>Sie erstellen - auf Basis von VirtualBox/Vagrant - ein selbst gewähltes «Infrastructure as Code» Projekt, indem sie einen Service oder Serverdienst automatisieren.
-</em>
-
-#### 223-Detaillierte-Aufgabenstellung
-
-#### 224-Mittel-und-Methoden
+#### 223-Mittel-und-Methoden
 Für diese Arbeit wird IPERKA als Projektmethode verwendet. Diese vorgehen hat der Kandidat bereits mehrfach in der Schule angewendet. Die Inhalte werden via Recherchen und bereits vorhandenen Fachkenntnissen erarbeitet und so aufbereitet, dass diese gut anschaulich dokumentiert werden können.
 
-#### 225-Vorkenntnisse
-Der Lehrling Luis Lüscher arbeitet in seinem Betrieb der SIX Group Services AG intensiv & täglich mit Splunk. Dadurch hat der Auftragsnehmer einiges an Wissen welches er mit an die LB1 mitnimmt.
-Im Bereich Vagrant konnte er bisher keine Erfahrungen sammeln, somit ist dies etwas neues für ihn. 
+#### 224-Vorkenntnisse
+Der Lehrling Luis Lüscher hat in seinem Betrieb der SIX Group Services AG zu einem früheren zeitpunkt bereit mal mit OpenShift gearbeitet. Dadurch hat der Auftragsnehmer einiges an Wissen welches er mit an die LB2 mitnimmt.
+In der Administration von K8s Infrastrukturen hat er soweit keine Kenntnisse.
 
 ### 23-Individuelle-Beurteilungskriterien
 
 #### 231-Teil-A
 
-Setup Umgebung, Lernumgebung, Tools<br>
-1P Virtualbx / 1P Vagrant / 1P Git-Setup / 1P SSH-Keys / 1P Repo-Setup / 1P Editor
+Projekt Gesamt (Komplexität, Umfang, Funktionalität, Eingeinleistung)<br>
+6P Excellent / 5P Sehr gut (überdurchschnittlich) / 4P Gut / 3P Ausreichend / 1-2P Vorhanden (je nach Umfang)
 
 #### 232-Teil-B
 
 Technische Doku (Struktur, Tiefe, Gestaltung, Formatierung, Nachvollziehbarkeit)<br>
-6P Excellent   / 5P Sehr gut (überdurchschnittlich) / 3P Gut / 2P Ausreichend / 1P Vorhanden
+6P Excellent / 5P Sehr gut (überdurchschnittlich) / 4P Gut / 3P Ausreichend / 1-2P Vorhanden (je nach Umfang)
 
 #### 233-Teil-C
 
-Entwicklung des Repositories (Regelmässigkeit und Umfang der Updates/Commits)Umfang Einträge + Commits des Repos <br>
-3P Regelm. / 2P mehrmals wöchentl. / 1P wöchentl.)
+Entwicklung des Repositories (Regelmässigkeit und Umfang der Updates/Commits)<br>
+Umfang Einträge + Commits des Repos -> 3P Regelm. / 2P mehrmals wöchentl. / 1P wöchentl.)
 
 #### 234-Teil-D
 
-Grund-Service, Funktionalität, Dokumentation (Eigen- oder Ergänzungsleistung!) <br>
-3P Excellent (Persist.,  deklarativ,  viel Eigenleistung) /2P Gut (Niveau Vorlage)  / 1P Eigenl. vorh.
+Erster Container-Dienst --> Setup: Eigenes Image erzeugt, in Repo bereitgestellt, Container läuft, Dienst verfügbar)<br>
+3P Excellent (Persist., deklarativ, viel Eigenleistung) / 2P Gut (Niveau Vorlage) / 1P Eigenl. vorh.
 
 #### 235-Teil-E
 
-Ergänzende Services, Funktionalität, Dokumentation <br>
-3P Excellent (Persist., deklarativ, viel Eigenleistung) / 2P Gut (Niveau Vorlage)  / 1P Eigenl. vorh
+Ergänzender Container-Dienst --> Microservice mit Eigenleistung erweitert oder in Kubernetes eingebunden<br>
+3P Excellent (Persist., deklarativ, viel Eigenleistung) / 2P Gut (Niveau Vorlage) / 1P Eigenl. vorh
 
 #### 236-Teil-F
 
@@ -377,11 +368,11 @@ Präsentation, Live-Demo & Quellenangaben:  (Max. 2 P.)<br>
 <table>
     <tr>
     <td><strong>Projekttitel:</strong></td>
-    <td>LB2- Infrastructure as Code (IaC)</td>
+    <td>LB2- Microservice aufsetzen, einrichten und bereitstellen (deployen))</td>
   </tr>
       <tr>
     <td><strong>Projektnummer:</strong></td>
-    <td>00001</td>
+    <td>00002</td>
   </tr>
         <tr>
     <td><strong>Projektart:</strong></td>
@@ -405,25 +396,28 @@ Präsentation, Live-Demo & Quellenangaben:  (Max. 2 P.)<br>
   </tr>
                 <tr>
     <td><strong>Projektdauer:</strong></td>
-    <td>Geplanter Beginn: 31.05.2021 13:00 Uhr <br>
-Geplantes Ende: 14.06.2021 16:50 Uhr
+    <td>Geplanter Beginn: 07.06.2021 13:00 Uhr <br>
+Geplantes Ende: 05.07.2021 16:50 Uhr
 </td>
   </tr>
                   <tr>
     <td><strong>Ausgangssituation / Problembeschreibung:</strong></td>
-    <td>Im Rahmen vom Modulunterricht im Modul 300 der LB1 sollte das Unternehmen Webity eine Infra as Code Umgebung aufbauen und dies möglichst einfach gegenüber dem Kunden zu gestalten. </td>
+    <td>Im Rahmen vom Modulunterricht im Modul 300 der LB2 sollte das Unternehmen Webity eine K8s Umgebung aufbauen und dies möglichst einfach gegenüber dem Kunden zu gestalten. Der ganze Aufbau der Infrastruktur sollte vollautomatisch via Ansible geschehen.</td>
   </tr>
                     <tr>
     <td><strong>Projektgesamtziel:</strong></td>
-    <td>Es sollte eine Infra as Code Umgebung aufgebaut werden. </td>
+    <td>Es sollte eine K8s Umgebung aufgebaut werden mit einem Ansible Playbook. </td>
   </tr>
                       <tr>
     <td><strong>Projektressourcen:</strong></td>
     <td>
     - Laptop von Luis<br>
     - TBZ Cloud<br>
-    - Vagrant<br>
+    - Raspberry Pis<br>
     - VS Code</td>
+    - Switch<br>
+    - Router<br>
+    - SD Karten<br>
   </tr>
                       <tr>
     <td><strong>Projektbudget:</strong></td>
@@ -461,7 +455,7 @@ Der Arbeitsplatz sieht folgendermassen aus: <br>
 - <strong>Speicher:</strong>  Insgesamt 4TB im Raid 1
 
 ##### Software
-Während der LB1 wurde folgende Software genutzt:
+Während der LB2 wurde folgende Software genutzt:
 - Windows 10 1909
 - Office 365 (Outlook, Word, PowerPoint, Excel und Teams)
 - Snagit 2020
@@ -617,7 +611,7 @@ Am Ende dieser Phase sind folgende Fragen beantwortet:
 - Was lief schlecht und was kann man besser machen?
 - Ist man zufrieden mit dem Produkt?
 
-### 33-Risikoanalyse
+### 32-Risikoanalyse
 
 #### 321-Risk-analysis-Beschreibung
 Bei der Risikoanalyse handelt es sich um eine vorausschauende Diagnose, um mögliche Probleme zu erkennen, einzudämmen und zu minimieren.
@@ -686,9 +680,9 @@ Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende
    </tr>
      <tr>
     <td>Nr. 3</td>
-    <td>Schwierigkeiten mit Splunk</td>
+    <td>Schwierigkeiten mit K8s und Ansible</td>
     <td>
-     <li>Fokus beim Teil "Realisieren" liegt bei Splunk und sprengt den Rahmen</li>
+     <li>Fokus beim Teil "Realisieren" liegt bei K8s sowie Ansible und sprengt den Rahmen</li>
 	   <li>Viele offene Fragen beim dokumentieren</li>
     </td>
     <td>Tief</td>
@@ -704,6 +698,52 @@ Gründe für eine Risikoanalyse sind die Prävention für eventuell auftauchende
 ### 41-Themen
 
 #### 411-Kubernetes
+Container haben die Software-Entwicklung – aber auch andere Bereiche der IT – grundlegend verändert. Software läuft mit der neuen Technik in einer speziell ausgelegten virtuellen Umgebung. Alles, was die Anwendung benötigt, befindet sich im Container und bleibt auch dort – sicher und zuverlässig. Mehrere Instanzen können so auch nebeneinander laufen.<br>
+Damit solche Container aber leicht verwaltet werden können – denn selten arbeitet man nur mit einem gleichzeitig –, bedarf es unterstützender Tools. Kubernetes (auch als „K8s“ bekannt) ist ein Werkzeug zur Container-Verwaltung, das auch mit großen Mengen an Containern umgehen kann.<br>
+
+Kubernetes ist erst wenige Jahre alt und hat dennoch bereits jetzt einen guten Ruf. Grund dafür dürfte – zumindest auch – die Verknüpfung zum IT-Riesen Google sein. Das Unternehmen hatte das Open-Source-Projekt seinerzeit angeschoben, einige Google-Mitarbeiter haben an Kubernetes mitentwickelt; zugleich haben aber auch viele Entwickler abseits von Google an der Software gearbeitet. 2015 wurde Kubernetes schließlich in einer ersten Version veröffentlicht. Inzwischen ist das Tool mit vielen verschiedenen Cloud-Plattformen wie Azure oder AWS kompatibel und kann dort eingesetzt werden.<br>
+Das war aber zunächst gar nicht das Ziel. Ausgangspunkt von Kubernetes waren bei Google die Systeme Borg und Omega, womit intern Cluster verwaltet werden sollten. Über virtuelle Cloud-Anwendungen hatte man damals noch gar nicht nachgedacht. Dann entschied man sich allerdings, eine quelloffene Version zu veröffentlichen und somit die Entwicklung von Kubernetes zu publik zu machen.<br>
+
+Kubernetes ist in der von Google entwickelten Programmiersprache Go geschrieben und zielt sowohl auf den Gebrauch in der Cloud ab als auch auf den Einsatz auf lokalen Rechnern oder in On-Premises-Rechenzentren. Das Bekenntnis zur Cloud lässt sich auch am weiteren Verlauf der Entwicklung des Projekts erkennen: Inzwischen treibt Google mit einigen weiteren Unternehmen unter dem Dach der Cloud Native Computing Foundation (siehe auch: Was ist Cloud Native?) das Open-Source-Projekt weiter voran – mit der Hilfe der sehr weitreichenden Community.<br>
+
+##### Wie funktioniert Kubernetes?
+Kubernetes ist ein Container-Orchestrierungs-System. Das bedeutet: Die Software soll nicht etwa Container erstellen, sondern diese verwalten. Dafür setzt Kubernetes auf Automatisierung von Prozessen. So fällt es Entwicklern leichter, Anwendungen zu testen, zu warten oder zu veröffentlichen. Die Kubernetes-Architektur besteht aus einer klaren Hierarchie:<br>
+- Container: Ein Container enthält Anwendungen und Software-Umgebungen.<br>
+- Pod: Diese Einheit in der Kubernetes-Architektur versammelt Container, die für eine Anwendung zusammenarbeiten müssen.<br>
+- Node: Einer oder mehrere Pods laufen auf einem Node, der sowohl eine virtuelle als auch eine physikalische Maschine sein kann.<br>
+- Cluster: Mehrere Nodes werden bei Kubernetes zu einem Cluster zusammengefasst.<br>
+
+Zudem basiert die Kubernetes-Architektur auf dem Prinzip von Master und Slave. Als Slaves, also die kontrollierten Teile des Systems, werden die beschriebenen Nodes eingesetzt. Sie stehen unter der Verwaltung und Kontrolle des Kubernetes-Masters.<br>
+Zu den Aufgaben eines Masters gehört es zum Beispiel, Pods auf Nodes zu verteilen. Durch die ständige Überwachung kann der Master auch eingreifen, sobald ein Node ausfällt, und diesen direkt doppeln, um den Ausfall zu kompensieren. Der Ist-Zustand wird immer mit einem Soll-Zustand verglichen und bei Bedarf angepasst. Solche Vorgänge geschehen automatisch. Der Master ist aber auch der Zugriffspunkt für Administratoren. Diese können darüber die Container orchestrieren.<br>
+Master und Nodes haben jeweils einen spezifischen Aufbau.<br>
+
+##### Kubernetes Node
+Der Slave (oder auch Minion) ist ein physischer oder virtueller Server, auf dem ein oder mehrere Container aktiv sind. Auf dem Node befindet sich eine Laufzeitumgebung für die Container. Außerdem ist das sogenannte Kubelet aktiv. Hierbei handelt es sich um einen Bestandteil, der die Kommunikation zum Master ermöglicht. Die Komponente startet und stoppt zudem Container. Mit dem cAdvisor hat das Kubelet einen Dienst, der die Ressourcenauslastung aufzeichnet. Dies ist für Analysen interessant. Schließlich gibt es noch den Kube-proxy, mit dem das System Load-Balancing durchführt und Netzwerkverbindungen über TCP oder andere Protokolle ermöglicht.<br>
+
+##### Kubernetes-Master
+Der Master ist ebenfalls ein Server. Um die Kontrolle und Überwachung der Nodes zu gewährleisten, läuft auf dem Master der Controller Manager. Diese Komponente wiederum hat mehrere Prozesse in sich vereint:<br>
+- Der Node Controller überwacht die Nodes und reagiert, wenn dieser ausfällt.<br>
+- Der Replication Controller stellt sicher, dass immer die gewünschte Zahl von Pods gleichzeitig läuft.<br>
+- Der Endpoints Controller kümmert sich um das Endpoint-Objekt, das für die Verbindung von Services und Pods zuständig ist.<br>
+- Service Account & Token Controller verwalten den Namespace und erstellen API-Zugriffstoken.<br>
+
+Neben dem Controller Manager läuft eine Datenbank namens etcd. In dieser Key-Value-Datenbank ist die Konfiguration des Clusters gespeichert, für den der Master zuständig ist. Mit der Komponente Scheduler kann der Master automatisiert die Verteilung von Pods auf Nodes übernehmen. Die Verbindung zum Node funktioniert über den im Master integrierten API-Server. Dieser stellt eine REST-Schnittstelle zur Verfügung und tauscht per JSON Informationen mit dem Cluster aus. So können z. B. auch die verschiedenen Controller auf die Nodes zugreifen.<br>
+
+##### Kubernetes und Docker: Konkurrenten?
+Die Frage, ob man lieber Kubernetes oder Docker verwenden sollte, ist nicht zu beantworten. Denn sie stellt sich gar nicht – man benutzt die beiden Programme miteinander. Docker (oder eine andere Container-Plattform wie rkt) ist auch bei Kubernetes für das Zusammenstellen und Ausführen des Containers zuständig. Kubernetes greift auf diese Container zu und übernimmt die Orchestrierung bzw. die Automatisierung von Prozessen. Kubernetes allein kann die Erstellung von Containern nicht leisten.<br>
+
+Eine Konkurrenz besteht höchstens zu Docker Swarm. Dabei handelt es sich um ein Orchestrierungswerkzeug des Herstellers von Docker. Dieses Tool arbeitet ebenfalls mit Clustern und bietet ähnliche Funktionen wie Kubernetes.<br>
+
+##### Kubernetes in der Praxis: Anwendung und Vorteile
+In der Software-Entwicklung spielt Kubernetes inzwischen eine große Rolle – besonders bei agilen Projekten. Der Zyklus von Entwicklung, Testing und Deployment (und allen möglichen Zwischenschritten) wird durch die Container-Orchestrierung vereinfacht. Kubernetes ermöglicht es, Container einfach von einer Stufe zur anderen zu verschieben und dabei viele Arbeitsschritte zu automatisieren.<br>
+
+Die Skalierung ist ein wichtiger Faktor – besonders, wenn man externen Cloud-Speicher anmietet: Um Kosten zu sparen, kann Kubernetes Ressourcen perfekt ausnutzen. Statt derzeit nicht benötigte Maschinen weiterlaufen zu lassen, kann Kubernetes diese Ressourcen wieder freigeben und entweder für andere Tasks einsetzen oder einfach gar nicht benutzen, was Kosten sparen kann. Dank Autoscaling achtet Kubernetes selbstständig darauf, nicht mehr Ressourcen zu verbrauchen, als tatsächlich notwendig sind. Doch auch andersherum ist schnelle Skalierung enorm wichtig: Veröffentlicht man seine Software zum ersten Mal, ist mitunter nicht korrekt abzuschätzen, wie der Zulauf aussehen wird. Damit bei extrem hoher Nachfrage das System nicht kollabiert, kann Kubernetes schnell weitere Instanzen zur Verfügung stellen.<br>
+
+Der Vorteil bei Kubernetes ist auch, dass man problemlos mehrere Plattformen miteinander verknüpfen kann. So ist es z. B. möglich, die Lösung in einer Hybrid Cloud einzusetzen. Teilweise befindet sich das System dann auf eigenen lokalen Servern und teilweise in einem entfernten Rechenzentrum – also der Cloud. Diese Möglichkeit wiederum erhöht die Skalierbarkeit noch mehr: Braucht man mehr Ressourcen, können diese beim Cloud-Anbieter in der Regel schnell und unkompliziert hinzugebucht werden.<br>
+
+Schließlich hilft Kubernetes Entwicklern auch dabei, den Überblick zu behalten. Jeder Container ist eindeutig markiert und man erhält Auskunft über den Status jeder einzelnen Instanz. Gleichzeitig ist eine Versionskontrolle Teil von Kubernetes. Updates können also auch nachträglich nachvollzogen werden. Überhaupt ist das Veröffentlichen von Updates einer der Hauptvorteile des Systems: Neue Versionen können so ausgerollt werden, dass überhaupt keine Downtime auftritt. Dafür werden Pods nach und nach geändert statt alle auf einmal. Das gilt sowohl für die interne Testversion als auch bei der Veröffentlichung von neuen Versionen für Endnutzer.<br>
+
+Da Kubernetes viele Aspekte der Orchestrierung eigenständig konfiguriert, entfallen einige Fallstricke bei der Arbeit. Deshalb gilt Kubernetes allgemein als sicheres System: Es kommt eher selten zu Ausfällen, und wenn doch einmal ein Pod nicht mehr wie geplant funktioniert, hat der Kubernetes-Master direkt Kenntnis davon und kann den Ausfall ersetzen.<br>
 
 #### 412-APT-vs-SNAP
 ##### 4211-Was-ist-Snap?
@@ -1359,26 +1399,61 @@ In der Datei lässt sich nicht nur ein (oder beliebig viele zusätzliche) Invent
 Viele dieser Parameter lassen sich zudem auch als Umweltvariablen setzen. Eine komplette Liste lässt sich mit dem CLI-Tool ansible-config anzeigen.<br>
 
 #### 414-Portainer
+Portainer ist heutzutage das Open Source Tool, um ihre eigenen Container auf eine ganz einfache Art und Weise zu verwalten. Es ist ganz egal, ob man Docker, Docker Swarm, Kubernetes oder auch Azure ACI verwendet.
 
-#### 415-Bitwarden
+#### 415-Nginx
+Laut W3Techs-Statistik ist Apache auch im Jahr 2016 noch der meistgenutzte Webserver – insgesamt
+über 50 Prozent aller Webseitenbetreiber nutzen ihn. Betrachtet man allerdings nicht die Gesamtheit aller
+Websites, sondern nur die Top 10.000 dermeistbesuchten Websites, zeigt sich ein anderes Bild: Nur
+knapp 30 Prozent dieser Seiten basieren auf dem erstmals 1995 publizierten Server-Urgestein. Von den
+führenden 1.000 Websites sind es sogar nur rund 27 Prozent.<br>
+Das ist zum einen auf den unverhältnismäßig hohen Anteil des Google Web Servers (rund 10 Prozent)
+bei den stark besuchten Websites zurückzuführen, denn auf ihm laufen sämtliche Google-Webseiten.
+Zum anderen hängt dieses Ergebnis aber auch mit dem rasanten Aufstieg der aus Russland
+stammenden Webserver-Software NGINX zusammen. War sie im Jahr 2010 mit knapp 4 Prozent
+Marktanteil nicht mehr als eine der zahlreichen Apache-Alternativen, ist die unter der BSD-Lizenz
+veröffentlichte Software heute bereits bei jedem zweiten Webprojekt der Top 10.000 bzw. 1.000 im
+Einsatz.<br>
+Die Programmierung der 2004 veröffentlichten NGINX-Server-Software trieb in erster Linie der russische
+Softwareentwickler Igor Sysoev voran. Damals wie heute lag der Fokus darauf, einen Server zu
+entwickeln, der sich durch außerordentlich hohe Performance auszeichnet und eine möglichst große
+Anzahl an Clients gleichzeitig bedienen kann, dabei aber auch durch einen geringen
+Ressourcenverbrauch überzeugt. Angesichts der wachsenden Beliebtheit und Verbreitung des
+Webservers gründete Sysoev 2011 NGINX Inc. Das kommerzielle Unternehmen ist seitdem für die
+Weiterentwicklung der Software zuständig und bietet – neben der weiterhin freien Standardversion – mit
+NGINX Plus auch kostenpflichtigen Support und Zusatzfeatures wie verbessertes Load Balancing an.<br>
+NGINX ist wie Apache modular aufgebaut. Das heißt, dass die verschiedenen Funktionen über
+entsprechende Module bereitgestellt werden, die Sie als Administrator aktivieren oder deaktivieren
+können. Dadurch verfügen Sie beispielsweise über die folgenden Features:<br>
+- Application Acceleration (Anwendungsbeschleunigung) ermöglicht die schnelle Auslieferung von
+Inhalten.<br>
+- Reverse Proxying erlaubt es, NGINX als Reverse Proxy (HTTP, TCP, UDP) zur
+Webbeschleunigung oder als E-Mail-Proxy (IMAP, POP3, SMTP) zu nutzen.<br>
+- TLS-Verschlüsselung ermöglicht den sicheren Datentransfer.<br>
+- Bandbreitenmanagement stellt allen Diensten die optimale Bandbreite zur Verfügung.<br>
+- Load Balancing entlastet den Hauptserver durch Umleitung der Anfragen.<br>
+- Videostreaming, das hohe Leistungsfähigkeit beim Streaming von MP4- und FLV-Medien bietet.<br>
 
-#### 416-Code-Server
+Während Apache für jede Client-Anfrage einen neuen Thread oder Prozess öffnet, arbeitet der NGINXServer ereignisorientiert. Somit kann er die Anfragen asynchron bearbeiten, was Arbeitsspeicher und Zeit
+spart. Die Server-Software wird von einer Vielzahl von Betriebssystemen unterstützt, unter anderem von
+zahlreichen Unix-/Linux-Varianten inklusive Mac OS sowie von Windows-Servern.
 
-#### 417-Linkding
 
-#### 418-Raspberry-Pi-Cooling
+#### 416-Raspberry-Pi
+Der Raspberry Pi ist ein Minicomputer auf einer nur Scheckkarten-großen Platine, der sich vielfältig erweitern lässt. Er wurde ursprünglich zu Lern- und Demonstrationszwecken entwickelt, eignet sich aber auch für die Realisierung verschiedener privater oder professioneller Anwendungen.<br>
+Die Raspberry Pi Foundation hat den Minicomputer im Scheckkartenformat entwickelt und im Jahr 2012 die erste Version auf den Markt gebracht. Ursprünglich war er dafür konzipiert, jungen Menschen einen einfachen Einstieg in das Programmieren und die Computertechnik zu ermöglichen. Schnell fand der Raspberry Pi eine große Fangemeinde und wurde für die unterschiedlichsten Anwendungen eingesetzt.<br>
+Die wichtigsten Merkmale des Minicomputers sind, neben den geringen Abmessungen, der niedrige Preis von nur circa fünf bis 40 Euro (je nach Modell) und die einfache Erweiterbarkeit des Systems. Das Grundmodul des Rechners besteht aus einer ARM-CPU, einem Grafikprozessor und dem Arbeitsspeicher. Zum Anschluss von Peripheriegeräten stehen Schnittstellen wie USB, Ethernet oder die 21 GPIO-Pins für weitere Anschlussmöglichkeiten zur Verfügung. Um einen Monitor mit dem Raspberry Pi zu verbinden, ist eine HDMI-Schnittstelle vorgesehen. Über diese lassen sich Bildinhalte mit Full-HD-Auflösung von bis zu 1080p wiedergeben.<br>
+Das Betriebssystem startet der Rechner von einer Speicherkarte, die in den vorhandenen SD-/MMC-Karten-Slot eingesteckt werden muss. Lauffähig auf dem System sind zum Beispiel verschiedene Linux- und Windows-Versionen. Über erhältliche Erweiterungsmodule kann der Raspberry Pi drahtlos per Bluetooth oder WLAN kommunizieren. In den neuesten Versionen des Raspberry Pi sind die WLAN- und Bluetooth-Schnittstellen bereits in der Grundausstattung vorhanden. Typische Anwendungen für den Raspberry Pi Minicomputer sind Mediaplayer, Spielekonsolen, NAS- und Cloud-Server, VPN-Server oder intelligente Steuerungen für das Internet of Things (IoT) und Smart Home.<br>
 
-#### 419-Raspberry-Pi
-
-#### 420-Proxy
-##### 4201-Was-ist-ein-Proxy?
+#### 417-Proxy
+##### 4171-Was-ist-ein-Proxy?
 Als Proxy-Server (Proxy = engl. «Stellvertreter») bezeichnet man eine Kommunikationsschnittstelle in einem Netzwerk, die zwischen zwei Computersystemen vermittelt. Grundlegende Aufgabe des Proxy-Servers ist es, Client-Anfragen an einen Server stellvertretend entgegenzunehmen und mit der eigenen IP-Adresse an den Zielrechner weiterzuleiten. Bei dieser Art der Kommunikation besteht keine direkte Verbindung zwischen Absender und Empfänger. Mitunter wissen das anfragende System und der Zielrechner gar nicht, dass sie es mit einem Proxy zu tun haben. Proxy-Server lassen sich in zwei Richtungen realisieren: Ein Forward-Proxy dient dem Schutz eines Client-Netzwerks vor Einflüssen aus dem Internet. Soll das Zielsystem, beispielsweise ein Webserver, durch einen vorgeschalteten Proxy-Server geschützt werden, spricht man von einem Reverse-Proxy.
 
 - Forward-Proxy (Schutz des Clients): Wird ein Proxy-Server als Schnittstelle zwischen einem privaten Netzwerk (LAN) und dem Internet installiert, lassen sich lokale Endgeräte effektiv von Einflüssen aus dem öffentlichen Netz abschirmen. Anfragen aus dem LAN werden vom Proxy entgegengenommen und mit dessen IP-Adresse als Absender an den Zielrechner im Internet weitergeleitet. Antwortpakete aus dem Netz werden somit nicht an den Client im LAN adressiert, sondern passieren ebenfalls den Proxy-Server, bevor Sie ans eigentliche Ziel weitergeleitet werden. In der Regel fungiert der Proxy-Server dabei als Kontrollinstanz. Entsprechende Sicherheitssysteme müssen so nicht auf jedem Client des Netzwerks installiert werden, sondern lassen sich auf einer überschaubaren Anzahl an Proxy-Servern realisieren. 
 
 - Reverse-Proxy (Schutz des Servers): Auch Webserver lassen sich zusätzlich absichern, indem ein Proxy-Server bei Zugriffen aus dem öffentlichen Netz vorgeschaltet wird. Clients aus dem Internet greifen somit nicht direkt auf den Zielrechner zu. Stattdessen werden Anfragen vom Proxy-Server entgegengenommen, gemäss konfigurierten Sicherheitsregeln geprüft und bei Unbedenklichkeit an den Server im Hintergrund weitergeleitet.
 
-##### 4202-Anwendungsgebiete-eines-Proxy-Server
+##### 4172-Anwendungsgebiete-eines-Proxy-Server
 Es gibt diverse Gründe, einen Proxy-Server zu implementieren. Als Bindeglied zwischen zwei Kommunikationspartnern ermöglicht diese Netzwerkkomponente selbst dann einen Datenaustausch zwischen zwei Systemen, wenn eine direkte Verbindung aufgrund inkompatibler IP-Adressen unmöglich ist – zum Beispiel weil eine Komponente IPv4 verwendet und die anderen den neuen Standard IPv6. Daten, die den Umweg über einen Proxy nehmen, lassen sich zudem filtern, zwischenspeichern und im Rahmen eines Load-Balancings auf verschiedene Zielsysteme verteilen. Darüber hinaus ist ein Proxy eine zentrale Komponente der Firewall, die Computersysteme vor Angriffen aus dem öffentlichen Netz schützt.
 
 - Caching: Eine weitere Standardfunktion für Proxy-Server ist das Caching. Um wiederkehrende Anfragen aus einem lokalen Netzwerk schnell beantworten zu können, speichert ein entsprechend konfigurierter Proxy-Server eine Kopie der Daten, die er von Servern aus dem Internet erhält, temporär im Cache. Häufig angefragte Webinhalte müssen so nicht jedes Mal neu geladen, sondern können direkt ausgeliefert werden. Dies spart Zeit und Bandbreite. 
@@ -1389,7 +1464,7 @@ Es gibt diverse Gründe, einen Proxy-Server zu implementieren. Als Bindeglied zw
 
 - Anonymisierung: Da Proxy-Server die direkte Verbindung zwischen Absender und Empfänger unterbinden, ist es möglich, die IP-Adresse eines Clients hinter der der Kommunikationsschnittstelle zu verbergen. Dies erlaubt ein gewisses Mass an Anonymität, da Nutzer nach aussen hin mit der IP-Adresse und dem Standort des Proxys agieren. In Ländern mit einer starken Internetzensur oder einem eingeschränkten Zugriff auf urheberrechtliche geschützte Inhalte werden Proxy-Server im Ausland mitunter genutzt, um ein Geoblocking zu umgehen.
 
-##### 4203-Welche-Arten-von-Proxys-gibt-es?
+##### 4173-Welche-Arten-von-Proxys-gibt-es?
 
 ###### Application Level vs. Circuit Level
 Manche Proxy-Server werden technisch so realisiert, dass sie in der Lage sind, Datenpakete zu analysieren, die ihnen zur Weiterleitung übergeben werden. Andere Proxy-Realisationen hingegen haben keinen Zugriff auf Paketdaten. Filterfunktionen lassen sich in diesem Fall jedoch auf Grundlage der Absender-IP und des angesprochenen Ports umsetzen.
@@ -1405,7 +1480,6 @@ Die Klassifikation anhand der Begriffe „dediziert“ und „generisch“ bezie
 - Generischer Proxy: Anders als dedizierte Proxys ist ein generischer Proxy-Server nicht spezialisiert und wird für mehrere Kommunikationsprotokolle eingesetzt.
 
 In der Praxis wird ein Application-Level-Proxy meist als dedizierter Proxy-Server realisiert. Generische Proxy-Server hingegen finden als Circuit-Level-Proxys Anwendung. Die entsprechenden Begriffe werden daher mitunter synonym verwendet.
-
 
 ## 5-Planen
 ### 51-Benoetigte-Infrastruktur
@@ -1492,13 +1566,21 @@ Im ersten und letzten Fall war die Diagnose also richtig, in den anderen beiden 
 
 ## 6-Entscheiden 
 
-Für die LB1 wird auf eine Splunk Instanz gesetzt. Auf zwei weiteren VMs wird Apache installiert und jeweils ein Splunk Forwarder. Die Konfiguration aller Dienste inklusive XML Dashboard Sourcecode sollte automatisch implementiert werden. 
+Im Rahmen der LB2 wird ein K8s Cluster auf 5 Raspberry Pis installiert. Dazu werden dann auf diesem K8s Cluster verschiedene Service aufgestzt und zur Verfügung gestellt.
 
 ## 7-Realisieren
 
 ### 71-Step-by-Step-K8s-Cluster
 
 #### 711-Setup-Raspberry-Pis
+Folgendes wird für dieses Setup benötigt: <br>
+- 5 x Raspberry Pi 4 8G Model B<br>
+- 5 x  microSD (microSDHC, mit mind. 16GB)<br>
+- 5 x USB-A - USB-C Kabel mind 0.5m<br>
+- 5 x Ethernet-Patchkabel RJ45 (S/FTP) kat. 6a mind. 0.5m<br>
+- 1 x USB-A Wall Charger<br>
+- 1 x Switch mit mind. 6 Ports (zB. Netgear GS108GE)<br>
+
 Als erstes muss man die Raspberry Pis korrekt konfigurieren, dafür habe ich jede einzene SD-Karte korrekt formatiert und Ubuntu Server 20.04 LTS 64bit installiert. Anschliessend kann man die Pis wieder anschliessen und das OS funktioniert direkt. 
 Als erstes starten man dazu den Raspberry Pi Imager. Man kann diesen von [raspberrypi.org](https://www.raspberrypi.org/software/ "raspberrypi.org") herunterladen. <br>
 ![Raspberry Pi Imager](/LB2/images/setup/1-Installation-SD-Ubuntu.png "Raspberry Pi Imager")
@@ -2003,12 +2085,25 @@ Um den dazugehörigen Port herauszufinden, einfach diesen Befehl ausführen:
 kubectl get services wordpress
 ```
 
+Unsere WordPress Seite ist nun via Port 30672 erreichbar. 
+
+```
+k8sadmin@rpipoelmaster01:~$ kubectl get services wordpress
+NAME        TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+wordpress   LoadBalancer   10.152.183.238   <pending>     80:30672/TCP   7d20h
+```
+
+
+
 ### 72-Ansible-K8s-Cluster
 #### 721-Aufbau
+Das ganze ist ungefähr so aufgabeut:
+![Aufbau Ansible](/LB2/images/setup/Aufbau_Ansbile_Setup.png "Aufbau Ansible")
 
-
+Hierbei wird die bereits vorhandene Infrastruktur um einen weiteren Host ergänzt. Dies ist der Ansbile Host. Er dient als zentraler Angelpunkt um das Playbook abzuspielen. 
 
 #### 722-Vorbereitungen
+Als erstes kopieren wir die Public Keys der einzelen Hosts auf unseren Ansible Host. 
 
 ```
 ssh-copy-id 10.0.10.10
@@ -2019,13 +2114,143 @@ ssh-copy-id 10.0.10.14
 ssh-copy-id 10.0.10.15
 ```
 
+Danach verbindet man sich mit dem Host. Dafür einfach das ganze im Terminal mit "Yes" bestätigen. 
+
+```
+The authenticity of host '10.0.10.12 (10.0.10.12)' can't be established.
+ECDSA key fingerprint is SHA256:c2kJP4OQ9DIOgx09VOoiYelswpAf4/EuMFcjBvV8aGk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+```
+
+Sobald man sich dann mit dem Passwort authentifziert hat, kann man sich nun mit dem Zertifkat authentifizeren. 
+
+```
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh '10.0.10.12'"
+and check to make sure that only the key(s) you wanted were added.
+```
+
+Nun installieren wir noch Ansbile und können anschliessend mit unserem Setup starten. <br>
+Zuerst APT Cache aktualisieren
+
+```
+sudo apt update
+```
+
+Anschliessend installieren wir Ansible
+
+```
+sudo apt install ansible
+```
 
 
-#### 723-Durchführung Ansible Playbook
+Nun testen wir, ob Ansbile funktioniert.
+
+```
+sudo nano /etc/ansible/hosts
+```
+
+Und fügen nun unsere Hosts hinzu.
+
+```
+[servers]
+rpipoelmaster01 ansible_host=10.0.10.10
+rpipoelnode1 ansible_host=10.0.10.11
+rpipoelnode2 ansible_host=10.0.10.12
+rpipoelnode3 ansible_host=10.0.10.13
+rpipoelnode4 ansible_host=10.0.10.14
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+```
+
+Jetzt testen wir unsere Konfiguration.
+
+```
+ansible all -m ping -u ubuntu
+```
+
+Danach erhalte ich folgendes Resultat
+
+```
+rpipoelmaster01 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+rpipoelnode1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+rpipoelnode2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+rpipoelnode3 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+rpipoelnode4 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+
+#### 723-Durchführung-Ansible-Playbook
 Das Playbook kann ganz einfach dann über folgenden Befehl ausgeführt werden:
+
 ```
 sudo ansible-playbook -i hosts.yml configure_cluster.yml - ubuntu -k
 ```
+
+Folgendes wird im Rahmen des Ansible Playbook verändert:
+- Worker-Knoten Hostnamen zuweisen
+- API Master Server Hostname zuweisen
+- Ändern des Root Passwort
+- K8s Admin Benutzer erstellen
+- Sperren des Standard-Ubuntu-Konto
+- Ändern des Anmeldebanner
+- SSH-Anmeldebanner-Pfad ändern
+- sshd-Dienst neu starten
+- Firewalld und netfilter-persistent installieren
+- Erforderliche Master-Ports öffnen
+- Erforderliche Worker Ports öffnen
+- Einschalten und Aktivieren von Firewalld
+- Swap deaktivieren
+- cgroups zur cmdline hinzufügen
+- Docker installieren
+- Docker-rootless installieren
+- Docker.service beim Systemstart hinzufügen
+- Export PATH=/usr/bin:$PATH
+- Export DOCKER_HOST=unix:///run/user/1001/docker.sock
+- Cgroup-Treiber in systemd ändern
+- Docker neu starten
+- Install microk8s
+- Füge k8sadmin zur Gruppe microk8s hinzu & geben k8sadmin das Recht auf ~/.kube
+- Füge einen Alias für microk8s.kubectl hinzu, um eine Menge Zeit zu sparen. 
+- Befehl zum Verbinden von Knoten 1 holen
+- Befehl zum Verbinden von Knoten 2 holen
+- Befehl zum Verbinden von Knoten 3 holen
+- Befehl zum Verbinden von Knoten 4 holen
+- Knoten 1 in Cluster hinzufügen
+- Knoten 2 in Cluster hinzufügen
+- Knoten 3 in Cluster hinzufügen
+- Knoten 4 in Cluster hinzufügen
+- Vorbereiten der Linkding-Installation
+- Code_Server-Installation vorbereiten
+- AddOns-Shell-Skript hinzufügen
+
+Die Logs können [hier](/LB2/data/log_23062021_setup.txt "hier") eingesehen werden (Zu lang um diese in der Doku zu hinterlegen). 
+
+Auf dem Master kann man im Anschluss mal nachsehen, ob die einzelnen Node bereits bereit sind.<br>
+![Node-Check](/LB2/images/setup/Node-Check.png "Node-Check")
+
+Als nächstes konfigurieren wir noch Portainer. Portainer ist unter http://MASTER_IP:30777 erreichbar.
+![User-Credentials](/LB2/images/setup/User-Credentials.png "User-Credentials")<br>
+
+Und dann noch die entsprechende Plattform bzw. die verwendete Container Umgebung auswählen. In meinen Fall sit dies Kubernetes.
+![Container-enviroment](/LB2/images/setup/Container-enviroment.png "Container-enviroment")<br>
 
 ## 8-Kontrollieren
 
@@ -2034,37 +2259,241 @@ sudo ansible-playbook -i hosts.yml configure_cluster.yml - ubuntu -k
 #### 811-Test-1
 <table>
   <tr>
-    <td colspan="2"><strong>Testfall 1 - Vagrant</strong></td>
+    <td colspan="2"><strong>Testfall 1 - Installation funktioniert (Step-by-Step)</strong></td>
   </tr>
     <tr>
     <td><strong>Beschreibung</strong></td>
-    <td>Das erarbeitete Projekt und die damit verbundene Umgebung, kann ohne Probleme nur durch den Befehl "vagrant up" dem User zur Verfügung stehen</td>
+    <td>Die Installation (Step-by-Step) funktioniert. </td>
   </tr>
       <tr>
     <td><strong>Testszenario</strong></td>
     <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
-	<li>Klonen des Repository</li>
-	<li>Öffnen einer Bash Shell im LB1 Unterordner</li>
-	<li>Eingabe des Befehl "vagrant up"</li>
+	<li>Installation gemäss dokumentiert Anleitung</li>
+	<li>Überprüfen der im Cluster vorhandenen Nodes</li>
+	<li>Simplen Service starten (Nginx)</li>
+  <li>Replizieren des Service</li>
 	</td>
   </tr>
 	<tr>
     <td><strong>Involvierte Komponenten</strong></td>
     <td>Folgende Komponenten werden im Testfall eingesetzt. 
-	<li>Vagrantfile</li>
-	<li>Skripts: generate_logs.sh / apache_splunk_forwarder_installation.sh / splunk_installation.sh </li>
-	<li>Dashboards: _internal.xml / apache_dashboard.xml</li>
-  <li>Webseiten: Inhalte aus den Ordnern /data/www und /data/www2</li>
+	<li>K8s Cluster</li>
 	</td>
   </tr>
     <tr>
     <td><strong>Erwartetes Resultat</strong></td>
-    <td>Die Installation sollte nach der Eingabe des Befehl "vagrant up" ein vollautomatisches Setup druchführen. Der User sollte sich um nicht kümmern müssen. </td>
+    <td>Die Installation sollte ordnungsgemäss funktionieren. Das Replizieren von Containern sollte ohne Probleme funktionieren.</td>
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Nach der Eingabe des Befehl "vagrant up" findet eine vollautomatische Installation statt. Es werden zwei Webserver und eine Splunk Instanz korrekt konfiguriert. 
-    <img src="/LB1/images/LB1_Test_1.png" alt="LB1 Test 1"></td>
+    <td>Alle Node sind vorhanden <br> 
+    <img src="/LB2/images/Node_Result.png" alt="LB2 Test 1"></td>
+  </tr>
+        <tr>
+    <td><strong>Tatsächliches Resultat 2</strong></td>
+    <td>Es kann ein Nginx Webserver aufgestzt werden<br> 
+    <img src="/LB2/images/Nginx_Webserver_erstellen.png" alt="LB2 Test 1.1"></td>
+  </tr>
+          <tr>
+    <td><strong>Tatsächliches Resultat 3</strong></td>
+    <td>Es kann ein Nginx Webserver aufgestzt werden<br> 
+    <img src="/LB2/images/nginx_webserver_scale_replica.png" alt="LB2 Test 1.2"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
+#### 812-Test-2
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 2 - Installation via Ansible funktioniert</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Die Installation (Ansible) funktioniert. </td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Installation gemäss dokumentiert Anleitung</li>
+	<li>Überprüfen der im Cluster vorhandenen Nodes</li>
+	<li>Simplen Service starten (Nginx)</li>
+  <li>Replizieren des Service</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>K8s Cluster</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Die Installation sollte ordnungsgemäss funktionieren. Das Replizieren von Containern sollte ohne Probleme funktionieren.</td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Alle Node sind vorhanden <br> 
+    <img src="/LB2/images/Node_Result.png" alt="LB2 Test 2"></td>
+  </tr>
+        <tr>
+    <td><strong>Tatsächliches Resultat 2</strong></td>
+    <td>Es kann ein Nginx Webserver aufgestzt werden<br> 
+    <img src="/LB2/images/Nginx_Webserver_erstellen.png" alt="LB2 Test 2.1"></td>
+  </tr>
+          <tr>
+    <td><strong>Tatsächliches Resultat 3</strong></td>
+    <td>Es kann ein Nginx Webserver aufgestzt werden<br> 
+    <img src="/LB2/images/nginx_webserver_scale_replica.png" alt="LB2 Test 2.2"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
+#### 813-Test-3
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 3 - Linkding wurde korrekt installiert</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Linkding wurde korrekt installiert.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Linkding GUI wird aufgerufen</li>
+	<li>Eingefügte Bookmarks können aufgerufen werden</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Portainer</li>
+	<li>Linkding</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Das GUI kann ohne Probleme aufgrufen werden und es können alle Bookmarks eingesehen werden. </td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Der Bookmark manager ist unter Port 30751	erreichbar und nach den importieren Bookmarks kann gesucht werden. 
+    <img src="/LB2/images/Linkding_search.png" alt="LB2 Test 3"></td>
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
+#### 814-Test-4
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 4 - WordPress wurde korrekt installiert</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>WordPress wurde korrekt installiert.</td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>WordPress GUI wird aufgerufen</li>
+	<li>ÖWordPress Admin Login</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>WordPress Seite</li>
+	<li>WordPress Admin bereich </li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Die WordPress Seite steht bereit und es kann sich mit dem erstellten Admin user angemeldet werden.</td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Die WordPress Seite steht und es kann sich im Admin Bereich angemeldet werden. <br>
+    <img src="/LB2/images/WordPress-admin_bereich.png" alt="LB2 Test 4"><br>
+    <img src="/LB2/images/WordPress_Seite.png" alt="LB2 Test 4.1"></td>
+    
+  </tr>
+          <tr>
+    <td><strong>Klassifikation</strong></td>
+    <td>TP</td>
+  </tr>
+        <tr>
+    <td><strong>Ergebnis</strong></td>
+    <td>Erfolgreich</td>
+  </tr>
+          <tr>
+    <td><strong>Massnahmen</strong></td>
+    <td>Keine Massnahmen erforderlich</td>
+  </tr>
+</table>
+
+#### 815-Test-5
+<table>
+  <tr>
+    <td colspan="2"><strong>Testfall 5 - Heimdall wurde korrekt installiert</strong></td>
+  </tr>
+    <tr>
+    <td><strong>Beschreibung</strong></td>
+    <td>Heimdall dient als internes Dashboard um sich Links schön abzuspeichern. Es wird sehr häufig in Home Labs verwendet. </td>
+  </tr>
+      <tr>
+    <td><strong>Testszenario</strong></td>
+    <td>Der Testfall wird in folgender Reihenfolge durchgeführt. 
+	<li>Aufrufen der Heimdall Instanz</li>
+	<li>Überprüfen ob ein Link geöffnet werden kann.</li>
+	</td>
+  </tr>
+	<tr>
+    <td><strong>Involvierte Komponenten</strong></td>
+    <td>Folgende Komponenten werden im Testfall eingesetzt. 
+	<li>Heimdall Pod</li>
+	</td>
+  </tr>
+    <tr>
+    <td><strong>Erwartetes Resultat</strong></td>
+    <td>Die Heimdall Instanz kann über den Browser geöffnet werden und die dort hinterlegten Links ebenfalls. </td>
+      </tr>
+      <tr>
+    <td><strong>Tatsächliches Resultat</strong></td>
+    <td>Heimdall kann über Port 8006 erreicht werden und die einzelnen hinterlegten Links können über die Buttons erreicht werden. 
+    <img src="/LB2/images/Heimdall_Dashboard.png.png" alt="LB2 Test 5"></td>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
@@ -2113,19 +2542,20 @@ sudo ansible-playbook -i hosts.yml configure_cluster.yml - ubuntu -k
     <td>Testfall 5 Dashboard _internal</td>
     <td>Erfolgreich</td>
   </tr>
-          <tr>
-    <td><strong>6</strong></td>
-    <td>Testfall 6 Splunk Instanz Login</td>
-    <td>Erfolgreich</td>
-  </tr>
 </table>
 
 ### 92-Reflexion
+Die LB2 war für mich sehr spannend. Besonders dadurch, dass ich eigentlich alles automatisiert habe wie zB. den Setup der Raspberry Pis und des K8s Cluster, konnte ich sehr vieles lernen. Besonders mit Ansible konnte ich mich richtig intensiv auseinandersetzen. Mit K8s konnte ich mich nicht anfreunden, vieles schien für mich «unnötig» kompliziert im Verhältnis zu Docker. In Umgebungen mit tausenden von Pods macht es absolut Sinn auf K8s zu setzen, in einem Home Lab sehe ich persönlich nicht unbedingt denn nutzen von K8s. besonders freute es mich dass ich einen Heimdall Service aufsetzen konnte. Denn dadurch kann ich in Zukunft die wichtigen Links für mein Home Lab an einem zentralen Ort abspeichern. <br>
 
 ### 93-Verbesserungsmoeglichkeiten
+Die LB2 war eigentlich völlig Okey, was mich aber ein bisschen störte ist, dass es keinen offiziellen Auftrag gab. Es gab lediglich eine Bewertungsskala. Dies kann ein Vor- und Nachteil sein, denn dadurch erhält die Lehrperson einen grösseren Spielraum in der Bewertung. Ansonsten war der Unterricht für mich so völlig Okey. In Zukunft würde ich aber nicht mehr auf eine Technologie wie K8s bzw. microk8s setzen, denn diese scheint mir ziemlich «buggy».<br>
+Das Dokumentieren mit GitHub bzw. mit einem Versionierungssystem war für mich etwas komplett Neues. Ist für mich eine interessante Art zu dokumentieren. Der Dokumentationsaufwand ist um einiges grösser als ansonsten, aber ich denke wenn man den Punkt mit der Versionierung aufnehmen möchte. Ist definitiv Confluence eine großartige Alternative. Denn diese wir auch bei meinem Lehrbetrieb verwendet. <br>
 
 ### 94-Zukunftsaussichten
+Ich muss ehrlich sagen, dass ich mich nicht ganz mit K8s anfreunden konnte. Es gibt sehr wenig Use Cases für mich persönlich, die für mich die Verwendung von K8s gutheissen könnten. Daher werde ich wohl meinen K8s Cluster auf meinen 5 Raspberry Pis wieder löschen und auf eine Docker Umgebung setzen. Der Einblick war trotzdem sehr wertvoll. In Zuzkunft möchte ich mich besonders mehr mit Ansible auseinandersetzen. <br>
 
 ## 10-Quellenverzeichnis
-- [Allgemein Splunk Doku](https://docs.splunk.com/Documentation/Splunk/8.2.0/Viz/Aboutthismanual "Allgemein Splunk Doku")<br>
-- Arbeitsbuch von Luis Lüscher über Splunk (Wird nicht öffentlich zur Verfügung gestellt.)
+- [Step by Step K8s Cluster](https://medium.com/devops-dudes/step-by-step-process-to-deploy-kubernetes-on-your-raspberry-pis-61abed475cd8 "Step by Step K8s Cluster")<br>
+- [Ansible Erklärung](https://www.dev-insider.de/was-ist-ansible-a-724411/ "Ansible Erklärung")<br>
+- [Docker, K8s and Helm](https://betterprogramming.pub/docker-kubernetes-and-helm-4b5a5a87bc8f "Docker, K8s and Helm")<br>
+- [Raspberry Pi Cluster Ep 1 - Introduction to Clustering](https://www.youtube.com/watch?v=kgVz4-SEhbE "Raspberry Pi Cluster Ep 1 - Introduction to Clustering")<br>
