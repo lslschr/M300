@@ -26,9 +26,9 @@ Projektarbeit im Modul 300 von Luis Lüscher erstellt am 14.06.2021 für die Lei
 
 		- [211-Internetauftritt](#211-Internetauftritt)<br>
     
-      		- [212-Unternehmenswerte](#212-Unternehmenswerte)<br>
+      - [212-Unternehmenswerte](#212-Unternehmenswerte)<br>
 
-      		- [213-Unsere-Dienstleistungen](#213-Unsere-Dienstleistungen)<br>
+      - [213-Unsere-Dienstleistungen](#213-Unsere-Dienstleistungen)<br>
 
 	- [22-Aufgabenstellung](#22-Aufgabenstellung)<br>
 
@@ -2097,7 +2097,7 @@ wordpress   LoadBalancer   10.152.183.238   <pending>     80:30672/TCP   7d20h
 
 ### 72-Ansible-K8s-Cluster
 #### 721-Aufbau
-Das ganze ist ungefähr so aufgabeut:
+Das ganze ist ungefähr so aufgebaut:<br>
 ![Aufbau Ansible](/LB2/images/setup/Aufbau_Ansbile_Setup.png "Aufbau Ansible")
 
 Hierbei wird die bereits vorhandene Infrastruktur um einen weiteren Host ergänzt. Dies ist der Ansbile Host. Er dient als zentraler Angelpunkt um das Playbook abzuspielen. 
@@ -2286,7 +2286,7 @@ Und dann noch die entsprechende Plattform bzw. die verwendete Container Umgebung
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Alle Node sind vorhanden <br> 
+    <td>Alle Nodes sind vorhanden <br> 
     <img src="/LB2/images/Node_Result.png" alt="LB2 Test 1"></td>
   </tr>
         <tr>
@@ -2343,7 +2343,7 @@ Und dann noch die entsprechende Plattform bzw. die verwendete Container Umgebung
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Alle Node sind vorhanden <br> 
+    <td>Alle Nodes sind vorhanden <br> 
     <img src="/LB2/images/Node_Result.png" alt="LB2 Test 2"></td>
   </tr>
         <tr>
@@ -2399,7 +2399,7 @@ Und dann noch die entsprechende Plattform bzw. die verwendete Container Umgebung
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Der Bookmark manager ist unter Port 30751	erreichbar und nach den importieren Bookmarks kann gesucht werden. 
+    <td>Der Bookmark manager ist unter Port 30751	erreichbar und nach den importieren Bookmarks kann gesucht werden.<br>
     <img src="/LB2/images/Linkding_search.png" alt="LB2 Test 3"></td>
   </tr>
           <tr>
@@ -2492,8 +2492,8 @@ Und dann noch die entsprechende Plattform bzw. die verwendete Container Umgebung
       </tr>
       <tr>
     <td><strong>Tatsächliches Resultat</strong></td>
-    <td>Heimdall kann über Port 8006 erreicht werden und die einzelnen hinterlegten Links können über die Buttons erreicht werden. 
-    <img src="/LB2/images/Heimdall_Dashboard.png.png" alt="LB2 Test 5"></td>
+    <td>Heimdall kann über Port 8006 erreicht werden und die einzelnen hinterlegten Links können über die Buttons erreicht werden. <br>
+    <img src="/LB2/images/Heimdall_Dashboard.png" alt="LB2 Test 5"></td>
   </tr>
           <tr>
     <td><strong>Klassifikation</strong></td>
@@ -2549,7 +2549,7 @@ Die LB2 war für mich sehr spannend. Besonders dadurch, dass ich eigentlich alle
 
 ### 93-Verbesserungsmoeglichkeiten
 Die LB2 war eigentlich völlig Okey, was mich aber ein bisschen störte ist, dass es keinen offiziellen Auftrag gab. Es gab lediglich eine Bewertungsskala. Dies kann ein Vor- und Nachteil sein, denn dadurch erhält die Lehrperson einen grösseren Spielraum in der Bewertung. Ansonsten war der Unterricht für mich so völlig Okey. In Zukunft würde ich aber nicht mehr auf eine Technologie wie K8s bzw. microk8s setzen, denn diese scheint mir ziemlich «buggy».<br>
-Das Dokumentieren mit GitHub bzw. mit einem Versionierungssystem war für mich etwas komplett Neues. Ist für mich eine interessante Art zu dokumentieren. Der Dokumentationsaufwand ist um einiges grösser als ansonsten, aber ich denke wenn man den Punkt mit der Versionierung aufnehmen möchte. Ist definitiv Confluence eine großartige Alternative. Denn diese wir auch bei meinem Lehrbetrieb verwendet. <br>
+Das Dokumentieren mit GitHub bzw. mit einem Versionierungssystem war für mich etwas komplett Neues. Ist für mich eine interessante Art zu dokumentieren. Der Dokumentationsaufwand ist um einiges grösser als ansonsten, aber ich denke wenn man den Punkt mit der Versionierung aufnehmen möchte. Ist definitiv Confluence eine großartige Alternative. Denn dieses wird auch bei meinem Lehrbetrieb verwendet. <br>
 
 ### 94-Zukunftsaussichten
 Ich muss ehrlich sagen, dass ich mich nicht ganz mit K8s anfreunden konnte. Es gibt sehr wenig Use Cases für mich persönlich, die für mich die Verwendung von K8s gutheissen könnten. Daher werde ich wohl meinen K8s Cluster auf meinen 5 Raspberry Pis wieder löschen und auf eine Docker Umgebung setzen. Der Einblick war trotzdem sehr wertvoll. In Zuzkunft möchte ich mich besonders mehr mit Ansible auseinandersetzen. <br>
